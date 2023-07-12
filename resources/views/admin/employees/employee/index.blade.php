@@ -32,7 +32,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Employee Name</th>
-                                                <th>PIN</th>
+                                                <th>Employee ID</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
                                                 <th>User Type</th>

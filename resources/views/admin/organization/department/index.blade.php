@@ -16,15 +16,10 @@
             <div class="container-fluid">         
                 <div class="row">
                     <div class="col-lg-5">
-                                                
-
                         <div class="card card-outline-info">
                             <div class="card-header">
                                 <h4 class="m-b-0 text-white">Add Department</h4>
                             </div>
-                            
-                                                                                                                
-
                             <div class="card-body">
                                     <form action="{{ route('organization.store') }}" method="post">
                                         @csrf
@@ -33,7 +28,7 @@
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label class="control-label">Department Name</label>
-                                                        <input type="text" name="department" id="firstName" value="" class="form-control" placeholder="" minlength="3" required>
+                                                        <input type="text" name="dept_name" class="form-control" placeholder="" minlength="3" required>
                                                     </div>
                                                 </div>
                                                 <!--/span-->
@@ -48,12 +43,11 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-7">
                         <div class="card card-outline-info">
                             <div class="card-header">
                                 <h4 class="m-b-0 text-white">Department List</h4>
-                    </div>
+                            </div>
                             <div class="card-body">
                                 <div class="table-responsive ">
                                     <table id="" class="display  table table-hover table-striped table-bordered" cellspacing="0" width="100%">
@@ -63,19 +57,18 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        
                                         <tbody>
-                                            @if(isset($organizations))
-                                            @foreach($organizations as $organization)
-                                            <tr>
-                                                <td>{{$organization->dept_name}}</td>
-                                                <td class="jsgrid-align-center ">
-                                                    <a href="http://hrsystem-ci.test\/organization/dep_edit/2" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="return confirm('Are you sure to delete this data?')" href="http://hrsystem-ci.test\/organization/Delete_dep/2" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        @endif
+                                            @if(isset($departments))
+                                                @foreach($departments as $department)
+                                                <tr>
+                                                    <td>{{$department->dept_name}}</td>
+                                                    <td class="jsgrid-align-center ">
+                                                        <a href="http://hrsystem-ci.test\/department/dep_edit/2" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                        <a onclick="return confirm('Are you sure to delete this data?')" href="http://hrsystem-ci.test\/department/Delete_dep/2" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            @endif
                                         </tbody>
                                     </table>
                                 </div>

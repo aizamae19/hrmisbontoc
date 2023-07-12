@@ -11,7 +11,9 @@ class DepartmentController extends Controller
     public function departmentorganization()
     {
         $departments = Organization::get();
-        return view('admin.organization.department.index');
+        return view('admin.organization.department.index',[
+            'departments'=>$departments
+        ]);
     }
 
     public function storeorganization(Request $request){
@@ -20,6 +22,14 @@ class DepartmentController extends Controller
 
         if($organizationsave->save()) {
             return redirect()->back();
+        }
+    }
+    public function updateorganization(Request $request){
+        $Updatesave=Organization::where('id' ,$request->id)->first();
+        $Updatesave->dept_name =$request->dept_name;
+
+        if($Updatesave->update()) {
+            return redirect()->back()->withErrors('Updated!');
         }
     }
 }
