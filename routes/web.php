@@ -29,7 +29,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         #ADMIN
         Route::group(['middleware' => ['admin']], function () {
             Route::get('/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admindashboard');
-
+            Route::get('/ams', [App\Http\Controllers\ams\amsController::class, 'index'])->name('ams');
+            
             #ORGANIZATION-DEPARTMENT
             
             Route::get('/organization/department', [App\Http\Controllers\Admin\DepartmentController::class, 'departmentorganization'])->name('organization.department');
