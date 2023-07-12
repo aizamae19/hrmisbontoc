@@ -34,6 +34,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             
             Route::get('/organization/department', [App\Http\Controllers\Admin\DepartmentController::class, 'departmentorganization'])->name('organization.department');
             Route::post('/organization/department/store', [App\Http\Controllers\Admin\DepartmentController::class, 'storeorganization'])->name('organization.store');
+            //Update
+            Route::get('/department/edit/{id}', 'DepartmentController@edittransaction')->name('department.edit');
+            Route::get('/department/edit/{id}', 'DepartmentController@updatetransaction')->name('department.edit');
+
+            //Delete
+            Route::get('/department/delete/{id}', 'DepartmentController@deletetransaction')->name('department.delete');
 
             #ORGANIZATION-DESIGNATION
             Route::get('/designation', [App\Http\Controllers\Admin\DesignationController::class, 'index'])->name('designation');
