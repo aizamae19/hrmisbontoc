@@ -30,7 +30,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::group(['middleware' => ['admin']], function () {
             Route::get('/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admindashboard');
             Route::get('/ams', [App\Http\Controllers\ams\amsController::class, 'index'])->name('ams');
-            Route::get('/printdtr', [App\Http\Controllers\ams\PrintDTRController::class, 'index'])->name('printdtr');
+            Route::get('/printdtr', [App\Http\Controllers\ams\PrintDTRController::class, 'index'])->name('printdtr.index');
+            Route::get('/printdtr/{id}/{dateFrom}/{dateTo}', [App\Http\Controllers\ams\PrintDTRController::class, 'printdtr'])->name('printdtr');
             
             #ORGANIZATION-DEPARTMENT
             

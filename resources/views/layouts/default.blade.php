@@ -144,7 +144,7 @@
                         </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
                             <ul aria-expanded="false" class="collapse">
-                             <li><a href="{{ route('printdtr') }}">Print DTR </a></li>
+                             <li><a href="{{ route('printdtr.index') }}">Print DTR </a></li>
                                 <!-- <li><a href="http://192.168.254.114/HRSystem-CI/attendance/Save_Attendance">Add Attendance </a></li>
                                 <li><a href="http://192.168.254.114/HRSystem-CI/attendance/Attendance_Report">Attendance Report </a></li> -->
                             </ul>
