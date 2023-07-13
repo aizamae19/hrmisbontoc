@@ -48,6 +48,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/organization/designation/store', [App\Http\Controllers\Admin\DesignationController::class, 'storedesignation'])->name('designation.store');
 
             #EMPLOYEES-EMPLOYEE
+            Route::get('/employee/add', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee.add');
+            Route::post('/employee/add/save', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee.save');
+
+            //add
             Route::get('/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee');
 
             #EMPLOYEES-INACTIVE USER
