@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('employee_id');
             $table->string('email')->unique();
             $table->string('contact')->unique();
-            $table->string('usertype');
+            $table->string('status');
             $table->timestamps();
         });
     }
