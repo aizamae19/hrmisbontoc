@@ -26,13 +26,14 @@
                                                                                 
 
                     <div class="card-body">
-                            <form method="post" action="Save_des" enctype="multipart/form-data">
+                            <form action="{{route('designation.store')}}" method="post">
+                                @csrf
                                 <div class="form-body">
                                     <div class="row ">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="control-label">Designation Name</label>
-                                                <input type="text" name="designation_list" id="firstName" value="" class="form-control" placeholder="" minlength="3" required>
+                                                <input type="text" name="designation_list" class="form-control" placeholder="" minlength="3" required>
                                             </div>
                                         </div>
                                         <!--/span-->

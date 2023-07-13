@@ -43,7 +43,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/department/delete/{id}', 'DepartmentController@deletetransaction')->name('department.delete');
 
             #ORGANIZATION-DESIGNATION
-            Route::get('/designation', [App\Http\Controllers\Admin\DesignationController::class, 'index'])->name('designation');
+            Route::get('/organization/designation', [App\Http\Controllers\Admin\DesignationController::class, 'designationorganization'])->name('organization.designation');
+            Route::post('/organization/designation/store', [App\Http\Controllers\Admin\DesignationController::class, 'storedesignation'])->name('designation.store');
 
             #EMPLOYEES-EMPLOYEE
             Route::get('/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee');
