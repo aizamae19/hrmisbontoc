@@ -119,7 +119,7 @@
 
                     <!-- User profile text-->
                     <div class="profile-text">
-                        <h5>Municipality of Bontoc</h5>
+                        <h5></h5>
                         <a href="{{ route('accountsettings')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                         <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
                     </div>
@@ -142,6 +142,7 @@
                                 <li><a href="{{ route('inactiveuser') }}">Inactive User </a></li>
                             </ul>
                         </li>
+                        
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
                             <ul aria-expanded="false" class="collapse">
                              <li><a href="{{ route('printdtr.index') }}">Print DTR </a></li>

@@ -31,19 +31,30 @@
                                     <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-                                                <th>Employee Name</th>
+                                                <th>Employee's First Name</th>
+                                                <th>Employee's Middle Name</th>
+                                                <th>Employee's Last Name</th>
                                                 <th>Employee ID</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
-                                                <th>User Type</th>
+                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                
+                                                @if(isset($employees))
+                                                @foreach($employees as $employee)
+                                                <td>{{$employee->firstname}}</td>
+                                                <td>{{$employee->middlename}}</td>
+                                                <td>{{$employee->lastname}}</td>
+                                                <td>{{$employee->eid}}</td>
+                                                <td>{{$employee->email}}</td>
+                                                <td>{{$employee->contact}}</td>
+                                                <td>{{$employee->status}}</td>
                                             </tr>
-                                                
+                                             @endforeach
+                                        @endif   
                                      </tbody>
                                     </table>
                                 </div>

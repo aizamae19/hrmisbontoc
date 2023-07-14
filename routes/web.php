@@ -32,6 +32,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/ams', [App\Http\Controllers\ams\amsController::class, 'index'])->name('ams');
             Route::get('/printdtr', [App\Http\Controllers\ams\PrintDTRController::class, 'index'])->name('printdtr.index');
             Route::get('/printdtr/{id}/{dateFrom}/{dateTo}', [App\Http\Controllers\ams\PrintDTRController::class, 'printdtr'])->name('printdtr');
+
             
             #ORGANIZATION-DEPARTMENT
             
@@ -49,11 +50,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/organization/designation/store', [App\Http\Controllers\Admin\DesignationController::class, 'storedesignation'])->name('designation.store');
 
             #EMPLOYEES-EMPLOYEE
-            Route::get('/employee/add', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee.add');
-            Route::post('/employee/add/save', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee.save');
+            Route::get('/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee');
 
             //add
-            Route::get('/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee');
+            // Route::get('/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'add'])->name('employee');
+            // Route::post('/employee/add/save', [App\Http\Controllers\Admin\EmployeeController::class, 'add'])->name('employee.save');
 
             #EMPLOYEES-INACTIVE USER
             Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
