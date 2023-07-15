@@ -16,7 +16,7 @@
                     <div class="container-fluid">
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{route('employee.store')}}" class="text-white"><i class="" aria-hidden="true"></i>  Employee List</a></button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{route('employee.employees')}}" class="text-white"><i class="" aria-hidden="true"></i>  Employee List</a></button>
                     </div>
                 </div>
                <div class="row">
@@ -27,7 +27,7 @@
                             </div>
                                                                                           
                                 <div class="card-body">
- 
+                                @include('layouts.partials.messages')
                                 <form class="row" action="{{ route('organization.store') }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group col-md-3 m-t-20">

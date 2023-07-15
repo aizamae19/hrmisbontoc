@@ -9,19 +9,23 @@ use App\Models\Employee;
 
 class EmployeeController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-     public function index()
+     public function employeeemployees()
     {   
+        $employees = Employee::get();
+        return view('admin.employees.employee.index', [
+            'employees'=>$employees
+        ]);
+    }  
+
+    public function addemployee(request $request){
         $employees = Employee::get();
         return view('admin.employees.employee.add', [
             'employees'=>$employees
         ]);
     }
-     public function storeemployee(Request $request){
+
+
+    public function storeemployee(Request $request){
         $employeesave =new Employee();
         $employeesave->firstname = $request->firstname;
         $employeesave->middlename = $request->middlename;
@@ -36,8 +40,7 @@ class EmployeeController extends Controller
         $employeesave->username = $request->username;
         $employeesave->email = $request->email;
 
-
-        if($designationsave->save()) {
+        if($employeesave->save()) {
             return redirect()->back();
         }
     }

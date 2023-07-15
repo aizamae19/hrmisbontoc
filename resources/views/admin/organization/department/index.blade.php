@@ -63,8 +63,10 @@
                                                 <tr>
                                                     <td>{{$department->dept_name}}</td>
                                                     <td class="jsgrid-align-center ">
-                                                        <a href="http://hrsystem-ci.test\/department/dep_edit/2" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                                        <a onclick="return confirm('Are you sure to delete this data?')" href="http://hrsystem-ci.test\/department/Delete_dep/2" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                                        <a href="" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                        <a onclick="return confirm('Are you sure to delete this data?')" href="" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                                        {{method_field('DELETE')}}
+                                                        @csrf
                                                     </td>
                                                 </tr>
                                                 @endforeach

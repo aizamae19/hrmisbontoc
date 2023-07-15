@@ -38,28 +38,30 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             
             Route::get('/organization/department', [App\Http\Controllers\Admin\DepartmentController::class, 'departmentorganization'])->name('organization.department');
             Route::post('/organization/department/store', [App\Http\Controllers\Admin\DepartmentController::class, 'storeorganization'])->name('organization.store');
+
             //Update
-            Route::get('/department/edit/{id}', 'DepartmentController@edittransaction')->name('department.edit');
-            Route::get('/department/edit/{id}', 'DepartmentController@updatetransaction')->name('department.edit');
+            // Route::get('/department/edit/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'editorganization'])->name('organization.edit');
+            // Route::post('/department/edit/store', [App\Http\Controllers\Admin\DepartmentController::class, 'updateorganization'])->name('organization.edit.store');
 
             //Delete
-            Route::get('/department/delete/{id}', 'DepartmentController@deletetransaction')->name('department.delete');
+            Route::get('/department/delete/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
+            Route::post('/department/delete', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
 
             #ORGANIZATION-DESIGNATION
             Route::get('/organization/designation', [App\Http\Controllers\Admin\DesignationController::class, 'designationorganization'])->name('organization.designation');
             Route::post('/organization/designation/store', [App\Http\Controllers\Admin\DesignationController::class, 'storedesignation'])->name('designation.store');
 
             #EMPLOYEES-EMPLOYEE
-            Route::get('/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'index'])->name('employee');
+            Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
 
             //add
-            // Route::get('/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'add'])->name('employee');
-            // Route::post('/employee/add/save', [App\Http\Controllers\Admin\EmployeeController::class, 'add'])->name('employee.save');
-
+            Route::get('/employees/employee/add', [App\Http\Controllers\Admin\EmployeeController::class, 'addemployee'])->name('employee.add');
+            Route::post('/employees/employee/store', [App\Http\Controllers\Admin\EmployeeController::class, 'storeemployee'])->name('employee.store');
+            
             #EMPLOYEES-INACTIVE USER
             Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
 
-             #LEAVE-HOLIDAY
+            #LEAVE-HOLIDAY
             Route::get('/holiday', [App\Http\Controllers\Admin\HolidayController::class, 'index'])->name('holiday');
 
             #LEAVE-LEAVE TYPE

@@ -24,12 +24,29 @@ class DepartmentController extends Controller
             return redirect()->back();
         }
     }
+    public function editorganization(Request $request){
+        $departments = Organization::where('id', $request->id)->first();
+
+        return view('admin.organization.department.index',[
+            'departments'=>$departments
+        ]);
+    }
+
     public function updateorganization(Request $request){
         $Updatesave=Organization::where('id' ,$request->id)->first();
         $Updatesave->dept_name =$request->dept_name;
 
         if($Updatesave->update()) {
             return redirect()->back()->withErrors('Updated!');
+        }
+    }
+
+    public function deleteorganization(Request $request){
+        $Deletesave=Organization::where('id' ,$request->id)->first();
+        $Deletesave->dept_name =$request->dept_name;
+
+        if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
         }
     }
 }

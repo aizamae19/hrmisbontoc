@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-
+            @include('layouts.partials.messages')
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
                     <h3 class="text-themecolor"><i class="fa fa-users" aria-hidden="true"></i> Employee</h3>
@@ -17,7 +17,7 @@
             <div class="container-fluid">
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="{{route('employee.add')}}" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
                     </div>
                 </div>
                 <div class="row">
@@ -31,9 +31,9 @@
                                     <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-                                                <th>Employee's First Name</th>
-                                                <th>Employee's Middle Name</th>
-                                                <th>Employee's Last Name</th>
+                                                <th>First Name</th>
+                                                <th>Middle Name</th>
+                                                <th>Last Name</th>
                                                 <th>Employee ID</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
@@ -42,9 +42,9 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        @if(isset($employees))
+                                            @foreach($employees as $employee)
                                             <tr>
-                                                @if(isset($employees))
-                                                @foreach($employees as $employee)
                                                 <td>{{$employee->firstname}}</td>
                                                 <td>{{$employee->middlename}}</td>
                                                 <td>{{$employee->lastname}}</td>
