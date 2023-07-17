@@ -5,6 +5,7 @@ namespace App\Http\Controllers\ams;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Employee;
+use Carbon\Carbon;
 
 class PrintDTRController extends Controller
 {
@@ -23,10 +24,11 @@ class PrintDTRController extends Controller
     }
     public function printdtr(Request $request)
     {
-        $employees = Employee::where('id', $request->id)->first();
+        $employee = Employee::where('id', $request->id)->first();
 
-        return view('ams.printdtr',[
-            'employees'=>  $employees 
+        return view('ams.dtr',[
+            'employee'=>  $employee,
+            'date' => Carbon::create($request->dateFrom)->format('F, Y')
         ]);
     }
 }
