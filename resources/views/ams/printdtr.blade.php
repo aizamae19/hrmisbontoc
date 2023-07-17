@@ -18,16 +18,17 @@
             </div>
                 
             <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <h4>Select Date</h4>
-                        <div class="form-group">
-                             <label>From</label>
-                             <input type="date" name="dateFrom">
+                <div class="col-12" >
+                    <div class="card"style=" width: 100%; border: 5px solid green;">
+                        <h4 style="padding-left:1%; color:black;padding-top:1%;"><b>Select Date</b></h4>
+                        <div class="form-group" style="padding-left:5%;">
+                             <label style="color:black;"><b>From</b></label>
+                             <input type="date" id="dateTo" name="dateFrom" style="width: 200px; border: 5px solid yellowgreen;">
+
                         </div>
-                        <div class="form-group">
-                             <label>To</label>
-                             <input type="date" name="dateTo">
+                        <div class="form-group"  style="padding-left:5%; ">
+                             <label  style="color:black;"><b>To</b></label>
+                             <input type="date" name="dateTo" style=" width: 200px; border: 5px solid yellowgreen;">
                         </div>
                     </div>
                     <div class="card card-outline-info">
@@ -59,7 +60,7 @@
                                                     <td>{{ $employee->contact }}</td>
                                                     <td>{{ $employee->usertype }}</td>
                                                     <td class="jsgrid-align-center ">
-                                                        <a href="" title="print" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-print"></i></a>
+                                                        <button data-url="{{ url('/printdtr/').'/'.$employee->id }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
                                                     </td>
                                                </tr>
                                             @endforeach
@@ -72,13 +73,35 @@
                 </div>
             </div>
             <footer class="footer"> © 2023 | Developed By GenIT Bangladesh </footer>
+            <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
             <script type="text/javascript">
-                function printPage(url) {
-                  var newWindow = window.open(url, '_blank');
-                  newWindow.onload = function() {
-                    newWindow.print();
-                  };
-                }
+                $('.printdtr').on('click', function(e){
+                    e.preventDefault();
 
+                    var link = $(this).attr('data-url');
+                    var dateFrom = $('input[name="dateFrom"]').val();
+                    var dateTo = $('input[name="dateTo"]').val();
+
+                    url = link+'/'+dateFrom+'/'+dateTo;
+                    var newWindow = window.open(url, '_blank');
+
+                    newWindow.onload = function() {
+                        newWindow.print();
+                    };
+
+                });
+                load_page();
+                function load_page() {
+                    var now = new Date();
+
+                    var day = ("0" + now.getDate()).slice(-2);
+                    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+                    var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+
+                    $('input[name="dateFrom"]').val(today);
+                    $('input[name="dateTo"]').val(today);
+                }
             </script>
+
 @endsection
