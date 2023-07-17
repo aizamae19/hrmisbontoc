@@ -40,8 +40,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/organization/department/store', [App\Http\Controllers\Admin\DepartmentController::class, 'storeorganization'])->name('organization.store');
 
             //Update
-            // Route::get('/department/edit/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'editorganization'])->name('organization.edit');
-            // Route::post('/department/edit/store', [App\Http\Controllers\Admin\DepartmentController::class, 'updateorganization'])->name('organization.edit.store');
+            Route::get('/department/edit/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'editorganization'])->name('organization.edit');
+            Route::post('/department/edit/store', [App\Http\Controllers\Admin\DepartmentController::class, 'updateorganization'])->name('organization.edit.store');
 
             //Delete
             Route::get('/department/delete/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
@@ -86,7 +86,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         });
 
        
-
         #USER
         Route::group(['middleware' => ['user']], function () {
             Route::get('/user', [App\Http\Controllers\Cashier\UserController::class, 'index'])->name('userdashboard');

@@ -28,24 +28,24 @@
                                                                                           
                                 <div class="card-body">
                                 @include('layouts.partials.messages')
-                                <form class="row" action="{{ route('organization.store') }}" method="post" enctype="multipart/form-data">
+                                <form class="row" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>First Name</label>
-                                        <input type="text" name="firstname" class="form-control form-control-line" placeholder="Employee's FirstName" minlength="2" required > 
+                                        <input type="text" name="firstname" class="form-control form-control-line" minlength="2" required > 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Middle Name </label>
-                                        <input type="text" id="" name="middlename" class="form-control form-control-line" value="" placeholder="Employee's MiddleName" minlength="2" required> 
+                                        <label>Middle Name</label>
+                                        <input type="text" id="" name="middlename" class="form-control form-control-line" value="" minlength="2" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Last Name </label>
-                                        <input type="text" id="" name="lastname" class="form-control form-control-line" value="" placeholder="Employee's LastName" minlength="2" required> 
+                                        <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
                                     </div>
                                     
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Employee ID</label>
-                                        <input type="text" name="eid" class="form-control form-control-line" placeholder="Example: 8820"> 
+                                        <input type="text" name="eid" class="form-control form-control-line" placeholder="8820"> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Department</label>
@@ -71,7 +71,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Gender </label>
+                                        <label>Gender</label>
                                         <select name="gender" class="form-control custom-select" required>
                                             <option>Select Gender</option>
                                             <option value="MALE">Male</option>
@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Contact Number </label>
-                                        <input type="text" name="contact" class="form-control" value="" placeholder="1234567890" minlength="10" maxlength="15" required> 
+                                        <input type="text" name="contact" class="form-control" value="" placeholder="" minlength="11" maxlength="15" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Birth </label>
@@ -105,7 +105,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Username </label>
-                                        <input type="text" name="username" class="form-control form-control-line" value="" placeholder="Username"> 
+                                        <input type="text" name="username" class="form-control form-control-line" value=""> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Email </label>

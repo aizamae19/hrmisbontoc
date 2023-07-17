@@ -52,6 +52,9 @@
                                                 <td>{{$employee->email}}</td>
                                                 <td>{{$employee->contact}}</td>
                                                 <td>{{$employee->status}}</td>
+                                                <td class="jsgrid-align-center ">
+                                                    <a href="" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                </td>
                                             </tr>
                                              @endforeach
                                         @endif   
