@@ -35,32 +35,7 @@
             <!-- Container fluid  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
-<!--
-                <div class="row m-m-10">
-                    <div class="col-12">
-                        <div class="card-body b-l calender-sidebar">
-                            <div id="calendar"></div>
-                        </div>
-                    </div>
-                </div>
 
-                 CALENDAR MODAL 
-                <div class="modal none-border" id="my-event">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title"><strong>Add Event</strong></h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            </div>
-                            <div class="modal-body"></div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-white waves-effect" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
-                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
 
                 <div class="row m-b-10"> 
                     <div class="col-12">
@@ -82,95 +57,24 @@
                                                 <th>Name</th>
                                                 <th>Start Date </th>
                                                 <th>End Date </th>
-                                                <th>Days</th>
-                                                <th>Year</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <!-- <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Start Date </th>
-                                                <th>End Date </th>
-                                                <th>Number of days</th>
-                                                <th>Year</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot> -->
                                         <tbody>
-                                                                                       <tr>
-                                                <td>New Year's Eve</td>
-                                                <td>30th of December 2021</td>
-                                                <td>31st of January 2022</td>
-                                                <td>32</td>
-                                                <td>12-2021</td>
+                                            @if(isset($holidays))
+                                                @foreach($holidays as $holiday)
+                                            <tr>
+                                                <td>{{$holiday->nameofholiday}}</td>
+                                                <td>{{$holiday->startdate}}</td>
+                                                <td>{{$holiday->enddate}}</td>
                                                 <td class="jsgrid-align-center ">
                                                     <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="1"><i class="fa fa-pencil-square-o"></i></a>
                                                     <a onclick="confirm('Are you sure, you want to delete this?')" href="#" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
                                                 </td>
+                                                @endforeach
+                                            @endif
                                             </tr>
-                                                                                        <tr>
-                                                <td>New Year's Day</td>
-                                                <td>1st of January 2022</td>
-                                                <td>2nd of January 2022</td>
-                                                <td>1</td>
-                                                <td>01-2022</td>
-                                                <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="3"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="#" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="3"><i class="fa fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                                                                        <tr>
-                                                <td>Christmas</td>
-                                                <td>23rd of December 2021</td>
-                                                <td>25th of December 2021</td>
-                                                <td>2</td>
-                                                <td>12-2021</td>
-                                                <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="5"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="#" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="5"><i class="fa fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                                                                        <tr>
-                                                <td>Thanksgiving</td>
-                                                <td>23rd of November 2021</td>
-                                                <td>26th of November 2021</td>
-                                                <td>3</td>
-                                                <td>11-2021</td>
-                                                <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="6"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="#" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="6"><i class="fa fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                                                                        <tr>
-                                                <td>Halloween</td>
-                                                <td>31st of October 2021</td>
-                                                <td>31st of October 2021</td>
-                                                <td>0</td>
-                                                <td>10-2021</td>
-                                                <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="7"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="#" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="7"><i class="fa fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                                                                        <tr>
-                                                <td>Saint Patrick's Day</td>
-                                                <td>17th of March 2021</td>
-                                                <td>17th of March 2021</td>
-                                                <td>0</td>
-                                                <td>03-2021</td>
-                                                <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="8"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="#" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="8"><i class="fa fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                                                                    </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                       </tbody>                                   
                         <div class="modal fade" id="holysmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content ">
@@ -178,12 +82,13 @@
                                         <h4 class="modal-title" id="exampleModalLabel1">Holidays</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
-                                    <form method="post" action="Add_Holidays" id="holidayform" enctype="multipart/form-data">
+                                    <form method="post" action="{{route('holiday.store')}}" id="holidayform" enctype="multipart/form-data">
+                                        @csrf
                                     <div class="modal-body">
                                         
                                             <div class="form-group">
                                                 <label class="control-label">Name of Holiday</label>
-                                                <input type="text" name="holiname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                                <input type="text" name="nameofholiday" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label">Start Date</label>
@@ -192,15 +97,7 @@
                                             <div class="form-group">
                                                 <label class="control-label">End Date</label>
                                                 <input type="text" name="enddate" class="form-control mydatetimepickerFull" id="recipient-name1" value="">
-                                            </div><!--
-                                            <div class="form-group">
-                                                <label class="control-label">Number of Days</label>
-                                                <input type="number" name="nofdate" class="form-control" id="recipient-name1" readonly required>
-                                            </div>-->
-                                            <!--<div class="form-group">
-                                                <label for="message-text" class="control-label"> Year</label>
-                                                <input class="form-control mydatetimepicker" name="year" id="message-text1" required>
-                                            </div> -->                                          
+                                            </div>                                      
                                         
                                     </div>
                                     <div class="modal-footer">
@@ -213,19 +110,7 @@
                             </div>
                         </div>
                 <script>
-/*    $('#holidayform').find('[name="enddate"]').on("change", function() {
-      //console.log('Yes');
-      var date1 = new Date($('#holidayform').find('[name="startdate"]').val());
-      var date2 = new Date($('#holidayform').find('[name="enddate"]').val());
-      var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-        console.log(date1);
-        if(date1.length > '0'){
-        $('#holidayform').find('[name="nofdate"]').val('1').end();
-        } else if(date2.length > '0') {
-         $('#holidayform').find('[name="nofdate"]').val(diffDays).end();   
-        }
-    });*/
+
                 
                 </script>                        
 <script type="text/javascript">
