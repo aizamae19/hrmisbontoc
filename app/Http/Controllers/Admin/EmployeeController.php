@@ -31,7 +31,7 @@ class EmployeeController extends Controller
         $employeesave->middlename = $request->middlename;
         $employeesave->lastname = $request->lastname;
         $employeesave->eid = $request->eid;
-        $employeesave->status = $request->status;
+        $employeesave->position = $request->position;
         $employeesave->gender = $request->gender;
         $employeesave->bloodtype = $request->bloodtype;
         $employeesave->contact = $request->contact;

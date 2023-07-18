@@ -4,16 +4,25 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Leavetype;
 
 class LeaveTypeController extends Controller
 {
-     public function __construct()
+     public function leavetypeleave()
     {
-        $this->middleware('auth');
+        $leavetypes = Leavetype::get();
+        return view('admin.leave.leavetype.index',[
+            'leavetypes'=>$leavetypes
+        ]);
     }
 
-       public function index()
-    {
-        return view('admin.leave.leavetype.index');
+    public function storeleavetype(Request $request){
+        $leavetypesave =new Leavetype();
+        $leavetypesave->leavename = $request->leavename;
+        $leavetypesave->leaveday = $request->leaveday;
+
+        if($leavetypesave->save()) {
+            return redirect()->back();
+        }
     }
 }

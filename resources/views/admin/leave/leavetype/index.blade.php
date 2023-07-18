@@ -34,94 +34,26 @@
                             <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>ID </th>
                                         <th>Leave Type</th>
                                         <th>Number Of Days</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <!-- <tfoot>
-                                <tr>
-                                        <th>ID </th>
-                                        <th>Leave Type</th>
-                                        <th>Number Of Days</th>
-                                        <th>Action</th>
-                                </tr>
-                                </tfoot> -->
                                 <tbody>
-                                                                        <tr>
-                                        <td>9</td>
-                                        <td>Leave without Pay</td>
-                                        <td></td>
+                                       @if(isset($leavetypes))
+                                         @foreach($leavetypes as $leavetype)
+                                      <tr>
+                                          <td>{{$leavetype->leavename}}</td>
+                                          <td>{{$leavetype->leaveday}}</td>
                                         <td class="jsgrid-align-center ">
                                             <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="9"><i class="fa fa-pencil-square-o"></i></a>
                                             <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=9" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
                                         </td>
                                     </tr>
-                                                                        <tr>
-                                        <td>8</td>
-                                        <td>Optional Leave</td>
-                                        <td></td>
-                                        <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="8"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=8" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                    </tr>
-                                                                        <tr>
-                                        <td>7</td>
-                                        <td>Public Holiday</td>
-                                        <td></td>
-                                        <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="7"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=7" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                    </tr>
-                                                                        <tr>
-                                        <td>5</td>
-                                        <td>Earned leave</td>
-                                        <td></td>
-                                        <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="5"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=5" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                    </tr>
-                                                                        <tr>
-                                        <td>4</td>
-                                        <td>Paternal Leave</td>
-                                        <td>7</td>
-                                        <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="4"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=4" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                    </tr>
-                                                                        <tr>
-                                        <td>3</td>
-                                        <td>Maternity Leave</td>
-                                        <td>90</td>
-                                        <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="3"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=3" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                    </tr>
-                                                                        <tr>
-                                        <td>2</td>
-                                        <td>Sick Leave</td>
-                                        <td>15</td>
-                                        <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="2"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=2" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                    </tr>
-                                                                        <tr>
-                                        <td>1</td>
-                                        <td>Casual Leave</td>
-                                        <td>21</td>
-                                        <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="1"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=1" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                    </tr>
-                                                                    </tbody>
+                                @endforeach
+                            @endif
+                                           
+                             </tbody>
                             </table>
                         </div>
                     </div>
@@ -135,7 +67,8 @@
                         <h4 class="modal-title" id="exampleModalLabel1">Leave</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
-                    <form method="post" action="Add_leaves_Type" id="leaveform" enctype="multipart/form-data">
+                    <form method="post" action="{{route('leavetype.store')}}" id="leaveform" enctype="multipart/form-data">
+                        @csrf
                         <div class="modal-body">
                             
                             <div class="form-group">
@@ -146,16 +79,7 @@
                                 <label class="control-label">Day</label>
                                 <input type="text" name="leaveday" class="form-control" id="recipient-name1" value="">
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">status</label>
-                                <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1" name="status" required>
-                                    <option value="">Select Here</option>
-                                    <option value="1">Active</option>
-                                    <option value="0">InActive</option>
-                                </select>
-                            </div>
-                            
-                        </div>
+
                         <div class="modal-footer">
                             <input type="hidden" name="id" value="" class="form-control" id="recipient-name1">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>

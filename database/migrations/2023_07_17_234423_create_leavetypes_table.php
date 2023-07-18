@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('employees', function (Blueprint $table) {
-            $table->string('position')->after('employee_id');
-            $table->string('department')->after('position');
+        Schema::create('leavetypes', function (Blueprint $table) {
+            $table->id();
+            $table->string('leavename');
+            $table->integer('leaveday');
+            $table->timestamps();
         });
     }
 
@@ -22,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('employees', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('leavetypes');
     }
 };

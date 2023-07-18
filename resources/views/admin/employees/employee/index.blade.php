@@ -37,7 +37,7 @@
                                                 <th>Employee ID</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
-                                                <th>Status</th>
+                                                <th>Position</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -51,7 +51,7 @@
                                                 <td>{{$employee->eid}}</td>
                                                 <td>{{$employee->email}}</td>
                                                 <td>{{$employee->contact}}</td>
-                                                <td>{{$employee->status}}</td>
+                                                <td>{{$employee->position}}</td>
                                                 <td class="jsgrid-align-center ">
                                                     <a href="" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
                                                 </td>

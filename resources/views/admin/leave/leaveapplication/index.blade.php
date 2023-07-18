@@ -47,21 +47,8 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <!-- <tfoot>
-                                    <tr>
-                                        <th>Employee Name</th>
-                                        <th>PIN</th>
-                                        <th>Leave Type</th>
-                                        <th>Apply Date</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>Duration</th>
-                                        <th>Leave Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </tfoot> -->
                                 <tbody>
-                                                                        <tr style="vertical-align:top">
+                                     <tr style="vertical-align:top">
                                         <td><span>Michael Johnson</span></td>
                                         <td>8829</td>
                                         <td>Casual Leave</td>
@@ -79,9 +66,9 @@
                                             
                <a href="" title="Edit" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
              <a href="" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
-                                            <br> 
+          <br> 
 
-                                                                                        <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
+                                <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
                                             
                                         </td>
                                                                             </tr>

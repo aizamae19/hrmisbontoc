@@ -62,9 +62,9 @@
                                             </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Status</label>
-                                        <select name="status" class="form-control custom-select" required>
-                                            <option>Select Status</option>
+                                        <label>Position</label>
+                                        <select name="position" class="form-control custom-select" required>
+                                            <option>Select Position</option>
                                             <option value="Job Order">Job Order</option>
                                             <option value="Permanent">Permanent</option>
                                             <option value="Casual">Casual</option>
@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Contact Number </label>
-                                        <input type="text" name="contact" class="form-control" value="" placeholder="" minlength="11" maxlength="15" required> 
+                                        <input type="number" name="contact" class="form-control" value="" placeholder="" minlength="11" maxlength="15" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Birth </label>
