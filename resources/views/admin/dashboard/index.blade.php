@@ -26,9 +26,12 @@
                                 <div class="d-flex flex-row">
                                     <div class="round align-self-center round-primary"><i class="ti-user"></i></div>
                                     <div class="m-l-10 align-self-center">
-                                    <h3 class="m-b-0">    
-                                    </h3>
-                                        <a href="" class="text-muted m-b-0">View Details</a></div>
+                                    @if($noemployees=App\Models\Employee::count())
+                                        <h3 class="m-b-0">
+                                             {{$noemployees}}
+                                        </h3>
+                                    @endif
+                                        <a href="{{route('employee.employees')}}" class="text-muted m-b-0">View Details</a></div>
                                 </div>
                             </div>
                         </div>
@@ -41,11 +44,8 @@
                                 <div class="d-flex flex-row">
                                     <div class="round align-self-center round-info"><i class="ti-file"></i></div>
                                     <div class="m-l-10 align-self-center">
-                                        @if($n0employees=App\Models\Employee::count())
                                         <h3 class="m-b-0">
-                                             {{$n0employees}}
                                         </h3>
-                                        @endif
                                         <a href="{{ route('leaveapplication')}}" class="text-muted m-b-0">View Details</a>
                                         </div>
                                 </div>
