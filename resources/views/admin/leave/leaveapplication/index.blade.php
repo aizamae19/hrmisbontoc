@@ -91,18 +91,7 @@
                                     
                                 <div class="form-group">
                                     <label>Employee</label>
-                                    <select class=" form-control custom-select selectedEmployeeID"  tabindex="1" name="emid" required>
-                                                                                <option value="Soy1332">Thom Anderson</option>
-                                                                                <option value="Doe1753">Will Williams</option>
-                                                                                <option value="Doe1754">John Greenwood</option>
-                                                                                <option value="Moo1402">Liam Moore</option>
-                                                                                <option value="Rob1472">Stephany Robs</option>
-                                                                                <option value="Tho1044">Chris Thompson</option>
-                                                                                <option value="Smi1266">Colin Smith</option>
-                                                                                <option value="Moo1634">Christine Moore</option>
-                                                                                <option value="Joh1474">Michael Johnson</option>
-                                                                                <option value="Den1745">Emily Denn</option>
-                                                                            </select>
+                                     <input type="text" name="employeename" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Leave Type</label>
