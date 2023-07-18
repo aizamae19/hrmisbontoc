@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('leaveapplications', function (Blueprint $table) {
             $table->id();
+            $table->string('employeename');
+            $table->string('')
             $table->timestamps();
         });
     }
