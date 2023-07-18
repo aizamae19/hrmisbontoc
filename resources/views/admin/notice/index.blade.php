@@ -32,40 +32,26 @@
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-                                                <th>Sl</th>
                                                 <th>Title</th>
-                                                <th>File</th>
+                                                <!-- <th>File</th> -->
                                                 <th>Date</th>
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <!-- <tfoot>
-                                            <tr>
-                                                <th>Sl</th>
-                                                <th>Title</th>
-                                                <th>File</th>
-                                                <th>Date</th>
-                                            </tr>
-                                        </tfoot> -->
                                         <tbody>
-                                                                                       <tr>
-                                                <td>1</td>
-                                                <td>This is a demo notice for all!</td>
-                                                <td><a href="http://localhost/HRSystem-CI/assets/images/notice/sample_image.jpg" target="_blank">sample_image.jpg</a></td>
-                                                <td>2022-01-01</td>
+                                            @if(isset($notices))
+                                            @foreach($notices as $notice)
+                                            <tr>
+                                                <td>{{$notice->noticetitle}}</td>
+                                                <td>{{$notice->publisheddate}}</td>
+                                                <td class="jsgrid-align-center ">
+                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="9"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=9" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                                </td>
                                             </tr>
-                                                                                        <tr>
-                                                <td>3</td>
-                                                <td>Warning for Violation of Office Decorum</td>
-                                                <td><a href="http://localhost/HRSystem-CI/assets/images/notice/offnot2.png" target="_blank">offnot2.png</a></td>
-                                                <td>2021-12-27</td>
-                                            </tr>
-                                                                                        <tr>
-                                                <td>2</td>
-                                                <td>Office Decorum Notice to Staff Members</td>
-                                                <td><a href="http://localhost/HRSystem-CI/assets/images/notice/offnot1.png" target="_blank">offnot1.png</a></td>
-                                                <td>2021-12-21</td>
-                                            </tr>
-                                                                                    </tbody>
+                                            @endforeach
+                                            @endif
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -80,20 +66,21 @@
                                         <h4 class="modal-title" id="exampleModalLabel1">Notice Board</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
-                                    <form role="form" method="post" action="Published_Notice" id="btnSubmit" enctype="multipart/form-data">
+                                    <form role="form" method="post" action="{{route('notice.store')}}" id="btnSubmit" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="modal-body">
                                             <div class="form-group">
                                                 <label for="message-text" class="control-label">Notice Title</label>
-                                                <textarea class="form-control" name="title" id="message-text1" required minlength="25" maxlength="150"></textarea>
+                                                <textarea class="form-control" name="noticetitle" id="message-text1" maxlength="150"></textarea>
                                             </div>
-                                            <div class="form-group">
+                                            <!-- <div class="form-group">
                                                 <label class="control-label">Document</label>
                                                 <label for="recipient-name1" class="control-label">Title</label>
                                                 <input type="file" name="file_url" class="form-control" id="recipient-name1" required>
-                                            </div>
+                                            </div> -->
                                             <div class="form-group">
                                                 <label for="message-text" class="control-label">Published Date</label>
-                                                <input type="date" name="nodate" class="form-control" id="recipient-name1" required>
+                                                <input type="date" name="publisheddate" class="form-control" id="recipient-name1" required>
                                             </div>
                                     </div>
                                     <div class="modal-footer">

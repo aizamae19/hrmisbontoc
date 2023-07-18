@@ -80,6 +80,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #NOTICE
             Route::get('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'index'])->name('notice');
+            Route::post('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'storenotice'])->name('notice.store');
 
             #SETTINGS
             Route::get('/accountsettings', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsettings');
