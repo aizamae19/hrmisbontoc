@@ -68,10 +68,9 @@
              <a href="" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
           <br> 
 
-                                <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
-                                            
-                                        </td>
-                                                                            </tr>
+              <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
                                                                     </tbody>
                             </table>
                         </div>
