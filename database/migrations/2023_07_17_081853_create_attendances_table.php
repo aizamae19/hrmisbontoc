@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('attendances', function (Blueprint $table) {
 
             $table->string('employee_id');
-            $table->integer('am_in');
-            $table->integer('am_out');
-            $table->integer('pm_in');
-            $table->integer('pm_out');
-            $table->timestamps();
+            $table->time('am_in');
+            $table->time('am_out');
+            $table->time('pm_in');
+            $table->time('pm_out');
+            $table->time();
 
         });
     }

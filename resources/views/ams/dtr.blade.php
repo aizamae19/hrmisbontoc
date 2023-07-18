@@ -1,4 +1,4 @@
-<html xmlns:o="urn:schemas-microsoft-com:office:office"
+  g <html xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:x="urn:schemas-microsoft-com:office:excel"
 xmlns="https://www.w3.org/TR/REC-html40">
 
@@ -8,14 +8,15 @@ xmlns="https://www.w3.org/TR/REC-html40">
 <meta name=Generator content="Microsoft Excel 15">
 <link rel=File-List href="DTR_files/filelist.xml">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/dtr.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/dtrstyle.css') }}">  
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/dtrstyle.css') }}">  
 
 
 
 
 </head>
 
-<body oncontextmenu="return false">
+<!-- <body oncontextmenu="return false"> -->
+<body>
 <div id="DTR_23514" align=center x:publishsource="Excel">
 
 <table border=0 cellpadding=0 cellspacing=0 width=721 class=xl6323514
@@ -446,32 +447,32 @@ xmlns="https://www.w3.org/TR/REC-html40">
 </div>
 
 <script type="text/javascript">
-   window.print();
-   document.addEventListener('contextmenu', function(e) {
-     e.preventDefault();
-   });
-  document.onkeydown = function (e) {
+  //  window.print();
+  //  document.addEventListener('contextmenu', function(e) {
+  //    e.preventDefault();
+  //  });
+  // document.onkeydown = function (e) {
  
-        // disable F12 key
-        if(e.keyCode == 123) {
-            return false;
-        }
+  //       // disable F12 key
+  //       if(e.keyCode == 123) {
+  //           return false;
+  //       }
  
-        // disable I key
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
-            return false;
-        }
+  //       // disable I key
+  //       if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+  //           return false;
+  //       }
  
-        // disable J key
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-            return false;
-        }
+  //       // disable J key
+  //       if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+  //           return false;
+  //       }
  
-        // disable U key
-        if(e.ctrlKey && e.keyCode == 85) {
-            return false;
-        }
-    }
+  //       // disable U key
+  //       if(e.ctrlKey && e.keyCode == 85) {
+  //           return false;
+  //       }
+  //   }
 </script>
 <!----------------------------->
 <!--END OF OUTPUT FROM EXCEL PUBLISH AS WEB PAGE WIZARD-->
