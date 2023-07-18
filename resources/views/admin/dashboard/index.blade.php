@@ -20,7 +20,7 @@
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
@@ -38,7 +38,7 @@
                     </div>
                     <!-- Column -->
                     <!-- Column -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-6 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
@@ -59,7 +59,7 @@
                 
                 <div class="row ">
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-3 col-xlg-3">
+                    <div class="col-md-6 col-lg-6 col-xlg-3">
                         <div class="card card-inverse card-info">
                             <div class="box bg-primary text-center">
                                 <h1 class="font-light text-white">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-3 col-xlg-3">
+                    <div class="col-md-6 col-lg-6 col-xlg-3">
                         <div class="card card-info card-inverse">
                             <div class="box text-center">
                                 <h1 class="font-light text-white">
