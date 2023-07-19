@@ -38,17 +38,18 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <!-- <tfoot>
-                                            <tr>
-                                                <th>Employee PIN</th>
-                                                <th>Employee Name </th>
-                                                <th>Total Day </th>
-                                                <th>Total Hour </th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot> -->
                                         <tbody>
-                                                                                   </tbody>
+                                        @if(isset($earnedleaves))
+                                             @foreach($earnedleaves as $earnedleave)
+                                      <tr>
+                                          <td>{{$earnedleave->emid}}</td>
+                                          <td>{{$earnedleave->startdate}}</td>
+                                          <td>{{$earnedleave->enddate}}</td>
+                                     </tr>    
+                                            @endforeach
+                                        @endif
+
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -62,9 +63,9 @@
                                         <h4 class="modal-title" id="exampleModalLabel1">Earn Leave</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
-                                    <form method="post" action="Update_Earn_Leave" id="earnform" enctype="multipart/form-data">
+                                    <form method="post" action="{{route ('earnedleave.store')}}" id="earnform" enctype="multipart/form-data">
+                                        @csrf
                                     <div class="modal-body">
-                                        
                                         <div class="form-group">
                                        <label>Employee </label>
                                         <select name="emid" class="form-control select2 custom-select" style="width:100%" required>
@@ -111,7 +112,7 @@
                                         <h4 class="modal-title" id="exampleModalLabel1">Earn Leave</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
-                                    <form method="post" action="Update_Earn_Leave_Only" id="deductionform" enctype="multipart/form-data">
+                                    <form method="post" action="" id="deductionform" enctype="multipart/form-data">
                                     <div class="modal-body">
                                         
                                         <div class="form-group">

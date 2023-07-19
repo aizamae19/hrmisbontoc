@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('leaveapplications', function (Blueprint $table) {
+        Schema::create('earnedleaves', function (Blueprint $table) {
             $table->id();
-            $table->string('employeename');
+            $table->string('emid');
+            $table->date('startdate');
+            $table->date('enddate');
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('leaveapplications');
+        Schema::dropIfExists('earnedleaves');
     }
 };

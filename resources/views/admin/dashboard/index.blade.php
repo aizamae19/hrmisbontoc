@@ -28,10 +28,10 @@
                                     <div class="m-l-10 align-self-center">
                                     @if($noemployees=App\Models\Employee::count())
                                         <h3 class="m-b-0">
-                                             {{$noemployees}}
+                                            {{$noemployees}}
                                         </h3>
                                     @endif
-                                        <a href="{{route('employee.employees')}}" class="text-muted m-b-0">View Details</a></div>
+                                        <a href="{{ route('employee.employees')}}" class="text-muted m-b-0">View Details</a></div>
                                 </div>
                             </div>
                         </div>
@@ -62,9 +62,11 @@
                     <div class="col-md-6 col-lg-6 col-xlg-3">
                         <div class="card card-inverse card-info">
                             <div class="box bg-primary text-center">
+                                @if($noemployees=App\Models\Employee::count())
                                 <h1 class="font-light text-white">
-
+                                    {{$noemployees}}
                                 </h1>
+                                @endif
                                 <h6 class="text-white">Former Employees</h6>
                             </div>
                         </div>
@@ -100,14 +102,14 @@
                                         <thead>
                                             <tr>
                                                 <th>Title</th>
-                                                <th>File</th>
+                                                <!-- <th>File</th> -->
                                                 <th>Date</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr class="scrollbar" style="vertical-align:top">
                                                 <td></td>
-                                                <td><mark><a href="" target="_blank"></a></mark>
+                                                <td><mark><a href="{{route('notice')}}" target="_blank"></a></mark>
                                                 </td>
                                                 <td style="width:100px"></td>
                                             </tr>

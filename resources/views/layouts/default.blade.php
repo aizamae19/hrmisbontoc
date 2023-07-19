@@ -155,7 +155,7 @@
                                 <li><a href="{{ route('leave.holiday') }}"> Holiday </a></li>
                                 <li><a href="{{ route('leave.leavetype') }}"> Leave Type</a></li>
                                 <li><a href="{{ route('leaveapplication') }}"> Leave Application </a></li>
-                                <li><a href="{{ route('earnedleave') }}"> Earned Leave </a></li>
+                                <li><a href="{{ route('leave.earnedleave') }}"> Earned Leave </a></li>
                                 <li><a href="{{ route('report') }}"> Report </a></li>
                             </ul>
                         </li>
