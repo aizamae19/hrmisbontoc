@@ -41,7 +41,7 @@ File: scss
 }
 
 .topbar .navbar-header {
-	background: #ffffff;
+	background: #006E33;
 }
 
 .topbar .top-navbar .navbar-header .navbar-brand .light-logo {
@@ -136,22 +136,22 @@ a.link:focus {
 }
 
 .sidebar-nav > ul > li.active > a {
-	color: #5c4ac7;
+	color: #000;
 	/* border-color: #5C4AC7; */
 	border-color: #3e515a;
 }
 
 .sidebar-nav > ul > li.active > a i {
 	/* color: #5C4AC7; */
-	color: #5c4ac7;
+	color: #000;
 }
 
 .sidebar-nav ul li a.active,
 .sidebar-nav ul li a:hover {
-	color: #5c4ac7;
+	color: #000;
 }
 
 .sidebar-nav ul li a.active i,
 .sidebar-nav ul li a:hover i {
-	color: #5c4ac7;
+	color: #000;
 }
