@@ -73,7 +73,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/leaveapplication', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'index'])->name('leaveapplication');
 
             #LEAVE-EARNED LEAVE
-            Route::get('/earnedleave', [App\Http\Controllers\Admin\EarnedleaveController::class, 'index'])->name('earnedleave');
+             Route::get('/leave/earnedleave', [App\Http\Controllers\Admin\EarnedLeaveController::class, 'earnedleaveleave'])->name('leave.earnedleave');
+            Route::post('/leave/earnedleave/store', [App\Http\Controllers\Admin\EarnedLeaveController::class, 'storeearnedleave'])->name('earnedleave.store');
 
             #LEAVE-REPORT
             Route::get('/report', [App\Http\Controllers\Admin\ReportController::class, 'index'])->name('report');
