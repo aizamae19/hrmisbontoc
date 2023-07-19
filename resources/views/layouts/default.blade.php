@@ -10,7 +10,7 @@
     <meta name="author" content="GenIT Bangladesh">
     <!-- Favicon icon -->
         <link rel="icon" type="image/ico" sizes="16x16" href="{{asset('assets/images/favicn.ico')}}">
-    <title>Human Resource-Bontoc</title>
+    <title>Human Resource</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- morris CSS -->
@@ -46,7 +46,7 @@
         <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="http://192.168.254.114/HRSystem-CI/"><b>
+                    <a class="navbar-brand" href=""><b>
                         <img src="{{asset('assets/images/hricn.png')}}" alt="DRI" class="DRI-logo" style="width:50px;"/>
                         </b>
                         <!-- Logo text --><span>
@@ -141,8 +141,7 @@
                                 <li><a href="{{ route('employee.employees') }}">Employees </a></li>
                                 <li><a href="{{ route('inactiveuser') }}">Inactive User </a></li>
                             </ul>
-                        </li>
-                        
+                        </li>          
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
                             <ul aria-expanded="false" class="collapse">
                              <li><a href="{{ route('printdtr.index') }}">Print DTR </a></li>
@@ -150,6 +149,7 @@
                                 <li><a href="http://192.168.254.114/HRSystem-CI/attendance/Attendance_Report">Attendance Report </a></li> -->
                             </ul>
                         </li>
+
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-off"></i><span class="hide-menu">Leave </span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('leave.holiday') }}"> Holiday </a></li>
@@ -159,27 +159,10 @@
                                 <li><a href="{{ route('report') }}"> Report </a></li>
                             </ul>
                         </li>
-                        <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-briefcase-check"></i><span class="hide-menu">Project </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Projects/All_Projects">Projects </a></li>
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Projects/All_Tasks"> Task List </a></li>
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Projects/Field_visit"> Field Visit</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Payroll </span></a>
-                            <ul aria-expanded="false" class="collapse"> -->
-                                <!--<li><a href="Payroll/Salary_Type"> Payroll Type </a></li>-->
-                                <!-- <li><a href="http://192.168.254.114/HRSystem-CI/Payroll/Salary_List"> Payroll List </a></li>
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Payroll/Generate_salary"> Generate Payslip</a></li>
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Payroll/Payslip_Report"> Payslip Report</a></li>
-                            </ul>
-                        </li> -->
-                        <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-cash"></i><span class="hide-menu">Loan </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Loan/View"> Grant Loan </a></li>
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Loan/installment"> Loan Installment</a></li>
-                            </ul>
-                        </li> -->
+
+                        <li> <a href="#" ><i class="mdi mdi-file-document"></i><span class="hide-menu">Personal Data Sheet<span class="hide-menu"></a></li>
+
+                        <li> <a href="#" ><i class="mdi mdi-file"></i><span class="hide-menu">Service Record<span class="hide-menu"></a></li>
                         
                         <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-grid"></i><span class="hide-menu">Assets </span></a>
                             <ul aria-expanded="false" class="collapse">

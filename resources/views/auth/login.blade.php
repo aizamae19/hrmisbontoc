@@ -8,7 +8,7 @@
 
                     <form class="login100-form validate-form" action="{{ route('login.custom') }}" method="POST">
                         <span class="login100-form-title p-b-43">
-                            Employee Information System
+                            <b>Human Resource Management & Information System</b>
                         </span>
                         
                         @csrf

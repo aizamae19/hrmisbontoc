@@ -16,7 +16,7 @@
             <div class="container-fluid">
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="{{ route('employee.store') }}" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="{{ route('employee.add') }}" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
                     </div>
                 </div>
                 <div class="row">
@@ -38,18 +38,9 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <!-- <tfoot>
-                                            <tr>
-                                                <th>ID </th>
-                                                <th>Employee Name</th>
-                                                <th>Email </th>
-                                                <th>Contact </th>
-                                                <th>Roll</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot> -->
+                                        
                                         <tbody>
-                                                                                   </tbody>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
