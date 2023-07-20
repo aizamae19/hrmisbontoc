@@ -20,18 +20,19 @@
 
                 <div class="card card-outline-info">
                     <div class="card-header">
-                        <h4 class="m-b-0 text-white">Add Designation</h4>
+                        <h4 class="m-b-0 text-white">Edit Designation</h4>
                     </div>
                     
                     <div class="card-body">
-                            <form action="{{route('designation.store')}}" method="post">
+                            <form action="{{route('designation.edit.store')}}" method="post">
                                 @csrf
                                 <div class="form-body">
                                     <div class="row ">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="control-label">Designation Name</label>
-                                                <input type="text" name="designation_list" class="form-control" placeholder="" minlength="3" required>
+                                                <input type="hidden" name="id" value="{{$designation->id}}">
+                                                <input type="text" value="{{$designation->designation_list}}" name="designation_list" class="form-control" placeholder="" minlength="3" required>
                                             </div>
                                         </div>
                                         <!--/span-->
@@ -59,7 +60,6 @@
                             <thead>
                                 <tr>
                                     <th>Designation </th>
-                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -67,12 +67,6 @@
                                         @foreach($designations as $designation)
                               <tr>
                                     <td>{{$designation->designation_list}}</td>
-                                    <td class="jsgrid-align-center ">
-                                        <a href="{{ url('/index/edit/').'/'.$designation->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a onclick="return confirm('Are you sure to delete this data?')"  href="{{ url('/index/delete/').'/'.$designation->id}}" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                        {{method_field('DELETE')}}
-                                        @csrf
-                                    </td>
                                 </tr>
                                 @endforeach
                             @endif

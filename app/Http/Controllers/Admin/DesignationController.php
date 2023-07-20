@@ -24,4 +24,32 @@ class DesignationController extends Controller
             return redirect()->back();
         }
     }
+
+    public function editdesignation(Request $request){
+        $designation = Designation::where('id', $request->id)->first();
+        $designations = Designation::orderBy('updated_at', 'asc')->get();
+
+        return view('admin.organization.designation.update',[
+            'designation'=>$designation,
+            'designations'=>$designations
+        ]);
+    }
+
+    public function updatedesignation(Request $request){
+        $Updatesave=Designation::where('id' ,$request->id)->first();
+        $Updatesave->designation_list =$request->designation_list;
+
+        if($Updatesave->update()) {
+            return redirect()->back()->withErrors('Updated!');
+        }
+    }
+
+    public function deletedesignation(Request $request){
+        $Deletesave=Designation::where('id' ,$request->id)->first();
+        $Deletesave->designation_list =$request->designation_list;
+
+        if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
+        }
+    }
 }
