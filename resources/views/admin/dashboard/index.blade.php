@@ -20,7 +20,7 @@
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
@@ -37,8 +37,22 @@
                         </div>
                     </div>
                     <!-- Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-row">
+                                    <div class="round align-self-center round-primary"><i class="ti-user"></i></div>
+                                    <div class="m-l-10 align-self-center">
+                                        <h3 class="m-b-0">
+                                            
+                                        </h3>
+                                        <a href="{{ route('employee.employees')}}" class="text-muted m-b-0">View Details</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Column -->
-                    <div class="col-lg-6 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
@@ -59,7 +73,7 @@
                 
                 <div class="row ">
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-6 col-xlg-3">
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
                         <div class="card card-inverse card-info">
                             <div class="box bg-primary text-center">
                                 @if($noemployees=App\Models\Employee::count())
@@ -72,7 +86,17 @@
                         </div>
                     </div>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-6 col-xlg-3">
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
+                        <div class="card card-inverse card-info">
+                            <div class="box bg-primary text-center">
+                                <h1 class="font-light text-white">
+                                </h1>
+                                <h6 class="text-white">Inactive Employees</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
                         <div class="card card-info card-inverse">
                             <div class="box text-center">
                                 <h1 class="font-light text-white">
