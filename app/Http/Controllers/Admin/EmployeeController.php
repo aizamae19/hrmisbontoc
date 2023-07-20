@@ -44,4 +44,34 @@ class EmployeeController extends Controller
             return redirect()->back();
         }
     }
+
+    public function editemployee(Request $request){
+        $employee = Employee::where('id', $request->id)->first();
+        $employees = Employee::orderBy('updated_at', 'asc')->get();
+
+        return view('admin.employees.employee.update',[
+            'employee'=>$employee,
+            'employees'=>$employees
+        ]);
+    }
+
+    public function updateemployee(Request $request){
+        $Updatesave=Employee::where('id' ,$request->id)->first();
+        $Updatesave->firstname = $request->firstname;
+        $Updatesave->middlename = $request->middlename;
+        $Updatesave->lastname = $request->lastname;
+        $Updatesave->eid = $request->eid;
+        $Updatesave->position = $request->position;
+        $Updatesave->gender = $request->gender;
+        $Updatesave->bloodtype = $request->bloodtype;
+        $Updatesave->contact = $request->contact;
+        $Updatesave->dateofbirth = $request->dateofbirth;
+        $Updatesave->joindate = $request->joindate;
+        $Updatesave->username = $request->username;
+        $Updatesave->email = $request->email;
+
+        if($Updatesave->update()) {
+            return redirect()->back()->withErrors('Updated!');
+        }
+    }
 }
