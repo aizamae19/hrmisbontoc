@@ -47,7 +47,7 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header">
                     <a class="navbar-brand" href=""><b>
-                        <img src="{{asset('images/logo.png')}}" alt="DRI" class="DRI-logo" style="width:50px;"/>
+                        <img src="{{asset('assets/images/logo.jpg')}}" alt="DRI" style="width:50px; border-radius: 100px;"/>
                         </b>
                         <!-- Logo text --><span>
                          <img src="{{asset('assets/images/hrtag.png')}}" alt="homepage" class="dark-logo" height="60px" width="100px" />
