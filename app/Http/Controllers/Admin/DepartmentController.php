@@ -25,9 +25,11 @@ class DepartmentController extends Controller
         }
     }
     public function editorganization(Request $request){
-        $departments = Organization::where('id', $request->id)->first();
+        $department = Organization::where('id', $request->id)->first();
+        $departments = Organization::orderBy('updated_at', 'asc')->get();
 
-        return view('admin.organization.department.index',[
+        return view('admin.organization.department.update',[
+            'department'=>$department,
             'departments'=>$departments
         ]);
     }
