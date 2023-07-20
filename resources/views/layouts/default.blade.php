@@ -47,7 +47,7 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header">
                     <a class="navbar-brand" href=""><b>
-                        <img src="{{asset('assets/images/hricn.png')}}" alt="DRI" class="DRI-logo" style="width:50px;"/>
+                        <img src="{{asset('images/logo.png')}}" alt="DRI" class="DRI-logo" style="width:50px;"/>
                         </b>
                         <!-- Logo text --><span>
                          <img src="{{asset('assets/images/hrtag.png')}}" alt="homepage" class="dark-logo" height="60px" width="100px" />
@@ -136,10 +136,10 @@
                                 <li><a href="{{route('organization.designation')}}">Designation</a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employees </span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employees</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('employee.employees') }}">Employees </a></li>
-                                <li><a href="{{ route('inactiveuser') }}">Inactive User </a></li>
+                                <li><a href="{{ route('employee.employees') }}">Employees</a></li>
+                                <li><a href="{{ route('inactiveuser') }}">Inactive User</a></li>
                             </ul>
                         </li>          
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
@@ -183,7 +183,7 @@
         <div class="page-wrapper">
             @yield('content')
 
-            <footer class="footer"> © 2023 | Developed by Undefined404</footer>
+            <footer class="footer"> © 2023 | </footer>
 
         </div>
 
