@@ -56,8 +56,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/index/edit/store', [App\Http\Controllers\Admin\DesignationController::class, 'updatedesignation'])->name('designation.edit.store');
 
             //Delete
-            Route::get('/index/delete/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'deletedesignation'])->name('designation.delete');
-            Route::post('/index/delete', [App\Http\Controllers\Admin\DepartmentController::class, 'deletedesignation'])->name('organization.delete');
+            Route::get('/index/delete/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('designation.delete');
+            Route::post('/index/delete', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('organization.delete');
 
             #EMPLOYEES-EMPLOYEE
             Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
