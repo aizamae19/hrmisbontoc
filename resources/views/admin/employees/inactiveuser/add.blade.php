@@ -105,7 +105,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Leaving </label>
-                                        <input type="date" name="joindate" id="example-email2" name="example-email" class="form-control" placeholder=""> 
+                                        <input type="date" name="leavedate" id="example-email2" name="example-email" class="form-control" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Username </label>
