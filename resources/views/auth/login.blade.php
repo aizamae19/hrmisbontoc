@@ -47,6 +47,8 @@
                                 Login
                             </button>
                         </div>
+
+                        <a href="{{route('registration')}}">Register</a>
                         
                     </form>
 

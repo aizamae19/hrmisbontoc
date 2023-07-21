@@ -19,7 +19,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/login', [CustomAuthController::class, 'index'])->name('login');
             Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 
-            Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+            Route::get('registration', [CustomAuthController::class, 'registration'])->name('registration');
             Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
         });
         Route::group(['middleware' => ['auth']], function() {
