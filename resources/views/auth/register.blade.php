@@ -9,25 +9,40 @@
                     <form method="POST" action="{{route('register.custom')}}">
                         @csrf
                         @include('layouts.partials.messages')
-                         <div class="row row-space">
+                         <div class="row">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Name</label>
                                     <input class="input--style-4" type="text" name="name">
                                 </div>
                             </div>
+<<<<<<< Updated upstream
+=======
+                        </div>
+                        <div class="row">
+>>>>>>> Stashed changes
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
                                     <input class="input--style-4" type="text" name="email">
                                 </div>
                             </div>
+<<<<<<< Updated upstream
+=======
+                        </div>
+                        <div class="row">
+>>>>>>> Stashed changes
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Username</label>
                                     <input class="input--style-4" type="text" name="username">
                                 </div>
                             </div>
+<<<<<<< Updated upstream
+=======
+                        </div>
+                        <div class="row">
+>>>>>>> Stashed changes
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Password</label>
