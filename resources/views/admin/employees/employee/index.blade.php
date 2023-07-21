@@ -53,7 +53,7 @@
                                                 <td>{{$employee->contact}}</td>
                                                 <td>{{$employee->position}}</td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="{{ url('/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
                                                 </td>
                                             </tr>
                                              @endforeach

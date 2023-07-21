@@ -52,12 +52,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/organization/designation/store', [App\Http\Controllers\Admin\DesignationController::class, 'storedesignation'])->name('designation.store');
 
             //Update
-            Route::get('/index/edit/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'editdesignation'])->name('designation.edit');
-            Route::post('/index/edit/store', [App\Http\Controllers\Admin\DesignationController::class, 'updatedesignation'])->name('designation.edit.store');
+            Route::get('/designation/index/edit/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'editdesignation'])->name('designation.edit');
+            Route::post('/designation/index/edit/store', [App\Http\Controllers\Admin\DesignationController::class, 'updatedesignation'])->name('designation.edit.store');
 
             //Delete
-            Route::get('/index/delete/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('designation.delete');
-            Route::post('/index/delete', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('organization.delete');
+            Route::get('/designation/index/delete/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('designation.delete');
+            Route::post('/designation/index/delete', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('organization.delete');
 
             #EMPLOYEES-EMPLOYEE
             Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
@@ -67,8 +67,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/employees/employee/store', [App\Http\Controllers\Admin\EmployeeController::class, 'storeemployee'])->name('employee.store');
 
             //Update
-            Route::get('/index/edit/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'editemployee'])->name('employee.edit');
-            Route::post('/index/edit/store', [App\Http\Controllers\Admin\EmployeeController::class, 'updateemployee'])->name('employee.edit.store');
+            Route::get('/employee/index/edit/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'editemployee'])->name('employee.edit');
+            Route::post('/employee/index/edit/store', [App\Http\Controllers\Admin\EmployeeController::class, 'updateemployee'])->name('employee.edit.store');
 
             
             #EMPLOYEES-INACTIVE USER
