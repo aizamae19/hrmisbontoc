@@ -170,26 +170,6 @@
                             </div>
                         </div>
                     </div>
-                </div> 
-<script>
-  $(".to-do").on("click", function(){
-      //console.log($(this).attr('data-value'));
-      $.ajax({
-          url: "Update_Todo",
-          type:"POST",
-          data:
-          {
-          'toid': $(this).attr('data-id'),         
-          'tovalue': $(this).attr('data-value'),
-          },
-          success: function(response) {
-              location.reload();
-          },
-          error: function(response) {
-            console.error();
-          }
-      });
-  });           
-</script>                                               
+                </div>                                               
             </div>
 @endsection
