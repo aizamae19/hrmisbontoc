@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('attendances', function (Blueprint $table) {
-
+            $table->id();
             $table->string('employee_id');
+            $table->date('date');
             $table->time('am_in');
             $table->time('am_out');
             $table->time('pm_in');
             $table->time('pm_out');
-            $table->time();
-
+            $table->timestamps();
         });
     }
 
