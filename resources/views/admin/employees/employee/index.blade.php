@@ -37,7 +37,7 @@
                                                 <th>Employee ID</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
-                                                <th>Status</th>
+                                                <th>Status</th>S
                                                 <th>Action</th>
                                             </tr>
                                         </thead>

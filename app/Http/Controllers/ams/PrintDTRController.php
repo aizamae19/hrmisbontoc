@@ -25,10 +25,10 @@ class PrintDTRController extends Controller
     public function printdtr(Request $request)
     {
         $employee = Employee::where('id', $request->id)->first();
-
+        $date=Carbon::create($request->dateFrom)->format('F d')." to ".Carbon::create($request->dateTo)->format('d, Y');
         return view('ams.dtr',[
             'employee'=>  $employee,
-            'date' => Carbon::create($request->dateFrom)->format('F, Y')
+            'dateFrom' =>  $date
         ]);
     }
 }
