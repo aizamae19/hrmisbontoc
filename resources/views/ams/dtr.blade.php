@@ -1,4 +1,4 @@
-<html xmlns:o="urn:schemas-microsoft-com:office:office"
+  g <html xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:x="urn:schemas-microsoft-com:office:excel"
 xmlns="https://www.w3.org/TR/REC-html40">
 
@@ -8,12 +8,15 @@ xmlns="https://www.w3.org/TR/REC-html40">
 <meta name=Generator content="Microsoft Excel 15">
 <link rel=File-List href="DTR_files/filelist.xml">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/dtr.css') }}">
-<!-- <style id="DTR_23514_Styles"> -->
+<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/dtrstyle.css') }}">  
+
+
 
 
 </head>
 
-<body oncontextmenu="return false">
+<!-- <body oncontextmenu="return false"> -->
+<body>
 <div id="DTR_23514" align=center x:publishsource="Excel">
 
 <table border=0 cellpadding=0 cellspacing=0 width=721 class=xl6323514
@@ -136,11 +139,11 @@ xmlns="https://www.w3.org/TR/REC-html40">
  </tr>
  <tr height="17" style="height:12.75pt">
   <td height="17" class="xl6323514" style="height:12.75pt"></td>
-  <td colspan="5" class="xl7523514">{{ $employee->firstname }} {{ $employee->middlename?$employee0->middlename.".":""}} {{ $employee->lastname }}</td>
+  <td colspan="5" class="xl7523514">{{ $employee->firstname }} {{ $employee->middlename}} {{ $employee->lastname }}</td>
   <td class="xl6323514"></td>
   <td class="xl6323514"></td>
   <td class="xl6323514"></td>
-  <td colspan="5" class="xl7523514">{{ $employee->firstname }} {{ $employee->middlename?$employee0->middlename.".":""}} {{ $employee->lastname }}</td>
+  <td colspan="5" class="xl7523514">{{ $employee->firstname }} {{ $employee->middlename}} {{ $employee->lastname }}</td>
   <td class="xl6323514"></td>
  </tr>
  <tr height="17" style="height:12.75pt">
@@ -201,25 +204,25 @@ xmlns="https://www.w3.org/TR/REC-html40">
  <tr height=17 style='height:12.75pt'>
   <td colspan=2 height=17 class=xl7923514 style='height:12.75pt'>Position</td>
   <td class=xl6323514></td>
-  <td class=xl7323514 colspan=2>{{ $position }}</td>
+  <td class=xl7323514 colspan=2>{{ $employee->position }}</td>
   <td class=xl6323514></td>
   <td class=xl6323514></td>
   <td class=xl6323514></td>
   <td colspan=2 class=xl7923514>Position</td>
   <td class=xl6323514></td>
-  <td class=xl7323514 colspan=2>{{ $position }}</td>
+  <td class=xl7323514 colspan=2>{{ $employee->position }}</td>
   <td class=xl6323514></td>
   <td class=xl6323514></td>
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td colspan=2 height=17 class=xl7923514 style='height:12.75pt'>Department</td>
   <td class=xl6323514></td>
-  <td class=xl7323514 colspan=3>{{ $dept }}</td>
+  <td class=xl7323514 colspan=3>{{ $employee->department }}</td>
   <td class=xl6323514></td>
   <td class=xl6323514></td>
   <td colspan=2 class=xl7923514>Department</td>
   <td class=xl6323514></td>
-  <td class=xl7323514 colspan=3>{{ $dept }}</td>
+  <td class=xl7323514 colspan=3>{{ $employee->department }}</td>
   <td class=xl6323514></td>
  </tr>
  <tr height=17 style='height:12.75pt'>
@@ -262,82 +265,14 @@ xmlns="https://www.w3.org/TR/REC-html40">
   <td class=xl7123514 style='border-top:none;border-left:none'>IN</td>
   <td class=xl7123514 style='border-top:none;border-left:none'>OUT</td>
  </tr>
- 
- @foreach($days as $day)
-    @if(in_array($day, $months))
-    	@if($log = App\Attendance::getEmplog($day,$emp_id,$emp_idnumber))
-		  	 
-		 <tr height=17 style='height:12.75pt'>
-		  <td height=17 class=xl7023514 style='height:12.75pt;border-top:none'>{{ Carbon\Carbon::createFromDate($day)->format('d') }}</td>
 
-		  <td class=xl7123514 style='border-top:none;border-left:none'>
-		  	 {{App\Attendance::getLog($log->am_in)}}
-		  </td>
-		  <td class=xl7123514 style='border-top:none;border-left:none'>{{ App\Attendance::getLog($log->am_out) }}
-		  </td>
-		  <td class=xl7123514 style='border-top:none;border-left:none'>{{ App\Attendance::getLog($log->pm_in) }}
-		  </td>
-		  <td class=xl7123514 style='border-top:none;border-left:none'>{{ App\Attendance::getLog($log->pm_out) }}
-		  </td>
-		  <td colspan=2 class=xl8623514 style='border-left:none'>{!! $total = App\Attendance::getNoOfhours($log->am_in,$log->am_out,$log->pm_in,$log->pm_out ) !!}
-		  </td>
-		  <td class=xl6323514></td>
-		  <td class=xl7023514 style='border-top:none'>{{ Carbon\Carbon::createFromDate($day)->format('d') }}</td>
-		  <td class=xl7123514 style='border-top:none;border-left:none'>{{ App\Attendance::getLog($log->am_in)}}
-		  </td>
-		  <td class=xl7123514 style='border-top:none;border-left:none'>{{ App\Attendance::getLog($log->am_out) }}
-		  </td>
-		  <td class=xl7123514 style='border-top:none;border-left:none'>{{ App\Attendance::getLog($log->pm_in) }}
-		  </td>
-		  <td class=xl7123514 style='border-top:none;border-left:none'>{{ App\Attendance::getLog($log->pm_out) }}
-		  </td>
-		  <td colspan=2 class=xl8623514 style='border-left:none'>
-		  	   {!! $total !!}
-		  </td>
-		</tr>
-		@else
-		 		<tr height=17 style='height:12.75pt'>
-				  <td height=17 class=xl7023514 style='height:12.75pt;border-top:none'>{{ Carbon\Carbon::createFromDate($day)->format('d') }}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'>{{ Carbon\Carbon::parse($day)->format('l') == 'Sunday'? 'Sun':''}}{{ Carbon\Carbon::parse($day)->format('l') == 'Saturday'? 'Sat':''}}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'>{{ Carbon\Carbon::parse($day)->format('l') == 'Sunday'? 'Sun':''}}{{ Carbon\Carbon::parse($day)->format('l') == 'Saturday'? 'Sat':''}}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'>{{ Carbon\Carbon::parse($day)->format('l') == 'Sunday'? 'Sun':''}}{{ Carbon\Carbon::parse($day)->format('l') == 'Saturday'? 'Sat':''}}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'>{{ Carbon\Carbon::parse($day)->format('l') == 'Sunday'? 'Sun':''}}{{ Carbon\Carbon::parse($day)->format('l') == 'Saturday'? 'Sat':''}}</td>
-				  <td colspan=2 class=xl8623514 style='border-left:none'>&nbsp;</td>
-				  <td class=xl6323514></td>
-				  <td class=xl7023514 style='border-top:none'>{{ Carbon\Carbon::createFromDate($day)->format('d') }}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'>{{ Carbon\Carbon::parse($day)->format('l') == 'Sunday'? 'Sun':''}}{{ Carbon\Carbon::parse($day)->format('l') == 'Saturday'? 'Sat':''}}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'>{{ Carbon\Carbon::parse($day)->format('l') == 'Sunday'? 'Sun':''}}{{ Carbon\Carbon::parse($day)->format('l') == 'Saturday'? 'Sat':''}}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'>{{ Carbon\Carbon::parse($day)->format('l') == 'Sunday'? 'Sun':''}}{{ Carbon\Carbon::parse($day)->format('l') == 'Saturday'? 'Sat':''}}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'>{{ Carbon\Carbon::parse($day)->format('l') == 'Sunday'? 'Sun':''}}{{ Carbon\Carbon::parse($day)->format('l') == 'Saturday'? 'Sat':''}}</td>
-				  <td colspan=2 class=xl8623514 style='border-left:none'>&nbsp;</td>
-		 		</tr>
-		@endif
- 	@else
- 		<tr height=17 style='height:12.75pt'>
-				  <td height=17 class=xl7023514 style='height:12.75pt;border-top:none'>{{ Carbon\Carbon::createFromDate($day)->format('d') }}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'></td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'></td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'></td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'></td>
-				  <td colspan=2 class=xl8623514 style='border-left:none'></td>
-				  <td class=xl6323514></td>
-				  <td class=xl7023514 style='border-top:none'>{{ Carbon\Carbon::createFromDate($day)->format('d') }}</td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'></td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'></td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'></td>
-				  <td class=xl7123514 style='border-top:none;border-left:none'></td>
-				  <td colspan=2 class=xl8623514 style='border-left:none'>&nbsp;</td>
-		 		</tr>
- 	@endif
-
- @endforeach
 
  <tr height=17 style='height:12.75pt'>
   <td colspan=5 height=17 class=xl8923514 style='height:12.75pt'>Total</td>
-  <td colspan=2 class=xl8823514>{!! $total = App\Attendance::getOverAllhours() !!}</td>
+  <td colspan=2 class=xl8823514></td>
   <td class=xl6323514></td>
   <td colspan=5 class=xl8923514>Total</td>
-  <td colspan=2 class=xl8823514>{!! $total !!}</td>
+  <td colspan=2 class=xl8823514></td>
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6323514 style='height:12.75pt'></td>
@@ -420,11 +355,11 @@ xmlns="https://www.w3.org/TR/REC-html40">
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6323514 style='height:12.75pt'></td>
-  <td colspan=5 class=xl7523514>{{ $employee }}</td>
+  <td colspan=5 class=xl7523514>{{ $employee->firstname }} {{ $employee->middlename}} {{ $employee->lastname }}</td>
   <td class=xl6323514></td>
   <td class=xl6323514></td>
   <td class=xl6323514></td>
-  <td colspan=5 class=xl7523514>{{ $employee }}</td>
+  <td colspan=5 class=xl7523514>{{ $employee->firstname }} {{ $employee->middlename}} {{ $employee->lastname }}</td>
   <td class=xl6323514></td>
  </tr>
  <tr height=17 style='height:12.75pt'>
@@ -472,11 +407,11 @@ xmlns="https://www.w3.org/TR/REC-html40">
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6323514 style='height:12.75pt'></td>
-  <td colspan=5 class=xl6623514>{{ $in_charge }}</td>
+  <td colspan=5 class=xl6623514>{{ $employee->incharge }}</td>
   <td class=xl6323514></td>
   <td class=xl6323514></td>
   <td class=xl6323514></td>
-  <td colspan=5 class=xl6623514>{{ $in_charge }}</td>
+  <td colspan=5 class=xl6623514>{{ $employee->incharge }}</td>
   <td class=xl6323514></td>
  </tr>
  <tr height=17 style='height:12.75pt'>
@@ -512,32 +447,32 @@ xmlns="https://www.w3.org/TR/REC-html40">
 </div>
 
 <script type="text/javascript">
-   window.print();
-   document.addEventListener('contextmenu', function(e) {
-     e.preventDefault();
-   });
-  document.onkeydown = function (e) {
+  //  window.print();
+  //  document.addEventListener('contextmenu', function(e) {
+  //    e.preventDefault();
+  //  });
+  // document.onkeydown = function (e) {
  
-        // disable F12 key
-        if(e.keyCode == 123) {
-            return false;
-        }
+  //       // disable F12 key
+  //       if(e.keyCode == 123) {
+  //           return false;
+  //       }
  
-        // disable I key
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
-            return false;
-        }
+  //       // disable I key
+  //       if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+  //           return false;
+  //       }
  
-        // disable J key
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-            return false;
-        }
+  //       // disable J key
+  //       if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+  //           return false;
+  //       }
  
-        // disable U key
-        if(e.ctrlKey && e.keyCode == 85) {
-            return false;
-        }
-    }
+  //       // disable U key
+  //       if(e.ctrlKey && e.keyCode == 85) {
+  //           return false;
+  //       }
+  //   }
 </script>
 <!----------------------------->
 <!--END OF OUTPUT FROM EXCEL PUBLISH AS WEB PAGE WIZARD-->
