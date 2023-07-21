@@ -19,16 +19,16 @@
                 
             <div class="row">
                 <div class="col-12" >
-                    <div class="card"style=" width: 100%; border: 5px solid green;">
+                    <div class="card"style=" width: 100%;">
                         <h4 style="padding-left:1%; color:black;padding-top:1%;"><b>Select Date</b></h4>
                         <div class="form-group" style="padding-left:5%;">
                              <label style="color:black;"><b>From</b></label>
-                             <input type="date" id="dateTo" name="dateFrom" style="width: 200px; border: 5px solid yellowgreen;">
+                             <input type="date" id="dateTo" name="dateFrom" style="width: 200px; ">
 
                         </div>
                         <div class="form-group"  style="padding-left:5%; ">
                              <label  style="color:black;"><b>To</b></label>
-                             <input type="date" name="dateTo" style=" width: 200px; border: 5px solid yellowgreen;">
+                             <input type="date" name="dateTo" style=" width: 200px;">
                         </div>
                     </div>
                     <div class="card card-outline-info">
