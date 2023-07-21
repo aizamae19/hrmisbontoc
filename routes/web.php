@@ -19,13 +19,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/login', [CustomAuthController::class, 'index'])->name('login');
             Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 
-<<<<<<< HEAD
+
             Route::get('/register', [CustomAuthController::class, 'register'])->name('register');
             Route::post('/register', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
-=======
-            Route::get('registration', [CustomAuthController::class, 'registration'])->name('registration');
-            Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
->>>>>>> 9654b00e8ad97204f6437867b9e404d81832268d
+
         });
         Route::group(['middleware' => ['auth']], function() {
             Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');

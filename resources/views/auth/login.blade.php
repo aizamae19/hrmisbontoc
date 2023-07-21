@@ -47,9 +47,6 @@
                                 Login
                             </button>
                         </div>
-
-                        <a href="{{route('registration')}}">Register</a>
-                        
                     </form>
 
                     <div class="login100-more" style="background-image: url('../images/logo.png');">
