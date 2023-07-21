@@ -34,7 +34,7 @@
                                                 <th>Employee Name</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
-                                                <th>Roll</th>
+                                                <th>Date of Leaving</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
