@@ -4,16 +4,26 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\EarnedLeave;
 
 class EarnedLeaveController extends Controller
 {
-     public function __construct()
+     public function earnedleaveleave()
     {
-        $this->middleware('auth');
+        $earnedleaves = EarnedLeave::get();
+        return view('admin.leave.earnedleave.index',[
+            'earnedleaves'=>$earnedleaves
+        ]);
     }
 
-      public function index()
-    {
-        return view('admin.leave.earnedleave.index');
+    public function storeearnedleave(Request $request){
+        $earnedleavesave =new EarnedLeave();
+        $earnedleavesave->emid = $request->emid;
+        $earnedleavesave->startdate = $request->startdate;
+        $earnedleavesave->enddate = $request->enddate;
+
+        if($earnedleavesave->save()) {
+            return redirect()->back();
+        }
     }
 }

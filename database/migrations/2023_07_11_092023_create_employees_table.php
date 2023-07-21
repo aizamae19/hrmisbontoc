@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('middlename')->nullable();
             $table->string('lastname');
             $table->integer('eid');
-            $table->string('status');
+            $table->string('position');
             $table->string('gender');
             $table->string('bloodtype');
             $table->integer('contact')->unique();

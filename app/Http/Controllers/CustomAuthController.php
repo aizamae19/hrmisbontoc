@@ -49,9 +49,9 @@ class CustomAuthController extends Controller
  
  
  
-    public function registration()
+    public function register()
     {
-        return view('auth.registration');
+        return view('auth.register');
     }
        
  
@@ -59,6 +59,7 @@ class CustomAuthController extends Controller
     {  
         $request->validate([
             'name' => 'required',
+            'username' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
         ]);
@@ -75,6 +76,7 @@ class CustomAuthController extends Controller
       return User::create([
         'name' => $data['name'],
         'email' => $data['email'],
+        'username' =>$data['username'],
         'password' => Hash::make($data['password'])
       ]);
     }    

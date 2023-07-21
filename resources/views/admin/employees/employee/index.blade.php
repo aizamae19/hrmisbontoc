@@ -37,7 +37,11 @@
                                                 <th>Employee ID</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
+<<<<<<< HEAD
+                                                <th>Position</th>
+=======
                                                 <th>Status</th>S
+>>>>>>> origin/ams
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -51,9 +55,9 @@
                                                 <td>{{$employee->eid}}</td>
                                                 <td>{{$employee->email}}</td>
                                                 <td>{{$employee->contact}}</td>
-                                                <td>{{$employee->status}}</td>
+                                                <td>{{$employee->position}}</td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
                                                 </td>
                                             </tr>
                                              @endforeach

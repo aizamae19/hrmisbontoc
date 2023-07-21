@@ -19,8 +19,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/login', [CustomAuthController::class, 'index'])->name('login');
             Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
 
-            Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
-            Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+
+            Route::get('/register', [CustomAuthController::class, 'register'])->name('register');
+            Route::post('/register', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+
         });
         Route::group(['middleware' => ['auth']], function() {
             Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
@@ -40,16 +42,24 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/organization/department/store', [App\Http\Controllers\Admin\DepartmentController::class, 'storeorganization'])->name('organization.store');
 
             //Update
-            Route::get('/department/edit/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'editorganization'])->name('organization.edit');
-            Route::post('/department/edit/store', [App\Http\Controllers\Admin\DepartmentController::class, 'updateorganization'])->name('organization.edit.store');
+            Route::get('/index/edit/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'editorganization'])->name('organization.edit');
+            Route::post('/index/edit/store', [App\Http\Controllers\Admin\DepartmentController::class, 'updateorganization'])->name('organization.edit.store');
 
             //Delete
-            Route::get('/department/delete/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
-            Route::post('/department/delete', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
+            Route::get('/index/delete/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
+            Route::post('/index/delete', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
 
             #ORGANIZATION-DESIGNATION
             Route::get('/organization/designation', [App\Http\Controllers\Admin\DesignationController::class, 'designationorganization'])->name('organization.designation');
             Route::post('/organization/designation/store', [App\Http\Controllers\Admin\DesignationController::class, 'storedesignation'])->name('designation.store');
+
+            //Update
+            Route::get('/designation/index/edit/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'editdesignation'])->name('designation.edit');
+            Route::post('/designation/index/edit/store', [App\Http\Controllers\Admin\DesignationController::class, 'updatedesignation'])->name('designation.edit.store');
+
+            //Delete
+            Route::get('/designation/index/delete/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('designation.delete');
+            Route::post('/designation/index/delete', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('organization.delete');
 
             #EMPLOYEES-EMPLOYEE
             Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
@@ -57,6 +67,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             //add
             Route::get('/employees/employee/add', [App\Http\Controllers\Admin\EmployeeController::class, 'addemployee'])->name('employee.add');
             Route::post('/employees/employee/store', [App\Http\Controllers\Admin\EmployeeController::class, 'storeemployee'])->name('employee.store');
+
+            //Update
+            Route::get('/employee/index/edit/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'editemployee'])->name('employee.edit');
+            Route::post('/employee/index/edit/store', [App\Http\Controllers\Admin\EmployeeController::class, 'updateemployee'])->name('employee.edit.store');
+
             
             #EMPLOYEES-INACTIVE USER
             Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
@@ -66,19 +81,22 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/leave/holiday/store', [App\Http\Controllers\Admin\HolidayController::class, 'storeholiday'])->name('holiday.store');
 
             #LEAVE-LEAVE TYPE
-            Route::get('/leavetype', [App\Http\Controllers\Admin\LeaveTypeController::class, 'index'])->name('leavetype');
+            Route::get('/leave/leavetype', [App\Http\Controllers\Admin\LeaveTypeController::class, 'leavetypeleave'])->name('leave.leavetype');
+            Route::post('/leave/leavetype/store', [App\Http\Controllers\Admin\LeaveTypeController::class, 'storeleavetype'])->name('leavetype.store');
 
             #LEAVE-LEAVE APPLICATION
             Route::get('/leaveapplication', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'index'])->name('leaveapplication');
 
             #LEAVE-EARNED LEAVE
-            Route::get('/earnedleave', [App\Http\Controllers\Admin\EarnedleaveController::class, 'index'])->name('earnedleave');
+             Route::get('/leave/earnedleave', [App\Http\Controllers\Admin\EarnedLeaveController::class, 'earnedleaveleave'])->name('leave.earnedleave');
+            Route::post('/leave/earnedleave/store', [App\Http\Controllers\Admin\EarnedLeaveController::class, 'storeearnedleave'])->name('earnedleave.store');
 
             #LEAVE-REPORT
             Route::get('/report', [App\Http\Controllers\Admin\ReportController::class, 'index'])->name('report');
 
             #NOTICE
             Route::get('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'index'])->name('notice');
+            Route::post('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'storenotice'])->name('notice.store');
 
             #SETTINGS
             Route::get('/accountsettings', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsettings');
@@ -94,6 +112,3 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
 
 });
-
-
-

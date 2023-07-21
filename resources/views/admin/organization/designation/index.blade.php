@@ -23,8 +23,6 @@
                         <h4 class="m-b-0 text-white">Add Designation</h4>
                     </div>
                     
-                                                                                
-
                     <div class="card-body">
                             <form action="{{route('designation.store')}}" method="post">
                                 @csrf
@@ -70,8 +68,10 @@
                               <tr>
                                     <td>{{$designation->designation_list}}</td>
                                     <td class="jsgrid-align-center ">
-                                        <a href="http://hrsystem-ci.test\/designation/Edit_des/27" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a onclick="return confirm('Are you sure to delete this data?')"  href="http://hrsystem-ci.test\/organization/des_delete/27" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                        <a href="{{ url('/designation/index/edit/').'/'.$designation->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a onclick="return confirm('Are you sure to delete this data?')"  href="{{ url('/designation/index/delete/').'/'.$designation->id}}" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                        {{method_field('DELETE')}}
+                                        @csrf
                                     </td>
                                 </tr>
                                 @endforeach

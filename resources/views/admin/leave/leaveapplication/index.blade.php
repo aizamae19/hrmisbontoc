@@ -47,21 +47,8 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <!-- <tfoot>
-                                    <tr>
-                                        <th>Employee Name</th>
-                                        <th>PIN</th>
-                                        <th>Leave Type</th>
-                                        <th>Apply Date</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>Duration</th>
-                                        <th>Leave Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </tfoot> -->
                                 <tbody>
-                                                                        <tr style="vertical-align:top">
+                                     <tr style="vertical-align:top">
                                         <td><span>Michael Johnson</span></td>
                                         <td>8829</td>
                                         <td>Casual Leave</td>
@@ -79,12 +66,11 @@
                                             
                <a href="" title="Edit" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
              <a href="" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
-                                            <br> 
+          <br> 
 
-                                                                                        <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
-                                            
-                                        </td>
-                                                                            </tr>
+              <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
                                                                     </tbody>
                             </table>
                         </div>
@@ -104,18 +90,7 @@
                                     
                                 <div class="form-group">
                                     <label>Employee</label>
-                                    <select class=" form-control custom-select selectedEmployeeID"  tabindex="1" name="emid" required>
-                                                                                <option value="Soy1332">Thom Anderson</option>
-                                                                                <option value="Doe1753">Will Williams</option>
-                                                                                <option value="Doe1754">John Greenwood</option>
-                                                                                <option value="Moo1402">Liam Moore</option>
-                                                                                <option value="Rob1472">Stephany Robs</option>
-                                                                                <option value="Tho1044">Chris Thompson</option>
-                                                                                <option value="Smi1266">Colin Smith</option>
-                                                                                <option value="Moo1634">Christine Moore</option>
-                                                                                <option value="Joh1474">Michael Johnson</option>
-                                                                                <option value="Den1745">Emily Denn</option>
-                                                                            </select>
+                                     <input type="text" name="employeename" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Leave Type</label>

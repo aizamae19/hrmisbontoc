@@ -20,32 +20,46 @@
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
                                     <div class="round align-self-center round-primary"><i class="ti-user"></i></div>
                                     <div class="m-l-10 align-self-center">
-                                    <h3 class="m-b-0">    
-                                    </h3>
-                                        <a href="" class="text-muted m-b-0">View Details</a></div>
+                                    @if($noemployees=App\Models\Employee::count())
+                                        <h3 class="m-b-0">
+                                            {{$noemployees}}
+                                        </h3>
+                                    @endif
+                                        <a href="{{ route('employee.employees')}}" class="text-muted m-b-0">View Details</a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex flex-row">
+                                    <div class="round align-self-center round-danger"><i class="ti-user"></i></div>
+                                    <div class="m-l-10 align-self-center">
+                                        <h3 class="m-b-0">
+                                            
+                                        </h3>
+                                        <a href="{{ route('employee.employees')}}" class="text-muted m-b-0">View Details</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Column -->
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
                                     <div class="round align-self-center round-info"><i class="ti-file"></i></div>
                                     <div class="m-l-10 align-self-center">
-                                        @if($n0employees=App\Models\Employee::count())
                                         <h3 class="m-b-0">
-                                             {{$n0employees}}
                                         </h3>
-                                        @endif
                                         <a href="{{ route('leaveapplication')}}" class="text-muted m-b-0">View Details</a>
                                         </div>
                                 </div>
@@ -59,18 +73,30 @@
                 
                 <div class="row ">
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-3 col-xlg-3">
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
                         <div class="card card-inverse card-info">
                             <div class="box bg-primary text-center">
+                                @if($noemployees=App\Models\Employee::count())
                                 <h1 class="font-light text-white">
-
+                                    {{$noemployees}}
                                 </h1>
+                                @endif
                                 <h6 class="text-white">Former Employees</h6>
                             </div>
                         </div>
                     </div>
                     <!-- Column -->
-                    <div class="col-md-6 col-lg-3 col-xlg-3">
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
+                        <div class="card card-inverse card-danger">
+                            <div class="box text-center">
+                                <h1 class="font-light text-white">
+                                </h1>
+                                <h6 class="text-white">Inactive Employees</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
                         <div class="card card-info card-inverse">
                             <div class="box text-center">
                                 <h1 class="font-light text-white">
@@ -100,14 +126,14 @@
                                         <thead>
                                             <tr>
                                                 <th>Title</th>
-                                                <th>File</th>
+                                                <!-- <th>File</th> -->
                                                 <th>Date</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr class="scrollbar" style="vertical-align:top">
                                                 <td></td>
-                                                <td><mark><a href="" target="_blank"></a></mark>
+                                                <td><mark><a href="{{route('notice')}}" target="_blank"></a></mark>
                                                 </td>
                                                 <td style="width:100px"></td>
                                             </tr>
@@ -144,26 +170,6 @@
                             </div>
                         </div>
                     </div>
-                </div> 
-<script>
-  $(".to-do").on("click", function(){
-      //console.log($(this).attr('data-value'));
-      $.ajax({
-          url: "Update_Todo",
-          type:"POST",
-          data:
-          {
-          'toid': $(this).attr('data-id'),         
-          'tovalue': $(this).attr('data-value'),
-          },
-          success: function(response) {
-              location.reload();
-          },
-          error: function(response) {
-            console.error();
-          }
-      });
-  });           
-</script>                                               
+                </div>                                               
             </div>
 @endsection
