@@ -62,7 +62,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
 
             #LEAVE-HOLIDAY
-            Route::get('/holiday', [App\Http\Controllers\Admin\HolidayController::class, 'index'])->name('holiday');
+           Route::get('/leave/holiday', [App\Http\Controllers\Admin\HolidayController::class, 'holidayleave'])->name('leave.holiday');
+            Route::post('/leave/holiday/store', [App\Http\Controllers\Admin\HolidayController::class, 'storeholiday'])->name('holiday.store');
 
             #LEAVE-LEAVE TYPE
             Route::get('/leavetype', [App\Http\Controllers\Admin\LeaveTypeController::class, 'index'])->name('leavetype');

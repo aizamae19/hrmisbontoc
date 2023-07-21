@@ -20,7 +20,7 @@
              
                 <div class="col-12">
                     <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#appmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Application </a></button>
-                    <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{ route('holiday')}}" class="text-white"><i class="" aria-hidden="true"></i> Holiday List</a></button>
+                    <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{ route('leave.holiday')}}" class="text-white"><i class="" aria-hidden="true"></i> Holiday List</a></button>
                 </div>                       
              
         </div> 
