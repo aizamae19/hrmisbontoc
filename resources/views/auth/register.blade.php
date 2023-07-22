@@ -16,24 +16,18 @@
                                     <input class="input--style-4" type="text" name="name">
                                 </div>
                             </div>
-                        </div>
-                        <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
                                     <input class="input--style-4" type="text" name="email">
                                 </div>
                             </div>
-                        </div>
-                        <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Username</label>
                                     <input class="input--style-4" type="text" name="username">
                                 </div>
                             </div>
-                        </div>
-                        <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Password</label>
