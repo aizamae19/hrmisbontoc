@@ -34,6 +34,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/ams', [App\Http\Controllers\ams\amsController::class, 'index'])->name('ams');
             Route::get('/printdtr', [App\Http\Controllers\ams\PrintDTRController::class, 'index'])->name('printdtr.index');
             Route::get('/printdtr/{id}/{dateFrom}/{dateTo}', [App\Http\Controllers\ams\PrintDTRController::class, 'printdtr'])->name('printdtr');
+            Route::get('/attendances', [App\Http\Controllers\ams\attendancesController::class, 'index'])->name('attendances');
+            Route::get('/attendances/{employeeId}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
+            // routes/web.php
+
+
+
+
 
             
             #ORGANIZATION-DEPARTMENT
