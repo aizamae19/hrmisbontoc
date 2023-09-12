@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Contact Number </label>
-                                        <input type="number" name="contact" class="form-control" value="" placeholder="" minlength="11" maxlength="15" required> 
+                                        <input type="text" name="contact" class="form-control" value="" placeholder="" minlength="11" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Birth </label>
@@ -118,7 +118,7 @@
                                     </div>
                                     <div class="form-actions col-md-12">
                                     <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
-                                    <button type="button" class="btn btn-danger">Cancel</button>
+                                    <button type="button" href="" class="btn btn-danger">Cancel</button>
                                     </div>
                                 </form>
                             </div>

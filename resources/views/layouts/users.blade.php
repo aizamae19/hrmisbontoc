@@ -1,5 +1,4 @@
-
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -52,7 +51,7 @@
                         <!-- Logo text --><span>
                          <img src="{{asset('assets/images/hrtag.png')}}" alt="homepage" class="dark-logo" height="60px" width="100px" />
                          <!-- Light Logo text -->    
-                         </span></a>
+                         </span> </a>
                 </div>
                 <div class="navbar-collapse">
                     <ul class="navbar-nav mr-auto mt-md-0">
@@ -159,6 +158,11 @@
                                 <li><a href="{{ route('report') }}"> Report </a></li>
                             </ul>
                         </li>
+
+                        <li> <a href="#" ><i class="mdi mdi-file-document"></i><span class="hide-menu">Personal Data Sheet<span class="hide-menu"></a></li>
+
+                        <li> <a href="#" ><i class="mdi mdi-file"></i><span class="hide-menu">Service Record<span class="hide-menu"></a></li>
+                        
                         <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-grid"></i><span class="hide-menu">Assets </span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="http://192.168.254.114/HRSystem-CI/Logistice/Assets_Category"> Assets Category </a></li>

@@ -38,7 +38,6 @@
                                                 <th>Email </th>
                                                 <th>Contact </th>
                                                 <th>Position</th>
-                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -55,6 +54,7 @@
                                                 <td>{{$employee->position}}</td>
                                                 <td class="jsgrid-align-center ">
                                                     <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <button data-url="{{ url('/employee/pds/printpds').'/'.$employee->id }}" title="print PDS" class="btn btn-sm btn-primary waves-effect waves-light printPDS"><i class="fa fa-print"></i></button>
                                                 </td>
                                             </tr>
                                              @endforeach

@@ -131,7 +131,7 @@
                                     </div>
                                     <div class="form-actions col-md-12">
                                     <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
-                                    <button type="button" class="btn btn-danger">Cancel</button>
+                                    <button type="button" href="" class="btn btn-danger">Cancel</button>
                                     </div>
                                 </form>
                             </div>

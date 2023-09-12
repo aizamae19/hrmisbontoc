@@ -21,7 +21,7 @@
                                 <h4 class="m-b-0 text-white">Add Department</h4>
                             </div>
                             <div class="card-body">
-                                    <form action="{{ route('organization.store') }}" method="post">
+                                    <form action="{{route('organization.store') }}" method="post">
                                         @csrf
                                         <div class="form-body">
                                             <div class="row ">

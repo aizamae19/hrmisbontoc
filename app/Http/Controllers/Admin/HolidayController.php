@@ -26,4 +26,36 @@ class HolidayController extends Controller
             return redirect()->back();
         }
     }
+
+    public function editholiday(Request $request){
+        $holiday = Designation::where('id', $request->id)->first();
+        $holidays = Designation::orderBy('updated_at', 'asc')->get();
+
+        return view('admin.leave.holiday.update',[
+            'holiday'=>$holiday,
+            'holidays'=>$holidays
+        ]);
+    }
+
+    public function updateholiday(Request $request){
+        $Updatesave=Holiday::where('id' ,$request->id)->first();
+        $Updatesave-> nameofholiday =$request->nameofholiday;
+        $Updatesave-> startdate =$request->startdate;
+        $Updatesave-> enddate =$request->enddate;
+
+        if($Updatesave->update()) {
+            return redirect()->back()->withErrors('Updated!');
+        }
+    }
+
+    public function deleteholiday(Request $request){
+        $Deletesave=Holiday::where('id' ,$request->id)->first();
+        $Updatesave-> nameofholiday =$request->nameofholiday;
+        $Updatesave-> startdate =$request->startdate;
+        $Updatesave-> enddate =$request->enddate;
+
+        if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
+        }
+    }
 }

@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('leaveapplications', function (Blueprint $table) {
+        Schema::create('personaldatasheets', function (Blueprint $table) {
             $table->id();
-            $table->string('employeename');
-            $table->date('dateoffiling');
-            $table->integer('positionid');
-            $table->integer('leavenameid');
-            $table->string('reason');
             $table->timestamps();
         });
     }
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('leaveapplications');
+        Schema::dropIfExists('personaldatasheets');
     }
 };
