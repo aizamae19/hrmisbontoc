@@ -50,9 +50,9 @@ class HolidayController extends Controller
 
     public function deleteholiday(Request $request){
         $Deletesave=Holiday::where('id' ,$request->id)->first();
-        $Updatesave-> nameofholiday =$request->nameofholiday;
-        $Updatesave-> startdate =$request->startdate;
-        $Updatesave-> enddate =$request->enddate;
+        $Deletesave-> nameofholiday =$request->nameofholiday;
+        $Deletesave-> startdate =$request->startdate;
+        $Deletesave-> enddate =$request->enddate;
 
         if($Deletesave->delete()) {
             return redirect()->back()->withErrors('Deleted!');
