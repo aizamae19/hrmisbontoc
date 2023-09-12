@@ -161,8 +161,6 @@
                         </li>
 
                         <li> <a href="#" ><i class="mdi mdi-file-document"></i><span class="hide-menu">Personal Data Sheet<span class="hide-menu"></a></li>
-
-                        <li> <a href="#" ><i class="mdi mdi-file"></i><span class="hide-menu">Service Record<span class="hide-menu"></a></li>
                         
                         <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-grid"></i><span class="hide-menu">Assets </span></a>
                             <ul aria-expanded="false" class="collapse">

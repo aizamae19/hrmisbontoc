@@ -20,7 +20,7 @@
         <div class="row m-b-10">
             <div class="col-12">
                 <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#leavemodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Leave Types</a></button>
-                <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="http://hrsystem-ci.test\/leave/Application" class="text-white"><i class="" aria-hidden="true"></i>  Leave Application</a></button>
+                <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{ route('leaveapplication') }}" class="text-white"><i class="" aria-hidden="true"></i>  Leave Application</a></button>
             </div>
         </div>
         <div class="row">
@@ -46,8 +46,10 @@
                                           <td>{{$leavetype->leavename}}</td>
                                           <td>{{$leavetype->leaveday}}</td>
                                         <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="9"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=9" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                            <a href="{{ url('/leavetype/index/edit/').'/'.$leavetype->id}}" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="9"><i class="fa fa-pencil-square-o"></i></a>
+                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/leavetype/index/delete/').'/'.$leavetype->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                            {{method_field('DELETE')}}
+                                              @csrf
                                         </td>
                                     </tr>
                                 @endforeach

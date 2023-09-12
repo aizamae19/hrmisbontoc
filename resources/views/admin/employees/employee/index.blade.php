@@ -37,11 +37,8 @@
                                                 <th>Employee ID</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
-<<<<<<< HEAD
                                                 <th>Position</th>
-=======
-                                                <th>Status</th>S
->>>>>>> origin/ams
+                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>

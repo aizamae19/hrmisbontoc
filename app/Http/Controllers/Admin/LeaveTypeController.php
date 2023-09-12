@@ -25,4 +25,33 @@ class LeaveTypeController extends Controller
             return redirect()->back();
         }
     }
-}
+    public function editleavetype(Request $request){
+        $leavetype = Leavetype::where('id', $request->id)->first();
+        $leavetypes = Leavetype::orderBy('updated_at', 'asc')->get();
+
+        return view('admin.leave.leavetype.index',[
+            'leavetype'=>$leavetype,
+            'leavetypes'=>$leavetypes
+        ]);
+    }
+
+    public function updateleavetype(Request $request){
+        $Updatesave=leavetype::where('id' ,$request->id)->first();
+        $Updatesave->leavename = $request->leavename;
+        $Updatesave->leaveday = $request->leaveday;
+
+        if($Updatesave->update()) {
+            return redirect()->back()->withErrors('Updated!');
+        }
+    }
+
+    public function deleteleavetype(Request $request){
+        $Deletesave=Leavetype::where('id' ,$request->id)->first();
+        $Deletesave->leavename =$request->leavename;
+        $Deletesave->leaveday =$request->leaveday;
+
+        if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
+        }
+        }
+    }

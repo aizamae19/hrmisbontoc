@@ -84,6 +84,15 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/leave/leavetype', [App\Http\Controllers\Admin\LeaveTypeController::class, 'leavetypeleave'])->name('leave.leavetype');
             Route::post('/leave/leavetype/store', [App\Http\Controllers\Admin\LeaveTypeController::class, 'storeleavetype'])->name('leavetype.store');
 
+             //Update
+            Route::get('/leavetype/index/edit/{id}', [App\Http\Controllers\Admin\LeaveTypeController::class, 'editleavetype'])->name('leavetype.edit');
+            Route::post('/leavetype/index/edit/store', [App\Http\Controllers\Admin\LeaveTypeController::class, 'updateleavetype'])->name('leavetype.edit.store');
+
+             //Delete
+            Route::get('/leavetype/index/delete/{id}', [App\Http\Controllers\Admin\LeaveTypeController::class, 'deleteleavetype'])->name('leavetype.delete');
+            Route::post('/leavetype/index/delete', [App\Http\Controllers\Admin\LeaveTypeController::class, 'deleteleavetype'])->name('leavetype.delete');
+
+
             #LEAVE-LEAVE APPLICATION
             Route::get('/leaveapplication', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'index'])->name('leaveapplication');
 
