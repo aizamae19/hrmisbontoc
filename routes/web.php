@@ -38,8 +38,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/attendances/{employeeId}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
             // routes/web.php
 
-
-
+            Route::post('/attendances/import/csv', [App\Http\Controllers\ams\attendancesController::class, 'import_csv'])->name('importcsv');
 
 
             
@@ -107,8 +106,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #SETTINGS
             Route::get('/accountsettings', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsettings');
-
-
         });
 
        

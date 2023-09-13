@@ -8,6 +8,8 @@
                     <div class="col-12" style="margin-top: 5px;">
                        <!--  <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Save_Attendance" class="text-white"><i class="" aria-hidden="true"></i> Add Attendance </a></button> -->
                         <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="#" class="text-white" data-toggle="modal" data-target="#Bulkmodal"><i class="" aria-hidden="true"></i>  IMPORT CSV FILE </a></button>
+                       
+                        
                        <!--  <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Attendance_Report" class="text-white"><i class="" aria-hidden="true"></i> Attendance Report </a></button> -->
                     </div>
                 </div>  
@@ -28,67 +30,59 @@
                                                 <th>Am Out</th>
                                                 <th>Pm In</th>
                                                 <th>Pm Out</th>
-                                                <th>Working Hour</th>
                                                 <th>Action  </th>
                                             </tr>
                                         </thead>
                                        
                                         <tbody>
-                                           
-                                             <tr>
-                                                @if(isset($attendance))
-                                                    @foreach($attendance as $attendancelist)
-                                                <td><mark>{{$attendancelist->employee_id}}</mark></td>
-                                                <td>{{$attendancelist->date}}</td>
-                                                <td>{{$attendancelist->am_in}}</td>
-                                                <td>{{$attendancelist->am_out}}</td>
-                                                <td>{{$attendancelist->pm_in}}</td>
-                                                <td>{{$attendancelist->pm_out}}</td>
-                                                <td>{{$attendancelist->working_hours}}</td>
-                                                    @endforeach
-                                                 @endif
-                                                @if(isset($workingHoursList))
-                                                    @foreach ($workingHoursList as $entry)
-                                                <td>{{ $entry->working_hours }}</td>
-                                                    @endforeach
-                                                @endif
-                                                <td>Action</td>
-                                                <td class="jsgrid-align-center ">
-                                                    <a href="Save_Attendance?A=1014" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light" data-value="Approve" ><i class="fa fa-pencil-square-o"></i></a>
-                                                </td>
-                                            </tr>
+                                           @if(isset($attendance))
+                                                @foreach($attendance as $attendancelist)
+                                                    <tr>
+                                                        <td><mark>{{$attendancelist->employee_id}}</mark></td>
+                                                        <td>{{$attendancelist->date}}</td>
+                                                        <td>{{$attendancelist->am_in}}</td>
+                                                        <td>{{$attendancelist->am_out}}</td>
+                                                        <td>{{$attendancelist->pm_in}}</td>
+                                                        <td>{{$attendancelist->pm_out}}</td>
+                    
+                                                        <td class="jsgrid-align-center ">
+                                                            <a href="Save_Attendance?A=1014" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light" data-value="Approve" ><i class="fa fa-pencil-square-o"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            @endif
+
                                         </tbody>
                                     </table>
+                                    {!! $attendance->links() !!}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-<div id="Bulkmodal" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                           <form method="post" action="import" enctype="multipart/form-data">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title" id="myModalLabel">Add Attendance</h4>
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h4>Import CSV File<span><img src="http://hrsystem-ci.test\/assets/images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4>
-                                             
-                                            <input type="file" name="csv_file" id="csv_file" accept=".csv"><br><br>
-                                                                                        
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="submit" class="btn btn-success waves-effect">Save</button>
-                                                <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
-                                            </div>
-                                            </form>
-                                        </div>
-                                        <!-- /.modal-content -->
-                                    </div>
-                                    <!-- /.modal-dialog -->
-                                </div>                             
+                <div id="Bulkmodal" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                           <form method="post" action="{{ route('importcsv') }}" enctype="multipart/form-data">
+                                @csrf
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">Add Attendance</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Import CSV File<span><img src="http://hrsystem-ci.test\/assets/images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4>
+                                    <input type="file" name="datFile" id="csv_file" accept=".dat"><br><br>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success waves-effect">Save</button>
+                                    <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>                             
             </div>
 
             <footer class="footer"> © 2023 | Developed By GenIT Bangladesh </footer>
@@ -204,43 +198,5 @@
   
     $(".select2").select2();
     </script>
-<script type="text/javascript">
-$('form').each(function() {
-    $(this).validate({
-    submitHandler: function(form) {
-        var formval = form;
-        var url = $(form).attr('action');
-
-        // Create an FormData object
-        var data = new FormData(formval);
-        $.ajax({
-            type: "POST",
-            enctype: 'multipart/form-data',
-            // url: "crud/Add_userInfo",
-            url: url,
-            data: data,
-            processData: false,
-            contentType: false,
-            cache: false,
-            timeout: 600000,
-            success: function (response) {
-                console.log(response);            
-                $(".message").fadeIn('fast').delay(3000).fadeOut('fast').html(response);
-                $('form').trigger("reset");
-                window.setTimeout(function(){location.reload()},3000);
-            },
-            error: function (e) {
-                console.log(e);
-            }
-        });
-    }
-});
-});
-
-    </script>     
-
     <script src="http://hrsystem-ci.test\/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-</body>
-
-</html>
 @endsection
