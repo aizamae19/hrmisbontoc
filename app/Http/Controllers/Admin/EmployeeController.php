@@ -74,4 +74,12 @@ class EmployeeController extends Controller
             return redirect()->back()->withErrors('Updated!');
         }
     }
+
+    public function printPDS(Request $request)
+    {
+        $personaldatasheet = Personaldatasheets::where('id', $request->id)->first();
+        return view('admin.employees.employee.pds',[
+            ''=>  $employee
+        ]);
+    }
 }

@@ -39,7 +39,8 @@
 
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#holysmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Holiday </a></button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#holysmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Edit Holiday </a></button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{ route('leaveapplication')}}" class="text-white"><i class="" aria-hidden="true"></i>  Leave Application</a></button>
                     </div>
                 </div>  
                 <div class="row">
@@ -67,10 +68,8 @@
                                                 <td>{{$holiday->startdate}}</td>
                                                 <td>{{$holiday->enddate}}</td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="{{ url('/holiday/index/edit/').'/'.$holiday->id}}" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="1"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/holiday/index/delete/').'/'.$holiday->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
-                                                    {{method_field('DELETE')}}
-                                                    @csrf
+                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="1"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
                                                 </td>
                                                 @endforeach
                                             @endif
@@ -83,21 +82,23 @@
                                         <h4 class="modal-title" id="exampleModalLabel1">Holidays</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
-                                    <form method="post" action="{{route('holiday.store')}}" id="holidayform" enctype="multipart/form-data">
+                                    <form method="post" action="{{route('holiday.edit.store')}}" id="holidayform" enctype="multipart/form-data">
                                         @csrf
                                     <div class="modal-body">
-                                        
                                             <div class="form-group">
                                                 <label class="control-label">Name of Holiday</label>
-                                                <input type="text" name="nameofholiday" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                                <input type="hidden" name="id" value="{{$holiday->id}}">
+                                                <input type="text" name="nameofholiday" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$holiday->nameofholiday}}" required>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label">Start Date</label>
-                                                <input type="text" name="startdate" class="form-control mydatetimepickerFull" id="recipient-name1"  value="">
+                                                <input type="hidden" name="id" value="{{$holiday->id}}">
+                                                <input type="text" name="startdate" class="form-control mydatetimepickerFull" id="recipient-name1"  value="{{$holiday->startdate}}">
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label">End Date</label>
-                                                <input type="text" name="enddate" class="form-control mydatetimepickerFull" id="recipient-name1" value="">
+                                                <input type="hidden" name="id" value="{{$holiday->id}}">
+                                                <input type="text" name="enddate" class="form-control mydatetimepickerFull" id="recipient-name1" value="{{$holiday->enddate}}">
                                             </div>                                      
                                         
                                     </div>
@@ -130,13 +131,13 @@
                                                 }).done(function (response) {
                                                     console.log(response);
                                                     // Populate the form fields with the data returned from server
-													$('#holidayform').find('[name="id"]').val(response.holidayvalue.id).end();
+                                                    $('#holidayform').find('[name="id"]').val(response.holidayvalue.id).end();
                                                     $('#holidayform').find('[name="holiname"]').val(response.holidayvalue.holiday_name).end();
                                                     $('#holidayform').find('[name="startdate"]').val(response.holidayvalue.from_date).end();
                                                     $('#holidayform').find('[name="enddate"]').val(response.holidayvalue.to_date).end();
                                                     $('#holidayform').find('[name="nofdate"]').val(response.holidayvalue.number_of_days).end();
                                                     $('#holidayform').find('[name="year"]').val(response.holidayvalue.year).end();
-												});
+                                                });
                                             });
                                         });
 </script>
@@ -155,7 +156,7 @@
                                                     $(".message").fadeIn('fast').delay(3000).fadeOut('fast').html(response);
                                                     window.setTimeout(function(){location.reload()},2000)
                                                     // Populate the form fields with the data returned from server
-												});
+                                                });
                                             });
                                         });
 </script>                              
