@@ -16,6 +16,13 @@ class LeaveTypeController extends Controller
         ]);
     }
 
+    public function addleavetype(request $request){
+        $employees = Employee::get();
+        return view('admin.leave.leavetype.index', [
+            'employees'=>$employees
+        ]);
+    }
+
     public function storeleavetype(Request $request){
         $leavetypesave =new Leavetype();
         $leavetypesave->leavename = $request->leavename;
@@ -29,7 +36,7 @@ class LeaveTypeController extends Controller
         $leavetype = Leavetype::where('id', $request->id)->first();
         $leavetypes = Leavetype::orderBy('updated_at', 'asc')->get();
 
-        return view('admin.leave.leavetype.index',[
+        return view('admin.leave.leavetype.update',[
             'leavetype'=>$leavetype,
             'leavetypes'=>$leavetypes
         ]);
