@@ -159,12 +159,8 @@
                                 <li><a href="{{ route('report') }}"> Report </a></li>
                             </ul>
                         </li>
-<<<<<<< HEAD
-
                         <li> <a href="#" ><i class="mdi mdi-file-document"></i><span class="hide-menu">Personal Data Sheet<span class="hide-menu"></a></li>
                         
-=======
->>>>>>> cd7a734c89c36d1f2faf5f8e03877fd98c3b729c
                         <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-grid"></i><span class="hide-menu">Assets </span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="http://192.168.254.114/HRSystem-CI/Logistice/Assets_Category"> Assets Category </a></li>

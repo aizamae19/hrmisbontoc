@@ -20,10 +20,8 @@
         <div class="row m-b-10">
             <div class="col-12">
                 <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#leavemodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Leave Types</a></button>
-<<<<<<< HEAD
                 <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{ route('leaveapplication') }}" class="text-white"><i class="" aria-hidden="true"></i>  Leave Application</a></button>
-=======
->>>>>>> cd7a734c89c36d1f2faf5f8e03877fd98c3b729c
+
             </div>
         </div>
         <div class="row">
