@@ -44,7 +44,7 @@
                                     </div>
                                     
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Employee ID</label>
+                                        <label>Personnel Number</label>
                                         <input type="text" name="eid" class="form-control form-control-line" placeholder="8820"> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
