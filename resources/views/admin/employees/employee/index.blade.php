@@ -34,10 +34,10 @@
                                                 <th>First Name</th>
                                                 <th>Middle Name</th>
                                                 <th>Last Name</th>
-                                                <th>Employee ID</th>
+                                                <th>Personnel Number</th>
                                                 <th>Email </th>
                                                 <th>Contact </th>
-                                                <th>Position</th>
+                                                <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -48,7 +48,7 @@
                                                 <td>{{$employee->firstname}}</td>
                                                 <td>{{$employee->middlename}}</td>
                                                 <td>{{$employee->lastname}}</td>
-                                                <td>{{$employee->eid}}</td>
+                                                <td>{{$employee->pn}}</td>
                                                 <td>{{$employee->email}}</td>
                                                 <td>{{$employee->contact}}</td>
                                                 <td>{{$employee->position}}</td>

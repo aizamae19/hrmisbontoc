@@ -75,8 +75,21 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
+                                        <label>Blood Group </label>
+                                        <select name="bloodtype" class="form-control custom-select">
+                                            <option>Select Blood Group</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
                                         <label>Contact Number </label>
-                                        <input type="text" name="contact" class="form-control" value="" placeholder="" minlength="11" required> 
+                                        <input type="text" name="contactnumber" class="form-control" value="" placeholder="" minlength="11" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Person to Contact</label>
@@ -84,11 +97,11 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Personal Email </label>
-                                        <input type="email" id="example-email2" name="email" class="form-control" placeholder="email@gmail.com" minlength="7" required > 
+                                        <input type="personalemail" id="example-email2" name="email" class="form-control" placeholder="email@gmail.com" minlength="7" required > 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Corporate Email </label>
-                                        <input type="email" id="example-email2" name="email" class="form-control" placeholder="email@gmail.com" minlength="7" required > 
+                                        <input type="corporateemail" id="example-email2" name="email" class="form-control" placeholder="email@gmail.com" minlength="7" required > 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Image </label>
