@@ -40,6 +40,19 @@ class EmployeeController extends Controller
         $employeesave->persontocontact = $request->persontocontact;
         $employeesave->personalemail = $request->personalemail;
         $employeesave->corporateemail = $request->corporateemail;
+        $employeesave->course = $request ->course;
+        $employeesave->graduate = $request ->graduate;
+        $employeesave->csc = $request ->csc;
+        $employeesave->dateofissuance = $request ->dateofissuance;
+        $employeesave->dateofvalidity = $request ->dateofvalidity;
+        $employeesave->personnel = $request ->personnel;
+        $employeesave->status = $request ->status;
+        $employeesave->position = $request ->position;
+        $employeesave->dateofjoining = $request ->dateofjoining;
+        $employeesave->dateofleaving = $request ->dateofleaving;
+        $employeesave->dateofretirement = $request ->dateofretirement;
+        $employeesave->salary = $request ->salary;
+        $employeesave->step = $request ->step;
 
         if($employeesave->save()) {
             return redirect()->back();
