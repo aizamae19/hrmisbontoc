@@ -30,15 +30,16 @@ class EmployeeController extends Controller
         $employeesave->firstname = $request->firstname;
         $employeesave->middlename = $request->middlename;
         $employeesave->lastname = $request->lastname;
-        $employeesave->eid = $request->eid;
-        $employeesave->position = $request->position;
+        $employeesave->suffix = $request->suffix;
+        $employeesave->address = $request->address;
+        $employeesave->maritalstatus = $request->maritalstatus;
+        $employeesave->dateofbirth = $request->dateofbirth;
         $employeesave->gender = $request->gender;
         $employeesave->bloodtype = $request->bloodtype;
-        $employeesave->contact = $request->contact;
-        $employeesave->dateofbirth = $request->dateofbirth;
-        $employeesave->joindate = $request->joindate;
-        $employeesave->username = $request->username;
-        $employeesave->email = $request->email;
+        $employeesave->contactnumber = $request->contactnumber;
+        $employeesave->persontocontact = $request->persontocontact;
+        $employeesave->personalemail = $request->personalemail;
+        $employeesave->corporateemail = $request->corporateemail;
 
         if($employeesave->save()) {
             return redirect()->back();
@@ -60,26 +61,19 @@ class EmployeeController extends Controller
         $Updatesave->firstname = $request->firstname;
         $Updatesave->middlename = $request->middlename;
         $Updatesave->lastname = $request->lastname;
-        $Updatesave->eid = $request->eid;
-        $Updatesave->position = $request->position;
+        $Updatesave->suffix = $request->suffix;
+        $Updatesave->address = $request->address;
+        $Updatesave->maritalstatus = $request->maritalstatus;
+        $Updatesave->dateofbirth = $request->dateofbirth;
         $Updatesave->gender = $request->gender;
         $Updatesave->bloodtype = $request->bloodtype;
-        $Updatesave->contact = $request->contact;
-        $Updatesave->dateofbirth = $request->dateofbirth;
-        $Updatesave->joindate = $request->joindate;
-        $Updatesave->username = $request->username;
-        $Updatesave->email = $request->email;
+        $Updatesave->contactnumber = $request->contactnumber;
+        $Updatesave->persontocontact = $request->persontocontact;
+        $Updatesave->personalemail = $request->personalemail;
+        $Updatesave->corporateemail = $request->corporateemail;
 
         if($Updatesave->update()) {
             return redirect()->back()->withErrors('Updated!');
         }
-    }
-
-    public function printPDS(Request $request)
-    {
-        $personaldatasheet = Personaldatasheets::where('id', $request->id)->first();
-        return view('admin.employees.employee.pds',[
-            ''=>  $employee
-        ]);
     }
 }

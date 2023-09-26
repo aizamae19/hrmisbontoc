@@ -48,11 +48,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Suffix</label>
-                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2" required> 
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Personnel Number</label>
-                                        <input type="text" name="personnelnumber" class="form-control form-control-line" placeholder=""> 
+                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Address</label>
@@ -97,11 +93,11 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Personal Email </label>
-                                        <input type="personalemail" id="example-email2" name="email" class="form-control" placeholder="email@gmail.com" minlength="7" required > 
+                                        <input type="email" id="example-email2" name="personalemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" required > 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Corporate Email </label>
-                                        <input type="corporateemail" id="example-email2" name="email" class="form-control" placeholder="email@gmail.com" minlength="7" required > 
+                                        <input type="email" id="example-email2" name="corporateemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" required > 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Image </label>

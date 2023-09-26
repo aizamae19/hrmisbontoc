@@ -34,10 +34,16 @@
                                                 <th>First Name</th>
                                                 <th>Middle Name</th>
                                                 <th>Last Name</th>
-                                                <th>Personnel Number</th>
-                                                <th>Email </th>
-                                                <th>Contact </th>
-                                                <th>Status</th>
+                                                <th>Suffix</th>
+                                                <th>Address</th>
+                                                <th>Marital Status</th>
+                                                <th>Birthdate</th>
+                                                <th>Gender</th>
+                                                <th>Blood Type</th>
+                                                <th>Contact Number</th>
+                                                <th>Person to Contact</th>
+                                                <th>Personal Email</th>
+                                                <th>Corporate Email</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -48,13 +54,18 @@
                                                 <td>{{$employee->firstname}}</td>
                                                 <td>{{$employee->middlename}}</td>
                                                 <td>{{$employee->lastname}}</td>
-                                                <td>{{$employee->pn}}</td>
-                                                <td>{{$employee->email}}</td>
-                                                <td>{{$employee->contact}}</td>
-                                                <td>{{$employee->position}}</td>
+                                                <td>{{$employee->suffix}}</td>
+                                                <td>{{$employee->address}}</td>
+                                                <td>{{$employee->maritalstatus}}</td>
+                                                <td>{{$employee->dateofbirth}}</td>
+                                                <td>{{$employee->gender}}</td>
+                                                <td>{{$employee->bloodtype}}</td>
+                                                <td>{{$employee->contactnumber}}</td>
+                                                <td>{{$employee->persontocontact}}</td>
+                                                <td>{{$employee->personalemail}}</td>
+                                                <td>{{$employee->corporateemail}}</td>
                                                 <td class="jsgrid-align-center ">
                                                     <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <button data-url="{{ url('/employee/pds/printpds').'/'.$employee->id }}" title="print PDS" class="btn btn-sm btn-primary waves-effect waves-light printPDS"><i class="fa fa-print"></i></button>
                                                 </td>
                                             </tr>
                                              @endforeach

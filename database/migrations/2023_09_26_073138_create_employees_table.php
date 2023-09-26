@@ -16,15 +16,14 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('middlename')->nullable();
             $table->string('lastname');
-            $table->string('suffix');
-            $table->string('personnelnumber');
+            $table->string('suffix')->nullable();
             $table->string('address');
             $table->string('maritalstatus');
             $table->date('dateofbirth');
             $table->string('gender');
             $table->string('bloodtype');
-            $table->integer('contactnumber')->unique();
-            $table->integer('persontocontact')->unique();
+            $table->string('contactnumber')->unique();
+            $table->string('persontocontact')->unique();
             $table->string('personalemail')->unique();
             $table->string('corporateemail')->unique();
             $table->timestamps();
