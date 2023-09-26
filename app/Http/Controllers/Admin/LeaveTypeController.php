@@ -17,9 +17,9 @@ class LeaveTypeController extends Controller
     }
 
     public function addleavetype(request $request){
-        $employees = Employee::get();
+        $leavetypes = Leavetype::get();
         return view('admin.leave.leavetype.index', [
-            'employees'=>$employees
+            'leavetypes'=>$leavetypes
         ]);
     }
 

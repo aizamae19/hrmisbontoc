@@ -48,7 +48,7 @@
                                           <td>{{$leavetype->leaveday}}</td>
                                         <td class="jsgrid-align-center ">
                                             <a href="{{ url('/leavetype/index/edit/').'/'.$leavetype->id}}" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="9"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/leavetype/index/delete/').'/'.$leavetype->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                            <a onclick="confirm('Are you sure you want to delete this?')" href="{{ url('/leavetype/index/delete/').'/'.$leavetype->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
                                             {{method_field('DELETE')}}
                                               @csrf
                                         </td>
