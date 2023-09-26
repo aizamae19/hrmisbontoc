@@ -60,7 +60,7 @@
                                         </thead>
                                         <tbody>
                                              @if(isset($leavetypes))
-                                         @foreach($leavetypes as $leavetype)
+                                                @foreach($leavetypes as $leavetype)
                                                 <tr>
                                                    <td>{{$leavetype->leavename}}</td>
                                                   <td>{{$leavetype->leaveday}}</td>

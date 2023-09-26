@@ -119,7 +119,7 @@
 
                     <!-- User profile text-->
                     <div class="profile-text">
-                        <h5></h5>
+                        <h5 style="color: #ffffff;">Admin</h5>
                         <a href="{{ route('accountsettings')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                         <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
                     </div>
