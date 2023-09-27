@@ -26,6 +26,20 @@ return new class extends Migration
             $table->string('persontocontact')->unique();
             $table->string('personalemail')->unique();
             $table->string('corporateemail')->unique();
+            $table->string('course');
+            $table->string('graduate');
+            $table->string('csc');
+            $table->date('dateofissuance');
+            $table->date('dateofvalidity');
+            $table->string('personnel');
+            $table->string('status');
+            $table->string('position');
+            $table->date('dateofjoining');
+            $table->date('dateofleaving');
+            $table->date('dateofretirement');
+            $table->string('salary');
+            $table->string('step');
+
             $table->timestamps();
         });
     }
