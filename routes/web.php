@@ -35,32 +35,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/printdtr', [App\Http\Controllers\ams\PrintDTRController::class, 'index'])->name('printdtr.index');
             Route::get('/printdtr/{id}/{dateFrom}/{dateTo}', [App\Http\Controllers\ams\PrintDTRController::class, 'printdtr'])->name('printdtr');
 
-            
-            #ORGANIZATION-DEPARTMENT
-            
-            Route::get('/organization/department', [App\Http\Controllers\Admin\DepartmentController::class, 'departmentorganization'])->name('organization.department');
-            Route::post('/organization/department/store', [App\Http\Controllers\Admin\DepartmentController::class, 'storeorganization'])->name('organization.store');
-
-            //Update
-            Route::get('/index/edit/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'editorganization'])->name('organization.edit');
-            Route::post('/index/edit/store', [App\Http\Controllers\Admin\DepartmentController::class, 'updateorganization'])->name('organization.edit.store');
-
-            //Delete
-            Route::get('/index/delete/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
-            Route::post('/index/delete', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
-
-            #ORGANIZATION-DESIGNATION
-            Route::get('/organization/designation', [App\Http\Controllers\Admin\DesignationController::class, 'designationorganization'])->name('organization.designation');
-            Route::post('/organization/designation/store', [App\Http\Controllers\Admin\DesignationController::class, 'storedesignation'])->name('designation.store');
-
-            //Update
-            Route::get('/designation/index/edit/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'editdesignation'])->name('designation.edit');
-            Route::post('/designation/index/edit/store', [App\Http\Controllers\Admin\DesignationController::class, 'updatedesignation'])->name('designation.edit.store');
-
-            //Delete
-            Route::get('/designation/index/delete/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('designation.delete');
-            Route::post('/designation/index/delete', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('organization.delete');
-
             #EMPLOYEES-EMPLOYEE
             Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
 
@@ -91,19 +65,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             //Delete
             Route::get('/holiday/index/delete/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'deleteholiday'])->name('holiday.delete');
             Route::post('/holiday/index/delete', [App\Http\Controllers\Admin\HolidayController::class, 'deleteholiday'])->name('holiday.delete');
-
-            #LEAVE-LEAVE TYPE
-            Route::get('/leave/leavetype', [App\Http\Controllers\Admin\LeaveTypeController::class, 'leavetypeleave'])->name('leave.leavetype');
-            Route::post('/leave/leavetype/store', [App\Http\Controllers\Admin\LeaveTypeController::class, 'storeleavetype'])->name('leavetype.store');
-
-             //Update
-            Route::get('/leavetype/index/edit/{id}', [App\Http\Controllers\Admin\LeaveTypeController::class, 'editleavetype'])->name('leavetype.edit');
-            Route::post('/leavetype/index/edit/store', [App\Http\Controllers\Admin\LeaveTypeController::class, 'updateleavetype'])->name('leavetype.edit.store');
-
-             //Delete
-            Route::get('/leavetype/index/delete/{id}', [App\Http\Controllers\Admin\LeaveTypeController::class, 'deleteleavetype'])->name('leavetype.delete');
-            Route::post('/leavetype/index/delete', [App\Http\Controllers\Admin\LeaveTypeController::class, 'deleteleavetype'])->name('leavetype.delete');
-
 
             #LEAVE-LEAVE APPLICATION
             Route::get('/leaveapplication', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'index'])->name('leaveapplication');

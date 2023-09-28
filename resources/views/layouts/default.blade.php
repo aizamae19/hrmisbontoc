@@ -1,5 +1,4 @@
-
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -130,12 +129,6 @@
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li> <a href="{{ route('admindashboard')}}" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-building-o"></i><span class="hide-menu">Organization </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('organization.department') }}">Department </a></li>
-                                <li><a href="{{route('organization.designation')}}">Designation</a></li>
-                            </ul>
-                        </li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employees</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('employee.employees') }}">Employees</a></li>
@@ -153,7 +146,6 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-off"></i><span class="hide-menu">Leave </span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('leave.holiday') }}"> Holiday </a></li>
-                                <li><a href="{{ route('leave.leavetype') }}"> Leave Type</a></li>
                                 <li><a href="{{ route('leaveapplication') }}"> Leave Application </a></li>
                                 <li><a href="{{ route('leave.earnedleave') }}"> Earned Leave </a></li>
                                 <li><a href="{{ route('report') }}"> Report </a></li>
