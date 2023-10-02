@@ -106,7 +106,7 @@
                                 </form>
                                     <br>
                                     <div>
-                                    <h3 style="padding-left: 20px;">Educational Background</h3>
+                                    <h3>Educational Background</h3>
                                 </div>
                                 <div class="card-body">
                                 @include('layouts.partials.messages')
@@ -135,7 +135,7 @@
                                 </form>
                                  <br>
                                     <div>
-                                    <h3 style="padding-left: 20px;">Work Background</h3>
+                                    <h3>Work Background</h3>
                                 </div>
                                 <div class="card-body">
                                 @include('layouts.partials.messages')
