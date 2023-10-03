@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('contactnumber')->unique();
             $table->string('persontocontact')->unique();
             $table->string('personalemail')->unique();
-            $table->string('corporateemail')->unique();
+            $table->string('corporateemail');
 
             $table->timestamps();
         });

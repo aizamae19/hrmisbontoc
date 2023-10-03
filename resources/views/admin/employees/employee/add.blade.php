@@ -103,15 +103,10 @@
                                         <label>Image </label>
                                         <input type="file" name="image" class="form-control" value=""> 
                                     </div>
-                                </form>
                                     <br>
                                     <div>
-                                    <h3>Educational Background</h3>
-                                </div>
-                                <div class="card-body">
-                                @include('layouts.partials.messages')
-                                <form class="row" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
-                                    @csrf
+                                        <h3>Educational Background</h3>
+                                    </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Course</label>
                                         <input type="text" name="course" class="form-control form-control-line" minlength="2" required > 
@@ -132,15 +127,10 @@
                                         <label>Date Of Validity PRC ID </label>
                                         <input type="date" name="dateofvalidity" id="example-email2" name="example-email" class="form-control" placeholder="" required>
                                     </div>
-                                </form>
                                  <br>
                                     <div>
                                     <h3>Work Background</h3>
                                 </div>
-                                <div class="card-body">
-                                @include('layouts.partials.messages')
-                                <form class="row" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
-                                    @csrf
                                      <div class="form-group col-md-3 m-t-20">
                                         <label>Personnel ID</label>
                                         <input type="text" id="" name="personnel" class="form-control form-control-line" value="" minlength="2" required> 
@@ -195,9 +185,9 @@
                                             <option value="18">18</option>
                                             <option value="19">19</option>
                                             <option value="20">20</option>
-                                            <option value="21">1</option>
-                                            <option value="22">2</option>
-                                            <option value="23">3</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
                                             <option value="24">24</option>
                                             <option value="25">25</option>
                                             <option value="26">26</option>
