@@ -47,8 +47,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/employee/index/edit/store', [App\Http\Controllers\Admin\EmployeeController::class, 'updateemployee'])->name('employee.edit.store');
 
             //printPDS
-            Route::get('/employee/pds/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'printPDS'])->name('print.PDS');
-            Route::get('/employee/pds', [App\Http\Controllers\Admin\EmployeeController::class, 'printPDS'])->name('print.PDS');
+            Route::get('/employee/pds/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'printpds'])->name('print.pds');
+            Route::get('/employee/pds', [App\Http\Controllers\Admin\EmployeeController::class, 'printpds'])->name('print.pds');
 
             
             #EMPLOYEES-INACTIVE USER
