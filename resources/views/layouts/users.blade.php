@@ -44,7 +44,9 @@
     <div id="main-wrapper">
         <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
-                <div class="navbar-header">
+                <div cl
+
+                ass="navbar-header">
                     <a class="navbar-brand" href=""><b>
                         <img src="{{asset('assets/images/logo.jpg')}}" alt="DRI" style="width:50px; border-radius: 100px;"/>
                         </b>
@@ -130,18 +132,13 @@
                         <li class="nav-devider"></li>
                         <li> <a href="{{ route('admindashboard')}}" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-building-o"></i><span class="hide-menu">Organization </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('organization.department') }}">Department </a></li>
-                                <li><a href="{{route('organization.designation')}}">Designation</a></li>
-                            </ul>
                         </li>
+                      
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employees</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('employee.employees') }}">Employees</a></li>
-                                <li><a href="{{ route('inactiveuser') }}">Inactive Employee</a></li>
-                            </ul>
                         </li>          
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
+                          
+
                             <ul aria-expanded="false" class="collapse">
                              <li><a href="{{ route('printdtr.index') }}">Print DTR </a></li>
                                 <!-- <li><a href="http://192.168.254.114/HRSystem-CI/attendance/Save_Attendance">Add Attendance </a></li>
@@ -156,6 +153,9 @@
                                 <li><a href="{{ route('leaveapplication') }}"> Leave Application </a></li>
                                 <li><a href="{{ route('leave.earnedleave') }}"> Earned Leave </a></li>
                                 <li><a href="{{ route('report') }}"> Report </a></li>
+
+
+                                
                             </ul>
                         </li>
 

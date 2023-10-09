@@ -68,7 +68,7 @@
                                                 <td>{{$holiday->enddate}}</td>
                                                 <td class="jsgrid-align-center ">
                                                     <a href="{{ url('/holiday/index/edit/').'/'.$holiday->id}}" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="1"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/holiday/index/delete/').'/'.$holiday->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
+                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/holiday/index/delete').'/'.$holiday->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
                                                     {{method_field('DELETE')}}
                                                     @csrf
                                                 </td>
