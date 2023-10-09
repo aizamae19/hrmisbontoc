@@ -49,23 +49,18 @@
                                 </thead>
                                 <tbody>
                                      <tr style="vertical-align:top">
-                                        <td><span>Michael Johnson</span></td>
-                                        <td>8829</td>
-                                        <td>Casual Leave</td>
-                                        <td>3rd of January 2022</td>
-                                        <td>2022-01-03</td>
+                                        <td><span></span></td>
                                         <td></td>
-                                        <td>
-                                            
-                                            <!-- Duration filtering -->
-                                            2 hours 
-                                        </td>
-                                        <td>Not Approve</td>
-                                         
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td class="jsgrid-align-center">
                                             
-               <a href="" title="Edit" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
-             <a href="" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
+                                            <a href="" title="Edit" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
+                                            <a href="" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
           <br> 
 
               <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
@@ -93,34 +88,18 @@
                                      <input type="text" name="employeename" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
                                 </div>
                                 <div class="form-group">
+                                    <label>Date of Filing</label>
+                                     <input type="date" name="dateoffiling" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Position</label>
+                                     <input type="text" name="position" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
+                                </div>
+                                <div class="form-group">
                                     <label>Leave Type</label>
                                     <select class="form-control custom-select assignleave"  tabindex="1" name="typeid" id="leavetype" required>
                                         <option value="">Select Here..</option>
-                                        
-                                        <option value="9">Leave without Pay</option>
-
-                                        
-                                        <option value="8">Optional Leave</option>
-
-                                        
-                                        <option value="7">Public Holiday</option>
-
-                                        
-                                        <option value="5">Earned leave</option>
-
-                                        
-                                        <option value="4">Paternal Leave</option>
-
-                                        
-                                        <option value="3">Maternity Leave</option>
-
-                                        
-                                        <option value="2">Sick Leave</option>
-
-                                        
-                                        <option value="1">Casual Leave</option>
-
-                                                                            </select>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <span style="color:red" id="total"></span>

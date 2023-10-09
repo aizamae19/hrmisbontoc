@@ -24,21 +24,43 @@ class EmployeeController extends Controller
         ]);
     }
 
+    public function printpds(Request $request){
+        $employees = Employee::where('id', $request->id)->get();
+        return view('admin.employees.employee.pds', [
+            'employees'=>$employees
+        ]);
+    }
+
 
     public function storeemployee(Request $request){ 
         $employeesave =new Employee();
         $employeesave->firstname = $request->firstname;
         $employeesave->middlename = $request->middlename;
         $employeesave->lastname = $request->lastname;
-        $employeesave->eid = $request->eid;
-        $employeesave->position = $request->position;
+        $employeesave->suffix = $request->suffix;
+        $employeesave->address = $request->address;
+        $employeesave->maritalstatus = $request->maritalstatus;
+        $employeesave->dateofbirth = $request->dateofbirth;
         $employeesave->gender = $request->gender;
         $employeesave->bloodtype = $request->bloodtype;
-        $employeesave->contact = $request->contact;
-        $employeesave->dateofbirth = $request->dateofbirth;
-        $employeesave->joindate = $request->joindate;
-        $employeesave->username = $request->username;
-        $employeesave->email = $request->email;
+        $employeesave->contactnumber = $request->contactnumber;
+        $employeesave->persontocontact = $request->persontocontact;
+        $employeesave->personalemail = $request->personalemail;
+        $employeesave->corporateemail = $request->corporateemail;
+        $employeesave->course = $request ->course;
+        $employeesave->graduate = $request ->graduate;
+        $employeesave->csc = $request ->csc;
+        $employeesave->dateofissuance = $request ->dateofissuance;
+        $employeesave->dateofvalidity = $request ->dateofvalidity;
+        $employeesave->personnel = $request ->personnel;
+        $employeesave->status = $request ->status;
+        $employeesave->department = $request ->department;
+        $employeesave->position = $request ->position;
+        $employeesave->dateofjoining = $request ->dateofjoining;
+        $employeesave->dateofleaving = $request ->dateofleaving;
+        $employeesave->dateofretirement = $request ->dateofretirement;
+        $employeesave->salary = $request ->salary;
+        $employeesave->step = $request ->step;
 
         if($employeesave->save()) {
             return redirect()->back();
@@ -60,15 +82,30 @@ class EmployeeController extends Controller
         $Updatesave->firstname = $request->firstname;
         $Updatesave->middlename = $request->middlename;
         $Updatesave->lastname = $request->lastname;
-        $Updatesave->eid = $request->eid;
-        $Updatesave->position = $request->position;
+        $Updatesave->suffix = $request->suffix;
+        $Updatesave->address = $request->address;
+        $Updatesave->maritalstatus = $request->maritalstatus;
+        $Updatesave->dateofbirth = $request->dateofbirth;
         $Updatesave->gender = $request->gender;
         $Updatesave->bloodtype = $request->bloodtype;
-        $Updatesave->contact = $request->contact;
-        $Updatesave->dateofbirth = $request->dateofbirth;
-        $Updatesave->joindate = $request->joindate;
-        $Updatesave->username = $request->username;
-        $Updatesave->email = $request->email;
+        $Updatesave->contactnumber = $request->contactnumber;
+        $Updatesave->persontocontact = $request->persontocontact;
+        $Updatesave->personalemail = $request->personalemail;
+        $Updatesave->corporateemail = $request->corporateemail;
+        $Updatesave->course = $request ->course;
+        $Updatesave->graduate = $request ->graduate;
+        $Updatesave->csc = $request ->csc;
+        $Updatesave->dateofissuance = $request ->dateofissuance;
+        $Updatesave->dateofvalidity = $request ->dateofvalidity;
+        $Updatesave->personnel = $request ->personnel;
+        $Updatesave->status = $request ->status;
+        $Updatesave->department = $request ->department;
+        $Updatesave->position = $request ->position;
+        $Updatesave->dateofjoining = $request ->dateofjoining;
+        $Updatesave->dateofleaving = $request ->dateofleaving;
+        $Updatesave->dateofretirement = $request ->dateofretirement;
+        $Updatesave->salary = $request ->salary;
+        $Updatesave->step = $request ->step;
 
         if($Updatesave->update()) {
             return redirect()->back()->withErrors('Updated!');

@@ -41,32 +41,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/attendances/import/csv', [App\Http\Controllers\ams\attendancesController::class, 'import_csv'])->name('importcsv');
 
 
-            
-            #ORGANIZATION-DEPARTMENT
-            
-            Route::get('/organization/department', [App\Http\Controllers\Admin\DepartmentController::class, 'departmentorganization'])->name('organization.department');
-            Route::post('/organization/department/store', [App\Http\Controllers\Admin\DepartmentController::class, 'storeorganization'])->name('organization.store');
-
-            //Update
-            Route::get('/index/edit/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'editorganization'])->name('organization.edit');
-            Route::post('/index/edit/store', [App\Http\Controllers\Admin\DepartmentController::class, 'updateorganization'])->name('organization.edit.store');
-
-            //Delete
-            Route::get('/index/delete/{id}', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
-            Route::post('/index/delete', [App\Http\Controllers\Admin\DepartmentController::class, 'deleteorganization'])->name('organization.delete');
-
-            #ORGANIZATION-DESIGNATION
-            Route::get('/organization/designation', [App\Http\Controllers\Admin\DesignationController::class, 'designationorganization'])->name('organization.designation');
-            Route::post('/organization/designation/store', [App\Http\Controllers\Admin\DesignationController::class, 'storedesignation'])->name('designation.store');
-
-            //Update
-            Route::get('/designation/index/edit/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'editdesignation'])->name('designation.edit');
-            Route::post('/designation/index/edit/store', [App\Http\Controllers\Admin\DesignationController::class, 'updatedesignation'])->name('designation.edit.store');
-
-            //Delete
-            Route::get('/designation/index/delete/{id}', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('designation.delete');
-            Route::post('/designation/index/delete', [App\Http\Controllers\Admin\DesignationController::class, 'deletedesignation'])->name('organization.delete');
-
             #EMPLOYEES-EMPLOYEE
             Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
 
@@ -78,6 +52,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/employee/index/edit/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'editemployee'])->name('employee.edit');
             Route::post('/employee/index/edit/store', [App\Http\Controllers\Admin\EmployeeController::class, 'updateemployee'])->name('employee.edit.store');
 
+            //printPDS
+            Route::get('/employee/pds/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'printpds'])->name('print.pds');
+            Route::get('/employee/pds', [App\Http\Controllers\Admin\EmployeeController::class, 'printpds'])->name('print.pds');
+
             
             #EMPLOYEES-INACTIVE USER
             Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
@@ -86,9 +64,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
            Route::get('/leave/holiday', [App\Http\Controllers\Admin\HolidayController::class, 'holidayleave'])->name('leave.holiday');
             Route::post('/leave/holiday/store', [App\Http\Controllers\Admin\HolidayController::class, 'storeholiday'])->name('holiday.store');
 
-            #LEAVE-LEAVE TYPE
-            Route::get('/leave/leavetype', [App\Http\Controllers\Admin\LeaveTypeController::class, 'leavetypeleave'])->name('leave.leavetype');
-            Route::post('/leave/leavetype/store', [App\Http\Controllers\Admin\LeaveTypeController::class, 'storeleavetype'])->name('leavetype.store');
+            //Update
+            Route::get('/holiday/index/edit/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'updateholiday'])->name('holiday.edit');
+            Route::post('/holiday/index/edit/store', [App\Http\Controllers\Admin\HolidayController::class, 'updateholiday'])->name('holiday.edit.store');
+
+            //Delete
+            Route::get('/holiday/index/delete/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'deleteholiday'])->name('holiday.delete');
+            Route::post('/holiday/index/delete', [App\Http\Controllers\Admin\HolidayController::class, 'deleteholiday'])->name('holiday.delete');
 
             #LEAVE-LEAVE APPLICATION
             Route::get('/leaveapplication', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'index'])->name('leaveapplication');
@@ -111,7 +93,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
        
         #USER
         Route::group(['middleware' => ['user']], function () {
-            Route::get('/user', [App\Http\Controllers\Cashier\UserController::class, 'index'])->name('userdashboard');
+            Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
         });
 
 

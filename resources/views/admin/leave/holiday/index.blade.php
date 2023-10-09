@@ -39,9 +39,8 @@
 
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                                            <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#holysmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Holiday </a></button>
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{ route('leaveapplication')}}" class="text-white"><i class="" aria-hidden="true"></i>  Leave Application</a></button>
-                                            </div>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#holysmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Holiday </a></button>
+                    </div>
                 </div>  
                 <div class="row">
                     <div class="col-12">
@@ -68,8 +67,10 @@
                                                 <td>{{$holiday->startdate}}</td>
                                                 <td>{{$holiday->enddate}}</td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="1"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="#" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
+                                                    <a href="{{ url('/holiday/index/edit/').'/'.$holiday->id}}" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="1"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/holiday/index/delete').'/'.$holiday->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
+                                                    {{method_field('DELETE')}}
+                                                    @csrf
                                                 </td>
                                                 @endforeach
                                             @endif

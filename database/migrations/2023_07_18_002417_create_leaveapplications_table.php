@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('leaveapplications', function (Blueprint $table) {
             $table->id();
             $table->string('employeename');
+            $table->date('dateoffiling');
+            $table->integer('positionid');
+            $table->integer('leavenameid');
+            $table->string('reason');
             $table->timestamps();
         });
     }
