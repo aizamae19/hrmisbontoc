@@ -25,7 +25,6 @@
                             <div class="card-header">
                                 <h4 class="m-b-0 text-white"><i class="fa fa-user-o" aria-hidden="true"></i> Add New Employee<span class="pull-right " ></span></h4>
                             </div>
-
                                 <br>
                                 <div>
                                     <h3 style="padding-left: 20px;">Personal Background</h3>
@@ -40,7 +39,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Middle Name</label>
-                                        <input type="text" id="" name="middlename" class="form-control form-control-line" value="" minlength="2" required> 
+                                        <input type="text" id="" name="middlename" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Last Name </label>
@@ -56,7 +55,15 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Marital Status</label>
-                                        <input type="text" name="maritalstatus" class="form-control form-control-line" minlength="2" required > 
+                                        <select name="maritalstatus" class="form-control custom-select" required>
+                                            <option>Select Marital Status</option>
+                                            <option value="Married">Married</option>
+                                            <option value="Common-Law Married">Common-Law Married</option>
+                                            <option value="Widowed">Widowed</option>
+                                            <option value="Separated">Separated</option>
+                                            <option value="Divorced">Divorced</option>
+                                            <option value="Single">Single</option>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Birth </label>
@@ -103,15 +110,11 @@
                                         <label>Image </label>
                                         <input type="file" name="image" class="form-control" value=""> 
                                     </div>
-                                </form>
                                     <br>
-                                    <div>
-                                    <h3 style="padding-left: 20px;">Educational Background</h3>
-                                </div>
-                                <div class="card-body">
-                                @include('layouts.partials.messages')
-                                <form class="row" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
-                                    @csrf
+                                    <div class="col-md-12">
+                                  <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
+                                   </div>
+                                    <br>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Course</label>
                                         <input type="text" name="course" class="form-control form-control-line" minlength="2" required > 
@@ -132,15 +135,11 @@
                                         <label>Date Of Validity PRC ID </label>
                                         <input type="date" name="dateofvalidity" id="example-email2" name="example-email" class="form-control" placeholder="" required>
                                     </div>
-                                </form>
                                  <br>
-                                    <div>
-                                    <h3 style="padding-left: 20px;">Work Background</h3>
-                                </div>
-                                <div class="card-body">
-                                @include('layouts.partials.messages')
-                                <form class="row" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
-                                    @csrf
+                                <div class="col-md-12">
+                                  <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Work Background</h3>
+                                   </div>
+                                <br>
                                      <div class="form-group col-md-3 m-t-20">
                                         <label>Personnel ID</label>
                                         <input type="text" id="" name="personnel" class="form-control form-control-line" value="" minlength="2" required> 
@@ -155,9 +154,47 @@
                                             <option value="Co-Terminous">Co-Terminous</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                     <div class="form-group col-md-3 m-t-20">
+                                        <label>Department</label>
+                                        <select name="department" class="form-control custom-select">
+                                            <option>Select Department</option>
+                                            <option value="Office of the Mayor">Office of the Mayor</option>
+                                            <option value="Office of the Vice-Mayor">Office of the Vice-Mayor</option>
+                                            <option value="Office of the Sangguniang Bayan">Office of the Sangguniang Bayan</option>
+                                            <option value="Office of the Municipal Plannig and Development Coordinator">Office of the Municipal Planning and Development Coordinator</option>
+                                            <option value="Office of the Municipal Budget Officer">Office of the Municipal Budget Officer</option>
+                                            <option value="Office of the Municipal Accountant">Office of the Municipal Accountant</option>
+                                            <option value="Office of the Municipal Treasurer">Office of the Municipal Treasurer</option>
+                                            <option value="Office of the Municipal Assessor">Office of the Municipal Assessor</option>
+                                             <option value="Rural Health Unit">Rural Health Unit</option>
+                                            <option value="Office of the Civil Registrar">Office of the Civil Registrar</option>
+                                            <option value="Municipal Social Welfare and Development Office">Municipal Social Welfare and Development Office</option>
+                                            <option value="Municipal Agricultural Services Office">Municipal Agricultural Services Office</option>
+                                            <option value="Office of the Municipal Engineer">Office of the Municipal Engineer</option>
+                                            <option value="Human Resource Management Office">Human Resource Management Office</option>
+                                        </select>
+                                    </div>
+                                      <div class="form-group col-md-3 m-t-20">
                                         <label>Position Title</label>
-                                        <input type="text" id="" name="position" class="form-control form-control-line" value="" minlength="2" required> 
+                                        <select name="position" class="form-control custom-select">
+                                            <option>Select Position Title</option>
+                                            <option value="Municipal Government Department Head I">Municipal Government Department Head I</option>
+                                            <option value="Registration Officer II">Registration Officer II</option>
+                                            <option value="Social Welfare Officer II">Social Welfare Officer II</option>
+                                            <option value="Administrative Assistant II">Administrative Assistant II</option>
+                                            <option value="Day Care Worker I">Day Care Worker I</option>
+                                            <option value="Municipal Agriculturist I">Municipal Agriculturist I</option>
+                                            <option value="Agricultural Technologist">Agricultural Technologist</option>
+                                            <option value="Agricultural Technician II">Agricultural Technician II</option>
+                                            <option value="Administrative Aide I">dministrative Aide I</option>
+                                            <option value="Engineer II">Engineer II</option>
+                                            <option value="Administrative Aide II">Administrative Aide II</option>
+                                            <option value="Administrative Aide III">Administrative Aide III</option>
+                                            <option value="Mechanic II">Mechanic II</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Joining</label>
@@ -195,9 +232,9 @@
                                             <option value="18">18</option>
                                             <option value="19">19</option>
                                             <option value="20">20</option>
-                                            <option value="21">1</option>
-                                            <option value="22">2</option>
-                                            <option value="23">3</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
                                             <option value="24">24</option>
                                             <option value="25">25</option>
                                             <option value="26">26</option>

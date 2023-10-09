@@ -26,7 +26,6 @@
                             <div class="card-header">
                                 <h4 class="m-b-0 text-white"><i class="fa fa-user-o" aria-hidden="true"></i> Employee List</h4>
                             </div>
-                            <div class="card-body">
                                 <div class="table-responsive ">
                                     <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
@@ -44,6 +43,20 @@
                                                 <th>Person to Contact</th>
                                                 <th>Personal Email</th>
                                                 <th>Corporate Email</th>
+                                                <th>Course</th>
+                                                <th>Graduate Studies</th>
+                                                <th>CSC Professional Eligibility</th>
+                                                <th>Date of Issuance PRC ID</th>
+                                                <th>Date of Validity PRC ID</th>
+                                                <th>Personnel ID</th>
+                                                <th>Status</th>
+                                                <th>Department</th>
+                                                <th>Position Title</th>
+                                                <th>Date of Joining</th>
+                                                <th>Date of Leaving</th>
+                                                <th>Date of Mandatory Retirement</th>
+                                                <th>Salary Grade</th>
+                                                <th>Step</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -64,8 +77,23 @@
                                                 <td>{{$employee->persontocontact}}</td>
                                                 <td>{{$employee->personalemail}}</td>
                                                 <td>{{$employee->corporateemail}}</td>
+                                                <td>{{$employee->course}}</td>
+                                                <td>{{$employee->graduate}}</td>
+                                                <td>{{$employee->csc}}</td>
+                                                <td>{{$employee->dateofissuance}}</td>
+                                                <td>{{$employee->dateofvalidity}}</td>
+                                                <td>{{$employee->personnel}}</td>
+                                                <td>{{$employee->status}}</td>
+                                                <td>{{$employee->department}}</td>
+                                                <td>{{$employee->position}}</td>
+                                                <td>{{$employee->dateofjoining}}</td>
+                                                <td>{{$employee->dateofleaving}}</td>
+                                                <td>{{$employee->dateofretirement}}</td>
+                                                <td>{{$employee->salary}}</td>                            
+                                                <td>{{$employee->step}}</td>
                                                 <td class="jsgrid-align-center ">
                                                     <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <button data-url="{{ url('/employee/pds/').'/'.$employee->id }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printpds"><i class="fa fa-print"></i> </button>
                                                 </td>
                                             </tr>
                                              @endforeach
@@ -78,4 +106,17 @@
                     </div>
                 </div>
             </div>
+            <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+            <script type="text/javascript">
+                $('.printpds').on('click', function(e){
+                    e.preventDefault();
+                    var link = $(this).attr('data-url');
+                    var newWindow = window.open(link, '_blank');
+
+                    newWindow.onload = function() {
+                        newWindow.print();
+                    };
+
+                });
+            </script>
 @endsection

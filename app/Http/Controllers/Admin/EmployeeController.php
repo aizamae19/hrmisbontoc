@@ -24,6 +24,13 @@ class EmployeeController extends Controller
         ]);
     }
 
+    public function printpds(Request $request){
+        $employees = Employee::where('id', $request->id)->get();
+        return view('admin.employees.employee.pds', [
+            'employees'=>$employees
+        ]);
+    }
+
 
     public function storeemployee(Request $request){ 
         $employeesave =new Employee();
@@ -47,6 +54,7 @@ class EmployeeController extends Controller
         $employeesave->dateofvalidity = $request ->dateofvalidity;
         $employeesave->personnel = $request ->personnel;
         $employeesave->status = $request ->status;
+        $employeesave->department = $request ->department;
         $employeesave->position = $request ->position;
         $employeesave->dateofjoining = $request ->dateofjoining;
         $employeesave->dateofleaving = $request ->dateofleaving;
@@ -84,6 +92,20 @@ class EmployeeController extends Controller
         $Updatesave->persontocontact = $request->persontocontact;
         $Updatesave->personalemail = $request->personalemail;
         $Updatesave->corporateemail = $request->corporateemail;
+        $Updatesave->course = $request ->course;
+        $Updatesave->graduate = $request ->graduate;
+        $Updatesave->csc = $request ->csc;
+        $Updatesave->dateofissuance = $request ->dateofissuance;
+        $Updatesave->dateofvalidity = $request ->dateofvalidity;
+        $Updatesave->personnel = $request ->personnel;
+        $Updatesave->status = $request ->status;
+        $Updatesave->department = $request ->department;
+        $Updatesave->position = $request ->position;
+        $Updatesave->dateofjoining = $request ->dateofjoining;
+        $Updatesave->dateofleaving = $request ->dateofleaving;
+        $Updatesave->dateofretirement = $request ->dateofretirement;
+        $Updatesave->salary = $request ->salary;
+        $Updatesave->step = $request ->step;
 
         if($Updatesave->update()) {
             return redirect()->back()->withErrors('Updated!');
