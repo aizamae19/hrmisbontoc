@@ -46,10 +46,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/employee/index/edit/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'editemployee'])->name('employee.edit');
             Route::post('/employee/index/edit/store', [App\Http\Controllers\Admin\EmployeeController::class, 'updateemployee'])->name('employee.edit.store');
 
-            //printPDS
-            Route::get('/employee/pds/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'printpds'])->name('print.pds');
-            Route::get('/employee/pds', [App\Http\Controllers\Admin\EmployeeController::class, 'printpds'])->name('print.pds');
-
             
             #EMPLOYEES-INACTIVE USER
             Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
@@ -80,17 +76,17 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'index'])->name('notice');
             Route::post('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'storenotice'])->name('notice.store');
 
+            //Delete
+            Route::get('/notice/index/delete/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
+            Route::post('/notice/index/delete', [App\Http\Controllers\Admin\HolidayController::class, 'deletenotice'])->name('notice.delete');
+
             #SETTINGS
             Route::get('/accountsettings', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsettings');
-
-
         });
 
        
         #USER
         Route::group(['middleware' => ['user']], function () {
-            Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
+            Route::get('/user', [App\Http\Controllers\Employee\DashboardController::class, 'index'])->name('userdashboard');
         });
-
-
 });

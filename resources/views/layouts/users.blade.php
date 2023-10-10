@@ -128,13 +128,7 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
-                        <li> <a href="{{ route('admindashboard')}}" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-building-o"></i><span class="hide-menu">Organization </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('organization.department') }}">Department </a></li>
-                                <li><a href="{{route('organization.designation')}}">Designation</a></li>
-                            </ul>
-                        </li>
+                        <li> <a href="{{ route('userdashboard')}}" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employees</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('employee.employees') }}">Employees</a></li>
@@ -158,19 +152,6 @@
                                 <li><a href="{{ route('report') }}"> Report </a></li>
                             </ul>
                         </li>
-
-                        <li> <a href="#" ><i class="mdi mdi-file-document"></i><span class="hide-menu">Personal Data Sheet<span class="hide-menu"></a></li>
-
-                        <li> <a href="#" ><i class="mdi mdi-file"></i><span class="hide-menu">Service Record<span class="hide-menu"></a></li>
-                        
-                        <!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-grid"></i><span class="hide-menu">Assets </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Logistice/Assets_Category"> Assets Category </a></li>
-                                <li><a href="http://192.168.254.114/HRSystem-CI/Logistice/All_Assets"> Asset List </a></li> -->
-                                <!--<li><a href="Logistice/View"> Logistic Support List </a></li>-->
-                                <!-- <li><a href="http://192.168.254.114/HRSystem-CI/Logistice/logistic_support"> Logistic Support </a></li>
-                            </ul>
-                        </li> -->
                         
                         <li> <a href="{{ route('notice') }}" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
                 </nav>

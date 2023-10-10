@@ -93,7 +93,6 @@
                                                 <td>{{$employee->step}}</td>
                                                 <td class="jsgrid-align-center ">
                                                     <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <button data-url="{{ url('/employee/pds/').'/'.$employee->id }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printpds"><i class="fa fa-print"></i> </button>
                                                 </td>
                                             </tr>
                                              @endforeach

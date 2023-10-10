@@ -18,6 +18,8 @@ class CustomAuthController extends Controller
          dd($role);
         if ($role->roleid==1){
              return '/admin';
+        }  elseif ($role->roleid==2){
+             return '/user';
         }
     }
 
@@ -39,9 +41,10 @@ class CustomAuthController extends Controller
              $role = User_role::where('userid',Auth::user()->id)->first();
             if ($role->roleid==1){
                  return redirect('/admin');
+            } elseif ($role->roleid==2){
+                 return redirect('/user');
+            
             }
-            // return redirect()->intended('dashboard')
-            //             ->withSuccess('Signed in');
         }
    
         return redirect("login")->withSuccess('Login details are not valid');
@@ -55,7 +58,7 @@ class CustomAuthController extends Controller
     }
        
  
-    public function customRegistration(Request $request)
+    public function customRegistration(Request $request) 
     {  
         $request->validate([
             'name' => 'required',

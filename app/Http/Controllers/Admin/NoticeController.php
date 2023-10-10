@@ -25,4 +25,14 @@ class NoticeController extends Controller
             return redirect()->back();
         }
     }
+
+    public function deletenotice(Request $request){
+        $Deletesave=Notice::where('id' ,$request->id)->first();
+        $Deletesave-> noticetitle =$request->noticetitle;
+        $Deletesave-> publisheddate =$request->publisheddate;
+        
+        if($Deletesave->delete()) {
+            return redirect()->back()->withErrors('Deleted!');
+        }
+    }
 }
