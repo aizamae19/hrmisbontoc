@@ -87,6 +87,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
        
         #USER
         Route::group(['middleware' => ['user']], function () {
-            Route::get('/user', [App\Http\Controllers\Employee\DashboardController::class, 'index'])->name('userdashboard');
+            Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
+            
         });
 });

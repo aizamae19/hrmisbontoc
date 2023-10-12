@@ -49,9 +49,9 @@
                         <img src="{{asset('assets/images/logo.jpg')}}" alt="DRI" style="width:50px; border-radius: 100px;"/>
                         </b>
                         <!-- Logo text --><span>
-                         <img src="{{asset('assets/images/hrtag.png')}}" alt="homepage" class="dark-logo" height="60px" width="100px" />
+                         <img src="{{asset('assets/images/hrtag1.png')}}" alt="homepage" class="dark-logo" height="60px" width="100px" />
                          <!-- Light Logo text -->    
-                         </span> </a>
+                         </span></a>
                 </div>
                 <div class="navbar-collapse">
                     <ul class="navbar-nav mr-auto mt-md-0">
@@ -118,7 +118,7 @@
 
                     <!-- User profile text-->
                     <div class="profile-text">
-                        <h5></h5>
+                        <h5 style="color: #ffffff;">User</h5>
                         <a href="{{ route('accountsettings')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                         <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
                     </div>
@@ -129,31 +129,26 @@
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li> <a href="{{ route('userdashboard')}}" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employees</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employee</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('employee.employees') }}">Employees</a></li>
-                                <li><a href="{{ route('inactiveuser') }}">Inactive Employee</a></li>
+                                <li><a href="">Profile</a></li>
                             </ul>
                         </li>          
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
                             <ul aria-expanded="false" class="collapse">
-                             <li><a href="{{ route('printdtr.index') }}">Print DTR </a></li>
-                                <!-- <li><a href="http://192.168.254.114/HRSystem-CI/attendance/Save_Attendance">Add Attendance </a></li>
-                                <li><a href="http://192.168.254.114/HRSystem-CI/attendance/Attendance_Report">Attendance Report </a></li> -->
+                             <li><a href="">Print DTR </a></li>
                             </ul>
                         </li>
 
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-off"></i><span class="hide-menu">Leave </span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('leave.holiday') }}"> Holiday </a></li>
-                                <li><a href="{{ route('leave.leavetype') }}"> Leave Type</a></li>
-                                <li><a href="{{ route('leaveapplication') }}"> Leave Application </a></li>
-                                <li><a href="{{ route('leave.earnedleave') }}"> Earned Leave </a></li>
-                                <li><a href="{{ route('report') }}"> Report </a></li>
+                                <li><a href=""> Holiday </a></li>
+                                <li><a href=""> Leave Application </a></li>
+                                <li><a href=""> Earned Leave </a></li>
                             </ul>
                         </li>
                         
-                        <li> <a href="{{ route('notice') }}" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
+                        <li> <a href="" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
