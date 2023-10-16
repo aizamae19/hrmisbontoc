@@ -20,15 +20,28 @@
             <div class="row">
                 <div class="col-12" >
                     <div class="card"style=" width: 100%;">
-                        <h4 style="padding-left:1%; color:black;padding-top:1%;"><b>Select Date</b></h4>
-                        <div class="form-group" style="padding-left:5%;">
-                             <label style="color:black;"><b>From</b></label>
-                             <input type="date" id="dateTo" name="dateFrom" style="width: 200px; ">
-
-                        </div>
-                        <div class="form-group"  style="padding-left:5%; ">
-                             <label  style="color:black;"><b>To</b></label>
-                             <input type="date" name="dateTo" style=" width: 200px;">
+                        <div class="row-flex" style="display: flex;justify-content: flex-start;align-items: center;">
+                            <div class="form-group col-md-3 m-t-20">
+                                <label>Select Month</label>
+                                <input type="text" value="{{ $d = date('m')}}" hidden>    
+                                <select name="dtr_month" value="" class="form-control custom-select" required>
+                                    <option value="{{$d}}">{{ date('F') }}</option>
+                                    @for($i=1; $i<=12; $i++)
+                                        @if($d != $i){
+                                            <option value="{{$i}}">{{ date('F', strtotime("2023-$i-01")) }}</option>
+                                        }
+                                        @endif
+                                    @endfor
+                                </select>
+                            </div>    
+                            <div class="form-group col-md-3 m-t-20">
+                                <label>Select Year</label>
+                                <select name="dtr_year" value="" class="form-control custom-select" required>
+                                    @for($i=date('Y'); $i>2019; $i--)
+                                        <option value="{{$i}}">{{ $i }}</option>
+                                    @endfor
+                                </select>
+                            </div>    
                         </div>
                     </div>
                     <div class="card card-outline-info">
@@ -60,7 +73,7 @@
                                                     <td>{{ $employee->contact }}</td>
                                                     <td>{{ $employee->usertype }}</td>
                                                     <td class="jsgrid-align-center ">
-                                                        <button data-url="{{ url('/printdtr/').'/'.$employee->id }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
+                                                        <button data-url="{{ url('/printdtr/').'/'.$employee->employee_id }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
                                                     </td>
                                                </tr>
                                             @endforeach
@@ -72,36 +85,35 @@
                     </div>
                 </div>
             </div>
-            <footer class="footer"> © 2023 | Developed By GenIT Bangladesh </footer>
+            <footer class="footer">   </footer>
             <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
             <script type="text/javascript">
                 $('.printdtr').on('click', function(e){
                     e.preventDefault();
 
                     var link = $(this).attr('data-url');
-                    var dateFrom = $('input[name="dateFrom"]').val();
-                    var dateTo = $('input[name="dateTo"]').val();
+                    var month = $('select[name="dtr_month"]').val();
+                    var year = $('select[name="dtr_year"]').val();
+                    url = link+'/'+month+'/'+year;
 
-                    url = link+'/'+dateFrom+'/'+dateTo;
                     var newWindow = window.open(url, '_blank');
-
                     newWindow.onload = function() {
                         newWindow.print();
                     };
 
                 });
-                load_page();
-                function load_page() {
-                    var now = new Date();
+                // load_page();
+                // function load_page() {
+                //     var now = new Date();
 
-                    var day = ("0" + now.getDate()).slice(-2);
-                    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                //     var day = ("0" + now.getDate()).slice(-2);
+                //     var month = ("0" + (now.getMonth() + 1)).slice(-2);
 
-                    var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+                //     var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
 
-                    $('input[name="dateFrom"]').val(today);
-                    $('input[name="dateTo"]').val(today);
-                }
+                //     $('input[name="dateFrom"]').val(today);
+                //     $('input[name="dateTo"]').val(today);
+                // }
             </script>
 
 @endsection
