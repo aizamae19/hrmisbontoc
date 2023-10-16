@@ -4,7 +4,7 @@ namespace App\Http\Controllers\ams;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Attendances;
+use App\Models\Attendance as Attendances;
 use Carbon\Carbon;
 
 class attendancesController extends Controller
@@ -109,11 +109,11 @@ class attendancesController extends Controller
                             $saveAttendance->date = $date;
                             if ($csvdate->hour < 12) {
                                  $saveAttendance->am_in = $csvdate->format('H:i:s');
-                                 $saveAttendance->save();
                             } else {
                                 $saveAttendance->pm_in = $csvdate->format('H:i:s');
-                                $saveAttendance->save();
+                                
                             }
+                            $saveAttendance->save();
                         }
                         // echo "Employee Id: $emp_id Date: $date <br>";
                         // return;
