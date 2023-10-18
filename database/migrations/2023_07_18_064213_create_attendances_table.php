@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
             $table->string('employee_id');
-            $table->date('date');
+            $table->date('date')->unique();
             $table->time('am_in');
             $table->time('am_out');
             $table->time('pm_in');
