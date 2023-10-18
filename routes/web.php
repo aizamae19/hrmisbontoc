@@ -55,7 +55,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/leave/holiday/store', [App\Http\Controllers\Admin\HolidayController::class, 'storeholiday'])->name('holiday.store');
 
             //Update
-            Route::get('/holiday/index/edit/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'updateholiday'])->name('holiday.edit');
+            Route::get('/holiday/index/edit/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'editholiday'])->name('holiday.edit');
             Route::post('/holiday/index/edit/store', [App\Http\Controllers\Admin\HolidayController::class, 'updateholiday'])->name('holiday.edit.store');
 
             //Delete
@@ -75,6 +75,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #NOTICE
             Route::get('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'index'])->name('notice');
             Route::post('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'storenotice'])->name('notice.store');
+
+            //Update
+            Route::get('/notice/index/edit/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'updatenotice'])->name('notice.update');
+            Route::post('/notice/index/edit', [App\Http\Controllers\Admin\HolidayController::class, 'updatenotice'])->name('notice.update');
 
             //Delete
             Route::get('/notice/index/delete/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');

@@ -24,14 +24,6 @@ class EmployeeController extends Controller
         ]);
     }
 
-    public function printpds(Request $request){
-        $employees = Employee::where('id', $request->id)->get();
-        return view('admin.employees.employee.pds', [
-            'employees'=>$employees
-        ]);
-    }
-
-
     public function storeemployee(Request $request){ 
         $employeesave =new Employee();
         $employeesave->firstname = $request->firstname;
