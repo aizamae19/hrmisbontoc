@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('attendances', function (Blueprint $table) {
-            $table->integer('working_hours')->after('pm_out');
-
+        Schema::create('accountsettings', function (Blueprint $table) {
+            $table->id();
+            $table->integer('copyright');
+            $table->string('email');
+            $table->string('address');
+            $table->integer('contactnumber');
+            $table->timestamps();
         });
     }
 
@@ -22,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('attendances', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('accountsettings');
     }
 };

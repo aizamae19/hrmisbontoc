@@ -83,15 +83,16 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'storenotice'])->name('notice.store');
 
             //Update
-            Route::get('/notice/index/edit/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'updatenotice'])->name('notice.update');
-            Route::post('/notice/index/edit', [App\Http\Controllers\Admin\HolidayController::class, 'updatenotice'])->name('notice.update');
+            Route::get('/notice/index/edit/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'editnotice'])->name('notice.edit');
+            Route::post('/notice/index/edit/store', [App\Http\Controllers\Admin\NoticeController::class, 'updatenotice'])->name('notice.edit.store');
 
             //Delete
             Route::get('/notice/index/delete/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
-            Route::post('/notice/index/delete', [App\Http\Controllers\Admin\HolidayController::class, 'deletenotice'])->name('notice.delete');
+            Route::post('/notice/index/delete', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
 
             #SETTINGS
-            Route::get('/accountsettings', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsettings');
+            Route::get('/accountsetting', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsetting');
+            Route::post('/accountsetting/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
         });
 
        

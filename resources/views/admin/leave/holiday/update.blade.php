@@ -56,9 +56,8 @@
                                             </div>                                      
                                         
                                         </div>
-                                    <div class="modal-footer">
-                                    <input type="hidden" name="id" value="" class="form-control" id="recipient-name1">                                   
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    <div class="modal-footer">                                   
+                                        <a href="{{route('leave.holiday')}}"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></a>
                                         <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
