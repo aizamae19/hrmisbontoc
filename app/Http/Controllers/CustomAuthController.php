@@ -70,7 +70,7 @@ class CustomAuthController extends Controller
         $data = $request->all();
         $check = $this->create($data);
           
-        return redirect("dashboard")->withSuccess('You have signed-in');
+        return redirect("login")->withSuccess('You have signed-in');
     }
  
  
@@ -83,16 +83,6 @@ class CustomAuthController extends Controller
         'password' => Hash::make($data['password'])
       ]);
     }    
-     
- 
-    public function dashboard()
-    {
-        if(Auth::check()){
-            return view('dashboard');
-        }
-   
-        return redirect("login")->withSuccess('You are not allowed to access');
-    }
      
  
     public function signOut() {
