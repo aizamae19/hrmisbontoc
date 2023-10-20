@@ -73,6 +73,32 @@
                 </script>                        
 <script type="text/javascript">
                                         $(document).ready(function () {
+                                            $(".holiday").click(function (e) {
+                                                e.preventDefault(e);
+                                                // Get the record's ID via attribute  
+                                                var iid = $(this).attr('data-id');
+                                                $('#holidayform').trigger("reset");
+                                                $('#holysmodel').modal('show');
+                                                $.ajax({
+                                                    url: 'Holidaybyib?id=' + iid,
+                                                    method: 'GET',
+                                                    data: '',
+                                                    dataType: 'json',
+                                                }).done(function (response) {
+                                                    console.log(response);
+                                                    // Populate the form fields with the data returned from server
+                                                    $('#holidayform').find('[name="id"]').val(response.holidayvalue.id).end();
+                                                    $('#holidayform').find('[name="holiname"]').val(response.holidayvalue.holiday_name).end();
+                                                    $('#holidayform').find('[name="startdate"]').val(response.holidayvalue.from_date).end();
+                                                    $('#holidayform').find('[name="enddate"]').val(response.holidayvalue.to_date).end();
+                                                    $('#holidayform').find('[name="nofdate"]').val(response.holidayvalue.number_of_days).end();
+                                                    $('#holidayform').find('[name="year"]').val(response.holidayvalue.year).end();
+                                                });
+                                            });
+                                        });
+</script>
+<script type="text/javascript">
+                                        $(document).ready(function () {
                                             $(".holidelet").click(function (e) {
                                                 e.preventDefault(e);
                                                 // Get the record's ID via attribute  

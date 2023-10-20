@@ -34,29 +34,10 @@
                                                 <th>Middle Name</th>
                                                 <th>Last Name</th>
                                                 <th>Suffix</th>
-                                                <th>Address</th>
-                                                <th>Marital Status</th>
-                                                <th>Birthdate</th>
-                                                <th>Gender</th>
-                                                <th>Blood Type</th>
-                                                <th>Contact Number</th>
-                                                <th>Person to Contact</th>
-                                                <th>Personal Email</th>
-                                                <th>Corporate Email</th>
-                                                <th>Course</th>
-                                                <th>Graduate Studies</th>
-                                                <th>CSC Professional Eligibility</th>
-                                                <th>Date of Issuance PRC ID</th>
-                                                <th>Date of Validity PRC ID</th>
                                                 <th>Personnel ID</th>
                                                 <th>Status</th>
                                                 <th>Department</th>
                                                 <th>Position Title</th>
-                                                <th>Date of Joining</th>
-                                                <th>Date of Leaving</th>
-                                                <th>Date of Mandatory Retirement</th>
-                                                <th>Salary Grade</th>
-                                                <th>Step</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
