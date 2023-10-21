@@ -17,11 +17,11 @@ class ifuser
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $role = User_role::where('userid',Auth::user()->id)->first();
-        if (Auth::user()&&$role->roleid>=2){
-            return $next($request);
+        $role = User_role::where('userid', Auth::user()->id)->first();
+        if(Auth::user()&&$role->roleid==2){
+             return $next($request);
         }
-        abort(403);
-       
+       abort(403);
+      
     }
 }

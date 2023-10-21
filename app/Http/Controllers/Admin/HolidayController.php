@@ -28,8 +28,8 @@ class HolidayController extends Controller
     }
 
     public function editholiday(Request $request){
-        $holiday = Designation::where('id', $request->id)->first();
-        $holidays = Designation::orderBy('updated_at', 'asc')->get();
+        $holiday = Holiday::where('id', $request->id)->first();
+        $holidays = Holiday::orderBy('updated_at', 'asc')->get();
 
         return view('admin.leave.holiday.update',[
             'holiday'=>$holiday,

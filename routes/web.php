@@ -34,6 +34,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/ams', [App\Http\Controllers\ams\amsController::class, 'index'])->name('ams');
             Route::get('/printdtr', [App\Http\Controllers\ams\PrintDTRController::class, 'index'])->name('printdtr.index');
             Route::get('/printdtr/{id}/{dateFrom}/{dateTo}', [App\Http\Controllers\ams\PrintDTRController::class, 'printdtr'])->name('printdtr');
+            Route::get('/attendances', [App\Http\Controllers\ams\attendancesController::class, 'index'])->name('attendances');
+            Route::get('/attendances/{employeeId}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
+            // routes/web.php
+
+            Route::post('/attendances/import/csv', [App\Http\Controllers\ams\attendancesController::class, 'import_csv'])->name('importcsv');
+
 
             #EMPLOYEES-EMPLOYEE
             Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
@@ -46,10 +52,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/employee/index/edit/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'editemployee'])->name('employee.edit');
             Route::post('/employee/index/edit/store', [App\Http\Controllers\Admin\EmployeeController::class, 'updateemployee'])->name('employee.edit.store');
 
-            //printPDS
-            Route::get('/employee/pds/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'printpds'])->name('print.pds');
-            Route::get('/employee/pds', [App\Http\Controllers\Admin\EmployeeController::class, 'printpds'])->name('print.pds');
-
             
             #EMPLOYEES-INACTIVE USER
             Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
@@ -59,7 +61,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/leave/holiday/store', [App\Http\Controllers\Admin\HolidayController::class, 'storeholiday'])->name('holiday.store');
 
             //Update
-            Route::get('/holiday/index/edit/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'updateholiday'])->name('holiday.edit');
+            Route::get('/holiday/index/edit/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'editholiday'])->name('holiday.edit');
             Route::post('/holiday/index/edit/store', [App\Http\Controllers\Admin\HolidayController::class, 'updateholiday'])->name('holiday.edit.store');
 
             //Delete
@@ -80,17 +82,23 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'index'])->name('notice');
             Route::post('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'storenotice'])->name('notice.store');
 
+            //Update
+            Route::get('/notice/index/edit/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'editnotice'])->name('notice.edit');
+            Route::post('/notice/index/edit/store', [App\Http\Controllers\Admin\NoticeController::class, 'updatenotice'])->name('notice.edit.store');
+
+            //Delete
+            Route::get('/notice/index/delete/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
+            Route::post('/notice/index/delete', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
+
             #SETTINGS
-            Route::get('/accountsettings', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsettings');
-
-
+            Route::get('/accountsetting', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsetting');
+            Route::post('/accountsetting/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
         });
 
        
         #USER
         Route::group(['middleware' => ['user']], function () {
             Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
+            
         });
-
-
 });
