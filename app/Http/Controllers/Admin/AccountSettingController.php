@@ -10,10 +10,7 @@ class AccountSettingController extends Controller
 {
     public function index()
     {   
-        $accountsetting = AccountSetting::get();
-        return view('admin.accountsetting.index', [
-            'accountsetting'=>$accountsetting
-        ]);
+        return view('admin.accountsetting.index');
     }  
 
     public function storeaccountsetting(Request $request){

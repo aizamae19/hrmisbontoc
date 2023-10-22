@@ -99,6 +99,14 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         #USER
         Route::group(['middleware' => ['user']], function () {
             Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
+
+             #NOTICE
+            Route::get('/notice', [App\Http\Controllers\User\NoticeController::class, 'index'])->name('notice');
             
+             #LEAVE-HOLIDAY
+            Route::get('/leave/holiday', [App\Http\Controllers\User\HolidayController::class, 'holidayleave'])->name('leave.holiday');
+
+            #LEAVE-EARNED LEAVE
+             Route::get('/leave/earnedleave', [App\Http\Controllers\Admin\EarnedLeaveController::class, 'earnedleaveleave'])->name('leave.earnedleave');
         });
 });
