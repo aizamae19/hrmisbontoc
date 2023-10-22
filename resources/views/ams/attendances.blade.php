@@ -54,7 +54,9 @@
 
                                         </tbody>
                                     </table>
-                                    {!! $attendance->links() !!}
+                                    <div class="container mt-4">
+                                        {{ $attendance->links('vendor.pagination.bootstrap-4') }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,4 +201,7 @@
     $(".select2").select2();
     </script>
     <script src="http://hrsystem-ci.test\/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+
+
 @endsection
