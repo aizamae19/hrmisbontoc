@@ -131,7 +131,7 @@
                         <li> <a href="{{ route('userdashboard')}}" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employee</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="">Profile</a></li>
+                                <li><a href="{{ route('useremployee.employees')}}">Profile</a></li>
                             </ul>
                         </li>          
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
@@ -142,13 +142,13 @@
 
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-off"></i><span class="hide-menu">Leave </span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('leave.holiday') }}"> Holiday </a></li>
+                                <li><a href="{{ route('userleave.holiday') }}"> Holiday </a></li>
                                 <li><a href=""> Leave Application </a></li>
-                                <li><a href="{{ route('leave.earnedleave') }}"> Earned Leave </a></li>
+                                <li><a href="{{ route('userleave.earnedleave') }}"> Earned Leave </a></li>
                             </ul>
                         </li>
                         
-                        <li> <a href="{{ route('notice') }}" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
+                        <li> <a href="{{ route('usernotice') }}" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>

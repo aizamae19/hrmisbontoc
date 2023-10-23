@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.users')
 
 @section('content')
             <div class="row page-titles">
@@ -152,137 +152,9 @@
                                        <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}" required>
                                     </div>
-                                 <br>
-                                <div class="col-md-12">
-                        <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Work Background</h3>
-                           </div>
-                                <br>
-                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Personnel ID</label>
-                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="personnel" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->personnel}}" required>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Status</label>
-                                        <select name="status" class="form-control custom-select" value="{{$employee->status}}" required>
-                                            <option>Select Status</option>
-                                            <option value="Permanent">Permanent</option>
-                                            <option value="Casual">Casual</option>
-                                            <option value="Job Order">Job Order</option>
-                                            <option value="Co-Terminous">Co-Terminous</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Department</label>
-                                        <select name="department" class="form-control custom-select" value="{{$employee->department}}" required>
-                                            <option>Select Department</option>
-                                            <option value="Office of the Mayor">Office of the Mayor</option>
-                                            <option value="Office of the Vice-Mayor">Office of the Vice-Mayor</option>
-                                            <option value="Office of the Sangguniang Bayan">Office of the Sangguniang Bayan</option>
-                                            <option value="Office of the Municipal Plannig and Development Coordinator">Office of the Municipal Planning and Development Coordinator</option>
-                                            <option value="Office of the Municipal Budget Officer">Office of the Municipal Budget Officer</option>
-                                            <option value="Office of the Municipal Accountant">Office of the Municipal Accountant</option>
-                                            <option value="Office of the Municipal Treasurer">Office of the Municipal Treasurer</option>
-                                            <option value="Office of the Municipal Assessor">Office of the Municipal Assessor</option>
-                                             <option value="Rural Health Unit">Rural Health Unit</option>
-                                            <option value="Office of the Civil Registrar">Office of the Civil Registrar</option>
-                                            <option value="Municipal Social Welfare and Development Office">Municipal Social Welfare and Development Office</option>
-                                            <option value="Municipal Agricultural Services Office">Municipal Agricultural Services Office</option>
-                                            <option value="Office of the Municipal Engineer">Office of the Municipal Engineer</option>
-                                            <option value="Human Resource Management Office">Human Resource Management Office</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Position Title</label>
-                                        <select name="position" class="form-control custom-select" value="{{$employee->position}}" required>
-                                            <option>Select Position Title</option>
-                                            <option value="Municipal Government Department Head I">Municipal Government Department Head I</option>
-                                            <option value="Registration Officer II">Registration Officer II</option>
-                                            <option value="Social Welfare Officer II">Social Welfare Officer II</option>
-                                            <option value="Administrative Assistant II">Administrative Assistant II</option>
-                                            <option value="Day Care Worker I">Day Care Worker I</option>
-                                            <option value="Municipal Agriculturist I">Municipal Agriculturist I</option>
-                                            <option value="Agricultural Technologist">Agricultural Technologist</option>
-                                            <option value="Agricultural Technician II">Agricultural Technician II</option>
-                                            <option value="Administrative Aide I">dministrative Aide I</option>
-                                            <option value="Engineer II">Engineer II</option>
-                                            <option value="Administrative Aide II">Administrative Aide II</option>
-                                            <option value="Administrative Aide III">Administrative Aide III</option>
-                                            <option value="Mechanic II">Mechanic II</option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Joining</label>
-                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofjoining}}" required>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Leaving </label>
-                                        <input type="text" name="dateofleaving" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofleaving}}" required>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Mandatory Retirement</label>
-                                        <input type="text" name="dateofretirement" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofretirement}}" required>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Salary Grade</label>
-                                        <select name="salary" class="form-control custom-select" vlaue="{{$employee->salary}}" required>
-                                            <option>Select Salary Grade</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option>
-                                            <option value="32">32</option>
-                                            <option value="33">33</option>
-                                        </select>
-                                    </div>
-                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Step</label>
-                                        <select name="step" class="form-control custom-select" vlaue="{{$employee->step}}" required>
-                                            <option>Select Step</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                        </select>
-                                    </div>
                                     <div class="form-actions col-md-12">
                                     <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
-                                     <a href ="{{ route('employee.employees') }}"><button type="button"  class="btn btn-danger">Cancel</button></a>
+                                     <a href ="{{ route('useremployee.employees') }}"><button type="button"  class="btn btn-danger">Cancel</button></a>
                                     </div>
                                 </form>
                             </div>
