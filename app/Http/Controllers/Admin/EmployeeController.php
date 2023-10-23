@@ -103,4 +103,12 @@ class EmployeeController extends Controller
             return redirect()->back()->withErrors('Updated!');
         }
     }
+
+    public function viewemployee(Request $request){
+        $employees=Employee::where('id',$request->id)->first();
+
+        return view('admin.employees.employee.view',[
+                'employees'=>$employees
+        ]);
+    }
 }

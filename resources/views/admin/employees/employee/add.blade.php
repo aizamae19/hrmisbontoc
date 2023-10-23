@@ -78,9 +78,9 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Blood Group </label>
+                                        <label>Blood Type </label>
                                         <select name="bloodtype" class="form-control custom-select">
-                                            <option>Select Blood Group</option>
+                                            <option>Select Blood Type</option>
                                             <option value="O+">O+</option>
                                             <option value="O-">O-</option>
                                             <option value="A+">A+</option>

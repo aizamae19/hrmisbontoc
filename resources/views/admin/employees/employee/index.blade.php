@@ -52,7 +52,7 @@
                                                 <td>{{$employee->address}}</td>
                                                 <td>{{$employee->status}}</td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
+                                                    <a href="{{ url('/employee/index/view/').'/'.$employee->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
                                                     <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
 
                                                 </td>
