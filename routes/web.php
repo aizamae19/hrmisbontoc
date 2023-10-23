@@ -33,7 +33,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admindashboard');
             Route::get('/ams', [App\Http\Controllers\ams\amsController::class, 'index'])->name('ams');
             Route::get('/printdtr', [App\Http\Controllers\ams\PrintDTRController::class, 'index'])->name('printdtr.index');
-            Route::get('/printdtr/{id}/{dateFrom}/{dateTo}', [App\Http\Controllers\ams\PrintDTRController::class, 'printdtr'])->name('printdtr');
+            Route::get('/printdtr/{id}/{month}/{year}', [App\Http\Controllers\ams\PrintDTRController::class, 'printdtr'])->name('printdtr');
             Route::get('/attendances', [App\Http\Controllers\ams\attendancesController::class, 'index'])->name('attendances');
             Route::get('/attendances/{employeeId}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
             // routes/web.php
@@ -42,7 +42,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
 
             #EMPLOYEES-EMPLOYEE
-            Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
+            Route::get('/admin/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
 
             //add
             Route::get('/employees/employee/add', [App\Http\Controllers\Admin\EmployeeController::class, 'addemployee'])->name('employee.add');
@@ -98,13 +98,29 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #SETTINGS
             Route::get('/accountsetting', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsetting');
-            Route::post('/accountsetting/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
+            Route::post('/accountsetting/add/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
         });
 
        
         #USER
         Route::group(['middleware' => ['user']], function () {
             Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
+
+             #NOTICE
+            Route::get('/user/notice', [App\Http\Controllers\User\NoticeController::class, 'index'])->name('usernotice');
             
+             #LEAVE-HOLIDAY
+            Route::get('/user/leave/holiday', [App\Http\Controllers\User\HolidayController::class, 'holidayleave'])->name('userleave.holiday');
+
+            #LEAVE-EARNED LEAVE
+             Route::get('/user/leave/earnedleave', [App\Http\Controllers\User\EarnedLeaveController::class, 'earnedleaveleave'])->name('userleave.earnedleave');
+
+            #EMPLOYEES-PROFILE
+            Route::get('/user/employees/profile', [App\Http\Controllers\User\EmployeeController::class, 'employeeemployees'])->name('useremployee.employees');
+            Route::post('/user/employees/profile/store', [App\Http\Controllers\User\EmployeeController::class, 'storeemployee'])->name('useremployee.store');
+
+            //Update
+            Route::get('/user/employee/index/edit/{id}', [App\Http\Controllers\User\EmployeeController::class, 'editemployee'])->name('useremployee.edit');
+            Route::post('/user/employee/index/edit/store', [App\Http\Controllers\User\EmployeeController::class, 'updateemployee'])->name('useremployee.edit.store');
         });
 });

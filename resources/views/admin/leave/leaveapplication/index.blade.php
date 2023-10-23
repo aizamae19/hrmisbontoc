@@ -39,7 +39,7 @@
                                         <th>PIN</th>
                                         <th>Leave Type</th>
                                         <th>Apply Date</th>
-                                        <th>Start Date</th>
+                                        <th>Start Date</th> 
                                         <th>End Date</th>
                                         <th>Duration</th>
                                         <th>Leave Status</th>
@@ -58,8 +58,8 @@
                                         <td></td>
                                         <td class="jsgrid-align-center">
                                             
-                                            <a href="" title="Edit" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
-                                            <a href="" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
+                                            <a href="" title="Approve" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
+                                            <a href="" title="Reject" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
           <br> 
 
               <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>

@@ -1,5 +1,5 @@
 
-@extends('layouts.default')
+@extends('layouts.users')
 
 @section('content')
 
@@ -30,7 +30,6 @@
                                                 <th>Title</th>
                                                 <!-- <th>File</th> -->
                                                 <th>Date</th>
-                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -39,12 +38,6 @@
                                             <tr>
                                                 <td>{{$notice->noticetitle}}</td>
                                                 <td>{{$notice->publisheddate}}</td>
-                                                <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="9"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/notice/index/delete').'/'.$notice->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
-                                                    {{method_field('DELETE')}}
-                                                    @csrf
-                                                </td>
                                             </tr>
                                             @endforeach
                                             @endif

@@ -7,11 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\AccountSetting;
 
 class AccountSettingController extends Controller
-{
-    public function index()
-    {   
+{ 
+    public function index(request $request){
         return view('admin.accountsetting.index');
-    }  
+    }
 
     public function storeaccountsetting(Request $request){
         $accountsettingsave =new AccountSetting();
