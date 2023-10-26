@@ -122,5 +122,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             //Update
             Route::get('/user/employee/index/edit/{id}', [App\Http\Controllers\User\EmployeeController::class, 'editemployee'])->name('useremployee.edit');
             Route::post('/user/employee/index/edit/store', [App\Http\Controllers\User\EmployeeController::class, 'updateemployee'])->name('useremployee.edit.store');
+
+            #LEAVE-LEAVE APPLICATION
+            Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
         });
 });

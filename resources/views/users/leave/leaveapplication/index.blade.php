@@ -15,76 +15,15 @@
     </div>
     <!-- Container fluid  -->
     <!-- ============================================================== -->
-    <div class="container-fluid">
-        <div class="row m-b-10">
-             
-                <div class="col-12">
-                    <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#appmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Application </a></button>
-                    <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{ route('leave.holiday')}}" class="text-white"><i class="" aria-hidden="true"></i> Holiday List</a></button>
-                </div>                       
-             
-        </div> 
-        <div class="row">
-            <div class="col-12">
-                <div class="card card-outline-info">
-                    <div class="card-header">
-                        <h4 class="m-b-0 text-white"> Application List                        
-                        </h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive ">
-                            <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th>Employee Name</th>
-                                        <th>PIN</th>
-                                        <th>Leave Type</th>
-                                        <th>Apply Date</th>
-                                        <th>Start Date</th>
-                                        <th>End Date</th>
-                                        <th>Duration</th>
-                                        <th>Leave Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                     <tr style="vertical-align:top">
-                                        <td><span></span></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td class="jsgrid-align-center">
-                                            
-                                            <a href="" title="Edit" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
-                                            <a href="" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
-          <br> 
-
-              <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
-                                    </td>
-                                </tr>
-                                                                    </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="appmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
-                    <div class="modal-dialog" role="document">
                         <div class="modal-content ">
                             <div class="modal-header">
                                 <h4 class="modal-title" id="exampleModalLabel1">Leave Application</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             </div>
                             <form method="post" action="Add_Applications" id="leaveapply" enctype="multipart/form-data">
                             <div class="modal-body">
                                     
                                 <div class="form-group">
-                                    <label>Employee</label>
+                                    <label>Employee Name</label>
                                      <input type="text" name="employeename" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
                                 </div>
                                 <div class="form-group">

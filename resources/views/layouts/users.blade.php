@@ -143,7 +143,7 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-off"></i><span class="hide-menu">Leave </span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('userleave.holiday') }}"> Holiday </a></li>
-                                <li><a href=""> Leave Application </a></li>
+                                <li><a href="{{ route('userleaveapplication') }}"> Leave Application </a></li>
                                 <li><a href="{{ route('userleave.earnedleave') }}"> Earned Leave </a></li>
                             </ul>
                         </li>

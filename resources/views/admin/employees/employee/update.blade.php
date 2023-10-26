@@ -229,7 +229,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Salary Grade</label>
-                                        <select name="salary" class="form-control custom-select" vlaue="{{$employee->salary}}" required>
+                                        <select name="salary" class="form-control custom-select" value="{{$employee->salary}}" required>
                                             <option>Select Salary Grade</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -268,7 +268,7 @@
                                     </div>
                                      <div class="form-group col-md-3 m-t-20">
                                         <label>Step</label>
-                                        <select name="step" class="form-control custom-select" vlaue="{{$employee->step}}" required>
+                                        <select name="step" class="form-control custom-select" value="{{$employee->step}}" required>
                                             <option>Select Step</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>

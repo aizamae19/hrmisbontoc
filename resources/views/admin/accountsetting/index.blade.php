@@ -2,7 +2,7 @@
 @extends('layouts.default')
 
 @section('content')
-
+            @include('layouts.partials.messages')
             <div class="message"></div>
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
