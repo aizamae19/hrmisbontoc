@@ -148,7 +148,7 @@
                             </ul>
                         </li>
                         
-                        <li> <a href="{{ route('usernotice') }}" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
+                        <li> <a href="{{ route('usernotice') }}" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Announcement <span class="hide-menu"></a></li>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
