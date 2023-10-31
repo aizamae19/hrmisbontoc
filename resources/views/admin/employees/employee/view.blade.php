@@ -40,7 +40,7 @@
                 <div class="card-body">
                    <div class="row">
                     <div class="col-sm-3">
-                      <h7 class="mb-0">Firstname</h7>
+                      <h6 class="mb-0">Firstname</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                      {{ $employees->firstname }}
