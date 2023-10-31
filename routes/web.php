@@ -125,5 +125,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #LEAVE-LEAVE APPLICATION
             Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
+
+            #MYPROFILE
+            Route::get('/user/myprofile', [App\Http\Controllers\User\MyProfileController::class, 'index'])->name('usermyprofile');
         });
 });

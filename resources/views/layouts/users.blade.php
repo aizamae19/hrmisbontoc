@@ -120,7 +120,7 @@
                     <div class="profile-text">
                         <h5 style="color: #ffffff;">User</h5>
                         <a href="{{ route('accountsetting')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
-                        <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+                        <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a>
                     </div>
                 </div>
                 <!-- End User profile text-->
@@ -128,10 +128,11 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
-                        <li> <a href="{{ route('userdashboard')}}" ><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a></li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employee</span></a>
+                        <li> <a href="{{ route('userdashboard')}}" ><i class="fa fa-home"></i><span class="hide-menu">Dashboard </span></a></li>
+                         <li> <a href="{{ route('usermyprofile') }}" ><i class="fa fa-id-badge"></i><span class="hide-menu">My Profile <span class="hide-menu"></a></li>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-user-circle"></i><span class="hide-menu">Information</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="{{ route('useremployee.employees')}}">Profile</a></li>
+                                <li><a href="{{ route('useremployee.employees')}}">Personal Data</a></li>
                             </ul>
                         </li>          
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
@@ -148,7 +149,7 @@
                             </ul>
                         </li>
                         
-                        <li> <a href="{{ route('usernotice') }}" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Announcement <span class="hide-menu"></a></li>
+                        <li> <a href="{{ route('usernotice') }}" ><i class="fa fa-bullhorn"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
