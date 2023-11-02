@@ -21,24 +21,58 @@
                             </div>
                             <form method="post" action="Add_Applications" id="leaveapply" enctype="multipart/form-data">
                             <div class="modal-body">
-                                    
+                                
                                 <div class="form-group">
-                                    <label>Employee Name</label>
+                                    <label>OFFICE/DEPARTMENT</label>
+                                     <input type="text" name="office" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
+
+                                <div class="form-group">
+                                    <label>EMPLOYEE NAME</label>
                                      <input type="text" name="employeename" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Date of Filing</label>
+                                    <label>DATE OF FILING</label>
                                      <input type="date" name="dateoffiling" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Position</label>
+                                    <label>POSITION</label>
                                      <input type="text" name="position" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Leave Type</label>
-                                    <select class="form-control custom-select assignleave"  tabindex="1" name="typeid" id="leavetype" required>
-                                        <option value="">Select Here..</option>
-                                    </select>
+                                    <label>SALARY</label>
+                                     <input type="text" name="salary" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>TYPE OF LEAVE TO BE AVAILED OF:</label>
+                                    <br>
+                                    <input type="checkbox" id="vacationleave" name="vacationleave" value="vacationleave">
+                                    <label for="vacationleave"> Vacation Leave (Sec. 51, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
+                                    <input type="checkbox" id="mandatoryleave" name="mandatoryleave" value="mandatoryleave">
+                                    <label for="mandatoryleave"> Mandatory/Forced Leave (Sec. 25, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
+                                    <input type="checkbox" id="sickleave" name="sickleave" value="sickleave">
+                                    <label for="sickleave"> Sick Leave (Sec. 43, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
+                                    <input type="checkbox" id="maternityleave" name="maternityleave" value="maternityleave">
+                                    <label for="maternityleave"> Maternity Leave (R.A. No. 11210 / IRR issued by CSC, DOLE and SSS)</label><br>
+                                    <input type="checkbox" id="paternityleave" name="paternityleave" value="paternityleave">
+                                    <label for="paternityleave"> Paternity Leave (R.A. No. 8187 / CSC MC No. 71, s. 1998, as amended)</label><br>
+                                    <input type="checkbox" id="specialprivilegeleave" name="specialprivilegeleave" value="specialprivilegeleave">
+                                    <label for="specialprivilegeleave"> Special Privilege Leave (Sec. 21, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
+                                    <input type="checkbox" id="soloparentleave" name="soloparentleave" value="soloparentleave">
+                                    <label for="soloparentleave"> Solo Parent Leave (RA No. 8972 / CSC MC No. 8, s. 2004)</label><br>
+                                    <input type="checkbox" id="studyleave" name="studyleave" value="studyleave">
+                                    <label for="studyleave"> Study Leave (Sec. 68, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
+                                    <input type="checkbox" id="vawcleave" name="vawcleave" value="vawcleave">
+                                    <label for="vawcleave"> 10-Day VAWC Leave (RA No. 9262 / CSC MC No. 15, s. 2005)</label><br>
+                                    <input type="checkbox" id="rehabilitation" name="rehabilitation" value="rehabilitation">
+                                    <label for="rehabilitation"> Rehabilitation Privilege (Sec. 55, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
+                                    <input type="checkbox" id="specialleavebenefits" name="specialleavebenefits" value="specialleavebenefits">
+                                    <label for="specialleavebenefits"> Special Leave Benefits for Women (RA No. 9710 / CSC MC No. 25, s. 2010)</label><br>
+                                    <input type="checkbox" id="specialemergency" name="specialemergency" value="specialemergency">
+                                    <label for="specialemergency"> Special Emergency (Calamity) Leave (CSC MC No. 2, s. 2012, as amended)</label><br>
+                                    <input type="checkbox" id="adoptionleave" name="adoptionleave" value="adoptionleave">
+                                    <label for="adoptionleave"> Adoption Leave (R.A. No. 8552)</label><br>
+                                    <label for="other">Others:</label>
+                                    <input type="text" style="padding: 10px 10px; margin: 2px 0;box-sizing: border-box; border: none; border-bottom: 1px solid black;" id="other" name="other" value="">
                                 </div>
                                 <div class="form-group">
                                     <span style="color:red" id="total"></span>
