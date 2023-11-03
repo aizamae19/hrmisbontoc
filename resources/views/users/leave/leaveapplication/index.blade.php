@@ -43,7 +43,7 @@
                                      <input type="text" name="salary" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>TYPE OF LEAVE TO BE AVAILED OF:</label>
+                                    <label>6.A TYPE OF LEAVE TO BE AVAILED OF:</label>
                                     <br>
                                     <input type="checkbox" id="vacationleave" name="vacationleave" value="vacationleave">
                                     <label for="vacationleave"> Vacation Leave (Sec. 51, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
@@ -71,8 +71,37 @@
                                     <label for="specialemergency"> Special Emergency (Calamity) Leave (CSC MC No. 2, s. 2012, as amended)</label><br>
                                     <input type="checkbox" id="adoptionleave" name="adoptionleave" value="adoptionleave">
                                     <label for="adoptionleave"> Adoption Leave (R.A. No. 8552)</label><br>
+                                    <input type="checkbox" id="other" name="other" value="other">
                                     <label for="other">Others:</label>
-                                    <input type="text" style="padding: 10px 10px; margin: 2px 0;box-sizing: border-box; border: none; border-bottom: 1px solid black;" id="other" name="other" value="">
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="other" name="other" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label>6.B DETAILS OF LEAVE</label>
+                                    <br>
+                                    <label>In case of Vacation/Special Privilege Leave:</label><br>
+                                    <input type="checkbox" id="philippines" name="philippines" value="philippines">
+                                    <label for="philippines">Within the Philippines</label>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="philippines" name="philippines" value=""><br>
+                                    <input type="checkbox" id="abroad" name="abroad" value="abroad">
+                                    <label for="abroad">Abroad(Specify)</label>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="abroad" name="abroad" value="">
+                                    <br>
+                                    <label>In case of Sick Leave:</label><br>
+                                    <input type="checkbox" id="inhospital" name="inhospital" value="inhospital">
+                                    <label for="inhospital">In Hospital(Specify Illness)</label>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="inhospital" name="inhospital" value=""><br>
+                                    <input type="checkbox" id="outpatient" name="outpatient" value="outpatient">
+                                    <label for="outpatient">Out Patient(Specify Illness)</label>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="outpatient" name="outpatient" value=""><br>
+                                    <label>In case of Special Leave Benefits for Women:</label><br>
+                                    <label for="leavebenefits">(Specify Illness)</label>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="leavebenefits" name="leavebenefits" value=""><br>
+                                    <label>In case of Study Leave:</label><br>
+                                    <input type="checkbox" id="completion" name="completion" value="completion">
+                                    <label for="completion">Completion of Master's Degree</label>
+                                    <br>
+                                    <input type="checkbox" id="boardexam" name="boardexam" value="boardexam">
+                                    <label for="boardexam">BAR/Board Examination Review </label>
                                 </div>
                                 <div class="form-group">
                                     <span style="color:red" id="total"></span>
