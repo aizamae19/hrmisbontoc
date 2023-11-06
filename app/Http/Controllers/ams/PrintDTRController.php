@@ -36,7 +36,7 @@ class PrintDTRController extends Controller
      
      public function printdtr(Request $request)
      {
-         $attendance = Attendance::where('employee_id', $request->id)
+         $attendance = Attendance::where('personnel', $request->id)
                                 ->whereMonth('date', $request->month)
                                 ->whereYear('date', $request->year)
                                  ->get();
@@ -51,7 +51,7 @@ class PrintDTRController extends Controller
                                      ];
                                  }
 
-        $employees = Employee::where('employee_id', $request->id)
+        $employees = Employee::where('personnel', $request->id)
                                  ->get();
         // return json_encode($attendance);
          return view('ams.dtr',[

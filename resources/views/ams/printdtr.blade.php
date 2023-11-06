@@ -55,9 +55,9 @@
                                         <tr>
 
                                             <th>Employee Name</th>
-                                            <th>Employee ID</th>
-                                            <th>Email </th>
-                                            <th>Contact </th>
+                                            <th>Personnel ID</th>
+                                            <th>Personal Email </th>
+                                            <th>Contact Number </th>
                                             <th>Position</th>
                                             <th >Action</th>
 
@@ -68,12 +68,14 @@
                                             @foreach($employees as $employee)
                                                  <tr>
                                                     <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
-                                                    <td>{{ $employee->employee_id }}</td>
-                                                    <td>{{ $employee->email }}</td>
-                                                    <td>{{ $employee->contact }}</td>
-                                                    <td>{{ $employee->usertype }}</td>
+                                                    <td>{{ $employee->personnel }}</td>
+                                                    <td>{{ $employee->personalemail }}</td>
+                                                    <td>{{ $employee->contactnumber }}</td>
+                                                    <td>{{ $employee->status }}</td>
+                                                    <td>{{ $employee->position }}</td>
+
                                                     <td class="jsgrid-align-center ">
-                                                        <button data-url="{{ url('/printdtr/').'/'.$employee->employee_id }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
+                                                        <button data-url="{{ url('/printdtr/').'/'.$employee->personnel }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
                                                     </td>
                                                </tr>
                                             @endforeach
