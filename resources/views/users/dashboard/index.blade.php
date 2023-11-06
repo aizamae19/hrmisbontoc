@@ -1,27 +1,12 @@
 @extends('layouts.users')
 
 @section('content')
-    <div class="message"></div>
-            <div class="row page-titles">
-                <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-braille" style="color:#1976d2"></i>&nbsp Dashboard</h3>
-                </div>
-                <div class="col-md-7 align-self-center">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
-                    </ol>
-                </div>
-            </div> 
             <div class="container-fluid">
-                                                                        
-                  
-                <!-- Row -->
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Notice Board</h4>
+                                <h4 class="card-title">Announcement! &nbsp<i class="fa fa-bullhorn"></i></h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive slimScrollDiv" style="height:600px;overflow-y:scroll">
@@ -50,7 +35,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    Holidays
+                                    Holidays <i class="fa fa-calendar"></i>
                                 </h4>
                             </div>
                             <div class="card-body">
@@ -71,8 +56,8 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
+                          </div>
                     </div>
                 </div>                                               
-            </div>
+            </div>             
 @endsection

@@ -42,7 +42,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
 
             #EMPLOYEES-EMPLOYEE
-            Route::get('/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
+            Route::get('/admin/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
 
             //add
             Route::get('/employees/employee/add', [App\Http\Controllers\Admin\EmployeeController::class, 'addemployee'])->name('employee.add');
@@ -51,6 +51,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             //Update
             Route::get('/employee/index/edit/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'editemployee'])->name('employee.edit');
             Route::post('/employee/index/edit/store', [App\Http\Controllers\Admin\EmployeeController::class, 'updateemployee'])->name('employee.edit.store');
+
+            //View
+            Route::get('/employee/index/view/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.view');
+            Route::post('/employee/index/view', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.edit.view');
+  
+
 
             
             #EMPLOYEES-INACTIVE USER
@@ -61,7 +67,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/leave/holiday/store', [App\Http\Controllers\Admin\HolidayController::class, 'storeholiday'])->name('holiday.store');
 
             //Update
-            Route::get('/holiday/index/edit/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'updateholiday'])->name('holiday.edit');
+            Route::get('/holiday/index/edit/{id}', [App\Http\Controllers\Admin\HolidayController::class, 'editholiday'])->name('holiday.edit');
             Route::post('/holiday/index/edit/store', [App\Http\Controllers\Admin\HolidayController::class, 'updateholiday'])->name('holiday.edit.store');
 
             //Delete
@@ -82,18 +88,45 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'index'])->name('notice');
             Route::post('/notice', [App\Http\Controllers\Admin\NoticeController::class, 'storenotice'])->name('notice.store');
 
+            //Update
+            Route::get('/notice/index/edit/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'editnotice'])->name('notice.edit');
+            Route::post('/notice/index/edit/store', [App\Http\Controllers\Admin\NoticeController::class, 'updatenotice'])->name('notice.edit.store');
+
             //Delete
             Route::get('/notice/index/delete/{id}', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
-            Route::post('/notice/index/delete', [App\Http\Controllers\Admin\HolidayController::class, 'deletenotice'])->name('notice.delete');
+            Route::post('/notice/index/delete', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
 
             #SETTINGS
-            Route::get('/accountsettings', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsettings');
+            Route::get('/accountsetting', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsetting');
+            Route::post('/accountsetting/add/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
         });
 
        
         #USER
         Route::group(['middleware' => ['user']], function () {
             Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
+
+             #NOTICE
+            Route::get('/user/notice', [App\Http\Controllers\User\NoticeController::class, 'index'])->name('usernotice');
             
+             #LEAVE-HOLIDAY
+            Route::get('/user/leave/holiday', [App\Http\Controllers\User\HolidayController::class, 'holidayleave'])->name('userleave.holiday');
+
+            #LEAVE-EARNED LEAVE
+             Route::get('/user/leave/earnedleave', [App\Http\Controllers\User\EarnedLeaveController::class, 'earnedleaveleave'])->name('userleave.earnedleave');
+
+            #EMPLOYEES-PROFILE
+            Route::get('/user/employees/profile', [App\Http\Controllers\User\EmployeeController::class, 'employeeemployees'])->name('useremployee.employees');
+            Route::post('/user/employees/profile/store', [App\Http\Controllers\User\EmployeeController::class, 'storeemployee'])->name('useremployee.store');
+
+            //Update
+            Route::get('/user/employee/index/edit/{id}', [App\Http\Controllers\User\EmployeeController::class, 'editemployee'])->name('useremployee.edit');
+            Route::post('/user/employee/index/edit/store', [App\Http\Controllers\User\EmployeeController::class, 'updateemployee'])->name('useremployee.edit.store');
+
+            #LEAVE-LEAVE APPLICATION
+            Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
+
+            #MYPROFILE
+            Route::get('/user/myprofile', [App\Http\Controllers\User\MyProfileController::class, 'index'])->name('usermyprofile');
         });
 });

@@ -33,7 +33,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Title</th>
-                                                <!-- <th>File</th> -->
+                                                <!-- <th>Memo</th> -->
                                                 <th>Date</th>
                                                 <th>Action</th>
                                             </tr>
@@ -45,7 +45,7 @@
                                                 <td>{{$notice->noticetitle}}</td>
                                                 <td>{{$notice->publisheddate}}</td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="9"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="{{ url('/notice/index/edit/').'/'.$notice->id}}" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="9"><i class="fa fa-pencil-square-o"></i></a>
                                                     <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/notice/index/delete').'/'.$notice->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
                                                     {{method_field('DELETE')}}
                                                     @csrf
@@ -73,10 +73,10 @@
                                     <div class="modal-body">
                                             <div class="form-group">
                                                 <label for="message-text" class="control-label">Notice Title</label>
-                                                <textarea class="form-control" name="noticetitle" id="message-text1" maxlength="150"></textarea>
+                                                <input type="text" class="form-control" name="noticetitle" id="message-text1" maxlength="150">
                                             </div>
                                             <!-- <div class="form-group">
-                                                <label class="control-label">Document</label>
+                                                <label class="control-label">Memo</label>
                                                 <label for="recipient-name1" class="control-label">Title</label>
                                                 <input type="file" name="file_url" class="form-control" id="recipient-name1" required>
                                             </div> -->

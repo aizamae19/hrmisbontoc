@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -12,17 +12,10 @@ class EmployeeController extends Controller
      public function employeeemployees()
     {   
         $employees = Employee::get();
-        return view('admin.employees.employee.index', [
+        return view('users.employee.profile.index', [
             'employees'=>$employees
         ]);
     }  
-
-    public function addemployee(request $request){
-        $employees = Employee::get();
-        return view('admin.employees.employee.add', [
-            'employees'=>$employees
-        ]);
-    }
 
     public function storeemployee(Request $request){ 
         $employeesave =new Employee();
@@ -44,15 +37,6 @@ class EmployeeController extends Controller
         $employeesave->csc = $request ->csc;
         $employeesave->dateofissuance = $request ->dateofissuance;
         $employeesave->dateofvalidity = $request ->dateofvalidity;
-        $employeesave->personnel = $request ->personnel;
-        $employeesave->status = $request ->status;
-        $employeesave->department = $request ->department;
-        $employeesave->position = $request ->position;
-        $employeesave->dateofjoining = $request ->dateofjoining;
-        $employeesave->dateofleaving = $request ->dateofleaving;
-        $employeesave->dateofretirement = $request ->dateofretirement;
-        $employeesave->salary = $request ->salary;
-        $employeesave->step = $request ->step;
 
         if($employeesave->save()) {
             return redirect()->back();
@@ -63,7 +47,7 @@ class EmployeeController extends Controller
         $employee = Employee::where('id', $request->id)->first();
         $employees = Employee::orderBy('updated_at', 'asc')->get();
 
-        return view('admin.employees.employee.update',[
+        return view('users.employee.profile.update',[
             'employee'=>$employee,
             'employees'=>$employees
         ]);
@@ -89,26 +73,9 @@ class EmployeeController extends Controller
         $Updatesave->csc = $request ->csc;
         $Updatesave->dateofissuance = $request ->dateofissuance;
         $Updatesave->dateofvalidity = $request ->dateofvalidity;
-        $Updatesave->personnel = $request ->personnel;
-        $Updatesave->status = $request ->status;
-        $Updatesave->department = $request ->department;
-        $Updatesave->position = $request ->position;
-        $Updatesave->dateofjoining = $request ->dateofjoining;
-        $Updatesave->dateofleaving = $request ->dateofleaving;
-        $Updatesave->dateofretirement = $request ->dateofretirement;
-        $Updatesave->salary = $request ->salary;
-        $Updatesave->step = $request ->step;
 
         if($Updatesave->update()) {
             return redirect()->back()->withErrors('Updated!');
         }
-    }
-
-    public function viewemployee(Request $request){
-        $employees=Employee::where('id',$request->id)->first();
-
-        return view('admin.employees.employee.view',[
-                'employees'=>$employees
-        ]);
     }
 }

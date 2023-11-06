@@ -1,10 +1,10 @@
-@extends('layouts.default')
+@extends('layouts.users')
 
 @section('content')
             @include('layouts.partials.messages')
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-users" aria-hidden="true"></i> Employee</h3>
+                    <h3 class="text-themecolor"><i class="fa fa-user cicle" aria-hidden="true"></i> Employee</h3>
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
@@ -15,11 +15,6 @@
             </div>
             <div class="message"></div>
             <div class="container-fluid">
-                <div class="row m-b-10"> 
-                    <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="{{route('employee.add')}}" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="card card-outline-info">
@@ -52,8 +47,8 @@
                                                 <td>{{$employee->address}}</td>
                                                 <td>{{$employee->status}}</td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="{{ url('/employee/index/view/').'/'.$employee->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
-                                                    <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
+                                                    <a href="{{ url('/user/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
 
                                                 </td>
                                             </tr>
@@ -68,16 +63,5 @@
                 </div>
             </div>
             <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-            <script type="text/javascript">
-                $('.printpds').on('click', function(e){
-                    e.preventDefault();
-                    var link = $(this).attr('data-url');
-                    var newWindow = window.open(link, '_blank');
-
-                    newWindow.onload = function() {
-                        newWindow.print();
-                    };
-
-                });
-            </script>
+            
 @endsection
