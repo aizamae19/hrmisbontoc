@@ -68,9 +68,9 @@
                 </div>
                 <div class="control-form">
                     <div style="display: flex; width: 100%;">
-                        <label for="" style="font-size: 1rem;" >For the mont of: </label>
+                        <label for="" style="font-size: 1rem;" >For the month of: </label>
                         <div class="container-row" style="flex-grow: 1; justify-content: center;border-bottom: 1px solid black">
-                            <label for="" style="font-weight: 900; padding-left: 5px;">{{ date('F', strtotime("2023-$month-01")) }}</label>
+                            <label for="" style="font-weight: 900; padding-left: 5px;">{{ date ('F', strtotime("2023-$month-01")) }}</label>
                         </div>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                 </div>
                 <div class="control-form">
                     <div style="display: flex; width: 100%;">
-                        <label for="" style="font-size: 1rem;" >For the mont of: </label>
+                        <label for="" style="font-size: 1rem;" >For the month of: </label>
                         <div class="container-row" style="flex-grow: 1; justify-content: center;border-bottom: 1px solid black">
                             <label for="" style="font-weight: 900; padding-left: 5px;">{{ date('F', strtotime("2023-$month-01")) }}</label>
                         </div>

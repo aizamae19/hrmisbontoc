@@ -24,7 +24,7 @@
                                     <table id="attendance123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-                                                <th>Employee ID</th>
+                                                <th>Personnel ID</th>
                                                 <th>Date </th>
                                                 <th>Am In</th>
                                                 <th>Am Out</th>
@@ -38,7 +38,7 @@
                                            @if(isset($attendance))
                                                 @foreach($attendance as $attendancelist)
                                                     <tr>
-                                                        <td><mark>{{$attendancelist->employee_id}}</mark></td>
+                                                        <td><mark>{{$attendancelist->personnel}}</mark></td>
                                                         <td>{{$attendancelist->date}}</td>
                                                         <td>{{$attendancelist->am_in}}</td>
                                                         <td>{{$attendancelist->am_out}}</td>

@@ -17,9 +17,9 @@ class attendancesController extends Controller
     }
 
 
-    public function showWorkingHoursList($employeeId)
+    public function showWorkingHoursList($Personnel)
     {
-            $workingHours = Attendances::where('employee_id', $employeeId)->get();
+            $workingHours = Attendances::where('personnel', $personnel)->get();
             $workingHoursList = [];
 
             foreach ($workingHours as $entry) {
@@ -80,10 +80,10 @@ class attendancesController extends Controller
                         $columns = explode($delimiter, $row);
                         // Process the columns as needed
 
-                        $emp_id = trim($columns[0]);
+                        $personnel = trim($columns[0]);
                         $csvdate = Carbon::parse(trim($columns[1]));
                         $date = $csvdate->format('Y-m-d');
-                        $checkAttendance = Attendances::where('employee_id', $emp_id)
+                        $checkAttendance = Attendances::where('personnel', $personnel)
                                                         ->where('date',$date)
                                                         ->first();
                         if(isset($checkAttendance)){
@@ -105,7 +105,7 @@ class attendancesController extends Controller
 
                         }else{
                             $saveAttendance = new Attendances();
-                            $saveAttendance->employee_id = $emp_id;
+                            $saveAttendance->personnel = $personnel;
                             $saveAttendance->date = $date;
                             if ($csvdate->hour < 12) {
                                  $saveAttendance->am_in = $csvdate->format('H:i:s');
