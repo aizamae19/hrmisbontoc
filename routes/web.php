@@ -105,6 +105,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         #USER
         Route::group(['middleware' => ['user']], function () {
             Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
+             Route::get('user/dashboard/notice', 'UserController@showNoticeBoard');
 
              #NOTICE
             Route::get('/user/notice', [App\Http\Controllers\User\NoticeController::class, 'index'])->name('usernotice');
