@@ -17,4 +17,11 @@ class UserController extends Controller
         return view('users.dashboard.index');
     }
 
+    public function showNoticeBoard()
+{
+    $notices = Notice::all();
+
+    return view('dashboard.notice', ['notices' => $notices]);
+}
+
 }
