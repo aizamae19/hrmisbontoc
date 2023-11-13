@@ -19,7 +19,7 @@
                             <div class="modal-header">
                                 <h4 class="modal-title" id="exampleModalLabel1">Leave Application</h4>
                             </div>
-                            <form method="post" action="Add_Applications" id="leaveapply" enctype="multipart/form-data">
+                            <form method="post" action="" id="leaveapply" enctype="multipart/form-data">
                             <div class="modal-body">
                                 
                                 <div class="form-group">
@@ -73,7 +73,7 @@
                                     <label for="adoptionleave"> Adoption Leave (R.A. No. 8552)</label><br>
                                     <input type="checkbox" id="other" name="other" value="other">
                                     <label for="other">Others:</label>
-                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="other" name="other" value="">
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="reason" name="reason" value="">
                                 </div>
                                 <div class="form-group">
                                     <label>6.B DETAILS OF LEAVE</label>
