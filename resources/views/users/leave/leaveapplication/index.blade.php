@@ -19,7 +19,7 @@
                             <div class="modal-header">
                                 <h4 class="modal-title" id="exampleModalLabel1">Leave Application</h4>
                             </div>
-                            <form method="post" action="Add_Applications" id="leaveapply" enctype="multipart/form-data">
+                            <form method="post" action="" id="leaveapply" enctype="multipart/form-data">
                             <div class="modal-body">
                                 
                                 <div class="form-group">
