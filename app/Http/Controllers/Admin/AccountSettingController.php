@@ -8,8 +8,11 @@ use App\Models\AccountSetting;
 
 class AccountSettingController extends Controller
 { 
-    public function index(request $request){
-        return view('admin.accountsetting.index');
+    public function index(){
+        $accountsettings = AccountSetting::get();
+        return view('admin.accountsetting.index', [
+            'accountsettings'=>$accountsettings
+        ]);
     }
 
     public function storeaccountsetting(Request $request){

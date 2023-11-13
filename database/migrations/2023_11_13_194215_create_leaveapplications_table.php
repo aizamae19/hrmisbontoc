@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('employeename');
             $table->date('dateoffiling');
             $table->string('position');
-            $table->int('salary');
+            $table->integer('salary');
             $table->string('vacationleave')->nullable();
             $table->string('mandatoryleave')->nullable();
             $table->string('sickleave')->nullable();
