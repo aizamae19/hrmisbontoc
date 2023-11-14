@@ -14,9 +14,7 @@
                 </div>
             </div>
             <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
+            <div class="container-fluid" style="background-image:url('../images/bontoc1.jpg'); background-size: cover; height: 560px;">
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->
@@ -108,13 +106,13 @@
                     </div>
                    
                 </div>
-                <!-- ============================================================== -->
             </div> 
             <div class="container-fluid">
+
                                                                         
                   
                 <!-- Row -->
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-body">
@@ -125,9 +123,9 @@
                                     <table class="table table-hover table-bordered earning-box ">
                                         <thead>
                                             <tr>
-                                                <th>Title</th>
+                                                <th>Title</th> -->
                                                 <!-- <th>File</th> -->
-                                                <th>Date</th>
+                                                <!-- <th>Date</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -171,5 +169,5 @@
                         </div>
                     </div>
                 </div>                                               
-            </div>
+            </div> -->
 @endsection
