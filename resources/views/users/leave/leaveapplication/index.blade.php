@@ -19,9 +19,9 @@
                             <div class="modal-header">
                                 <h4 class="modal-title" id="exampleModalLabel1">Leave Application</h4>
                             </div>
-                            <form method="post" action="" id="leaveapply" enctype="multipart/form-data">
+                            <form method="post" action="{{route('leaveapplication.store')}}" id="leaveapply" enctype="multipart/form-data">
                             <div class="modal-body">
-                                
+                                @csrf
                                 <div class="form-group">
                                     <label>OFFICE/DEPARTMENT</label>
                                      <input type="text" name="office" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
@@ -81,21 +81,21 @@
                                     <label>In case of Vacation/Special Privilege Leave:</label><br>
                                     <input type="checkbox" id="philippines" name="philippines" value="philippines">
                                     <label for="philippines">Within the Philippines</label>
-                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="philippines" name="philippines" value=""><br>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="phil" name="phil" value=""><br>
                                     <input type="checkbox" id="abroad" name="abroad" value="abroad">
                                     <label for="abroad">Abroad (Specify)</label>
-                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="abroad" name="abroad" value="">
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="outofcountry" name="outofcountry" value="">
                                     <br>
                                     <label>In case of Sick Leave:</label><br>
                                     <input type="checkbox" id="inhospital" name="inhospital" value="inhospital">
                                     <label for="inhospital">In Hospital (Specify Illness)</label>
-                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="inhospital" name="inhospital" value=""><br>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="admit" name="admit" value=""><br>
                                     <input type="checkbox" id="outpatient" name="outpatient" value="outpatient">
                                     <label for="outpatient">Out Patient (Specify Illness)</label>
-                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="outpatient" name="outpatient" value=""><br>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="undermedication" name="undermedication" value=""><br>
                                     <label>In case of Special Leave Benefits for Women:</label><br>
                                     <label for="leavebenefits">(Specify Illness)</label>
-                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="leavebenefits" name="leavebenefits" value=""><br>
+                                    <input type="text" style="border: none; border-bottom: 1px solid black;" id="benefits" name="benefits" value=""><br>
                                     <label>In case of Study Leave:</label><br>
                                     <input type="checkbox" id="completion" name="completion" value="completion">
                                     <label for="completion">Completion of Master's Degree</label>
@@ -111,16 +111,9 @@
                                     <label for="terminalleave">Terminal Leave</label><br>
                                 </div>
                                 <div class="form-group">
-                                    <span style="color:red" id="total"></span>
-                                    <div class="span pull-right">
-                                        <button class="btn btn-info fetchLeaveTotal">Fetch Total Leave</button>
-                                    </div>
-                                    <br>
-                                </div>
-                                <div class="form-group">
                                     <label>6.C NUMBER OF WORKING DAYS APPLIED FOR</label><br>
-                                    <label class="control-label" id="hourlyFix">Inclusive Dates</label>
-                                    <input type="text" name="startdate" class="form-control mydatetimepickerFull" id="recipient-name1" required>
+                                    <label class="control-label" id="">Inclusive Dates</label>
+                                    <input type="date" name="inclusivedates" class="form-control mydatetimepickerFull" id="recipient-name1" required>
                                 </div>
                                 <div class="form-group">
                                     <label>6.D COMMUTATION</label><br>
@@ -130,7 +123,11 @@
                                     <input type="checkbox" id="requested" name="requested" value="requested">
                                     <label for="requested">Requested</label><br>
                                 </div>
-                            <div class="modal-footer">
+                                 <div class="form-group">
+                                        <label>Signature of the Applicant (Kindly attach the picture of your signature.)</label>
+                                        <input type="file" name="image" class="form-control" value="image">
+                                </div>
+                                <div class="modal-footer">
                                 <input type="hidden" name="id" class="form-control" id="recipient-name1" required> 
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-success">Submit</button>

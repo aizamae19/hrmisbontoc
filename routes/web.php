@@ -97,8 +97,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/notice/index/delete', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
 
             #SETTINGS
-            Route::get('/accountsetting', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsetting');
-            Route::post('/accountsetting/add/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
+            Route::get('/accountsetting', [App\Http\Controllers\Admin\AccountSettingController::class, 'accountsetting'])->name('setting.account');
+            Route::post('/accountsetting/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
         });
 
        
@@ -126,6 +126,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #LEAVE-LEAVE APPLICATION
             Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
+            Route::post('/user/leaveapplication/store', [App\Http\Controllers\User\LeaveApplicationController::class, 'storeleaveapplication'])->name('leaveapplication.store');
 
             #MYPROFILE
             Route::get('/user/myprofile', [App\Http\Controllers\User\MyProfileController::class, 'index'])->name('usermyprofile');

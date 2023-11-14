@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('employeename');
             $table->date('dateoffiling');
             $table->string('position');
-            $table->integer('salary');
+            $table->string('salary');
             $table->string('vacationleave')->nullable();
             $table->string('mandatoryleave')->nullable();
             $table->string('sickleave')->nullable();
@@ -51,8 +51,7 @@ return new class extends Migration
             $table->date('inclusivedates')->nullable();
             $table->string('notrequested')->nullable();
             $table->string('requested')->nullable();
-            $table->string('image');
-
+            $table->timestamps();
         });
     }
 

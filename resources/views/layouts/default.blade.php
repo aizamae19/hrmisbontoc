@@ -95,7 +95,7 @@
                                     <li role="separator" class="divider"></li>
                                     <li><a href="http://hrmis_bontoc.test/employee/view?I=U295MTMzMg=="><i class="ti-user"></i> My Profile</a></li>
                                                                         
-                                    <li><a href="{{ route('accountsetting')}}"><i class="ti-settings"></i> Account Setting</a></li>
+                                    <li><a href="{{ route('setting.account')}}"><i class="ti-settings"></i> Account Setting</a></li>
                                     <li><a href="{{ route('signout') }}"></i> Logout</a></li>
                                 </ul>
                             </div>
@@ -119,7 +119,7 @@
                     <!-- User profile text-->
                     <div class="profile-text">
                         <h5 style="color: #ffffff;">Admin</h5>
-                        <a href="{{ route('accountsetting')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
+                        <a href="{{ route('setting.account')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                         <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
                     </div>
                 </div>
