@@ -1,8 +1,7 @@
 @extends('layouts.users')
 
 @section('content')
-<br><br><br><br><br><br><br>
- <div class="container-fluid" style="background-image:url('../images/bontoc1.jpg'); background-size: cover; height: 450px;">     <div class="row">
+ <div class="container-fluid" style="background-image:url('../images/bontoc1.jpg'); background-size: cover; height: 620px;">     <div class="row">
                     <div class="col-lg-8">
                         <div class="card">
                             <div class="card-body">
