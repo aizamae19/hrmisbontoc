@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('maritalstatus');
             $table->date('dateofbirth');
             $table->string('gender');
-            $table->string('bloodtype');
+            $table->string('bloodtype')->nullable();
             $table->string('contactnumber')->unique();
             $table->string('persontocontact')->unique();
             $table->string('personalemail')->unique();
