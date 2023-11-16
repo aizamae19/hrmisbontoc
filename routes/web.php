@@ -74,6 +74,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #LEAVE-LEAVE APPLICATION
             Route::get('/leaveapplication', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'index'])->name('leaveapplication');
+            Route::post('/leaveapplication/approve/{id}', [LApp\Http\Controllers\Admin\LeaveApplicationController::class, 'approve'])->name('approve');
+            Route::post('/leaveapplication/reject/{id}', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'reject'])->name('reject');
 
             #LEAVE-EARNED LEAVE
              Route::get('/leave/earnedleave', [App\Http\Controllers\Admin\EarnedLeaveController::class, 'earnedleaveleave'])->name('leave.earnedleave');

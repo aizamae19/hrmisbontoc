@@ -16,7 +16,7 @@
             <div class="container-fluid">
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="{{ route('employee.add') }}" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="{{ route('employee.employees') }}" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
                     </div>
                 </div>
                 <div class="row">
