@@ -48,7 +48,7 @@ return new class extends Migration
             $table->string('otherpurpose')->nullable();
             $table->string('monetization')->nullable();
             $table->string('terminalleave')->nullable();
-            $table->date('inclusivedates')->nullable();
+            $table->string('inclusivedates')->nullable();
             $table->string('notrequested')->nullable();
             $table->string('requested')->nullable();
             $table->enum('status', ['pending', 'approve', 'reject'])->default('pending');

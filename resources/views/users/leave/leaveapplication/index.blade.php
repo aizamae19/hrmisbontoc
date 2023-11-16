@@ -25,7 +25,7 @@
                                 <div class="form-group">
                                     <label>OFFICE/DEPARTMENT</label>
                                      <input type="text" name="office" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
-
+                                </div>
                                 <div class="form-group">
                                     <label>EMPLOYEE NAME</label>
                                      <input type="text" name="employeename" class="form-control" id="recipient-name1" minlength="1" maxlength="35" value="" required>
@@ -45,13 +45,13 @@
                                 <div class="form-group">
                                     <label>6.A TYPE OF LEAVE TO BE AVAILED OF:</label>
                                     <br>
-                                    <input type="checkbox" id="vacationleave" name="vacationleave" value="vacationleave">
+                                    <input type="checkbox" id="vacationleave" name="vacationleave" value="Vacation Leave">
                                     <label for="vacationleave"> Vacation Leave (Sec. 51, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
-                                    <input type="checkbox" id="mandatoryleave" name="mandatoryleave" value="mandatoryleave">
+                                    <input type="checkbox" id="mandatoryleave" name="mandatoryleave" value="Mandatory Leave">
                                     <label for="mandatoryleave"> Mandatory/Forced Leave (Sec. 25, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
-                                    <input type="checkbox" id="sickleave" name="sickleave" value="sickleave">
+                                    <input type="checkbox" id="sickleave" name="sickleave" value="Sick Leave">
                                     <label for="sickleave"> Sick Leave (Sec. 43, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
-                                    <input type="checkbox" id="maternityleave" name="maternityleave" value="maternityleave">
+                                    <input type="checkbox" id="maternityleave" name="maternityleave" value="Maternity Leave">
                                     <label for="maternityleave"> Maternity Leave (R.A. No. 11210 / IRR issued by CSC, DOLE and SSS)</label><br>
                                     <input type="checkbox" id="paternityleave" name="paternityleave" value="paternityleave">
                                     <label for="paternityleave"> Paternity Leave (R.A. No. 8187 / CSC MC No. 71, s. 1998, as amended)</label><br>
@@ -113,14 +113,21 @@
                                 <div class="form-group">
                                     <label>6.C NUMBER OF WORKING DAYS APPLIED FOR</label><br>
                                     <label class="control-label" id="">Inclusive Dates</label>
-                                    <input type="date" name="inclusivedates" class="form-control mydatetimepickerFull" id="recipient-name1" required>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="inclusivedates" name="inclusivedates">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text">
+                                    <i class="fa fa-calendar"></i>
+                                    </span>
+                                    </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label>6.D COMMUTATION</label><br>
                                     <input type="checkbox" id="notrequested" name="notrequested" value="notrequested">
                                     <label for="notrequested">Not Requested</label>
                                     <br>
-                                    <input type="checkbox" id="requested" name="requested" value="requested">
+                                    <input type="checkbox" id="requested" name="equested" value="requested">
                                     <label for="requested">Requested</label><br>
                                 </div>
                                  <div class="form-group">
@@ -137,5 +144,17 @@
                     </div>
                 </div>                     
             </div>
+
+            <script>
+  $(document).ready(function() {
+    $('#inclusivedates').datepicker({
+      autoclose: true,
+      format: 'mm/dd/yyyy',
+      clearBtn: true,
+      multidate: true,
+      multidateSeparator: " - "
+    });
+  });
+</script>
 
 @endsection
