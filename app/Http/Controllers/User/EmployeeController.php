@@ -17,13 +17,6 @@ class EmployeeController extends Controller
         ]);
     }  
 
-    public function addemployee(request $request){
-        $employees = Employee::get();
-        return view('users.myprofile.index', [
-            'employees'=>$employees
-        ]);
-    }
-
     public function storeemployee(Request $request){ 
         $employeesave =new Employee();
         $employeesave->firstname = $request->firstname;
@@ -63,7 +56,7 @@ class EmployeeController extends Controller
         $employee = Employee::where('id', $request->id)->first();
         $employees = Employee::orderBy('updated_at', 'asc')->get();
 
-        return view(' .update',[
+        return view('users.myprofile.update',[
             'employee'=>$employee,
             'employees'=>$employees
         ]);

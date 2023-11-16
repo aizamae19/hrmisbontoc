@@ -51,6 +51,7 @@ return new class extends Migration
             $table->date('inclusivedates')->nullable();
             $table->string('notrequested')->nullable();
             $table->string('requested')->nullable();
+            $table->enum('status', ['pending', 'approve', 'reject'])->default('pending');
             $table->timestamps();
         });
     }

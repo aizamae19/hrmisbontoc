@@ -10,16 +10,16 @@
           
       <div class="row card p-1" >
       @include('layouts.partials.messages')
-         <form action="{{ route('useremployee.edit.view') }}"  method="post">
+         <form action="{{ route('useremployee.edit.view')}}"  method="get">
           @csrf
             <div class="col-md-12">
     <div class="main-body">
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
-                <div class="card-body">
+                <div class="card-body">z
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="rounded-circle" width="250">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="250">
                   </div>
                 </div>
               </div>

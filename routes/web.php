@@ -118,9 +118,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
             Route::post('/user/leaveapplication/store', [App\Http\Controllers\User\LeaveApplicationController::class, 'storeleaveapplication'])->name('leaveapplication.store');
 
-           #EMPLOYEES-EMPLOYEE
+            #EMPLOYEES-EMPLOYEE
             //View
-            Route::get('/user/myprofile', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
-            Route::post('/user/myprofile', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.edit.view');
+            Route::get('/users/myprofile/index/{id}', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
+            Route::post('/users/myprofile/index', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.edit.view');
         });
 });
