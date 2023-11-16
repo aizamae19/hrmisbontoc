@@ -47,29 +47,29 @@
                                     <br>
                                     <input type="checkbox" id="vacationleave" name="vacationleave" value="Vacation Leave">
                                     <label for="vacationleave"> Vacation Leave (Sec. 51, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
-                                    <input type="checkbox" id="mandatoryleave" name="mandatoryleave" value="Mandatory Leave">
+                                    <input type="checkbox" id="mandatoryleave" name="mandatoryleave" value="Mandatory/Forced Leave">
                                     <label for="mandatoryleave"> Mandatory/Forced Leave (Sec. 25, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
                                     <input type="checkbox" id="sickleave" name="sickleave" value="Sick Leave">
                                     <label for="sickleave"> Sick Leave (Sec. 43, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
                                     <input type="checkbox" id="maternityleave" name="maternityleave" value="Maternity Leave">
                                     <label for="maternityleave"> Maternity Leave (R.A. No. 11210 / IRR issued by CSC, DOLE and SSS)</label><br>
-                                    <input type="checkbox" id="paternityleave" name="paternityleave" value="paternityleave">
+                                    <input type="checkbox" id="paternityleave" name="paternityleave" value="Paternity Leave">
                                     <label for="paternityleave"> Paternity Leave (R.A. No. 8187 / CSC MC No. 71, s. 1998, as amended)</label><br>
-                                    <input type="checkbox" id="specialprivilegeleave" name="specialprivilegeleave" value="specialprivilegeleave">
+                                    <input type="checkbox" id="specialprivilegeleave" name="specialprivilegeleave" value="Special Privilege Leave">
                                     <label for="specialprivilegeleave"> Special Privilege Leave (Sec. 21, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
-                                    <input type="checkbox" id="soloparentleave" name="soloparentleave" value="soloparentleave">
+                                    <input type="checkbox" id="soloparentleave" name="soloparentleave" value="Solo Parent Leave">
                                     <label for="soloparentleave"> Solo Parent Leave (RA No. 8972 / CSC MC No. 8, s. 2004)</label><br>
-                                    <input type="checkbox" id="studyleave" name="studyleave" value="studyleave">
+                                    <input type="checkbox" id="studyleave" name="studyleave" value="Study Leave">
                                     <label for="studyleave"> Study Leave (Sec. 68, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
-                                    <input type="checkbox" id="vawcleave" name="vawcleave" value="vawcleave">
+                                    <input type="checkbox" id="vawcleave" name="vawcleave" value="10-Day VAWC Leave">
                                     <label for="vawcleave"> 10-Day VAWC Leave (RA No. 9262 / CSC MC No. 15, s. 2005)</label><br>
-                                    <input type="checkbox" id="rehabilitation" name="rehabilitation" value="rehabilitation">
+                                    <input type="checkbox" id="rehabilitation" name="rehabilitation" value="Rehabilitation Privilege">
                                     <label for="rehabilitation"> Rehabilitation Privilege (Sec. 55, Rule XVI, Omnibus Rules Implementing E.O. No. 292)</label><br>
-                                    <input type="checkbox" id="specialleavebenefits" name="specialleavebenefits" value="specialleavebenefits">
+                                    <input type="checkbox" id="specialleavebenefits" name="specialleavebenefits" value="Special Leave Benefits">
                                     <label for="specialleavebenefits"> Special Leave Benefits for Women (RA No. 9710 / CSC MC No. 25, s. 2010)</label><br>
-                                    <input type="checkbox" id="specialemergency" name="specialemergency" value="specialemergency">
+                                    <input type="checkbox" id="specialemergency" name="specialemergency" value="Special Emergency (Calamity) Leave">
                                     <label for="specialemergency"> Special Emergency (Calamity) Leave (CSC MC No. 2, s. 2012, as amended)</label><br>
-                                    <input type="checkbox" id="adoptionleave" name="adoptionleave" value="adoptionleave">
+                                    <input type="checkbox" id="adoptionleave" name="adoptionleave" value="Adoption Leave">
                                     <label for="adoptionleave"> Adoption Leave (R.A. No. 8552)</label><br>
                                     <input type="checkbox" id="other" name="other" value="other">
                                     <label for="other">Others:</label>
@@ -79,35 +79,35 @@
                                     <label>6.B DETAILS OF LEAVE</label>
                                     <br>
                                     <label>In case of Vacation/Special Privilege Leave:</label><br>
-                                    <input type="checkbox" id="philippines" name="philippines" value="philippines">
+                                    <input type="checkbox" id="philippines" name="philippines" value="Within Philippines">
                                     <label for="philippines">Within the Philippines</label>
                                     <input type="text" style="border: none; border-bottom: 1px solid black;" id="phil" name="phil" value=""><br>
-                                    <input type="checkbox" id="abroad" name="abroad" value="abroad">
+                                    <input type="checkbox" id="abroad" name="abroad" value="Abroad">
                                     <label for="abroad">Abroad (Specify)</label>
                                     <input type="text" style="border: none; border-bottom: 1px solid black;" id="outofcountry" name="outofcountry" value="">
                                     <br>
                                     <label>In case of Sick Leave:</label><br>
-                                    <input type="checkbox" id="inhospital" name="inhospital" value="inhospital">
+                                    <input type="checkbox" id="inhospital" name="inhospital" value="In Hospital">
                                     <label for="inhospital">In Hospital (Specify Illness)</label>
                                     <input type="text" style="border: none; border-bottom: 1px solid black;" id="admit" name="admit" value=""><br>
-                                    <input type="checkbox" id="outpatient" name="outpatient" value="outpatient">
+                                    <input type="checkbox" id="outpatient" name="outpatient" value="Out Patient">
                                     <label for="outpatient">Out Patient (Specify Illness)</label>
                                     <input type="text" style="border: none; border-bottom: 1px solid black;" id="undermedication" name="undermedication" value=""><br>
                                     <label>In case of Special Leave Benefits for Women:</label><br>
                                     <label for="leavebenefits">(Specify Illness)</label>
                                     <input type="text" style="border: none; border-bottom: 1px solid black;" id="benefits" name="benefits" value=""><br>
                                     <label>In case of Study Leave:</label><br>
-                                    <input type="checkbox" id="completion" name="completion" value="completion">
+                                    <input type="checkbox" id="completion" name="completion" value="Completion of Master's Degree">
                                     <label for="completion">Completion of Master's Degree</label>
                                     <br>
-                                    <input type="checkbox" id="boardexam" name="boardexam" value="boardexam">
+                                    <input type="checkbox" id="boardexam" name="boardexam" value="BAR/Board Examination Review">
                                     <label for="boardexam">BAR/Board Examination Review </label><br>
                                     <label for="otherpurpose">Other purpose:</label>
                                     <input type="text" style="border: none; border-bottom: 1px solid black;" id="otherpurpose" name="otherpurpose" value=""><br>
-                                    <input type="checkbox" id="monetization" name="monetization" value="monetization">
+                                    <input type="checkbox" id="monetization" name="monetization" value="Monetization of Leave Credits">
                                     <label for="monetization">Monetization of Leave Credits</label>
                                     <br>
-                                    <input type="checkbox" id="terminalleave" name="terminalleave" value="terminalleave">
+                                    <input type="checkbox" id="terminalleave" name="terminalleave" value="Terminal Leave">
                                     <label for="terminalleave">Terminal Leave</label><br>
                                 </div>
                                 <div class="form-group">
@@ -124,11 +124,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label>6.D COMMUTATION</label><br>
-                                    <input type="checkbox" id="notrequested" name="notrequested" value="notrequested">
+                                    <input type="checkbox" id="notrequested" name="notrequested" value="Not Requested">
                                     <label for="notrequested">Not Requested</label>
                                     <br>
                                     <input type="checkbox" id="requested" name="equested" value="requested">
-                                    <label for="requested">Requested</label><br>
+                                    <label for="Requested">Requested</label><br>
                                 </div>
                                  <div class="form-group">
                                         <label>Signature of the Applicant (Kindly attach the picture of your signature.)</label>

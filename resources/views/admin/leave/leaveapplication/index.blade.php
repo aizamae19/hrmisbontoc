@@ -38,11 +38,6 @@
                                         <th>Office/Department</th>
                                         <th>Employee Name</th>
                                         <th>Date of Filing</th>
-                                        <th>Position</th>
-                                        <th>Salary</th> 
-                                        <th>Leave Type</th>
-                                        <th>Inclusive Dates</th>
-                                        <th>Commutation</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -53,16 +48,11 @@
                                         <td>{{$leaveapplications->office}}</td>
                                         <td>{{$leaveapplications->employeename}}</td>
                                         <td>{{$leaveapplications->dateoffiling}}</td>
-                                        <td>{{$leaveapplications->position}}</td>
-                                        <td>{{$leaveapplications->salary}}</td>
-                                        <td></td>
-                                        <td>{{$leaveapplications->inclusivedates}}</td>
-                                        <td></td>
                                         <td class="jsgrid-align-center">
-                                            
+                                            <a href="" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
                                             <a href="" title="Approve" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
                                             <a href="" title="Reject" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a> 
-                                            <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
+                                            
                                         </td>
                                     </tr>
                                         @endforeach
