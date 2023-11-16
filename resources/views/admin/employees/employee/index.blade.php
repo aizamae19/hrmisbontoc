@@ -54,7 +54,9 @@
                                                 <td class="jsgrid-align-center ">
                                                     <a href="{{ url('/employee/index/view/').'/'.$employee->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
                                                     <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-
+                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/employee/index/delete').'/'.$employee->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
+                                                    {{method_field('DELETE')}}
+                                                    @csrf
                                                 </td>
                                             </tr>
                                              @endforeach

@@ -129,7 +129,7 @@
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
                         <li> <a href="{{ route('userdashboard')}}" ><i class="fa fa-home"></i><span class="hide-menu">Dashboard </span></a></li>
-                         <li> <a href="" ><i class="fa fa-id-badge"></i><span class="hide-menu">My Profile <span class="hide-menu"></a></li>  
+                         <li> <a href="{{ route('useremployee.edit.view')}}" ><i class="fa fa-id-badge"></i><span class="hide-menu">My Profile <span class="hide-menu"></a></li>  
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-off"></i><span class="hide-menu">Leave </span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('userleave.holiday') }}"> Holiday </a></li>

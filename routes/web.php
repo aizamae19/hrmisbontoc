@@ -55,6 +55,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             //View
             Route::get('/employee/index/view/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.view');
             Route::post('/employee/index/view', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.edit.view');
+
+            //Delete
+            Route::get('/employee/index/delete/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'deleteemployee'])->name('employee.delete');
+            Route::post('/employee/index/delete', [App\Http\Controllers\Admin\EmployeeController::class, 'deleteemployee'])->name('employee.delete');
   
 
             #EMPLOYEES-INACTIVE USER
@@ -120,9 +124,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
             Route::post('/user/leaveapplication/store', [App\Http\Controllers\User\LeaveApplicationController::class, 'storeleaveapplication'])->name('leaveapplication.store');
 
-            #EMPLOYEES-EMPLOYEE
+            #MYPROFILE
             //View
-            Route::get('/users/myprofile/index/{id}', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
             Route::post('/users/myprofile/index', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.edit.view');
         });
 });
