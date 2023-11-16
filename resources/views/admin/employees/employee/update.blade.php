@@ -16,7 +16,7 @@
                     <div class="container-fluid">
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{route('employee.employees')}}" class="text-white"><i class="" aria-hidden="true"></i>Employee List</a></button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{route('employee.employees')}}" class="text-white"><i class="" aria-hidden="true"></i> Employee List</a></button>
                     </div>
                 </div>
                <div class="row">
@@ -43,7 +43,7 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Middle Name</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->middlename}}" required>
+                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->middlename}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Last Name </label>
@@ -53,7 +53,7 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Suffix</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}" required>
+                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Address</label>
@@ -63,7 +63,7 @@
                                      <div class="form-group col-md-3 m-t-20">
                                         <label>Marital Status</label>
                                         <select name="maritalstatus" class="form-control custom-select" value="{{$employee->maritalstatus}}" required>
-                                            <option>Select Marital Status</option>
+                                            <option value="">Select Marital Status</option>
                                             <option value="Married">Married</option>
                                             <option value="Common-Law Married">Common-Law Married</option>
                                             <option value="Widowed">Widowed</option>

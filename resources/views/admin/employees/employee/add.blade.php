@@ -55,8 +55,8 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Marital Status</label>
-                                        <select name="maritalstatus" class="form-control custom-select" required>
-                                            <option>Select Marital Status</option>
+                                        <select name="maritalstatus" value="" class="form-control custom-select" required>
+                                            <option value="">Select Marital Status</option>
                                             <option value="Married">Married</option>
                                             <option value="Common-Law Married">Common-Law Married</option>
                                             <option value="Widowed">Widowed</option>

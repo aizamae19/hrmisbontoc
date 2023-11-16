@@ -14,28 +14,22 @@
             </div>
             <div class="message"></div>
             <div class="container-fluid">
-                <div class="row m-b-10"> 
-                    <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="{{ route('employee.employees') }}" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="card card-outline-info">
                             <div class="card-header">
-                                <h4 class="m-b-0 text-white"><i class="fa fa-user-o" aria-hidden="true"></i> Employee List</h4>
+                                <h4 class="m-b-0 text-white"><i class="fa fa-user-o" aria-hidden="true"></i> Inactive Employee List</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive ">
                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-                                                <th>ID </th>
+                                                <th>Personnel ID</th>
                                                 <th>Employee Name</th>
-                                                <th>Email </th>
-                                                <th>Contact </th>
+                                                <th>Address </th>
+                                                <th>Status </th>
                                                 <th>Date of Leaving</th>
-                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         
