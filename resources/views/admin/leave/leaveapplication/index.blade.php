@@ -35,14 +35,14 @@
                             <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
+                                        <th>Office/Department</th>
                                         <th>Employee Name</th>
-                                        <th>PIN</th>
+                                        <th>Date of Filing</th>
+                                        <th>Position</th>
+                                        <th>Salary</th> 
                                         <th>Leave Type</th>
-                                        <th>Apply Date</th>
-                                        <th>Start Date</th> 
-                                        <th>End Date</th>
-                                        <th>Duration</th>
-                                        <th>Leave Status</th>
+                                        <th>Inclusive Dates</th>
+                                        <th>Commutation</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
