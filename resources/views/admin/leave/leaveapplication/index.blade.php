@@ -35,37 +35,39 @@
                             <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
+                                        <th>Office/Department</th>
                                         <th>Employee Name</th>
-                                        <th>PIN</th>
+                                        <th>Date of Filing</th>
+                                        <th>Position</th>
+                                        <th>Salary</th> 
                                         <th>Leave Type</th>
-                                        <th>Apply Date</th>
-                                        <th>Start Date</th> 
-                                        <th>End Date</th>
-                                        <th>Duration</th>
-                                        <th>Leave Status</th>
+                                        <th>Inclusive Dates</th>
+                                        <th>Commutation</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(isset($leaveapplications))
+                                            @foreach($leaveapplications as $leaveapplications)
                                      <tr style="vertical-align:top">
-                                        <td><span></span></td>
+                                        <td>{{$leaveapplications->office}}</td>
+                                        <td>{{$leaveapplications->employeename}}</td>
+                                        <td>{{$leaveapplications->dateoffiling}}</td>
+                                        <td>{{$leaveapplications->position}}</td>
+                                        <td>{{$leaveapplications->salary}}</td>
                                         <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>{{$leaveapplications->inclusivedates}}</td>
                                         <td></td>
                                         <td class="jsgrid-align-center">
                                             
                                             <a href="" title="Approve" class="btn btn-sm btn-success waves-effect waves-light Status" data-employeeId=Joh1474  data-id="4" data-value="Approve" data-duration="2" data-type="1">Approve</a>       
-                                            <a href="" title="Reject" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
-          <br> 
-
-              <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
-                                    </td>
-                                </tr>
-                                                                    </tbody>
+                                            <a href="" title="Reject" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a> 
+                                            <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light leaveapp" data-id="4" ><i class="fa fa-pencil-square-o"></i></a>
+                                        </td>
+                                    </tr>
+                                        @endforeach
+                                    @endif
+                                </tbody>
                             </table>
                         </div>
                     </div>
