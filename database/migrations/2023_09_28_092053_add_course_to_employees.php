@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('status')->after('personnel');
             $table->string('position')->after('status');
             $table->date('dateofjoining')->after('position');
-            $table->date('dateofleaving')->after('dateofjoining');
+            $table->date('dateofleaving')->after('dateofjoining')->nullable();
             $table->date('dateofretirement')->after('dateofleaving');
             $table->integer('salary')->after('dateofretirement');
             $table->integer('step')->after('salary');

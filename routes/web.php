@@ -57,8 +57,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/employee/index/view', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.edit.view');
   
 
-
-            
             #EMPLOYEES-INACTIVE USER
             Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
 
@@ -116,19 +114,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #LEAVE-EARNED LEAVE
              Route::get('/user/leave/earnedleave', [App\Http\Controllers\User\EarnedLeaveController::class, 'earnedleaveleave'])->name('userleave.earnedleave');
 
-            #EMPLOYEES-PROFILE
-            Route::get('/user/employees/profile', [App\Http\Controllers\User\EmployeeController::class, 'employeeemployees'])->name('useremployee.employees');
-            Route::post('/user/employees/profile/store', [App\Http\Controllers\User\EmployeeController::class, 'storeemployee'])->name('useremployee.store');
-
-            //Update
-            Route::get('/user/employee/index/edit/{id}', [App\Http\Controllers\User\EmployeeController::class, 'editemployee'])->name('useremployee.edit');
-            Route::post('/user/employee/index/edit/store', [App\Http\Controllers\User\EmployeeController::class, 'updateemployee'])->name('useremployee.edit.store');
-
             #LEAVE-LEAVE APPLICATION
             Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
             Route::post('/user/leaveapplication/store', [App\Http\Controllers\User\LeaveApplicationController::class, 'storeleaveapplication'])->name('leaveapplication.store');
 
-            #MYPROFILE
-            Route::get('/user/myprofile', [App\Http\Controllers\User\MyProfileController::class, 'index'])->name('usermyprofile');
+           #EMPLOYEES-EMPLOYEE
+            //View
+            Route::get('/user/myprofile', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
+            Route::post('/user/myprofile', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.edit.view');
         });
 });

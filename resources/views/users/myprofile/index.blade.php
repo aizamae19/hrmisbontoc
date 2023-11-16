@@ -1,81 +1,302 @@
 @extends('layouts.users')
 
 @section('content')
-    <div class="message"></div>
-            <div class="row page-titles">
-                <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-user-circle-o" style="color:#082746"></i>Information</h3>
+    <link href="{{ asset('style/style.css')}}" rel="stylesheet">
+
+  <div class="container mt-2"  >
+        <div class="card mb-7" style="max-width: 500px;  ">
+            <div class="row g-12" style="margin-right: -25.75rem">
+                <div class="col-md-12">
+          
+      <div class="row card p-1" >
+      @include('layouts.partials.messages')
+         <form action="{{ route('useremployee.edit.view') }}"  method="post">
+          @csrf
+            <div class="col-md-12">
+    <div class="main-body">
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="rounded-circle" width="250">
+                  </div>
                 </div>
-                <div class="col-md-7 align-self-center">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active">My Profile</li>
-                    </ol>
-                </div>
+              </div>
+              <div class="card mt-3">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-3" style="text-align: center;"></h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                   
+                    </div>
+                  </div>
+  
+              </div>
             </div>
-
-            <section style="background-color: #eee;">
-
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card mb-4">
-          <div class="card-body text-center">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-              class="rounded-circle img-fluid" style="width: 150px;">
-            <h5 class="my-3">John Smith</h5>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Firstname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     {{ $employees->firstname }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Middlename</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     {{ $employees->middlename }} 
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Lastname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                       {{ $employees->lastname }} 
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Suffix</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->suffix }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->address }}
+                    </div>
+                  </div>
+                  <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Marital Status</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->maritalstatus }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-12" >
+              <div class="card mb-3" >
+                <div class="card-body">
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date of Birth</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     {{ $employees->dateofbirth }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Gender</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                     {{ $employees->gender }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Blood Type</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                       {{ $employees->bloodtype }}
+                    </div>
+                  </div>
+                  <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Contact Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->contactnumber }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Person to Contact</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->persontocontact }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Personal Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->personalemail }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Corporate Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->corporateemail }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Course</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->course }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Graduate Studies</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->graduate }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">CSC Professional Eligibility</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->csc }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date Of Issuance PRC ID</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->dateofissuance }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date Of Validity PRC ID</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->dateofvalidity }}
+                    </div>
+                  </div>
+                    <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Personnel ID</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->personnel }}
+                    </div>
+                  </div>
+                    <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Status</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->status }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Department</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->department }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Position Title</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->position }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date Of Joining</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->dateofjoining }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date Of Leaving</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->dateofleaving }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date Of Mandatory Retirement</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->dateofretirement }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Salary Garde</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->salary }}
+                    </div>
+                  </div>
+                    <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Step</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->step }}
+                    </div>
+                  </div>
+                    </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+    </div> 
     </div>
-      <div class="col-lg-8">
-        <div class="card mb-4">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Full Name</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">Johnatan Smith</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Email</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">example@example.com</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">(097) 234-5678</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Mobile</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">(098) 765-4321</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Address</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
+  </form>
 </div>
-</section>
+</div>
+
+</div>
+
 @endsection
