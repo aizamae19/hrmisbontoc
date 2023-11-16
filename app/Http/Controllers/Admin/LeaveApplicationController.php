@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Leaveapplication;
 
 class LeaveApplicationController extends Controller
 {
@@ -14,6 +15,9 @@ class LeaveApplicationController extends Controller
 
        public function index()
     {
-        return view('admin.leave.leaveapplication.index');
+        $leaveapplications = Leaveapplication::get();
+        return view('admin.employees.employee.index', [
+            'employees'=>$employees
+        ]);
     }
 }

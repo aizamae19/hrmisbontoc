@@ -47,6 +47,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(isset($leaveapplications))
+                                            @foreach($leaveapplications as $leaveapplications)
                                      <tr style="vertical-align:top">
                                         <td><span></span></td>
                                         <td></td>
