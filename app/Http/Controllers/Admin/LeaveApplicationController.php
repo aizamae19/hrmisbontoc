@@ -16,8 +16,8 @@ class LeaveApplicationController extends Controller
        public function index()
     {
         $leaveapplications = Leaveapplication::get();
-        return view('admin.employees.employee.index', [
-            'employees'=>$employees
+        return view('admin.leave.leaveapplication.index', [
+            'leaveapplications'=>$leaveapplications
         ]);
     }
 }
