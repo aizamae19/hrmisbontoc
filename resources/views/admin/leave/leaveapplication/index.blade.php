@@ -50,8 +50,14 @@
                                         <td>{{$leaveapplications->dateoffiling}}</td>
                                         <td class="jsgrid-align-center">
                                             <a href="{{ url('/leaveapplication/index/edit/').'/'.$leaveapplications->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                            @if($leaveapplications->status == 'Approved')
+                                                <span class="badge badge-success">Approved</span>
+                                            @elseif($leaveapplications->status == 'Rejected')
+                                                <span class="badge badge-danger">Rejected</span>
+                                            @else
                                             <a href="{{ url('/leaveapplication/approve/').'/'.$leaveapplications->id}}" title="Approve" class="btn btn-sm btn-success waves-effect waves-light Status" data-value="Approve" >Approve</a>       
-                                            <a href="{{ url('/leaveapplication/reject/').'/'.$leaveapplications->id}}" title="Reject" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a> 
+                                            <a href="{{ url('/leaveapplication/reject/').'/'.$leaveapplications->id}}" title="Reject" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
+                                            @endif 
                                         </td>
                                     </tr>
                                         @endforeach
