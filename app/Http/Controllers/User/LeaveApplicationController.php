@@ -10,7 +10,17 @@ class LeaveApplicationController extends Controller
 {
        public function index()
     {
-        return view('users.leave.leaveapplication.index');
+        $leaveapplications = Leaveapplication::get();
+        return view('users.leave.leaveapplication.index', [
+            'leaveapplications'=>$leaveapplications
+        ]);
+    }
+
+    public function addleaveapplication(request $request){
+        $leaveapplications = Leaveapplication::get();
+        return view('users.leave.leaveapplication.add', [
+            'leaveapplications'=>$leaveapplications
+        ]);
     }
 
     public function storeleaveapplication(Request $request){ 

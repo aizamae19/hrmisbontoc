@@ -23,17 +23,17 @@ class LeaveApplicationController extends Controller
 
     public function approve($id)
     {
-        $leaveapplications = LeaveApplication::findOrFail($id);
-        $leaveapplications->status = 'approved';
+        $leaveapplications = Leaveapplication::findOrFail($id);
+        $leaveapplications->status = 'approve';
         $leaveapplications->save();
-        return view('admin.leave.leaveapplication.index')->with('success', 'Leave application approved!');
+        return redirect('/leaveapplication')->with('success', 'Leave application approved!');
     }
 
     public function reject($id)
     {
-        $leaveapplications = LeaveApplication::findOrFail($id);
-        $leaveapplications->status = 'rejected';
+        $leaveapplications = Leaveapplication::findOrFail($id);
+        $leaveapplications->status = 'reject';
         $leaveapplications->save();
-        return view('admin.leave.leaveapplication.index')->with('success', 'Leave application rejected!');
+        return redirect('/leaveapplication')->with('success', 'Leave application rejected!');
     }
 }

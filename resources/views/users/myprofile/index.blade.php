@@ -10,7 +10,7 @@
           
       <div class="row card p-1" >
       @include('layouts.partials.messages')
-         <form action="{{ route('useremployee.edit.view')}}"  method="get">
+         <form action="{{ route('useremployee.edit.view', ['id' => $employees->id]) }}"  method="post">
           @csrf
             <div class="col-md-12">
     <div class="main-body">

@@ -104,41 +104,6 @@ class EmployeeController extends Controller
         }
     }
 
-    public function deleteemployee(Request $request){
-        $Deletesave=Employee::where('id' ,$request->id)->first();
-        $Deletesave->firstname = $request->firstname;
-        $Deletesave->middlename = $request->middlename;
-        $Deletesave->lastname = $request->lastname;
-        $Deletesave->suffix = $request->suffix;
-        $Deletesave->address = $request->address;
-        $Deletesave->maritalstatus = $request->maritalstatus;
-        $Deletesave->dateofbirth = $request->dateofbirth;
-        $Deletesave->gender = $request->gender;
-        $Deletesave->bloodtype = $request->bloodtype;
-        $Deletesave->contactnumber = $request->contactnumber;
-        $Deletesave->persontocontact = $request->persontocontact;
-        $Deletesave->personalemail = $request->personalemail;
-        $Deletesave->corporateemail = $request->corporateemail;
-        $Deletesave->course = $request ->course;
-        $Deletesave->graduate = $request ->graduate;
-        $Deletesave->csc = $request ->csc;
-        $Deletesave->dateofissuance = $request ->dateofissuance;
-        $Deletesave->dateofvalidity = $request ->dateofvalidity;
-        $Deletesave->personnel = $request ->personnel;
-        $Deletesave->status = $request ->status;
-        $Deletesave->department = $request ->department;
-        $Deletesave->position = $request ->position;
-        $Deletesave->dateofjoining = $request ->dateofjoining;
-        $Deletesave->dateofleaving = $request ->dateofleaving;
-        $Deletesave->dateofretirement = $request ->dateofretirement;
-        $Deletesave->salary = $request ->salary;
-        $Deletesave->step = $request ->step;
-
-        if($Deletesave->delete()) {
-            return redirect()->back()->withErrors('Deleted!');
-        }
-    }
-
     public function viewemployee(Request $request){
         $employees=Employee::where('id',$request->id)->first();
 

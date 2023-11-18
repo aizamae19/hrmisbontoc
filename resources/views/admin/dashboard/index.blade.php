@@ -39,12 +39,15 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
-                                    <div class="round align-self-center round-danger"><i class="ti-user"></i></div>
+                                    <div class="round align-self-center round-info"><i class="ti-file"></i></div>
                                     <div class="m-l-10 align-self-center">
+                                        @if($noleaveapplications=App\Models\Leaveapplication::count())
                                         <h3 class="m-b-0">
-                                            
+                                            {{$noleaveapplications}}
                                         </h3>
-                                        <a href="{{ route('employee.employees')}}" class="text-muted m-b-0">View Details</a></div>
+                                    @endif
+                                        <a href="{{ route('leaveapplication')}}" class="text-muted m-b-0">View Details</a>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -54,12 +57,12 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
-                                    <div class="round align-self-center round-info"><i class="ti-file"></i></div>
+                                    <div class="round align-self-center round-danger"><i class="ti-user"></i></div>
                                     <div class="m-l-10 align-self-center">
                                         <h3 class="m-b-0">
+                                            
                                         </h3>
-                                        <a href="{{ route('leaveapplication')}}" class="text-muted m-b-0">View Details</a>
-                                        </div>
+                                        <a href="{{ route('report')}}" class="text-muted m-b-0">View Details</a></div>
                                 </div>
                             </div>
                         </div>
@@ -83,28 +86,30 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6 col-lg-4 col-xlg-3">
+                        <div class="card card-info card-inverse">
+                            <div class="box text-center">
+                                @if($noleaveapplications=App\Models\LeaveApplication::count())
+                                <h1 class="font-light text-white">
+                                    {{$noleaveapplications}}
+                                </h1>
+                                @endif
+                                <h6 class="text-white">Pending Leave Application</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- Column -->
                     <div class="col-md-6 col-lg-4 col-xlg-3">
                         <div class="card card-inverse card-danger">
                             <div class="box text-center">
                                 <h1 class="font-light text-white">
                                 </h1>
-                                <h6 class="text-white">Inactive Employees</h6>
+                                <h6 class="text-white">Leave Reports</h6>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-6 col-lg-4 col-xlg-3">
-                        <div class="card card-info card-inverse">
-                            <div class="box text-center">
-                                <h1 class="font-light text-white">
-                                              
-                                </h1>
-                                <h6 class="text-white">Pending Leave Application</h6>
-                            </div>
-                        </div>
-                    </div>
-                   
                 </div>
             </div> 
             <div class="container-fluid">

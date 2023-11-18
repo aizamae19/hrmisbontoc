@@ -59,10 +59,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             //Delete
             Route::get('/employee/index/delete/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'deleteemployee'])->name('employee.delete');
             Route::post('/employee/index/delete', [App\Http\Controllers\Admin\EmployeeController::class, 'deleteemployee'])->name('employee.delete');
-  
-
-            #EMPLOYEES-INACTIVE USER
-            Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
 
             #LEAVE-HOLIDAY
            Route::get('/leave/holiday', [App\Http\Controllers\Admin\HolidayController::class, 'holidayleave'])->name('leave.holiday');
@@ -78,8 +74,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #LEAVE-LEAVE APPLICATION
             Route::get('/leaveapplication', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'index'])->name('leaveapplication');
-            Route::post('/leaveapplication/approve/{id}', [LApp\Http\Controllers\Admin\LeaveApplicationController::class, 'approve'])->name('approve');
-            Route::post('/leaveapplication/reject/{id}', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'reject'])->name('reject');
+            
+            Route::get('/leaveapplication/approve/{id}', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'approve'])->name('approve');
+            Route::post('/leaveapplication/approve', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'approve'])->name('approve');
+
+            Route::get('/leaveapplication/reject/{id}', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'reject'])->name('reject');
+            Route::post('/leaveapplication/reject', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'reject'])->name('reject');
 
             #LEAVE-EARNED LEAVE
              Route::get('/leave/earnedleave', [App\Http\Controllers\Admin\EarnedLeaveController::class, 'earnedleaveleave'])->name('leave.earnedleave');
@@ -121,11 +121,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
              Route::get('/user/leave/earnedleave', [App\Http\Controllers\User\EarnedLeaveController::class, 'earnedleaveleave'])->name('userleave.earnedleave');
 
             #LEAVE-LEAVE APPLICATION
-            Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
+             Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
+
+            Route::get('/user/leaveapplication/add', [App\Http\Controllers\User\LeaveApplicationController::class, 'addleaveapplication'])->name('userleaveapplication.add');
             Route::post('/user/leaveapplication/store', [App\Http\Controllers\User\LeaveApplicationController::class, 'storeleaveapplication'])->name('leaveapplication.store');
 
             #MYPROFILE
-            //View
-            Route::post('/users/myprofile/index', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.edit.view');
+            Route::get('/user/myprofile/index/{id}', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
+            Route::post('/user/myprofile/index', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
         });
 });
