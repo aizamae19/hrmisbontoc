@@ -88,8 +88,10 @@
                                         <div class="dw-user-box">
                                             <div class="u-img"><img src="{{asset('assets/images/users/userav-min.png')}}" alt="user"></div>
                                             <div class="u-text">
-                                                <h4>Thom Anderson</h4>
-                                                <p class="text-muted">thoma@mail.com</p>
+                                                @if(Auth::check())
+                                                <h4>{{ Auth::user()->name }}</h4>
+                                                <p class="text-muted">{{ Auth::user()->email }}</p>
+                                                @endif
                                         </div>
                                     </li>
                                     <li role="separator" class="divider"></li>

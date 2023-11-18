@@ -14,7 +14,7 @@
                 </div>
             </div>
             <!-- Container fluid  -->
-            <div class="container-fluid" style="background-image:url('../images/bontoc1.jpg'); background-size: cover; height: 560px;">
+            <div class="container-fluid" style="background-image:url('../images/bontoc1.jpg'); background-size: cover; height: 470px;">
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->

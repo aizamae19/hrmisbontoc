@@ -88,8 +88,10 @@
                                         <div class="dw-user-box">
                                             <div class="u-img"><img src="{{asset('assets/images/users/userav-min.png')}}" alt="user"></div>
                                             <div class="u-text">
-                                                <h4>Thom Anderson</h4>
-                                                <p class="text-muted">thoma@mail.com</p>
+                                                @if(Auth::check())
+                                                <h4>{{ Auth::user()->name }}</h4>
+                                                <p class="text-muted">{{ Auth::user()->email }}</p>
+                                                @endif
                                         </div>
                                     </li>
                                     <li role="separator" class="divider"></li>
@@ -118,7 +120,9 @@
 
                     <!-- User profile text-->
                     <div class="profile-text">
-                        <h5 style="color: #ffffff;">Admin</h5>
+                        @if(Auth::check())
+                        <h5 style="color: #ffffff;">{{ Auth::user()->name }}</h5>
+                        @endif
                         <a href="{{ route('setting.account')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                         <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
                     </div>
