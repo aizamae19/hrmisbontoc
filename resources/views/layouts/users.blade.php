@@ -118,7 +118,9 @@
 
                     <!-- User profile text-->
                     <div class="profile-text">
-                        <h5 style="color: #ffffff;">User</h5>
+                        @if(Auth::check())
+                        <h5 style="color: #ffffff;">{{ Auth::user()->name }}</h5>
+                        @endif
                         <a href="{{ route('setting.account')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                         <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="fa fa-sign-out"></i></a>
                     </div>
