@@ -36,6 +36,7 @@
                                         <th>Office/Department</th>
                                         <th>Employee Name</th>
                                         <th>Date of Filing</th>
+                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -46,9 +47,9 @@
                                         <td>{{$leaveapplications->office}}</td>
                                         <td>{{$leaveapplications->employeename}}</td>
                                         <td>{{$leaveapplications->dateoffiling}}</td>
+                                        <td><button style="border-radius: 12px; cursor: auto;">{{$leaveapplications->status}}</button></td>
                                         <td class="jsgrid-align-center">
                                             <a href="" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a> 
-                                            <button style="border-radius: 12px; cursor: auto;">{{$leaveapplications->status}}</button>
                                         </td>
                                     </tr>
                                         @endforeach

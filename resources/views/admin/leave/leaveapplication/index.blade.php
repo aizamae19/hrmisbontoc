@@ -49,10 +49,9 @@
                                         <td>{{$leaveapplications->employeename}}</td>
                                         <td>{{$leaveapplications->dateoffiling}}</td>
                                         <td class="jsgrid-align-center">
-                                            <a href="" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
+                                            <a href="{{ url('/leaveapplication/index/edit/').'/'.$leaveapplications->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
                                             <a href="{{ url('/leaveapplication/approve/').'/'.$leaveapplications->id}}" title="Approve" class="btn btn-sm btn-success waves-effect waves-light Status" data-value="Approve" >Approve</a>       
                                             <a href="{{ url('/leaveapplication/reject/').'/'.$leaveapplications->id}}" title="Reject" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a> 
-                                            
                                         </td>
                                     </tr>
                                         @endforeach

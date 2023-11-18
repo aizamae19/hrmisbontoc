@@ -134,7 +134,7 @@
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('userleave.holiday') }}"> Holiday </a></li>
                                 <li><a href="{{ route('userleaveapplication') }}"> Leave Application </a></li>
-                                <li><a href="{{ route('userleave.earnedleave') }}"> Earned Leave </a></li>
+                                <!--<li><a href="{{ route('userleave.earnedleave') }}"> Earned Leave </a></li>-->
                             </ul>
                         </li>
                         
@@ -148,7 +148,7 @@
         <div class="page-wrapper">
             @yield('content')
 
-            <footer class="footer"> © 2023 | </footer>
+            <footer class="footer"> eis&dtris © 2023 | </footer>
 
         </div>
 

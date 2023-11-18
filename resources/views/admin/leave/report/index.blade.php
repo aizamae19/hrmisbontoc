@@ -26,32 +26,12 @@
                                 <div class="card-body">
                                     <form method="post" action="" id="salaryform" class="form-material row">
                                         <div class="form-group col-md-3">
-                                            <input type="text" name="datetime" id="date_from" class="form-control mydatetimepicker" placeholder="from" required>
+                                            <input type="text" name="datetime" id="date_from" class="form-control mydatetimepicker" placeholder="From">
                                         </div>
                                         <div class="form-group col-md-3">
                                             <select class="select2 form-control custom-select col-md-8" data-placeholder="Choose a Category" tabindex="1" id="emid" name="emid" required>
                                                 <option value="#">Select Here</option>
                                                 <option value="all">All Employee</option>
-                                                                                                <option value="Soy1332">
-                                                    Thom Anderson                                                </option>
-                                                                                                <option value="Doe1753">
-                                                    Will Williams                                                </option>
-                                                                                                <option value="Doe1754">
-                                                    John Greenwood                                                </option>
-                                                                                                <option value="Moo1402">
-                                                    Liam Moore                                                </option>
-                                                                                                <option value="Rob1472">
-                                                    Stephany Robs                                                </option>
-                                                                                                <option value="Tho1044">
-                                                    Chris Thompson                                                </option>
-                                                                                                <option value="Smi1266">
-                                                    Colin Smith                                                </option>
-                                                                                                <option value="Moo1634">
-                                                    Christine Moore                                                </option>
-                                                                                                <option value="Joh1474">
-                                                    Michael Johnson                                                </option>
-                                                                                                <option value="Den1745">
-                                                    Emily Denn                                                </option>
                                                                                             </select>
                                         </div>
                                         <div class="col-md-3 form-group">
@@ -67,13 +47,10 @@
                             <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
-                                        <th>PIN</th>
-                                        <th>Employee</th>
-                                        <th>Type</th>
-                                        <th>Duration</th>
-                                        <th>Start</th>
-                                        <th>End</th>
-                                        <!--<th>Total</th>-->
+                                        <th>Office/Department</th>
+                                        <th>Employee Name</th>
+                                        <th>Leave Type</th>
+                                        <th>Inclusive Dates</th>
                                     </tr>
                                 </thead>
                                 <!-- <tfoot>
