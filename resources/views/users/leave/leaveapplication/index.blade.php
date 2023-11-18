@@ -47,7 +47,11 @@
                                         <td>{{$leaveapplications->office}}</td>
                                         <td>{{$leaveapplications->employeename}}</td>
                                         <td>{{$leaveapplications->dateoffiling}}</td>
-                                        <td><button style="border-radius: 12px; cursor: auto;">{{$leaveapplications->status}}</button></td>
+                                        <td>@if($leaveapplications->status == 'Approved')
+                                                <span class="badge badge-success">Approved</span>
+                                            @else($leaveapplications->status == 'Rejected')
+                                                <span class="badge badge-danger">Rejected</span>
+                                            @endif</td>
                                         <td class="jsgrid-align-center">
                                             <a href="" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a> 
                                         </td>
