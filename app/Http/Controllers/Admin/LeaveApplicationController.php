@@ -24,7 +24,7 @@ class LeaveApplicationController extends Controller
     public function approve($id)
     {
         $leaveapplications = Leaveapplication::findOrFail($id);
-        $leaveapplications->status = 'approve';
+        $leaveapplications->status = 'Approved';
         $leaveapplications->save();
         return redirect('/leaveapplication')->with('success', 'Leave application approved!');
     }
@@ -32,7 +32,7 @@ class LeaveApplicationController extends Controller
     public function reject($id)
     {
         $leaveapplications = Leaveapplication::findOrFail($id);
-        $leaveapplications->status = 'reject';
+        $leaveapplications->status = 'Rejected';
         $leaveapplications->save();
         return redirect('/leaveapplication')->with('success', 'Leave application rejected!');
     }

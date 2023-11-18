@@ -48,6 +48,7 @@
                                         <td>{{$leaveapplications->dateoffiling}}</td>
                                         <td class="jsgrid-align-center">
                                             <a href="" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a> 
+                                            <button style="border-radius: 12px; cursor: auto;">{{$leaveapplications->status}}</button>
                                         </td>
                                     </tr>
                                         @endforeach
