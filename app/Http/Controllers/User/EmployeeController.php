@@ -9,8 +9,8 @@ use App\Models\Employee;
 
 class EmployeeController extends Controller
 {
-    public function viewemployee($id){
-        $employees=Employee::where('username',$request->id)->first();
+    public function viewemployee(Request $request){
+        $employees=Employee::where('id',$request->id)->first();
 
         return view('users.myprofile.index',[
                 'employees'=>$employees

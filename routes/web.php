@@ -133,7 +133,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/user/leaveapplication/store', [App\Http\Controllers\User\LeaveApplicationController::class, 'storeleaveapplication'])->name('leaveapplication.store');
 
             #MYPROFILE
-            Route::get('/user/myprofile/index/{id}', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
-            Route::post('/user/myprofile/index', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
+            Route::get('/user/myprofile', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
         });
 });
