@@ -161,7 +161,7 @@
                                             <option value="Office of the Mayor">Office of the Mayor</option>
                                             <option value="Office of the Vice-Mayor">Office of the Vice-Mayor</option>
                                             <option value="Office of the Sangguniang Bayan">Office of the Sangguniang Bayan</option>
-                                            <option value="Office of the Municipal Plannig and Development Coordinator">Office of the Municipal Planning and Development Coordinator</option>
+                                            <option value="Office of the Municipal Planning and Development Coordinator">Office of the Municipal Planning and Development Coordinator</option>
                                             <option value="Office of the Municipal Budget Officer">Office of the Municipal Budget Officer</option>
                                             <option value="Office of the Municipal Accountant">Office of the Municipal Accountant</option>
                                             <option value="Office of the Municipal Treasurer">Office of the Municipal Treasurer</option>
