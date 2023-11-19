@@ -12,8 +12,7 @@
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3">{{ $employee->firstname }} {{ $employee->middlename }} {{ $employee->lastname }} {{ $employee->suffix}}</h5>
             <div class="d-flex justify-content-center mb-2">
-              <button type="button" class="btn btn-primary">Change Profile</button>
-              <button type="button" class="btn btn-outline-primary ms-1">Edit</button>
+              <a href="{{ url('/user/myprofile/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
             </div>
           </div>
         </div>

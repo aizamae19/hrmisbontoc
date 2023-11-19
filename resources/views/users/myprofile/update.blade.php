@@ -14,11 +14,6 @@
             </div>
             <div class="message"></div>
                     <div class="container-fluid">
-                <div class="row m-b-10"> 
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{route('employee.employees')}}" class="text-white"><i class="" aria-hidden="true"></i> Employee List</a></button>
-                    </div>
-                </div>
                <div class="row">
                     <div class="col-12">
                         <div class="card card-outline-info">
@@ -33,7 +28,7 @@
                                                                                           
                                 <div class="card-body">
                                 @include('layouts.partials.messages')
-                                <form class="row" action="{{ route('employee.edit.store') }}" method="post" enctype="multipart/form-data">
+                                <form class="row" action="{{ route('useremployee.edit.store') }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                    <div class="form-group col-md-3 m-t-20">
                                         <label>First Name</label>
@@ -43,7 +38,7 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Middle Name</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->middlename}}" required>
+                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->middlename}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Last Name </label>
@@ -53,7 +48,7 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Suffix</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}" required>
+                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Address</label>
@@ -154,7 +149,7 @@
                                     </div>
                                     <div class="form-actions col-md-12">
                                     <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
-                                     <a href ="{{ route('useremployee.employees') }}"><button type="button"  class="btn btn-danger">Cancel</button></a>
+                                     <a href ="{{ route('useremployee.view') }}"><button type="button"  class="btn btn-danger">Cancel</button></a>
                                     </div>
                                 </form>
                             </div>

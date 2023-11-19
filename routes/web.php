@@ -134,5 +134,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #MYPROFILE
             Route::get('/user/myprofile', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
+
+            //Update
+            Route::get('/user/myprofile/index/edit/{id}', [App\Http\Controllers\User\EmployeeController::class, 'editemployee'])->name('useremployee.edit');
+            Route::post('/user/myprofile/index/edit/store', [App\Http\Controllers\User\EmployeeController::class, 'updateemployee'])->name('useremployee.edit.store');
         });
 });
