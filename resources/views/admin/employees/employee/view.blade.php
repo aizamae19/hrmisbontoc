@@ -19,20 +19,9 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="250">
+                    <img src="{{asset('assets/images/users/userav-min.png')}}" alt="Admin" class="rounded-circle" width="250">
                   </div>
                 </div>
-              </div>
-              <div class="card mt-3">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-3" style="text-align: center;"></h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                   
-                    </div>
-                  </div>
-  
               </div>
             </div>
             <div class="col-md-8">
