@@ -92,8 +92,6 @@
                                                 @endif
                                         </div>
                                     </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="http://hrmis_bontoc.test/employee/view?I=U295MTMzMg=="><i class="ti-user"></i> My Profile</a></li>
                                                                         
                                     <li><a href="{{ route('setting.account')}}"><i class="ti-settings"></i> Account Setting</a></li>
                                     <li><a href="{{ route('signout') }}"></i> Logout</a></li>
