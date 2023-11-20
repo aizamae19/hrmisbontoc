@@ -56,9 +56,19 @@
                                         <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Address</label>
+                                        <label>Purok/Street</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="address" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->address}}" required>
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Municipality</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="municipality" class="form-control form-control-line" value="{{$employee->municipality}}" minlength="2" required > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Town/Province</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="province" class="form-control form-control-line" value="{{$employee->province}}" minlength="2" required > 
                                     </div>
                                      <div class="form-group col-md-3 m-t-20">
                                         <label for="maritalstatus">Marital Status</label>

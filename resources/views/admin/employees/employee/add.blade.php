@@ -50,8 +50,16 @@
                                         <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Address</label>
-                                        <input type="text" name="address" class="form-control form-control-line" minlength="2" required > 
+                                        <label>Purok/Street</label>
+                                        <input type="text" name="address" class="form-control form-control-line" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Municipality</label>
+                                        <input type="text" name="municipality" class="form-control form-control-line" minlength="2" required > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Town/Province</label>
+                                        <input type="text" name="province" class="form-control form-control-line" minlength="2" required > 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Marital Status</label>

@@ -31,6 +31,8 @@ class EmployeeController extends Controller
         $employeesave->lastname = $request->lastname;
         $employeesave->suffix = $request->suffix;
         $employeesave->address = $request->address;
+        $employeesave->address = $request->municipality;
+        $employeesave->address = $request->province;
         $employeesave->maritalstatus = $request->maritalstatus;
         $employeesave->dateofbirth = $request->dateofbirth;
         $employeesave->gender = $request->gender;
@@ -68,6 +70,8 @@ class EmployeeController extends Controller
         $Updatesave->lastname = $request->lastname;
         $Updatesave->suffix = $request->suffix;
         $Updatesave->address = $request->address;
+        $Updatesave->address = $request->municipality;
+        $Updatesave->address = $request->province;
         $Updatesave->maritalstatus = $request->maritalstatus;
         $Updatesave->dateofbirth = $request->dateofbirth;
         $Updatesave->gender = $request->gender;

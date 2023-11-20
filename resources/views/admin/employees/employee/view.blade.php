@@ -76,10 +76,28 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Address</h6>
+                      <h6 class="mb-0">Purok/Street</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{ $employees->address }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Municipality</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->municipality }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Town/Province</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->province }}
                     </div>
                   </div>
                   <hr>
