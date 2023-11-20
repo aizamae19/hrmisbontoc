@@ -272,16 +272,4 @@
                 </div>
             </div>
         </div>
-
-        <script>
-  $(document).ready(function() {
-    $('#dateofbirth').datepicker({
-      autoclose: true,
-      format: 'mm/dd/yyyy',
-      clearBtn: true,
-      multidate: true,
-      multidateSeparator: " - "
-    });
-  });
-</script>
 @endsection
