@@ -32,7 +32,8 @@
                                             <tr>
                                                 <th>Personnel ID</th>
                                                 <th>Employee Name</th>
-                                                <th>Address</th>
+                                                <th>Department</th>
+                                                <th>Position</th>
                                                 <th>Status</th>
                                                 <th>Date of Joining</th>
                                                 <th>Action</th>
@@ -44,7 +45,8 @@
                                             <tr>
                                                 <td>{{$employee->personnel}}</td>
                                                 <td>{{ $employee->firstname }} {{ $employee->middlename }} {{ $employee->lastname }} {{ $employee->suffix}}</td>
-                                                <td>{{$employee->address}}</td>
+                                                <td>{{$employee->department}}</td>
+                                                <td>{{$employee->position}}</td>
                                                 <td>{{$employee->status}}</td>
                                                 <td>{{$employee->dateofjoining}}</td>
                                                 <td class="jsgrid-align-center ">
