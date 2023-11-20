@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('earnedleaves', function (Blueprint $table) {
-            $table->id();
-            $table->string('emid');
-            $table->date('startdate');
-            $table->date('enddate');
-            $table->timestamps();
+        Schema::table('employees', function (Blueprint $table) {
+            $table->string('contact')->after('persontocontact');
         });
     }
 
@@ -25,6 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('earnedleaves');
+        //
     }
 };

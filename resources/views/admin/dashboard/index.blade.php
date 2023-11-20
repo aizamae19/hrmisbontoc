@@ -14,7 +14,7 @@
                 </div>
             </div>
             <!-- Container fluid  -->
-            <div class="container-fluid" style="background-image:url('../images/bontoc1.jpg'); background-size: cover; height: 470px;">
+            <div class="container-fluid" style="background-image:url('../images/bontoc.jpeg'); background-size: cover; height: 470px;">
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->
@@ -62,7 +62,7 @@
                                         <h3 class="m-b-0">
                                             
                                         </h3>
-                                        <a href="{{ route('report')}}" class="text-muted m-b-0">View Details</a></div>
+                                        <a href="" class="text-muted m-b-0">View Details</a></div>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                             <div class="box text-center">
                                 <h1 class="font-light text-white">
                                 </h1>
-                                <h6 class="text-white">Leave Reports</h6>
+                                <h6 class="text-white">Attendances</h6>
                             </div>
                         </div>
                     </div>

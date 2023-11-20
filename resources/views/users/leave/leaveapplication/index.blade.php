@@ -53,7 +53,7 @@
                                                 <span class="badge badge-danger">Rejected</span>
                                             @endif</td>
                                         <td class="jsgrid-align-center">
-                                            <a href="" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a> 
+                                            <a href="{{ url('/user/leaveapplication/index/view/').'/'.$leaveapplications->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a> 
                                         </td>
                                     </tr>
                                         @endforeach

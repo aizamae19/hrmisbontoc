@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Birth </label>
-                                        <input type="date" name="dateofbirth" id="example-email2" name="example-email" class="form-control" placeholder="" required> 
+                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Gender</label>
@@ -96,7 +96,11 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Person to Contact</label>
-                                        <input type="text" name="persontocontact" class="form-control" value="" placeholder="" minlength="11" required> 
+                                        <input type="text" name="persontocontact" class="form-control" value="" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Person's Contact Number</label>
+                                        <input type="text" name="contact" class="form-control" minlength="11" value="" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Personal Email </label>
@@ -105,10 +109,6 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Corporate Email </label>
                                         <input type="email" id="example-email2" name="corporateemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" required > 
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Image </label>
-                                        <input type="file" name="image" class="form-control" value=""> 
                                     </div>
                                     <br>
                                     <div class="col-md-12">
@@ -125,7 +125,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>CSC Professional Eligibility </label>
-                                      <input type="text" id="" name="csc" class="form-control form-control-line" value="" minlength="2" required> 
+                                      <input type="text" id="" name="csc" class="form-control form-control-line" value="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Issuance PRC ID </label>
@@ -272,4 +272,16 @@
                 </div>
             </div>
         </div>
+
+        <script>
+  $(document).ready(function() {
+    $('#dateofbirth').datepicker({
+      autoclose: true,
+      format: 'mm/dd/yyyy',
+      clearBtn: true,
+      multidate: true,
+      multidateSeparator: " - "
+    });
+  });
+</script>
 @endsection

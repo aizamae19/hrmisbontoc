@@ -37,6 +37,7 @@ class EmployeeController extends Controller
         $employeesave->bloodtype = $request->bloodtype;
         $employeesave->contactnumber = $request->contactnumber;
         $employeesave->persontocontact = $request->persontocontact;
+        $employeesave->contact = $request->contact;
         $employeesave->personalemail = $request->personalemail;
         $employeesave->corporateemail = $request->corporateemail;
         $employeesave->course = $request ->course;
@@ -73,6 +74,7 @@ class EmployeeController extends Controller
         $Updatesave->bloodtype = $request->bloodtype;
         $Updatesave->contactnumber = $request->contactnumber;
         $Updatesave->persontocontact = $request->persontocontact;
+        $Updatesave->contact = $request->contact;
         $Updatesave->personalemail = $request->personalemail;
         $Updatesave->corporateemail = $request->corporateemail;
         $Updatesave->course = $request ->course;

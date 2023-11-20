@@ -109,6 +109,11 @@
                                         <input type="text" name="persontocontact" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->persontocontact}}" required>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
+                                        <label>Person's Contact Number</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="contact" class="form-control" minlength="11" value="{{$employee->contact}}" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
                                         <label>Personal Email </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="personalemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->personalemail}}" required>
@@ -117,10 +122,6 @@
                                         <label>Corporate Email </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->corporateemail}}" required>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Image </label>
-                                        <input type="file" name="image" class="form-control" value=""> 
                                     </div>
                                     <br>
                         <div class="col-md-12">

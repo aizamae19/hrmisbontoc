@@ -48,7 +48,7 @@
                             </button>
                         </div>
                     </form>
-
+        
                     <div class="login100-more" style="background-image: url('../images/logo.png');">
                     </div>
                 </div>

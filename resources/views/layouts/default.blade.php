@@ -55,10 +55,9 @@
                 </div>
                 <div class="navbar-collapse">
                     <ul class="navbar-nav mr-auto mt-md-0">
-                        <!-- This is  -->
                         <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
                         <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted text-muted waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-bell"></i>
                                 <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                             </a>
@@ -69,7 +68,6 @@
                                     </li>
                                     <li>
                                         <div class="message-center">
-                                            <!-- Message -->
                                                                                     </div>
                                     </li>
                                     <li>
@@ -77,7 +75,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <ul class="navbar-nav my-lg-0">
                         <li class="nav-item dropdown">
@@ -153,7 +151,7 @@
                                 <li><a href="{{ route('leave.holiday') }}"> Holiday </a></li>
                                 <li><a href="{{ route('leaveapplication') }}"> Leave Application </a></li>
                                 <!--<li><a href="{{ route('leave.earnedleave') }}"> Earned Leave </a></li>-->
-                                <li><a href="{{ route('report') }}"> Report </a></li>
+                                <!-- <li><a href="{{ route('report') }}"> Report </a></li> -->
                             </ul>
                         </li>
 

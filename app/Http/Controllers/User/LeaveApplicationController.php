@@ -68,4 +68,22 @@ class LeaveApplicationController extends Controller
             return redirect()->back();
         }
     }
+
+    public function editleaveapplication(Request $request){
+        $leaveapplication = Leaveapplication::where('id', $request->id)->first();
+        $leaveapplications = Leaveapplication::orderBy('updated_at', 'asc')->get();
+
+        return view('users.leave.leaveapplication.update',[
+            'leaveapplication'=>$leaveapplication,
+            'leaveapplications'=>$leaveapplications
+        ]);
+    }
+
+    public function viewleaveapplication(Request $request){
+        $leaveapplications=Leaveapplication::where('id',$request->id)->first();
+
+        return view('users.leave.leaveapplication.view',[
+                'leaveapplications'=>$leaveapplications
+        ]);
+    }
 }

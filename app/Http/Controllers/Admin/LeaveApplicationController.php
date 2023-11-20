@@ -92,4 +92,12 @@ class LeaveApplicationController extends Controller
             return redirect()->back();
         }
     }
+
+    public function viewleaveapplication(Request $request){
+        $leaveapplications=Leaveapplication::where('id',$request->id)->first();
+
+        return view('admin.leave.leaveapplication.view',[
+                'leaveapplications'=>$leaveapplications
+        ]);
+    }
 }

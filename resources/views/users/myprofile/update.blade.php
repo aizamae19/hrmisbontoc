@@ -113,10 +113,6 @@
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->corporateemail}}" required>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Image </label>
-                                        <input type="file" name="image" class="form-control" value=""> 
-                                    </div>
                                     <br>
                         <div class="col-md-12">
                         <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
