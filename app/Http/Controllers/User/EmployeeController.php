@@ -5,20 +5,27 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Employee;
-
+use Illuminate\Support\Facades\Auth;
 
 class EmployeeController extends Controller
 {
-     public function employeeemployees()
-    {   
-        $employees = Employee::get();
-        return view('users.employee.profile.index', [
-            'employees'=>$employees
-        ]);
-    }  
+    public function viewemployee(){
+    $name = Auth::user()->name;
+        $nameParts = explode(' ', $name);
+
+        $employee = Employee::where(function ($query) use ($nameParts) {
+            foreach ($nameParts as $part) {
+                $query->orWhere('firstname', 'LIKE', "%$part%");
+                $query->orWhere('middlename', 'LIKE', "%$part%");
+                $query->orWhere('lastname', 'LIKE', "%$part%");
+            }
+        })->first();
+
+    return view('users.myprofile.index', ['employee' => $employee]);
+    }
 
     public function storeemployee(Request $request){ 
-        $employeesave =new Employee();
+        $employeesave = new Employee();
         $employeesave->firstname = $request->firstname;
         $employeesave->middlename = $request->middlename;
         $employeesave->lastname = $request->lastname;
@@ -30,6 +37,7 @@ class EmployeeController extends Controller
         $employeesave->bloodtype = $request->bloodtype;
         $employeesave->contactnumber = $request->contactnumber;
         $employeesave->persontocontact = $request->persontocontact;
+        $employeesave->contact = $request->contact;
         $employeesave->personalemail = $request->personalemail;
         $employeesave->corporateemail = $request->corporateemail;
         $employeesave->course = $request ->course;
@@ -47,7 +55,7 @@ class EmployeeController extends Controller
         $employee = Employee::where('id', $request->id)->first();
         $employees = Employee::orderBy('updated_at', 'asc')->get();
 
-        return view('users.employee.profile.update',[
+        return view('users.myprofile.update',[
             'employee'=>$employee,
             'employees'=>$employees
         ]);
@@ -66,6 +74,7 @@ class EmployeeController extends Controller
         $Updatesave->bloodtype = $request->bloodtype;
         $Updatesave->contactnumber = $request->contactnumber;
         $Updatesave->persontocontact = $request->persontocontact;
+        $Updatesave->contact = $request->contact;
         $Updatesave->personalemail = $request->personalemail;
         $Updatesave->corporateemail = $request->corporateemail;
         $Updatesave->course = $request ->course;
@@ -78,4 +87,5 @@ class EmployeeController extends Controller
             return redirect()->back()->withErrors('Updated!');
         }
     }
+
 }

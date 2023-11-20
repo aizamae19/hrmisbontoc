@@ -55,10 +55,9 @@
                 </div>
                 <div class="navbar-collapse">
                     <ul class="navbar-nav mr-auto mt-md-0">
-                        <!-- This is  -->
                         <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
                         <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted text-muted waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-bell"></i>
                                 <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                             </a>
@@ -69,7 +68,6 @@
                                     </li>
                                     <li>
                                         <div class="message-center">
-                                            <!-- Message -->
                                                                                     </div>
                                     </li>
                                     <li>
@@ -77,7 +75,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <ul class="navbar-nav my-lg-0">
                         <li class="nav-item dropdown">
@@ -88,14 +86,16 @@
                                         <div class="dw-user-box">
                                             <div class="u-img"><img src="{{asset('assets/images/users/userav-min.png')}}" alt="user"></div>
                                             <div class="u-text">
-                                                <h4>Thom Anderson</h4>
-                                                <p class="text-muted">thoma@mail.com</p>
+                                                @if(Auth::check())
+                                                <h4>{{ Auth::user()->name }}</h4>
+                                                <p class="text-muted">{{ Auth::user()->email }}</p>
+                                                @endif
                                         </div>
                                     </li>
                                     <li role="separator" class="divider"></li>
                                     <li><a href="http://hrmis_bontoc.test/employee/view?I=U295MTMzMg=="><i class="ti-user"></i> My Profile</a></li>
                                                                         
-                                    <li><a href="{{ route('accountsetting')}}"><i class="ti-settings"></i> Account Setting</a></li>
+                                    <li><a href="{{ route('setting.account')}}"><i class="ti-settings"></i> Account Setting</a></li>
                                     <li><a href="{{ route('signout') }}"></i> Logout</a></li>
                                 </ul>
                             </div>
@@ -118,8 +118,10 @@
 
                     <!-- User profile text-->
                     <div class="profile-text">
-                        <h5 style="color: #ffffff;">Admin</h5>
-                        <a href="{{ route('accountsetting')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
+                        @if(Auth::check())
+                        <h5 style="color: #ffffff;">{{ Auth::user()->name }}</h5>
+                        @endif
+                        <a href="{{ route('setting.account')}}" class="dropdown-toggle u-dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="mdi mdi-settings"></i></a>
                         <a href="{{ route('signout') }}" class="" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
                     </div>
                 </div>
@@ -132,7 +134,6 @@
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Employees</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('employee.employees') }}">Employees</a></li>
-                                <li><a href="{{ route('inactiveuser') }}">Inactive Employee</a></li>
                             </ul>
                         </li>          
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
@@ -149,8 +150,8 @@
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="{{ route('leave.holiday') }}"> Holiday </a></li>
                                 <li><a href="{{ route('leaveapplication') }}"> Leave Application </a></li>
-                                <li><a href="{{ route('leave.earnedleave') }}"> Earned Leave </a></li>
-                                <li><a href="{{ route('report') }}"> Report </a></li>
+                                <!--<li><a href="{{ route('leave.earnedleave') }}"> Earned Leave </a></li>-->
+                                <!-- <li><a href="{{ route('report') }}"> Report </a></li> -->
                             </ul>
                         </li>
 
@@ -173,7 +174,7 @@
         <div class="page-wrapper">
             @yield('content')
 
-            <footer class="footer"> © 2023 | </footer>
+            <footer class="footer"> eis&dtris © 2023 | </footer>
 
         </div>
 

@@ -25,17 +25,7 @@
                             <div class="card-body">
                                 <div class="table_body">
                                     <form action="{{route('accountsetting.store')}}" method="POST" id="fileUploadForm"   enctype="multipart/form-data" accept-charset="utf-8">
-                                        @csrf
-                                        <!-- <div class="form-group clearfix">
-                                            <label for="" class="col-md-3">Upload site logo</label>
-                                            <div class="col-md-9">
-                                                <div class="file_prev inb">
-                                                    <img src="http://localhost/HRSystem-CI/assets/images/hrtag.png" height="100" width="167">
-                                                    </div>
-                                                <label for="img_url" class="custom-file-upload"><i class="fa fa-camera" aria-hidden="true"></i> Upload Logo</label>
-                                                <input type="file" value="" class="" id="img_url" name="img_url" aria-describedby="fileHelp">
-                                            </div>
-                                        </div> -->                                                               
+                                        @csrf                                                             
                                         <div class="form-group clearfix">
                                             <label for="copyright" class="col-md-3">Copyright</label>
                                             <div class="col-md-9">
@@ -66,7 +56,6 @@
                                                 <span class="flashmessage"></span>
                                             </div>
                                         </div>
-                                        
                                     </form>
                                 </div>
                             </div>

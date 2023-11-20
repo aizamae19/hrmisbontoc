@@ -30,12 +30,9 @@
                                     <table id="attendance tbody" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
-<<<<<<< Updated upstream
+
                                                 <th>Personnel ID</th>
-=======
-                                                <th>Personnel</th>
->>>>>>> Stashed changes
-                                                <th>Date </th>
+                                               <th>Date </th>
                                                 <th>Am In</th>
                                                 <th>Am Out</th>
                                                 <th>Pm In</th>

@@ -59,12 +59,10 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             //View
             Route::get('/employee/index/view/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.view');
             Route::post('/employee/index/view', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.edit.view');
-  
 
-
-            
-            #EMPLOYEES-INACTIVE USER
-            Route::get('/inactiveuser', [App\Http\Controllers\Admin\InactiveUserController::class, 'index'])->name('inactiveuser');
+            //Delete
+            Route::get('/employee/index/delete/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'deleteemployee'])->name('employee.delete');
+            Route::post('/employee/index/delete', [App\Http\Controllers\Admin\EmployeeController::class, 'deleteemployee'])->name('employee.delete');
 
             #LEAVE-HOLIDAY
            Route::get('/leave/holiday', [App\Http\Controllers\Admin\HolidayController::class, 'holidayleave'])->name('leave.holiday');
@@ -80,6 +78,22 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #LEAVE-LEAVE APPLICATION
             Route::get('/leaveapplication', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'index'])->name('leaveapplication');
+            
+            //Approve
+            Route::get('/leaveapplication/approve/{id}', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'approve'])->name('approve');
+            Route::post('/leaveapplication/approve', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'approve'])->name('approve');
+
+            //Reject
+            Route::get('/leaveapplication/reject/{id}', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'reject'])->name('reject');
+            Route::post('/leaveapplication/reject', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'reject'])->name('reject');
+
+            //Update
+            Route::get('/leaveapplication/index/edit/{id}', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'editleaveapplication'])->name('leaveapplication.edit');
+            Route::post('/leaveapplication/index/edit/store', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'updateleaveapplication'])->name('leaveapplication.edit.store');
+
+            //View
+            Route::get('/leaveapplication/index/view/{id}', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'viewleaveapplication'])->name('leaveapplication.view');
+            Route::post('/user/leaveapplication/index/view', [App\Http\Controllers\Admin\LeaveApplicationController::class, 'viewleaveapplication'])->name('leaveapplication.edit.view');
 
             #LEAVE-EARNED LEAVE
              Route::get('/leave/earnedleave', [App\Http\Controllers\Admin\EarnedLeaveController::class, 'earnedleaveleave'])->name('leave.earnedleave');
@@ -101,14 +115,15 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::post('/notice/index/delete', [App\Http\Controllers\Admin\NoticeController::class, 'deletenotice'])->name('notice.delete');
 
             #SETTINGS
-            Route::get('/accountsetting', [App\Http\Controllers\Admin\AccountSettingController::class, 'index'])->name('accountsetting');
-            Route::post('/accountsetting/add/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
+            Route::get('/accountsetting', [App\Http\Controllers\Admin\AccountSettingController::class, 'accountsetting'])->name('setting.account');
+            Route::post('/accountsetting/store', [App\Http\Controllers\Admin\AccountSettingController::class, 'storeaccountsetting'])->name('accountsetting.store');
         });
 
        
         #USER
         Route::group(['middleware' => ['user']], function () {
             Route::get('/user', [App\Http\Controllers\User\UserController::class, 'index'])->name('userdashboard');
+             Route::get('user/dashboard/notice', 'UserController@showNoticeBoard');
 
              #NOTICE
             Route::get('/user/notice', [App\Http\Controllers\User\NoticeController::class, 'index'])->name('usernotice');
@@ -119,18 +134,22 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             #LEAVE-EARNED LEAVE
              Route::get('/user/leave/earnedleave', [App\Http\Controllers\User\EarnedLeaveController::class, 'earnedleaveleave'])->name('userleave.earnedleave');
 
-            #EMPLOYEES-PROFILE
-            Route::get('/user/employees/profile', [App\Http\Controllers\User\EmployeeController::class, 'employeeemployees'])->name('useremployee.employees');
-            Route::post('/user/employees/profile/store', [App\Http\Controllers\User\EmployeeController::class, 'storeemployee'])->name('useremployee.store');
-
-            //Update
-            Route::get('/user/employee/index/edit/{id}', [App\Http\Controllers\User\EmployeeController::class, 'editemployee'])->name('useremployee.edit');
-            Route::post('/user/employee/index/edit/store', [App\Http\Controllers\User\EmployeeController::class, 'updateemployee'])->name('useremployee.edit.store');
-
             #LEAVE-LEAVE APPLICATION
-            Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
+             Route::get('/user/leaveapplication', [App\Http\Controllers\User\LeaveApplicationController::class, 'index'])->name('userleaveapplication');
+
+            //add
+            Route::get('/user/leaveapplication/add', [App\Http\Controllers\User\LeaveApplicationController::class, 'addleaveapplication'])->name('userleaveapplication.add');
+            Route::post('/user/leaveapplication/store', [App\Http\Controllers\User\LeaveApplicationController::class, 'storeleaveapplication'])->name('leaveapplication.store');
+
+            //View
+            Route::get('/user/leaveapplication/index/view/{id}', [App\Http\Controllers\User\LeaveApplicationController::class, 'viewleaveapplication'])->name('userleaveapplication.view');
+            Route::post('/user/leaveapplication/index/view', [App\Http\Controllers\User\LeaveApplicationController::class, 'viewleaveapplication'])->name('userleaveapplication.edit.view');
 
             #MYPROFILE
-            Route::get('/user/myprofile', [App\Http\Controllers\User\MyProfileController::class, 'index'])->name('usermyprofile');
+            Route::get('/user/myprofile', [App\Http\Controllers\User\EmployeeController::class, 'viewemployee'])->name('useremployee.view');
+
+            //Update
+            Route::get('/user/myprofile/index/edit/{id}', [App\Http\Controllers\User\EmployeeController::class, 'editemployee'])->name('useremployee.edit');
+            Route::post('/user/myprofile/index/edit/store', [App\Http\Controllers\User\EmployeeController::class, 'updateemployee'])->name('useremployee.edit.store');
         });
 });

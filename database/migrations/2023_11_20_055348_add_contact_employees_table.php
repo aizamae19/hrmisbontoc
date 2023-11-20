@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('accountsettings', function (Blueprint $table) {
-            $table->id();
-            $table->integer('copyright');
-            $table->string('email');
-            $table->string('address');
-            $table->integer('contactnumber');
-            $table->timestamps();
+        Schema::table('employees', function (Blueprint $table) {
+            $table->string('contact')->after('persontocontact');
         });
     }
 
@@ -26,6 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('accountsettings');
+        //
     }
 };

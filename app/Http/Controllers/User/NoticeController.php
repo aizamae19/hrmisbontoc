@@ -15,4 +15,5 @@ class NoticeController extends Controller
             'notices'=>$notices
         ]);
     }
+
 }

@@ -14,11 +14,6 @@
             </div>
             <div class="message"></div>
                     <div class="container-fluid">
-                <div class="row m-b-10"> 
-                    <div class="col-12">
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="{{route('employee.employees')}}" class="text-white"><i class="" aria-hidden="true"></i> Employee List</a></button>
-                    </div>
-                </div>
                <div class="row">
                     <div class="col-12">
                         <div class="card card-outline-info">
@@ -33,7 +28,7 @@
                                                                                           
                                 <div class="card-body">
                                 @include('layouts.partials.messages')
-                                <form class="row" action="{{ route('employee.edit.store') }}" method="post" enctype="multipart/form-data">
+                                <form class="row" action="{{ route('useremployee.edit.store') }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                    <div class="form-group col-md-3 m-t-20">
                                         <label>First Name</label>
@@ -43,7 +38,7 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Middle Name</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->middlename}}" required>
+                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->middlename}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Last Name </label>
@@ -53,7 +48,7 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Suffix</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}" required>
+                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Address</label>
@@ -61,15 +56,15 @@
                                         <input type="text" name="address" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->address}}" required>
                                     </div>
                                      <div class="form-group col-md-3 m-t-20">
-                                        <label>Marital Status</label>
-                                        <select name="maritalstatus" class="form-control custom-select" value="{{$employee->maritalstatus}}" required>
-                                            <option>Select Marital Status</option>
-                                            <option value="Married">Married</option>
-                                            <option value="Common-Law Married">Common-Law Married</option>
-                                            <option value="Widowed">Widowed</option>
-                                            <option value="Separated">Separated</option>
-                                            <option value="Divorced">Divorced</option>
-                                            <option value="Single">Single</option>
+                                        <label for="maritalstatus">Marital Status</label>
+                                        <select name="maritalstatus" class="form-control custom-select" required>
+                                            <option value="">Select Marital Status</option>
+                                            <option value="Married" {{ $employee->maritalstatus === 'Married' ? 'selected' : '' }}>Married</option>
+                                            <option value="Common-Law Married" {{ $employee->maritalstatus === 'Common-Law Married' ? 'selected' : '' }}>Common-Law Married</option>
+                                            <option value="Widowed" {{ $employee->maritalstatus === 'Widowed' ? 'selected' : '' }}>Widowed</option>
+                                            <option value="Separated" {{ $employee->maritalstatus === 'Separated' ? 'selected' : '' }}>Separated</option>
+                                            <option value="Divorced" {{ $employee->maritalstatus === 'Divorced' ? 'selected' : '' }}>Divorced</option>
+                                            <option value="Single" {{ $employee->maritalstatus === 'Single' ? 'selected' : '' }}>Single</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
@@ -79,23 +74,23 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Gender</label>
-                                        <select name="gender" class="form-control custom-select" value="{{$employee->gender}}"required>
+                                        <select name="gender" class="form-control custom-select" required>
                                             <option>Select Gender</option>
-                                            <option value="MALE">Male</option>
-                                            <option value="FEMALE">Female</option>
+                                            <option value="MALE" {{ $employee->gender === 'MALE' ? 'selected' : '' }}>Male</option>
+                                            <option value="FEMALE" {{ $employee->gender === 'FEMALE' ? 'selected' : '' }}>Female</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Blood Group </label>
-                                        <select name="bloodtype" class="form-control custom-select" value="{{$employee->bloodtype}}">
+                                        <select name="bloodtype" class="form-control custom-select">
                                             <option>Select Blood Group</option>
-                                            <option value="O+">O+</option>
-                                            <option value="O-">O-</option>
-                                            <option value="A+">A+</option>
-                                            <option value="A-">A-</option>
-                                            <option value="B+">B+</option>
-                                            <option value="B-">B-</option>
-                                            <option value="AB+">AB+</option>
+                                            <option value="O+" {{ $employee->bloodtype === 'O+' ? 'selected' : '' }}>O+</option>
+                                            <option value="O-" {{ $employee->bloodtype === 'O-' ? 'selected' : '' }}>O-</option>
+                                            <option value="A+" {{ $employee->bloodtype === 'A+' ? 'selected' : '' }}>A+</option>
+                                            <option value="A-" {{ $employee->bloodtype === 'A-' ? 'selected' : '' }}>A-</option>
+                                            <option value="B+" {{ $employee->bloodtype === 'B+' ? 'selected' : '' }}>B+</option>
+                                            <option value="B-" {{ $employee->bloodtype === 'B-' ? 'selected' : '' }}>B-</option>
+                                            <option value="AB+" {{ $employee->bloodtype === 'AB+' ? 'selected' : '' }}>AB+</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
@@ -117,10 +112,6 @@
                                         <label>Corporate Email </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->corporateemail}}" required>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Image </label>
-                                        <input type="file" name="image" class="form-control" value=""> 
                                     </div>
                                     <br>
                         <div class="col-md-12">
@@ -154,7 +145,7 @@
                                     </div>
                                     <div class="form-actions col-md-12">
                                     <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
-                                     <a href ="{{ route('useremployee.employees') }}"><button type="button"  class="btn btn-danger">Cancel</button></a>
+                                     <a href ="{{ route('useremployee.view') }}"><button type="button"  class="btn btn-danger">Cancel</button></a>
                                     </div>
                                 </form>
                             </div>

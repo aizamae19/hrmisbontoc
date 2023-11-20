@@ -55,8 +55,8 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Marital Status</label>
-                                        <select name="maritalstatus" class="form-control custom-select" required>
-                                            <option>Select Marital Status</option>
+                                        <select name="maritalstatus" value="" class="form-control custom-select" required>
+                                            <option value="">Select Marital Status</option>
                                             <option value="Married">Married</option>
                                             <option value="Common-Law Married">Common-Law Married</option>
                                             <option value="Widowed">Widowed</option>
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Birth </label>
-                                        <input type="date" name="dateofbirth" id="example-email2" name="example-email" class="form-control" placeholder="" required> 
+                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Gender</label>
@@ -96,7 +96,11 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Person to Contact</label>
-                                        <input type="text" name="persontocontact" class="form-control" value="" placeholder="" minlength="11" required> 
+                                        <input type="text" name="persontocontact" class="form-control" value="" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Person's Contact Number</label>
+                                        <input type="text" name="contact" class="form-control" minlength="11" value="" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Personal Email </label>
@@ -105,10 +109,6 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Corporate Email </label>
                                         <input type="email" id="example-email2" name="corporateemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" required > 
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Image </label>
-                                        <input type="file" name="image" class="form-control" value=""> 
                                     </div>
                                     <br>
                                     <div class="col-md-12">
@@ -125,7 +125,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>CSC Professional Eligibility </label>
-                                      <input type="text" id="" name="csc" class="form-control form-control-line" value="" minlength="2" required> 
+                                      <input type="text" id="" name="csc" class="form-control form-control-line" value="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Issuance PRC ID </label>
@@ -161,7 +161,7 @@
                                             <option value="Office of the Mayor">Office of the Mayor</option>
                                             <option value="Office of the Vice-Mayor">Office of the Vice-Mayor</option>
                                             <option value="Office of the Sangguniang Bayan">Office of the Sangguniang Bayan</option>
-                                            <option value="Office of the Municipal Plannig and Development Coordinator">Office of the Municipal Planning and Development Coordinator</option>
+                                            <option value="Office of the Municipal Planning and Development Coordinator">Office of the Municipal Planning and Development Coordinator</option>
                                             <option value="Office of the Municipal Budget Officer">Office of the Municipal Budget Officer</option>
                                             <option value="Office of the Municipal Accountant">Office of the Municipal Accountant</option>
                                             <option value="Office of the Municipal Treasurer">Office of the Municipal Treasurer</option>
