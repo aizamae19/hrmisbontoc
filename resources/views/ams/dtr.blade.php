@@ -70,7 +70,18 @@
                     <div style="display: flex; width: 100%;">
                         <label for="" style="font-size: 1rem;" >For the month of: </label>
                         <div class="container-row" style="flex-grow: 1; justify-content: center;border-bottom: 1px solid black">
+<<<<<<< Updated upstream
                             <label for="" style="font-weight: 900; padding-left: 5px;">{{ date ('F', strtotime("2023-$month-01")) }}</label>
+=======
+                            <label for="" style="font-weight: 900; padding-left: 5px;">{{ date('F', strtotime("2023-$month-01")) }}</label>
+                            <label for="" style="font-weight: 900; padding-left: 5px;">
+                                    {{ date('d', strtotime("2023-$month-01")) }} <!-- Date -->
+                                </label>
+
+                              <label for="" style="font-weight: 900; padding-left: 5px;">
+                                    {{ date('Y', strtotime("2023-$month-01")) }} <!-- Year -->
+                                </label>
+>>>>>>> Stashed changes
                         </div>
                     </div>
                 </div>
@@ -252,6 +263,7 @@
                 </div>
                 <div class="row control-input" style="border-bottom: 1px solid black">
                     <label for="" style="font-weight: 900;">{{ $employee->firstname }} {{ strtoupper($employee->middlename[0]) }}.  {{ $employee->lastname }} </label>
+
                 </div>
                 <div class="row control-input">
                     <label for="">(Name)</label>
@@ -261,6 +273,12 @@
                         <label for="" style="font-size: 1rem;" >For the month of: </label>
                         <div class="container-row" style="flex-grow: 1; justify-content: center;border-bottom: 1px solid black">
                             <label for="" style="font-weight: 900; padding-left: 5px;">{{ date('F', strtotime("2023-$month-01")) }}</label>
+                            <label for="" style="font-weight: 900; padding-left: 5px;">
+                                    {{ date('d', strtotime("2023-$month-01")) }} <!-- Date -->
+                             </label>
+                             <label for="" style="font-weight: 900; padding-left: 5px;">
+                                    {{ date('Y', strtotime("2023-$month-01")) }} <!-- Year -->
+                             </label>
                         </div>
                     </div>
                 </div>

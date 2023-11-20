@@ -35,7 +35,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/printdtr', [App\Http\Controllers\ams\PrintDTRController::class, 'index'])->name('printdtr.index');
             Route::get('/printdtr/{id}/{month}/{year}', [App\Http\Controllers\ams\PrintDTRController::class, 'printdtr'])->name('printdtr');
             Route::get('/attendances', [App\Http\Controllers\ams\attendancesController::class, 'index'])->name('attendances');
+
             Route::get('/attendances/{personnel}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
+
+            // Route::get('/attendances/{employeeId}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
+
             // routes/web.php
 
             Route::post('/attendances/import/csv', [App\Http\Controllers\ams\attendancesController::class, 'import_csv'])->name('importcsv');

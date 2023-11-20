@@ -305,6 +305,7 @@
                     var employee = @json($employees);
                     var count = Object.keys(attendances).length;
                     var x=0
+
                     if(employee[0]['position'] == "Job Order" || employee[0]['position'] == "Casual"){
                         for(i=1; i<=15; i++){
                             document.write("<tr>");

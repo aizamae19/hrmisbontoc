@@ -17,7 +17,11 @@ class attendancesController extends Controller
     }
 
 
+<<<<<<< Updated upstream
     public function showWorkingHoursList($Personnel)
+=======
+    public function showWorkingHoursList($personnel)
+>>>>>>> Stashed changes
     {
             $workingHours = Attendances::where('personnel', $personnel)->get();
             $workingHoursList = [];
@@ -94,7 +98,7 @@ class attendancesController extends Controller
                                     $checkAttendance->save();
                                 } else {
                                    $checkAttendance->pm_in = $csvdate->format('H:i:s');
-                                   $checkAttendance->save();
+                                   $checkAttendance->save0();
                                 }
                             }
 
@@ -105,7 +109,11 @@ class attendancesController extends Controller
 
                         }else{
                             $saveAttendance = new Attendances();
+<<<<<<< Updated upstream
                             $saveAttendance->personnel = $personnel;
+=======
+                            $saveAttendance->personnel= $personnel;
+>>>>>>> Stashed changes
                             $saveAttendance->date = $date;
                             if ($csvdate->hour < 12) {
                                  $saveAttendance->am_in = $csvdate->format('H:i:s');
