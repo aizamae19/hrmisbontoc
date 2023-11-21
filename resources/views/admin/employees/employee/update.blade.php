@@ -56,6 +56,16 @@
                                         <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
+                                        <label>Date Of Birth </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" value="{{$employee->dateofbirth}}" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Place Of Birth </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="placeofbirth" id="dateofbirth" class="form-control" value="{{$employee->placeofbirth}}" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
                                         <label>Purok/Street</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="address" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->address}}" required>
@@ -76,9 +86,9 @@
                                         <input type="text" name="province" class="form-control form-control-line" value="{{$employee->province}}" minlength="2" required > 
                                     </div>
                                      <div class="form-group col-md-3 m-t-20">
-                                        <label for="maritalstatus">Marital Status</label>
+                                        <label for="maritalstatus">Civil Status</label>
                                         <select name="maritalstatus" class="form-control custom-select" required>
-                                            <option value="">Select Marital Status</option>
+                                            <option value="">Select Civil Status</option>
                                             <option value="Married" {{ $employee->maritalstatus === 'Married' ? 'selected' : '' }}>Married</option>
                                             <option value="Common-Law Married" {{ $employee->maritalstatus === 'Common-Law Married' ? 'selected' : '' }}>Common-Law Married</option>
                                             <option value="Widowed" {{ $employee->maritalstatus === 'Widowed' ? 'selected' : '' }}>Widowed</option>
@@ -88,20 +98,15 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Birth </label>
-                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofbirth" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofbirth}}" required>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Gender</label>
+                                        <label>Sex</label>
                                         <select name="gender" class="form-control custom-select" required>
-                                            <option>Select Gender</option>
-                                            <option value="MALE" {{ $employee->gender === 'MALE' ? 'selected' : '' }}>Male</option>
-                                            <option value="FEMALE" {{ $employee->gender === 'FEMALE' ? 'selected' : '' }}>Female</option>
+                                            <option>Select Sex</option>
+                                            <option value="Male" {{ $employee->gender === 'Male' ? 'selected' : '' }}>Male</option>
+                                            <option value="Female" {{ $employee->gender === 'Female' ? 'selected' : '' }}>Female</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Blood Group </label>
+                                        <label>Blood Group</label>
                                         <select name="bloodtype" class="form-control custom-select">
                                             <option>Select Blood Group</option>
                                             <option value="O+" {{ $employee->bloodtype === 'O+' ? 'selected' : '' }}>O+</option>
@@ -114,17 +119,17 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Contact Number </label>
+                                        <label>Mobile Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="contactnumber" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->contactnumber}}" required>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Person to Contact</label>
+                                    <div class="form-group col-md-6 m-t-20">
+                                        <label>Person to Contact in Case of Emergency</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="persontocontact" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->persontocontact}}" required>
+                                        <input type="text" name="persontocontact" class="form-control" value="{{$employee->persontocontact}}" placeholder="" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Person's Contact Number</label>
+                                    <div class="form-group col-md-6 m-t-20">
+                                        <label>Contact Number of Contact Person</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="contact" class="form-control" minlength="11" value="{{$employee->contact}}" placeholder="" required> 
                                     </div>
@@ -136,7 +141,32 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Corporate Email </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->corporateemail}}" required>
+                                        <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->corporateemail}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>GSIS ID Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="gsis" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->gsis}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>PAG-IBIG ID Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="pagibig" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->pagibig}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Philhealth Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="philhealth" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->philhealth}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>SSS Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="sss" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->sss}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Tin Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="tin" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->tin}}">
                                     </div>
                                     <br>
                         <div class="col-md-12">
@@ -144,29 +174,29 @@
                            </div>
                                     <br>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Course</label>
+                                        <label>College Degree</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="course" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->course}}" required>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Graduate Studies</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="graduate" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->graduate}}" required>
+                                        <input type="text" name="graduate" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->graduate}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>CSC Professional Eligibility </label>
                                       <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->csc}}" required>
+                                        <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->csc}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Issuance PRC ID </label>
+                                        <label>Date Of Issuance-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}" required>
+                                        <input type="text" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Validity PRC ID </label>
+                                        <label>Date Of Validity-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}" required>
+                                        <input type="text" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}">
                                     </div>
                                  <br>
                                 <div class="col-md-12">
@@ -179,7 +209,12 @@
                                         <input type="text" name="personnel" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->personnel}}" required>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Status</label>
+                                        <label>Biometric Number</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="biometric" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->biometric}}" required>
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Employment Status</label>
                                         <select name="status" class="form-control custom-select" required>
                                             <option>Select Status</option>
                                             <option value="Permanent" {{ $employee->status === 'Permanent' ? 'selected' : '' }}>Permanent</option>
@@ -193,32 +228,32 @@
                                         <label>Department</label>
                                         <select name="department" class="form-control custom-select" required>
                                             <option>Select Department</option>
-                                            <option value="Municipal Agricultural Services Office" {{ $employee->department === 'Municipal Agricultural Services Office' ? 'Selected' : ''}}>Municipal Agricultural Services Office</option>
-                                            <option value="Municipal Social Welfare & Development Office" {{ $employee->department === 'Municipal Social Welfare & Development Office' ? 'Selected' : ''}}>Municipal Social Welfare & Development Office</option>
-                                            <option value="Municipal Assessor's Office" {{ $employee->department === 'Municipal Assessor Office' ? 'Selected' : ''}}>Municipal Assessor Office</option>
-                                            <option value="COMELEC"{{ $employee->department === 'COMELEC' ? 'Selected' : ''}}>COMELEC</option>
-                                            <option value="Local Civil Registrar"{{ $employee->department === 'Local Civil Registrar' ? 'Selected' : ''}}>Local Civil Registrar</option>
-                                            <option value="Budget Office" {{ $employee->department === 'Budget Office' ? 'Selected' : ''}}>Budget Office</option>
-                                            <option value="BOMWASA AND BIR"{{ $employee->department === 'BOMWASA AND BIR' ? 'Selected' : ''}}>BOMWASA AND BIR</option>
-                                            <option value="Accounting Office"{{ $employee->department === 'Accounting Office' ? 'Selected' : ''}}>Accounting Office</option>
-                                            <option value="PESO"{{ $employee->department === 'PESO' ? 'Selected' : ''}}>PESO</option>
-                                            <option value="Municipal Treasurer's Office" {{ $employee->department === 'Municipal Treasurer Office' ? 'Selected' : ''}}>Municipal Treasurer's Office</option>
-                                            <option value="Cogressman's Office"{{ $employee->department === 'Congressman Office' ? 'Selected' : ''}}>Congressman's Office</option>
-                                            <option value="HRMO"{{ $employee->department === '' ? 'Selected' : 'HRMO'}}>HRMO</option>
-                                            <option value="MPDC"{{ $employee->department === '' ? 'Selected' : 'MPDC'}}>MPDC</option>
-                                            <option value="KALAHI"{{ $employee->department === '' ? 'Selected' : 'KALAHI'}}>KALAHI</option>
-                                            <option value="Office of the Sangguniang Bayan"{{ $employee->department === 'Office of the Sangguniang Bayan' ? 'Selected' : ''}}>Office of the Sangguniang Bayan</option>
-                                            <option value="Office of the Vice-Mayor"{{ $employee->department === '' ? 'Selected' : 'Office of the Vice-Mayor'}}>Office of the Vice-Mayor</option>
-                                            <option value="Office of the Mayor"{{ $employee->department === '' ? 'Selected' : 'Office of the Mayor'}}>Office of the Mayor</option>
-                                            <option value="Engineering Office"{{ $employee->department === '' ? 'Selected' : 'Engineering Office'}}>Engineering Office</option>
-                                            <option value="MENRO"{{ $employee->department === '' ? 'Selected' : 'MENRO'}}>MENRO</option>
-                                            <option value="Tourism"{{ $employee->department === '' ? 'Selected' : 'Tourism'}}>Tourism</option>
-                                            <option value="RHU"{{ $employee->department === '' ? 'Selected' : 'Rural Health Unit'}}>RHU</option>
-                                            <option value="DILG"{{ $employee->department === '' ? 'Selected' : 'DILG'}}>DILG</option>
-                                            <option value="MDRR"{{ $employee->department === '' ? 'Selected' : 'MDRR'}}>MDRR</option>
-                                            <option value="GSO"{{ $employee->department === '' ? 'Selected' : 'GSO'}}>GSO</option>
-                                            <option value="DSWD"{{ $employee->department === '' ? 'Selected' : 'DSWD'}}>DSWD</option>
-                                            <option value="DTI"{{ $employee->department === '' ? 'Selected' : 'DTI'}}>DTI</option>
+                                            <option value="Municipal Agricultural Services Office" {{ $employee->department === 'Municipal Agricultural Services Office' ? 'selected' : '' }}>Municipal Agricultural Services Office</option>
+                                            <option value="Municipal Social Welfare & Development Office" {{ $employee->department === 'Municipal Social Welfare & Development Office' ? 'selected' : '' }}>Municipal Social Welfare & Development Office</option>
+                                            <option value="Municipal Assessor's Office"{{ $employee->department === "Municipal Assessor's Office" ? 'selected' : '' }}>Municipal Assessor's Office</option>
+                                            <option value="Commision on Election" {{ $employee->department === 'Commision on Election' ? 'selected' : '' }}>Commision on Election</option>
+                                            <option value="Local Civil Registrar" {{ $employee->department === 'Local Civil Registrar' ? 'selected' : '' }}>Local Civil Registrar</option>
+                                            <option value="Budget Office" {{ $employee->department === 'Budget Office' ? 'selected' : '' }}>Budget Office</option>
+                                            <option value="BOMWASA AND BIR" {{ $employee->department === 'BOMWASA AND BIR' ? 'selected' : '' }}>BOMWASA AND BIR</option>
+                                            <option value="Accounting Office" {{ $employee->department === 'Accounting Office' ? 'selected' : '' }}>Accounting Office</option>
+                                            <option value="PESO" {{ $employee->department === 'PESO' ? 'selected' : '' }}>PESO</option>
+                                            <option value="Municipal Treasurer's Office" {{ $employee->department === "Municipal Treasurer's Office" ? 'selected' : '' }}>Municipal Treasurer's Office</option>
+                                            <option value="Cogressman's Office" {{ $employee->department === "Congressman's Office" ? 'selected' : '' }}>Congressman's Office</option>
+                                            <option value="Human Resource Management Office" {{ $employee->department === 'Human Resource Management Office' ? 'selected' : '' }}>Human Resource Management Office</option>
+                                            <option value="MPDC" {{ $employee->department === 'MPDC' ? 'selected' : '' }}>MPDC</option>
+                                            <option value="KALAHI" {{ $employee->department === 'KALAHI' ? 'selected' : '' }}>KALAHI</option>
+                                            <option value="Office of the Sangguniang Bayan" {{ $employee->department === 'Office of the Sangguniang Bayan' ? 'selected' : '' }}>Office of the Sangguniang Bayan</option>
+                                            <option value="Office of the Vice-Mayor" {{ $employee->department === 'Office of the Vice-Mayor' ? 'selected' : '' }}>Office of the Vice-Mayor</option>
+                                            <option value="Office of the Mayor" {{ $employee->department === 'Office of the Mayor' ? 'selected' : '' }}>Office of the Mayor</option>
+                                            <option value="Engineering Office" {{ $employee->department === 'Engineering Office' ? 'selected' : '' }}>Engineering Office</option>
+                                            <option value="MENRO" {{ $employee->department === 'MENRO' ? 'selected' : '' }}>MENRO</option>
+                                            <option value="Tourism" {{ $employee->department === 'Tourism' ? 'selected' : '' }}>Tourism</option>
+                                            <option value="Rural Health Unit" {{ $employee->department === 'Rural Health Unit' ? 'selected' : '' }}>Rural Health Unit</option>
+                                            <option value="DILG" {{ $employee->department === 'DILG' ? 'selected' : '' }}>DILG</option>
+                                            <option value="MDRR" {{ $employee->department === 'MDRR' ? 'selected' : '' }}>MDRR</option>
+                                            <option value="GSO" {{ $employee->department === 'GSO' ? 'selected' : '' }}>GSO</option>
+                                            <option value="DSWD" {{ $employee->department === 'DSWD' ? 'selected' : '' }}>DSWD</option>
+                                            <option value="Department of Trade and Industry" {{ $employee->department === 'Department of Trade and Industry' ? 'selected' : '' }}>Department of Trade and Industry</option>
 
                                         </select>
                                     </div>
@@ -244,7 +279,7 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Joining</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofjoining}}">
+                                        <input type="text" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofjoining}}" required>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Leaving </label>

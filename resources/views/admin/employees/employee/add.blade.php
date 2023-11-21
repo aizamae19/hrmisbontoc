@@ -110,11 +110,11 @@
                                         <label>Mobile Number </label>
                                         <input type="text" name="contactnumber" class="form-control" value="" placeholder="" minlength="11" required> 
                                     </div>
-                                    <div class="form-group col-md-5 m-t-20">
+                                    <div class="form-group col-md-6 m-t-20">
                                         <label>Person to Contact in Case of Emergency</label>
                                         <input type="text" name="persontocontact" class="form-control" value="" placeholder="" required> 
                                     </div>
-                                    <div class="form-group col-md-4 m-t-20">
+                                    <div class="form-group col-md-6 m-t-20">
                                         <label>Contact Number of Contact Person</label>
                                         <input type="text" name="contact" class="form-control" minlength="11" value="" placeholder="" required> 
                                     </div>
