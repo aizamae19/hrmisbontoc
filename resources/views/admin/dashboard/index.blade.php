@@ -95,7 +95,7 @@
                                     {{$noleaveapplications}}
                                 </h1>
                                 @endif
-                                <h6 class="text-white">Pending Leave Application</h6>
+                                <h6 class="text-white">Leave Application</h6>
                             </div>
                         </div>
                     </div>
@@ -112,4 +112,5 @@
                     </div>
                 </div>
             </div> 
+
 @endsection
