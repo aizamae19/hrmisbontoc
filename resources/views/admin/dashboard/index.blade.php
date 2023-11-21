@@ -23,7 +23,7 @@
             @if($noemployees=App\Models\Employee::count())
                 <div class="circle-tile-number text-faded ">{{$noemployees}}</div> 
             @endif
-          <a class="circle-tile-footer" href="{{ route('employee.employees')}}">More Info<i class="fa fa-chevron-circle-right"></i></a>
+          <a class="circle-tile-footer" href="{{ route('employee.employees')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
             @if($noleaveapplications=App\Models\Leaveapplication::count())
                 <div class="circle-tile-number text-faded ">{{$noleaveapplications}}</div>
             @endif
-          <a class="circle-tile-footer" href="{{ route('leaveapplication')}}">More Info<i class="fa fa-chevron-circle-right"></i></a>
+          <a class="circle-tile-footer" href="{{ route('leaveapplication')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>
       </div>
     </div> 
@@ -46,8 +46,8 @@
         <a href="#"><div class="circle-tile-heading blue "><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content blue">
           <div class="circle-tile-description text-faded"> Permanent </div>
-          <div class="circle-tile-number text-faded ">10</div>
-          <a class="circle-tile-footer" href="#">More Info<i class="fa fa-chevron-circle-right"></i></a>
+          <div class="circle-tile-number text-faded ">{{ $permanent }}</div>
+          <a class="circle-tile-footer" href="{{ route('employees.permanent')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>
       </div>
     </div> 
@@ -61,10 +61,8 @@
         <a href="#"><div class="circle-tile-heading green"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content green">
           <div class="circle-tile-description text-faded"> Casual </div>
-            @if($noemployees=App\Models\Employee::count())
-                <div class="circle-tile-number text-faded ">{{$noemployees}}</div> 
-            @endif
-          <a class="circle-tile-footer" href="{{ route('employee.employees')}}">More Info<i class="fa fa-chevron-circle-right"></i></a>
+                <div class="circle-tile-number text-faded ">{{ $casual }}</div> 
+          <a class="circle-tile-footer" href="{{ route('employees.casual')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>
       </div>
     </div>
@@ -74,10 +72,8 @@
         <a href="#"><div class="circle-tile-heading gray"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content gray">
           <div class="circle-tile-description text-faded"> Job Order </div>
-            @if($noleaveapplications=App\Models\Leaveapplication::count())
-                <div class="circle-tile-number text-faded ">{{$noleaveapplications}}</div>
-            @endif
-          <a class="circle-tile-footer" href="{{ route('leaveapplication')}}">More Info<i class="fa fa-chevron-circle-right"></i></a>
+                <div class="circle-tile-number text-faded ">{{ $joborder }}</div>
+          <a class="circle-tile-footer" href="{{ route('employees.joborder')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>
       </div>
     </div> 
@@ -87,8 +83,8 @@
         <a href="#"><div class="circle-tile-heading purple "><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content purple">
           <div class="circle-tile-description text-faded"> Co-Terminous </div>
-          <div class="circle-tile-number text-faded ">10</div>
-          <a class="circle-tile-footer" href="#">More Info<i class="fa fa-chevron-circle-right"></i></a>
+          <div class="circle-tile-number text-faded ">{{ $coterminous }}</div>
+          <a class="circle-tile-footer" href="{{ route('employees.coterminous')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>
       </div>
     </div> 

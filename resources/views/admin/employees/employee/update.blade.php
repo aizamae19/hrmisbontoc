@@ -61,6 +61,11 @@
                                         <input type="text" name="address" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->address}}" required>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
+                                        <label>Barangay</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="barangay" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->barangay}}" required>
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
                                         <label>Municipality</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="municipality" class="form-control form-control-line" value="{{$employee->municipality}}" minlength="2" required > 

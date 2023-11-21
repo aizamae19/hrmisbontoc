@@ -54,6 +54,10 @@
                                         <input type="text" name="address" class="form-control form-control-line" minlength="2"> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
+                                        <label>Barangay</label>
+                                        <input type="text" name="barangay" class="form-control form-control-line" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
                                         <label>Municipality</label>
                                         <input type="text" name="municipality" class="form-control form-control-line" minlength="2" required > 
                                     </div>

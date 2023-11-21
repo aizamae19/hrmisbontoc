@@ -15,6 +15,7 @@ class EmployeeController extends Controller
         return view('admin.employees.employee.index', [
             'employees'=>$employees
         ]);
+
     }  
 
     public function addemployee(request $request){
@@ -31,8 +32,9 @@ class EmployeeController extends Controller
         $employeesave->lastname = $request->lastname;
         $employeesave->suffix = $request->suffix;
         $employeesave->address = $request->address;
-        $employeesave->address = $request->municipality;
-        $employeesave->address = $request->province;
+        $employeesave->barangay = $request->barangay;
+        $employeesave->municipality = $request->municipality;
+        $employeesave->province = $request->province;
         $employeesave->maritalstatus = $request->maritalstatus;
         $employeesave->dateofbirth = $request->dateofbirth;
         $employeesave->gender = $request->gender;
@@ -79,8 +81,9 @@ class EmployeeController extends Controller
         $Updatesave->lastname = $request->lastname;
         $Updatesave->suffix = $request->suffix;
         $Updatesave->address = $request->address;
-        $Updatesave->address = $request->municipality;
-        $Updatesave->address = $request->province;
+        $Updatesave->barangay = $request->barangay;
+        $Updatesave->municipality = $request->municipality;
+        $Updatesave->province = $request->province;
         $Updatesave->maritalstatus = $request->maritalstatus;
         $Updatesave->dateofbirth = $request->dateofbirth;
         $Updatesave->gender = $request->gender;
@@ -116,5 +119,53 @@ class EmployeeController extends Controller
         return view('admin.employees.employee.view',[
                 'employees'=>$employees
         ]);
+    }
+
+    public function permanentEmployees()
+    {
+        $permanentEmployees = $this->getpermanentEmployees();
+
+        return view('admin.employees.permanent', compact('permanentEmployees'));
+    }
+
+    private function getpermanentEmployees()
+    {
+        return Employee::where('status', 'permanent')->get();
+    }
+
+    public function casualEmployees()
+    {
+        $casualEmployees = $this->getcasualEmployees();
+
+        return view('admin.employees.casual', compact('casualEmployees'));
+    }
+
+    private function getcasualEmployees()
+    {
+        return Employee::where('status', 'casual')->get();
+    }
+
+    public function joborderEmployees()
+    {
+        $joborderEmployees = $this->getjoborderEmployees();
+
+        return view('admin.employees.joborder', compact('joborderEmployees'));
+    }
+
+    private function getjoborderEmployees()
+    {
+        return Employee::where('status', 'job order')->get();
+    }
+
+    public function coterminousEmployees()
+    {
+        $coterminousEmployees = $this->getcoterminousEmployees();
+
+        return view('admin.employees.coterminous', compact('coterminousEmployees'));
+    }
+
+    private function getcoterminousEmployees()
+    {
+        return Employee::where('status', 'co-terminous')->get();
     }
 }
