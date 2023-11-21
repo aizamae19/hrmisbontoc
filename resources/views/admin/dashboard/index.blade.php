@@ -19,7 +19,7 @@
       <div class="circle-tile ">
         <a href="#"><div class="circle-tile-heading dark-blue"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content dark-blue">
-          <div class="circle-tile-description text-faded"> Former Employees</div>
+          <div class="circle-tile-description text-faded">Employees</div>
             @if($noemployees=App\Models\Employee::count())
                 <div class="circle-tile-number text-faded ">{{$noemployees}}</div> 
             @endif
@@ -32,11 +32,9 @@
       <div class="circle-tile ">
         <a href="#"><div class="circle-tile-heading red"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content red">
-          <div class="circle-tile-description text-faded"> Leave Application </div>
-            @if($noleaveapplications=App\Models\Leaveapplication::count())
-                <div class="circle-tile-number text-faded ">{{$noleaveapplications}}</div>
-            @endif
-          <a class="circle-tile-footer" href="{{ route('leaveapplication')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
+          <div class="circle-tile-description text-faded"> Elective </div>
+                <div class="circle-tile-number text-faded ">{{$electives}}</div>
+          <a class="circle-tile-footer" href="{{ route('employees.electives')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>
       </div>
     </div> 

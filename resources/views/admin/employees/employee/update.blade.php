@@ -186,6 +186,7 @@
                                             <option value="Casual" {{ $employee->status === 'Casual' ? 'selected' : '' }}>Casual</option>
                                             <option value="Job Order" {{ $employee->status === 'Job Order' ? 'selected' : '' }}>Job Order</option>
                                             <option value="Co-Terminous" {{ $employee->status === 'Co-Terminous' ? 'selected' : '' }}>Co-Terminous</option>
+                                            <option value="Elective" {{ $employee->status === 'Elective' ? 'selected' : '' }}>Elective</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
@@ -212,7 +213,7 @@
                                             <option value="Engineering Office"{{ $employee->department === '' ? 'Selected' : 'Engineering Office'}}>Engineering Office</option>
                                             <option value="MENRO"{{ $employee->department === '' ? 'Selected' : 'MENRO'}}>MENRO</option>
                                             <option value="Tourism"{{ $employee->department === '' ? 'Selected' : 'Tourism'}}>Tourism</option>
-                                            <option value="RHU"{{ $employee->department === '' ? 'Selected' : 'RHU'}}>RHU</option>
+                                            <option value="RHU"{{ $employee->department === '' ? 'Selected' : 'Rural Health Unit'}}>RHU</option>
                                             <option value="DILG"{{ $employee->department === '' ? 'Selected' : 'DILG'}}>DILG</option>
                                             <option value="MDRR"{{ $employee->department === '' ? 'Selected' : 'MDRR'}}>MDRR</option>
                                             <option value="GSO"{{ $employee->department === '' ? 'Selected' : 'GSO'}}>GSO</option>

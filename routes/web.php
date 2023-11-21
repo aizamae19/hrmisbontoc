@@ -47,6 +47,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/admin/employees/casual', [App\Http\Controllers\Admin\EmployeeController::class, 'casualEmployees'])->name('employees.casual');
             Route::get('/admin/employees/joborder', [App\Http\Controllers\Admin\EmployeeController::class, 'joborderEmployees'])->name('employees.joborder');
             Route::get('/admin/employees/co-terminous', [App\Http\Controllers\Admin\EmployeeController::class, 'coterminousEmployees'])->name('employees.coterminous');
+            Route::get('/admin/employees/electives', [App\Http\Controllers\Admin\EmployeeController::class, 'electivesEmployees'])->name('employees.electives');
 
             //add
             Route::get('/employees/employee/add', [App\Http\Controllers\Admin\EmployeeController::class, 'addemployee'])->name('employee.add');

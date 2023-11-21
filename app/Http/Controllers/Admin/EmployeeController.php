@@ -37,6 +37,7 @@ class EmployeeController extends Controller
         $employeesave->province = $request->province;
         $employeesave->maritalstatus = $request->maritalstatus;
         $employeesave->dateofbirth = $request->dateofbirth;
+        $employeesave->placeofbirth = $request->placeofbirth;
         $employeesave->gender = $request->gender;
         $employeesave->bloodtype = $request->bloodtype;
         $employeesave->contactnumber = $request->contactnumber;
@@ -44,12 +45,18 @@ class EmployeeController extends Controller
         $employeesave->contact = $request->contact;
         $employeesave->personalemail = $request->personalemail;
         $employeesave->corporateemail = $request->corporateemail;
+        $employeesave->gsis = $request->gsis;
+        $employeesave->pagibig = $request->pagibig;
+        $employeesave->philhealth = $request->philhealth;
+        $employeesave->sss = $request->sss;
+        $employeesave->tin = $request->tin;
         $employeesave->course = $request ->course;
         $employeesave->graduate = $request ->graduate;
         $employeesave->csc = $request ->csc;
         $employeesave->dateofissuance = $request ->dateofissuance;
         $employeesave->dateofvalidity = $request ->dateofvalidity;
         $employeesave->personnel = $request ->personnel;
+        $employeesave->biometric = $request ->biometric;
         $employeesave->status = $request ->status;
         $employeesave->department = $request ->department;
         $employeesave->position = $request ->position;
@@ -86,6 +93,7 @@ class EmployeeController extends Controller
         $Updatesave->province = $request->province;
         $Updatesave->maritalstatus = $request->maritalstatus;
         $Updatesave->dateofbirth = $request->dateofbirth;
+        $Updatesave->placeofbirth = $request->placeofbirth;
         $Updatesave->gender = $request->gender;
         $Updatesave->bloodtype = $request->bloodtype;
         $Updatesave->contactnumber = $request->contactnumber;
@@ -93,12 +101,18 @@ class EmployeeController extends Controller
         $Updatesave->contact = $request->contact;
         $Updatesave->personalemail = $request->personalemail;
         $Updatesave->corporateemail = $request->corporateemail;
+        $Updatesave->gsis = $request->gsis;
+        $Updatesave->pagibig = $request->pagibig;
+        $Updatesave->philhealth = $request->philhealth;
+        $Updatesave->sss = $request->sss;
+        $Updatesave->tin = $request->tin;
         $Updatesave->course = $request ->course;
         $Updatesave->graduate = $request ->graduate;
         $Updatesave->csc = $request ->csc;
         $Updatesave->dateofissuance = $request ->dateofissuance;
         $Updatesave->dateofvalidity = $request ->dateofvalidity;
         $Updatesave->personnel = $request ->personnel;
+        $Updatesave->biometric = $request ->biometric;
         $Updatesave->status = $request ->status;
         $Updatesave->department = $request ->department;
         $Updatesave->position = $request ->position;
@@ -167,5 +181,17 @@ class EmployeeController extends Controller
     private function getcoterminousEmployees()
     {
         return Employee::where('status', 'co-terminous')->get();
+    }
+
+    public function electivesEmployees()
+    {
+        $electivesEmployees = $this->getelectivesEmployees();
+
+        return view('admin.employees.electives', compact('electivesEmployees'));
+    }
+
+    private function getelectivesEmployees()
+    {
+        return Employee::where('status', 'electives')->get();
     }
 }
