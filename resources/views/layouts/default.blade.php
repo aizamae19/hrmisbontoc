@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="GenIT Bangladesh">
     <!-- Favicon icon -->
-        <link rel="icon" type="image/ico" sizes="16x16" href="{{asset('assets/images/favicn.ico')}}">
-    <title>Human Resource</title>
+        <link rel="icon" type="image/ico" href="{{asset('assets/images/logo1.png')}}">
+    <title>Employee Information System</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- morris CSS -->
