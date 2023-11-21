@@ -187,20 +187,33 @@
                                         <label>Department</label>
                                         <select name="department" class="form-control custom-select" required>
                                             <option>Select Department</option>
-                                            <option value="Office of the Mayor" {{ $employee->department === 'Office of the Mayor' ? 'selected' : '' }}>Office of the Mayor</option>
-                                            <option value="Office of the Vice-Mayor" {{ $employee->department === 'Office of the Vice-Mayor' ? 'selected' : '' }}>Office of the Vice-Mayor</option>
-                                            <option value="Office of the Sangguniang Bayan" {{ $employee->department === 'Office of the Sangguniang Bayan' ? 'selected' : '' }}>Office of the Sangguniang Bayan</option>
-                                            <option value="Office of the Municipal Planning and Development Coordinator" {{ $employee->department === 'Office of the Municipal Planning and development Coordinator' ? 'selected' : '' }}>Office of the Municipal Planning and Development Coordinator</option>
-                                            <option value="Office of the Municipal Budget Officer" {{ $employee->department === 'Office of the Municipal Budget Officer' ? 'selected' : '' }}>Office of the Municipal Budget Officer</option>
-                                            <option value="Office of the Municipal Accountant" {{ $employee->department === 'Office of the Municipal Accountant' ? 'selected' : '' }}>Office of the Municipal Accountant</option>
-                                            <option value="Office of the Municipal Treasurer" {{ $employee->department === 'Office of the Municipal Treasurer' ? 'selected' : '' }}>Office of the Municipal Treasurer</option>
-                                            <option value="Office of the Municipal Assessor" {{ $employee->department === 'Office of the Municipal Assessor' ? 'selected' : '' }}>Office of the Municipal Assessor</option>
-                                             <option value="Rural Health Unit" {{ $employee->department === 'Rural Health Unit' ? 'selected' : '' }}>Rural Health Unit</option>
-                                            <option value="Office of the Civil Registrar" {{ $employee->department === 'Office of the Civil Registrar' ? 'selected' : '' }}>Office of the Civil Registrar</option>
-                                            <option value="Municipal Social Welfare and Development Office" {{ $employee->department === 'Municipal Social Welfare and Development Office' ? 'selected' : '' }}>Municipal Social Welfare and Development Office</option>
-                                            <option value="Municipal Agricultural Services Office" {{ $employee->department === 'Municipal Agricultural Services Office' ? 'selected' : '' }}>Municipal Agricultural Services Office</option>
-                                            <option value="Office of the Municipal Engineer" {{ $employee->department === 'Office of the Municipal Engineer' ? 'selected' : '' }}>Office of the Municipal Engineer</option>
-                                            <option value="Human Resource Management Office" {{ $employee->department === 'Human Resource Management Office' ? 'selected' : '' }}>Human Resource Management Office</option>
+                                            <option value="Municipal Agricultural Services Office" {{ $employee->department === 'Municipal Agricultural Services Office' ? 'Selected' : ''}}>Municipal Agricultural Services Office</option>
+                                            <option value="Municipal Social Welfare & Development Office" {{ $employee->department === 'Municipal Social Welfare & Development Office' ? 'Selected' : ''}}>Municipal Social Welfare & Development Office</option>
+                                            <option value="Municipal Assessor's Office" {{ $employee->department === 'Municipal Assessor Office' ? 'Selected' : ''}}>Municipal Assessor Office</option>
+                                            <option value="COMELEC"{{ $employee->department === 'COMELEC' ? 'Selected' : ''}}>COMELEC</option>
+                                            <option value="Local Civil Registrar"{{ $employee->department === 'Local Civil Registrar' ? 'Selected' : ''}}>Local Civil Registrar</option>
+                                            <option value="Budget Office" {{ $employee->department === 'Budget Office' ? 'Selected' : ''}}>Budget Office</option>
+                                            <option value="BOMWASA AND BIR"{{ $employee->department === 'BOMWASA AND BIR' ? 'Selected' : ''}}>BOMWASA AND BIR</option>
+                                            <option value="Accounting Office"{{ $employee->department === 'Accounting Office' ? 'Selected' : ''}}>Accounting Office</option>
+                                            <option value="PESO"{{ $employee->department === 'PESO' ? 'Selected' : ''}}>PESO</option>
+                                            <option value="Municipal Treasurer's Office" {{ $employee->department === 'Municipal Treasurer Office' ? 'Selected' : ''}}>Municipal Treasurer's Office</option>
+                                            <option value="Cogressman's Office"{{ $employee->department === 'Congressman Office' ? 'Selected' : ''}}>Congressman's Office</option>
+                                            <option value="HRMO"{{ $employee->department === '' ? 'Selected' : 'HRMO'}}>HRMO</option>
+                                            <option value="MPDC"{{ $employee->department === '' ? 'Selected' : 'MPDC'}}>MPDC</option>
+                                            <option value="KALAHI"{{ $employee->department === '' ? 'Selected' : 'KALAHI'}}>KALAHI</option>
+                                            <option value="Office of the Sangguniang Bayan"{{ $employee->department === 'Office of the Sangguniang Bayan' ? 'Selected' : ''}}>Office of the Sangguniang Bayan</option>
+                                            <option value="Office of the Vice-Mayor"{{ $employee->department === '' ? 'Selected' : 'Office of the Vice-Mayor'}}>Office of the Vice-Mayor</option>
+                                            <option value="Office of the Mayor"{{ $employee->department === '' ? 'Selected' : 'Office of the Mayor'}}>Office of the Mayor</option>
+                                            <option value="Engineering Office"{{ $employee->department === '' ? 'Selected' : 'Engineering Office'}}>Engineering Office</option>
+                                            <option value="MENRO"{{ $employee->department === '' ? 'Selected' : 'MENRO'}}>MENRO</option>
+                                            <option value="Tourism"{{ $employee->department === '' ? 'Selected' : 'Tourism'}}>Tourism</option>
+                                            <option value="RHU"{{ $employee->department === '' ? 'Selected' : 'RHU'}}>RHU</option>
+                                            <option value="DILG"{{ $employee->department === '' ? 'Selected' : 'DILG'}}>DILG</option>
+                                            <option value="MDRR"{{ $employee->department === '' ? 'Selected' : 'MDRR'}}>MDRR</option>
+                                            <option value="GSO"{{ $employee->department === '' ? 'Selected' : 'GSO'}}>GSO</option>
+                                            <option value="DSWD"{{ $employee->department === '' ? 'Selected' : 'DSWD'}}>DSWD</option>
+                                            <option value="DTI"{{ $employee->department === '' ? 'Selected' : 'DTI'}}>DTI</option>
+
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">

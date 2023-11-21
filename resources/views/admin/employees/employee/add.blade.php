@@ -166,20 +166,32 @@
                                         <label>Department</label>
                                         <select name="department" class="form-control custom-select">
                                             <option>Select Department</option>
-                                            <option value="Office of the Mayor">Office of the Mayor</option>
-                                            <option value="Office of the Vice-Mayor">Office of the Vice-Mayor</option>
-                                            <option value="Office of the Sangguniang Bayan">Office of the Sangguniang Bayan</option>
-                                            <option value="Office of the Municipal Planning and Development Coordinator">Office of the Municipal Planning and Development Coordinator</option>
-                                            <option value="Office of the Municipal Budget Officer">Office of the Municipal Budget Officer</option>
-                                            <option value="Office of the Municipal Accountant">Office of the Municipal Accountant</option>
-                                            <option value="Office of the Municipal Treasurer">Office of the Municipal Treasurer</option>
-                                            <option value="Office of the Municipal Assessor">Office of the Municipal Assessor</option>
-                                             <option value="Rural Health Unit">Rural Health Unit</option>
-                                            <option value="Office of the Civil Registrar">Office of the Civil Registrar</option>
-                                            <option value="Municipal Social Welfare and Development Office">Municipal Social Welfare and Development Office</option>
                                             <option value="Municipal Agricultural Services Office">Municipal Agricultural Services Office</option>
-                                            <option value="Office of the Municipal Engineer">Office of the Municipal Engineer</option>
-                                            <option value="Human Resource Management Office">Human Resource Management Office</option>
+                                            <option value="Municipal Social Welfare & Development Office">Municipal Social Welfare & Development Office</option>
+                                            <option value="Municipal Assessor's Office">Municipal Assessor's Office</option>
+                                            <option value="COMELEC">COMELEC</option>
+                                            <option value="Local Civil Registrar">Local Civil Registrar</option>
+                                            <option value="Budget Office">Budget Office</option>
+                                            <option value="BOMWASA AND BIR">BOMWASA AND BIR</option>
+                                            <option value="Accounting Office">Accounting Office</option>
+                                            <option value="PESO">PESO</option>
+                                            <option value="Municipal Treasurer's Office">Municipal Treasurer's Office</option>
+                                            <option value="Cogressman's Office">Congressman's Office</option>
+                                            <option value="HRMO">HRMO</option>
+                                            <option value="MPDC">MPDC</option>
+                                            <option value="KALAHI">KALAHI</option>
+                                            <option value="Office of the Sangguniang Bayan">Office of the Sangguniang Bayan</option>
+                                            <option value="Office of the Vice-Mayor">Office of the Vice-Mayor</option>
+                                            <option value="Office of the Mayor">Office of the Mayor</option>
+                                            <option value="Engineering Office">Engineering Office</option>
+                                            <option value="MENRO">MENRO</option>
+                                            <option value="Tourism">Tourism</option>
+                                            <option value="RHU">RHU</option>
+                                            <option value="DILG">DILG</option>
+                                            <option value="MDRR">MDRR</option>
+                                            <option value="GSO">GSO</option>
+                                            <option value="DSWD">DSWD</option>
+                                            <option value="DTI">DTI</option>
                                         </select>
                                     </div>
                                       <div class="form-group col-md-3 m-t-20">
