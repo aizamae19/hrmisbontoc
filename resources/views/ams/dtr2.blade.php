@@ -1,4 +1,4 @@
-@if(isset($employees))
+<!-- @if(isset($employees))
     @foreach($employees as $employee)
     @endforeach
 @endif
@@ -423,4 +423,4 @@
 <script type="text/javascript">
     var table = document.getElementById("IDtable");
     
-</script>
+</script> -->

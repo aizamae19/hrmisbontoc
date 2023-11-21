@@ -8,11 +8,11 @@
             <div class="container-fluid">
 
                 <div class="row m-b-10"> 
-                    <div class="col-12" style="margin-top: 5px;">
+                    <div class="col-12" style="margin-top: 10px; margin-bottom: 10px;   width: 3000px;">
                        <!--  <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Save_Attendance" class="text-white"><i class="" aria-hidden="true"></i> Add Attendance </a></button> -->
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="#" class="text-white" data-toggle="modal" data-target="#Bulkmodal"><i class="" aria-hidden="true"></i>  IMPORT CSV FILE </a></button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="#" class="text-white" data-toggle="modal" data-target="#Bulkmodal"><i class="" aria-hidden="true" style=" "></i>  IMPORT CSV FILE </a></button>
                         
-                         <input id="attendance" style="margin-left:80%; " type="text" placeholder="search" >
+                        <!--  <input id="attendance" style="margin-left:80%; " type="text" placeholder="search" > -->
 
 
 
@@ -100,7 +100,7 @@
 
     </div>
 
-    <script>
+   <!--  <script>
     $(document).ready(function(){
       $("#attendance").on("keyup", function() {
         var value = $(this).val().toLowerCase();
@@ -109,7 +109,7 @@
         });
       });
     });
-    </script>
+    </script> -->
     
 
     <!-- <script type="text/javascript">
