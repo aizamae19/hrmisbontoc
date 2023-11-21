@@ -51,6 +51,16 @@
                                         <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
+                                        <label>Date Of Birth </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" value="{{$employee->dateofbirth}}" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Place Of Birth </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="placeofbirth" id="dateofbirth" class="form-control" value="{{$employee->placeofbirth}}" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
                                         <label>Purok/Street</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="address" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->address}}" required>
@@ -63,17 +73,17 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Municipality</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="municipality" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->municipality}}" required>
+                                        <input type="text" name="municipality" class="form-control form-control-line" value="{{$employee->municipality}}" minlength="2" required > 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Town/Province</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="province" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->province}}" required>
+                                        <input type="text" name="province" class="form-control form-control-line" value="{{$employee->province}}" minlength="2" required > 
                                     </div>
                                      <div class="form-group col-md-3 m-t-20">
-                                        <label for="maritalstatus">Marital Status</label>
+                                        <label for="maritalstatus">Civil Status</label>
                                         <select name="maritalstatus" class="form-control custom-select" required>
-                                            <option value="">Select Marital Status</option>
+                                            <option value="">Select Civil Status</option>
                                             <option value="Married" {{ $employee->maritalstatus === 'Married' ? 'selected' : '' }}>Married</option>
                                             <option value="Common-Law Married" {{ $employee->maritalstatus === 'Common-Law Married' ? 'selected' : '' }}>Common-Law Married</option>
                                             <option value="Widowed" {{ $employee->maritalstatus === 'Widowed' ? 'selected' : '' }}>Widowed</option>
@@ -83,20 +93,15 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Birth </label>
-                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofbirth" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofbirth}}" required>
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Gender</label>
+                                        <label>Sex</label>
                                         <select name="gender" class="form-control custom-select" required>
-                                            <option>Select Gender</option>
-                                            <option value="MALE" {{ $employee->gender === 'MALE' ? 'selected' : '' }}>Male</option>
-                                            <option value="FEMALE" {{ $employee->gender === 'FEMALE' ? 'selected' : '' }}>Female</option>
+                                            <option>Select Sex</option>
+                                            <option value="Male" {{ $employee->gender === 'Male' ? 'selected' : '' }}>Male</option>
+                                            <option value="Female" {{ $employee->gender === 'Female' ? 'selected' : '' }}>Female</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Blood Group </label>
+                                        <label>Blood Group</label>
                                         <select name="bloodtype" class="form-control custom-select">
                                             <option>Select Blood Group</option>
                                             <option value="O+" {{ $employee->bloodtype === 'O+' ? 'selected' : '' }}>O+</option>
@@ -109,14 +114,19 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Contact Number </label>
+                                        <label>Mobile Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="contactnumber" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->contactnumber}}" required>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Person to Contact</label>
+                                    <div class="form-group col-md-6 m-t-20">
+                                        <label>Person to Contact in Case of Emergency</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="persontocontact" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->persontocontact}}" required>
+                                        <input type="text" name="persontocontact" class="form-control" value="{{$employee->persontocontact}}" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-6 m-t-20">
+                                        <label>Contact Number of Contact Person</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="contact" class="form-control" minlength="11" value="{{$employee->contact}}" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Personal Email </label>
@@ -126,7 +136,32 @@
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Corporate Email </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->corporateemail}}" required>
+                                        <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->corporateemail}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>GSIS ID Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="gsis" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->gsis}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>PAG-IBIG ID Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="pagibig" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->pagibig}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Philhealth Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="philhealth" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->philhealth}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>SSS Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="sss" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->sss}}">
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Tin Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="tin" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->tin}}">
                                     </div>
                                     <br>
                         <div class="col-md-12">
@@ -134,29 +169,29 @@
                            </div>
                                     <br>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Course</label>
+                                        <label>College Degree</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="course" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->course}}" required>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Graduate Studies</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="graduate" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->graduate}}" required>
+                                        <input type="text" name="graduate" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->graduate}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>CSC Professional Eligibility </label>
                                       <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->csc}}" required>
+                                        <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->csc}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Issuance PRC ID </label>
+                                        <label>Date Of Issuance-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}" required>
+                                        <input type="text" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}">
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Validity PRC ID </label>
+                                        <label>Date Of Validity-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}" required>
+                                        <input type="text" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}">
                                     </div>
                                     <div class="form-actions col-md-12">
                                     <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
