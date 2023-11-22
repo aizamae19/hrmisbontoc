@@ -33,47 +33,47 @@
                                 @include('layouts.partials.messages')
                                 <form class="row" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
                                     @csrf
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>First Name</label>
                                         <input type="text" name="firstname" class="form-control form-control-line" minlength="2" required > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Middle Name</label>
                                         <input type="text" id="" name="middlename" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Last Name </label>
                                         <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Suffix</label>
                                         <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Birth </label>
                                         <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" placeholder="" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Place Of Birth </label>
                                         <input type="text" name="placeofbirth" id="dateofbirth" class="form-control" placeholder="" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Purok/Street</label>
                                         <input type="text" name="address" class="form-control form-control-line" minlength="2"> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Barangay</label>
                                         <input type="text" name="barangay" class="form-control form-control-line" minlength="2"> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Municipality</label>
                                         <input type="text" name="municipality" class="form-control form-control-line" minlength="2" required > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Town/Province</label>
                                         <input type="text" name="province" class="form-control form-control-line" minlength="2" required > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Civil Status</label>
                                         <select name="maritalstatus" value="" class="form-control custom-select" required>
                                             <option value="">Select Civil Status</option>
@@ -85,7 +85,7 @@
                                             <option value="Divorced">Divorced</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Sex</label>
                                         <select name="gender" class="form-control custom-select" required>
                                             <option>Select Sex</option>
@@ -93,7 +93,7 @@
                                             <option value="Female">Female</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Blood Type </label>
                                         <select name="bloodtype" class="form-control custom-select">
                                             <option>Select Blood Type</option>
@@ -106,43 +106,43 @@
                                             <option value="AB+">AB+</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Mobile Number </label>
                                         <input type="text" name="contactnumber" class="form-control" value="" placeholder="" minlength="11" required> 
                                     </div>
-                                    <div class="form-group col-md-6 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Person to Contact in Case of Emergency</label>
                                         <input type="text" name="persontocontact" class="form-control" value="" placeholder="" required> 
                                     </div>
-                                    <div class="form-group col-md-6 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Contact Number of Contact Person</label>
                                         <input type="text" name="contact" class="form-control" minlength="11" value="" placeholder="" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Personal Email </label>
                                         <input type="email" id="example-email2" name="personalemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Corporate Email </label>
                                         <input type="email" id="example-email2" name="corporateemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>GSIS ID Number </label>
                                         <input type="text" id="gsis" name="gsis" class="form-control" value=""  minlength="7" > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>PAG-IBIG ID Number </label>
                                         <input type="text" id="pagibig" name="pagibig" class="form-control" value="" minlength="7" > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Philhealth Number </label>
                                         <input type="text" id="philhealth" name="philhealth" class="form-control" value="" minlength="7" > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>SSS Number </label>
                                         <input type="text" id="sss" name="sss" class="form-control" value="" minlength="7" > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>TIN Number </label>
                                         <input type="text" id="tin" name="tin" class="form-control" value="" minlength="7" > 
                                     </div>
@@ -151,23 +151,23 @@
                                   <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
                                    </div>
                                     <br>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>College Degree</label>
                                         <input type="text" name="course" class="form-control form-control-line" minlength="2" required > 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Graduate Studies</label>
                                         <input type="text" id="" name="graduate" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>CSC Professional Eligibility </label>
                                       <input type="text" id="" name="csc" class="form-control form-control-line" value=""> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Issuance-PRC ID </label>
                                         <input type="date" name="dateofissuance" id="example-email2" name="example-email" class="form-control" placeholder=""> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Validity-PRC ID </label>
                                         <input type="date" name="dateofvalidity" id="example-email2" name="example-email" class="form-control" placeholder="">
                                     </div>
@@ -176,15 +176,15 @@
                                   <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Work Background</h3>
                                    </div>
                                 <br>
-                                     <div class="form-group col-md-3 m-t-20">
+                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Personnel ID</label>
                                         <input type="text" id="" name="personnel" class="form-control form-control-line" value="" minlength="2" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Biometric Number</label>
                                         <input type="text" id="" name="biometric" class="form-control form-control-line" value="" minlength="2" required>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Employment Status</label>
                                         <select name="status" class="form-control custom-select" required>
                                             <option>Select Status</option>
@@ -195,7 +195,7 @@
                                             <option value="Elective">Elective</option>
                                         </select>
                                     </div>
-                                     <div class="form-group col-md-3 m-t-20">
+                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Department</label>
                                         <select name="department" class="form-control custom-select" required>
                                             <option>Select Department</option>
@@ -227,7 +227,7 @@
                                             <option value="Department of Trade and Industry">Department of Trade and Industry</option>
                                         </select>
                                     </div>
-                                      <div class="form-group col-md-3 m-t-20">
+                                      <div class="form-group col-md-4 m-t-20">
                                         <label>Position Title</label>
                                         <select name="position" class="form-control custom-select" required>
                                             <option>Select Position Title</option>
@@ -246,19 +246,19 @@
                                             <option value="Mechanic II">Mechanic II</option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Joining</label>
                                         <input type="date" name="dateofjoining" id="example-email2" name="example-email" class="form-control" placeholder="" required>
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Leaving </label>
                                         <input type="date" name="dateofleaving" id="example-email2" name="example-email" class="form-control" placeholder=""> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Mandatory Retirement</label>
                                         <input type="date" name="dateofretirement" id="example-email2" name="example-email" class="form-control" placeholder="" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Salary Grade</label>
                                         <select name="salary" class="form-control custom-select" required>
                                             <option>Select Salary Grade</option>
@@ -297,7 +297,7 @@
                                             <option value="33">33</option>
                                         </select>
                                     </div>
-                                     <div class="form-group col-md-3 m-t-20">
+                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Step</label>
                                         <select name="step" class="form-control custom-select" required>
                                             <option>Select Step</option>
