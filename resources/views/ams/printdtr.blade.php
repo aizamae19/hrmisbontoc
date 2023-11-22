@@ -81,7 +81,7 @@
                                         @if(isset($employees))
                                             @foreach($employees as $employee)
                                                  <tr>
-                                                    <td>{{ $employee->personnel }}</td>
+                                                    <td>{{ $employee->biometric }}</td>
                                                     <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
                                                     <td>{{ $employee->department }}</td>
                                                     <td>{{ $employee->contactnumber }}</td>
