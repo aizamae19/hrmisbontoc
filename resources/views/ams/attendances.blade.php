@@ -2,14 +2,20 @@
     @extends('layouts.default')
 
 @section('content')
+
+<body>
+
             <div class="container-fluid">
 
                 <div class="row m-b-10"> 
-                    <div class="col-12" style="margin-top: 5px;">
+                    <div class="col-12" style="margin-top: 10px; margin-bottom: 10px;   width: 3000px;">
                        <!--  <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Save_Attendance" class="text-white"><i class="" aria-hidden="true"></i> Add Attendance </a></button> -->
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="#" class="text-white" data-toggle="modal" data-target="#Bulkmodal"><i class="" aria-hidden="true"></i>  IMPORT CSV FILE </a></button>
-                       
+                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="#" class="text-white" data-toggle="modal" data-target="#Bulkmodal"><i class="" aria-hidden="true" style=" "></i>  IMPORT CSV FILE </a></button>
                         
+                        <!--  <input id="attendance" style="margin-left:80%; " type="text" placeholder="search" > -->
+
+
+
                        <!--  <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Attendance_Report" class="text-white"><i class="" aria-hidden="true"></i> Attendance Report </a></button> -->
                     </div>
                 </div>  
@@ -21,20 +27,20 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive ">
-                                    <table id="attendance123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                                    <table id="attendance tbody" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
+
                                                 <th>Personnel ID</th>
-                                                <th>Date </th>
+                                               <th>Date </th>
                                                 <th>Am In</th>
                                                 <th>Am Out</th>
                                                 <th>Pm In</th>
                                                 <th>Pm Out</th>
-                                                <th>Action  </th>
+                                               
                                             </tr>
                                         </thead>
-                                       
-                                        <tbody>
+                                        <tbody id="attendance">
                                            @if(isset($attendance))
                                                 @foreach($attendance as $attendancelist)
                                                     <tr>
@@ -45,9 +51,9 @@
                                                         <td>{{$attendancelist->pm_in}}</td>
                                                         <td>{{$attendancelist->pm_out}}</td>
                     
-                                                        <td class="jsgrid-align-center ">
+                                                        <!-- <td class="jsgrid-align-center ">
                                                             <a href="Save_Attendance?A=1014" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light" data-value="Approve" ><i class="fa fa-pencil-square-o"></i></a>
-                                                        </td>
+                                                        </td> -->
                                                     </tr>
                                                 @endforeach
                                             @endif
@@ -56,6 +62,7 @@
                                     </table>
                                     <div class="container mt-4">
                                         {{ $attendance->links('vendor.pagination.bootstrap-4') }}
+
                                     </div>
                                 </div>
                             </div>
@@ -87,14 +94,25 @@
                 </div>                             
             </div>
 
-            <footer class="footer"> © 2023 | Developed By GenIT Bangladesh </footer>
+            <footer class="footer"> © 2023 | Developed By 404 Team </footer>
 
         </div>
 
     </div>
+
+   <!--  <script>
+    $(document).ready(function(){
+      $("#attendance").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#attendance tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > - 1)
+        });
+      });
+    });
+    </script> -->
     
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $(function () {
             $('.mydatetimepicker').datepicker({
             format: "mm-yyyy",
@@ -200,8 +218,8 @@
   
     $(".select2").select2();
     </script>
-    <script src="http://hrsystem-ci.test\/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+   <!--  <script src="http://hrsystem-ci.test\/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script> -->
 
-
+ -->
 
 @endsection

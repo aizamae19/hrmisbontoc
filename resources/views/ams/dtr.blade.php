@@ -68,9 +68,9 @@
                 </div>
                 <div class="control-form">
                     <div style="display: flex; width: 100%;">
-                        <label for="" style="font-size: 1rem;" >For the month of: </label>
+                        <label for="" style="font-size: 1rem;" >For the mont of: </label>
                         <div class="container-row" style="flex-grow: 1; justify-content: center;border-bottom: 1px solid black">
-                            <label for="" style="font-weight: 900; padding-left: 5px;">{{ date ('F', strtotime("2023-$month-01")) }}</label>
+                            <label for="" style="font-weight: 900; padding-left: 5px;">{{ date('F', strtotime("$year-$month-01")) }} <span id="dates"></span> {{ $year }}</label>
                         </div>
                     </div>
                 </div>
@@ -115,29 +115,119 @@
                     var attendances = @json($attendanceList);
                     var employee = @json($employees);
                     var count = Object.keys(attendances).length;
-                    var x=0
-                    if(employee[0]['position'] == "Job Order" || employee[0]['position'] == "Casual"){
+                    var dates = document.getElementById('dates');
+                    let holiday = @json($holiday);
+                    let hCount = Object.keys(holiday).length;
+                    var x=0;
+                    var ctr = Object.keys(employee).length;
+                    var stat = (ctr > 1) ? 1 : 0;
+
+                    var hDates ={};
+                    for(var i=0; i<hCount; i++){
+                        var strDate = holiday[i]['startdate'];
+                        var endDate = holiday[i]['enddate'];
+                        var holidayName = holiday[i]['holidayName'];
+                        // Extracting day part 
+                        var sDate = parseInt(strDate.split('-')[2]);
+                        var eDate = parseInt(endDate.split('-')[2]);
+                        hDates[i] = {holidayName: holidayName,hDays: []};
+
+                        if(sDate < eDate){
+                            for(var d=sDate; d<=eDate; d++){
+                                hDates[i].hDays.push(d);
+                            }
+                        }else{
+                            hDates[i].hDays.push(sDate);
+                        }
+                    }
+                    console.log(employee);
+                    console.log(stat);
+                    if(employee[stat]['status'] == "Job Order" || employee[stat]['status'] == "Casual"){
+                        
+                        dates.textContent = '1-15';
                         for(i=1; i<=15; i++){
                             document.write("<tr>");
                             document.write("<th>"+i+"</th>");
                             var present = false;
-                            for(x=0; x<count; x++){
-                                var am_in = attendances[x]['am_in'];
-                                var am_out = attendances[x]['am_out'];
-                                var pm_in = attendances[x]['pm_in'];
-                                var pm_out = attendances[x]['pm_out'];
-                                var dte = attendances[x]['date'];
-                                dte = new Date(dte).getDate();
-                                if(i == dte){
-                                    document.write("<th>"+am_in+"</th>");
-                                    document.write("<th>"+am_out+"</th>");
-                                    document.write("<th>"+pm_in+"</th>");
-                                    document.write("<th>"+pm_out+"</th>");
-                                    present = true;
-                                    break;
+                            var isHoliday = false;
+                            if(hCount > 0){
+                                isHoliday = true;
+                            }
+
+                            if(hCount > 0){
+                                isHoliday = true;
+                                var isFound = false;
+                                var notFound = 0;
+                                for (let j = 0; j < hCount; j++) {
+                                    isFound = false;
+                                    
+                                    let hDaycnt = hDates[j]['hDays'].length;
+                                    for (let x = 0; x < hDaycnt; x++) {
+                                        if (hDates[j].hDays[x] === i) {
+                                            document.write("<th colspan='2' style='color:#ff6347'>HOLIDAY</th>");
+                                            document.write("<th colspan='2' style='color:#ff6347'>"+hDates[j].holidayName+"</th>");
+                                            isFound = true;
+                                            break; // Break out of the inner loop once the value is found
+                                        }
+                                    }
+                                    if (isFound) {
+                                        break; // Break out of the outer loop once the value is found
+                                    }else{
+                                        notFound++;
+                                    }
+                                    
+                                    if(notFound == hCount){
+                                        for(x=0; x<count; x++){
+                                            var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                            var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                            var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                            var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                            var dte = attendances[x]['date'];
+                                            am_in = militaryTo12HrTime(am_in);
+                                            am_out = militaryTo12HrTime(am_out);
+                                            pm_in = militaryTo12HrTime(pm_in);
+                                            pm_out = militaryTo12HrTime(pm_out);
+                                            dte = new Date(dte).getDate();
+                                            if(i == dte){
+                                                document.write("<th>"+am_in+"</th>");
+                                                document.write("<th>"+am_out+"</th>");
+                                                document.write("<th>"+pm_in+"</th>");
+                                                document.write("<th>"+pm_out+"</th>");
+                                                present = true;
+                                                break;
+                                            }else{
+                                                isHoliday = false;
+                                            }
+
+                                        }
+                                        
+                                    }
+                                }
+                            }else{
+                                for(x=0; x<count; x++){
+                                    var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                    var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                    var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                    var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                    var dte = attendances[x]['date'];
+                                    am_in = militaryTo12HrTime(am_in);
+                                    am_out = militaryTo12HrTime(am_out);
+                                    pm_in = militaryTo12HrTime(pm_in);
+                                    pm_out = militaryTo12HrTime(pm_out);
+                                    dte = new Date(dte).getDate();
+                                    if(i == dte){
+                                        document.write("<th>"+am_in+"</th>");
+                                        document.write("<th>"+am_out+"</th>");
+                                        document.write("<th>"+pm_in+"</th>");
+                                        document.write("<th>"+pm_out+"</th>");
+                                        present = true;
+                                        break;
+                                    }
                                 }
                             }
-                            if(!present){
+                            
+                            if(!isHoliday && !present){
+                                // absent or saturday & sunday
                                 document.write("<th></th>");
                                 document.write("<th></th>");
                                 document.write("<th></th>");
@@ -159,27 +249,90 @@
                             document.write("<tr>");
                         }     
                     }else{
+                        dates.textContent = '1-31';
                         for(i=1; i<=31; i++){
                             document.write("<tr>");
                             document.write("<th>"+i+"</th>");
                             var present = false;
-                            for(x=0; x<count; x++){
-                                var am_in = attendances[x]['am_in'];
-                                var am_out = attendances[x]['am_out'];
-                                var pm_in = attendances[x]['pm_in'];
-                                var pm_out = attendances[x]['pm_out'];
-                                var dte = attendances[x]['date'];
-                                dte = new Date(dte).getDate();
-                                if(i == dte){
-                                    document.write("<th>"+am_in+"</th>");
-                                    document.write("<th>"+am_out+"</th>");
-                                    document.write("<th>"+pm_in+"</th>");
-                                    document.write("<th>"+pm_out+"</th>");
-                                    present = true;
-                                    break;
+                            var isHoliday = false;
+                            if(hCount > 0){
+                                isHoliday = true;
+                            }
+
+                            if(hCount > 0){
+                                isHoliday = true;
+                                var isFound = false;
+                                var notFound = 0;
+                                for (let j = 0; j < hCount; j++) {
+                                    isFound = false;
+                                    
+                                    let hDaycnt = hDates[j]['hDays'].length;
+                                    for (let x = 0; x < hDaycnt; x++) {
+                                        if (hDates[j].hDays[x] === i) {
+                                            document.write("<th colspan='2' style='color:#ff6347'>HOLIDAY</th>");
+                                            document.write("<th colspan='2' style='color:#ff6347'>"+hDates[j].holidayName+"</th>");
+                                            isFound = true;
+                                            break; // Break out of the inner loop once the value is found
+                                        }
+                                    }
+                                    if (isFound) {
+                                        break; // Break out of the outer loop once the value is found
+                                    }else{
+                                        notFound++;
+                                    }
+                                    
+                                    if(notFound == hCount){
+                                        for(x=0; x<count; x++){
+                                            var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                            var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                            var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                            var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                            var dte = attendances[x]['date'];
+                                            am_in = militaryTo12HrTime(am_in);
+                                            am_out = militaryTo12HrTime(am_out);
+                                            pm_in = militaryTo12HrTime(pm_in);
+                                            pm_out = militaryTo12HrTime(pm_out);
+                                            dte = new Date(dte).getDate();
+                                            if(i == dte){
+                                                document.write("<th>"+am_in+"</th>");
+                                                document.write("<th>"+am_out+"</th>");
+                                                document.write("<th>"+pm_in+"</th>");
+                                                document.write("<th>"+pm_out+"</th>");
+                                                present = true;
+                                                break;
+                                            }else{
+                                                isHoliday = false;
+                                            }
+
+                                        }
+                                        
+                                    }
+                                }
+                            }else{
+                                for(x=0; x<count; x++){
+                                    var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                    var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                    var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                    var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                    var dte = attendances[x]['date'];
+                                    am_in = militaryTo12HrTime(am_in);
+                                    am_out = militaryTo12HrTime(am_out);
+                                    pm_in = militaryTo12HrTime(pm_in);
+                                    pm_out = militaryTo12HrTime(pm_out);
+                                    dte = new Date(dte).getDate();
+                                    if(i == dte){
+                                        document.write("<th>"+am_in+"</th>");
+                                        document.write("<th>"+am_out+"</th>");
+                                        document.write("<th>"+pm_in+"</th>");
+                                        document.write("<th>"+pm_out+"</th>");
+                                        present = true;
+                                        break;
+                                    }
                                 }
                             }
-                            if(!present){
+                           
+                            if(!isHoliday && !present){
+                                // absent or saturday & sunday
                                 document.write("<th></th>");
                                 document.write("<th></th>");
                                 document.write("<th></th>");
@@ -190,7 +343,27 @@
                             document.write("<tr>");
                         }
                     }
-                    
+                    function militaryTo12HrTime(militaryTime) {
+                        if (!militaryTime) {
+                            return ""; // Handle the case where militaryTime is empty
+                        }
+                        // Split the military time string into hours and minutes
+                        const [hours, minutes] = militaryTime.split(':').map(Number);
+
+                        // Determine whether it's AM or PM
+                        const period = hours < 12 ? "AM" : "PM";
+
+                        // Convert to 12-hour format
+                        let twelveHourTime = hours % 12;
+                        if (twelveHourTime === 0) {
+                            twelveHourTime = 12; // 12:00 AM or 12:00 PM
+                        }
+
+                        // Format the time in 12-hour format
+                        twelveHourTime = `${twelveHourTime.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${period}`;
+                        
+                        return twelveHourTime;
+                    }
                     
                 </script>
             </table>
@@ -258,9 +431,9 @@
                 </div>
                 <div class="control-form">
                     <div style="display: flex; width: 100%;">
-                        <label for="" style="font-size: 1rem;" >For the month of: </label>
+                        <label for="" style="font-size: 1rem;" >For the mont of: </label>
                         <div class="container-row" style="flex-grow: 1; justify-content: center;border-bottom: 1px solid black">
-                            <label for="" style="font-weight: 900; padding-left: 5px;">{{ date('F', strtotime("2023-$month-01")) }}</label>
+                            <label for="" style="font-weight: 900; padding-left: 5px;">{{ date('F', strtotime("$year-$month-01")) }} <span id="dates2"></span> {{ $year }}</label>
                         </div>
                     </div>
                 </div>
@@ -304,8 +477,31 @@
                     var attendances = @json($attendanceList);
                     var employee = @json($employees);
                     var count = Object.keys(attendances).length;
-                    var x=0
-                    if(employee[0]['position'] == "Job Order" || employee[0]['position'] == "Casual"){
+                    var dates2 = document.getElementById('dates2');
+                    // let holiday = @json($holiday);
+                    // let hCount = Object.keys(holiday).length;
+                    var x=0;
+
+                    var hDates ={};
+                    for(var i=0; i<hCount; i++){
+                        var strDate = holiday[i]['startdate'];
+                        var endDate = holiday[i]['enddate'];
+                        var holidayName = holiday[i]['holidayName'];
+                        // Extracting day part 
+                        var sDate = parseInt(strDate.split('-')[2]);
+                        var eDate = parseInt(endDate.split('-')[2]);
+                        hDates[i] = {holidayName: holidayName,hDays: []};
+
+                        if(sDate < eDate){
+                            for(var d=sDate; d<=eDate; d++){
+                                hDates[i].hDays.push(d);
+                            }
+                        }else{
+                            hDates[i].hDays.push(sDate);
+                        }
+                    }
+                    if(employee[stat]['status'] == "Job Order" || employee[stat]['status'] == "Casual"){
+                        dates2.textContent = '16-31';
                         for(i=1; i<=15; i++){
                             document.write("<tr>");
                             document.write("<th>"+i+"</th>");
@@ -321,23 +517,85 @@
                             document.write("<tr>");
                             document.write("<th>"+i+"</th>");
                             var present = false;
-                            for(x=0; x<count; x++){
-                                var am_in = attendances[x]['am_in'];
-                                var am_out = attendances[x]['am_out'];
-                                var pm_in = attendances[x]['pm_in'];
-                                var pm_out = attendances[x]['pm_out'];
-                                var dte = attendances[x]['date'];
-                                dte = new Date(dte).getDate();
-                                if(i == dte){
-                                    document.write("<th>"+am_in+"</th>");
-                                    document.write("<th>"+am_out+"</th>");
-                                    document.write("<th>"+pm_in+"</th>");
-                                    document.write("<th>"+pm_out+"</th>");
-                                    present = true;
-                                    break;
+                            var isHoliday = false;
+                            if(hCount > 0){
+                                isHoliday = true;
+                            }
+
+                            if(hCount > 0){
+                                isHoliday = true;
+                                var isFound = false;
+                                var notFound = 0;
+                                for (let j = 0; j < hCount; j++) {
+                                    isFound = false;
+                                    
+                                    let hDaycnt = hDates[j]['hDays'].length;
+                                    for (let x = 0; x < hDaycnt; x++) {
+                                        if (hDates[j].hDays[x] === i) {
+                                            document.write("<th colspan='2' style='color:#ff6347'>HOLIDAY</th>");
+                                            document.write("<th colspan='2' style='color:#ff6347'>"+hDates[j].holidayName+"</th>");
+                                            isFound = true;
+                                            break; // Break out of the inner loop once the value is found
+                                        }
+                                    }
+                                    if (isFound) {
+                                        break; // Break out of the outer loop once the value is found
+                                    }else{
+                                        notFound++;
+                                    }
+                                    
+                                    if(notFound == hCount){
+                                        for(x=0; x<count; x++){
+                                            var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                            var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                            var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                            var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                            var dte = attendances[x]['date'];
+                                            am_in = militaryTo12HrTime(am_in);
+                                            am_out = militaryTo12HrTime(am_out);
+                                            pm_in = militaryTo12HrTime(pm_in);
+                                            pm_out = militaryTo12HrTime(pm_out);
+                                            dte = new Date(dte).getDate();
+                                            if(i == dte){
+                                                document.write("<th>"+am_in+"</th>");
+                                                document.write("<th>"+am_out+"</th>");
+                                                document.write("<th>"+pm_in+"</th>");
+                                                document.write("<th>"+pm_out+"</th>");
+                                                present = true;
+                                                break;
+                                            }else{
+                                                isHoliday = false;
+                                            }
+
+                                        }
+                                        
+                                    }
+                                }
+                            }else{
+                                for(x=0; x<count; x++){
+                                    var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                    var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                    var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                    var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                    var dte = attendances[x]['date'];
+                                    am_in = militaryTo12HrTime(am_in);
+                                    am_out = militaryTo12HrTime(am_out);
+                                    pm_in = militaryTo12HrTime(pm_in);
+                                    pm_out = militaryTo12HrTime(pm_out);
+                                    dte = new Date(dte).getDate();
+                                    if(i == dte){
+                                        document.write("<th>"+am_in+"</th>");
+                                        document.write("<th>"+am_out+"</th>");
+                                        document.write("<th>"+pm_in+"</th>");
+                                        document.write("<th>"+pm_out+"</th>");
+                                        present = true;
+                                        break;
+                                    }
                                 }
                             }
-                            if(!present){
+                            
+                            if(!isHoliday && !present){
+                                // absent or saturday & sunday
                                 document.write("<th></th>");
                                 document.write("<th></th>");
                                 document.write("<th></th>");
@@ -348,27 +606,90 @@
                             document.write("<tr>");
                         }
                     }else{
+                        dates2.textContent = '1-31';
                         for(i=1; i<=31; i++){
                             document.write("<tr>");
                             document.write("<th>"+i+"</th>");
                             var present = false;
-                            for(x=0; x<count; x++){
-                                var am_in = attendances[x]['am_in'];
-                                var am_out = attendances[x]['am_out'];
-                                var pm_in = attendances[x]['pm_in'];
-                                var pm_out = attendances[x]['pm_out'];
-                                var dte = attendances[x]['date'];
-                                dte = new Date(dte).getDate();
-                                if(i == dte){
-                                    document.write("<th>"+am_in+"</th>");
-                                    document.write("<th>"+am_out+"</th>");
-                                    document.write("<th>"+pm_in+"</th>");
-                                    document.write("<th>"+pm_out+"</th>");
-                                    present = true;
-                                    break;
+                            var isHoliday = false;
+                            if(hCount > 0){
+                                isHoliday = true;
+                            }
+
+                            if(hCount > 0){
+                                isHoliday = true;
+                                var isFound = false;
+                                var notFound = 0;
+                                for (let j = 0; j < hCount; j++) {
+                                    isFound = false;
+                                    
+                                    let hDaycnt = hDates[j]['hDays'].length;
+                                    for (let x = 0; x < hDaycnt; x++) {
+                                        if (hDates[j].hDays[x] === i) {
+                                            document.write("<th colspan='2' style='color:#ff6347'>HOLIDAY</th>");
+                                            document.write("<th colspan='2' style='color:#ff6347'>"+hDates[j].holidayName+"</th>");
+                                            isFound = true;
+                                            break; // Break out of the inner loop once the value is found
+                                        }
+                                    }
+                                    if (isFound) {
+                                        break; // Break out of the outer loop once the value is found
+                                    }else{
+                                        notFound++;
+                                    }
+                                    
+                                    if(notFound == hCount){
+                                        for(x=0; x<count; x++){
+                                            var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                            var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                            var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                            var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                            var dte = attendances[x]['date'];
+                                            am_in = militaryTo12HrTime(am_in);
+                                            am_out = militaryTo12HrTime(am_out);
+                                            pm_in = militaryTo12HrTime(pm_in);
+                                            pm_out = militaryTo12HrTime(pm_out);
+                                            dte = new Date(dte).getDate();
+                                            if(i == dte){
+                                                document.write("<th>"+am_in+"</th>");
+                                                document.write("<th>"+am_out+"</th>");
+                                                document.write("<th>"+pm_in+"</th>");
+                                                document.write("<th>"+pm_out+"</th>");
+                                                present = true;
+                                                break;
+                                            }else{
+                                                isHoliday = false;
+                                            }
+
+                                        }
+                                        
+                                    }
+                                }
+                            }else{
+                                for(x=0; x<count; x++){
+                                    var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                    var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                    var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                    var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                    var dte = attendances[x]['date'];
+                                    am_in = militaryTo12HrTime(am_in);
+                                    am_out = militaryTo12HrTime(am_out);
+                                    pm_in = militaryTo12HrTime(pm_in);
+                                    pm_out = militaryTo12HrTime(pm_out);
+                                    dte = new Date(dte).getDate();
+                                    if(i == dte){
+                                        document.write("<th>"+am_in+"</th>");
+                                        document.write("<th>"+am_out+"</th>");
+                                        document.write("<th>"+pm_in+"</th>");
+                                        document.write("<th>"+pm_out+"</th>");
+                                        present = true;
+                                        break;
+                                    }
                                 }
                             }
-                            if(!present){
+                           
+                            if(!isHoliday && !present){
+                                // absent or saturday & sunday
                                 document.write("<th></th>");
                                 document.write("<th></th>");
                                 document.write("<th></th>");
@@ -378,6 +699,27 @@
                             document.write("<th></th>");
                             document.write("<tr>");
                         }
+                    }
+                    function militaryTo12HrTime(militaryTime) {
+                        if (!militaryTime) {
+                            return ""; // Handle the case where militaryTime is empty
+                        }
+                        // Split the military time string into hours and minutes
+                        const [hours, minutes] = militaryTime.split(':').map(Number);
+
+                        // Determine whether it's AM or PM
+                        const period = hours < 12 ? "AM" : "PM";
+
+                        // Convert to 12-hour format
+                        let twelveHourTime = hours % 12;
+                        if (twelveHourTime === 0) {
+                            twelveHourTime = 12; // 12:00 AM or 12:00 PM
+                        }
+
+                        // Format the time in 12-hour format
+                        twelveHourTime = `${twelveHourTime.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${period}`;
+                        
+                        return twelveHourTime;
                     }
                 </script>
             </table>
@@ -419,7 +761,8 @@
     </div>
 </body>
 </html>
-<script type="text/javascript">
-    var table = document.getElementById("IDtable");
+    <script type="text/javascript">
+
+    
     
 </script>

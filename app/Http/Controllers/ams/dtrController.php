@@ -37,7 +37,7 @@ class dtrController extends Controller
      
      public function dtr(Request $request)
      {
-         $attendance = Attendance::where('employee_id', $request->id)
+         $attendance = Attendance::where('personnel', $request->id)
                                  ->get();
         // return json_encode($attendance);
          return view('ams.dtr',[

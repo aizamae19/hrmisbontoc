@@ -21,6 +21,16 @@
                 <div class="col-12" >
                     <div class="card"style=" width: 100%;">
                         <div class="row-flex" style="display: flex;justify-content: flex-start;align-items: center;">
+<!-- 
+                            <div class="form-group col-md-3 m-t-20">
+                                <label>Select Day</label>
+                                <select name="dtr_day" class="form-control custom-select" required>
+                                    @for($i=1; $i<=31; $i++)
+                                        <option value="{{$i}}">{{$i}}</option>
+                                    @endfor
+                                </select>
+                            </div> -->
+
                             <div class="form-group col-md-3 m-t-20">
                                 <label>Select Month</label>
                                 <input type="text" value="{{ $d = date('m')}}" hidden>    
@@ -94,6 +104,7 @@
                     e.preventDefault();
 
                     var link = $(this).attr('data-url');
+                    // var day = $('select[name="dtr_day"]').val();
                     var month = $('select[name="dtr_month"]').val();
                     var year = $('select[name="dtr_year"]').val();
                     url = link+'/'+month+'/'+year;
@@ -106,12 +117,12 @@
                 });
                 // load_page();
                 // function load_page() {
-                //     var now = new Date();
+                // var now = new Date();
 
                 //     var day = ("0" + now.getDate()).slice(-2);
-                //     var month = ("0" + (now.getMonth() + 1)).slice(-2);
+                //     // var month = ("0" + (now.getMonth() + 1)).slice(-2);
 
-                //     var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+                //     // var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
 
                 //     $('input[name="dateFrom"]').val(today);
                 //     $('input[name="dateTo"]').val(today);

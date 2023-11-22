@@ -5,7 +5,7 @@
                     <div class="col-12">
                         <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Save_Attendance" class="text-white"><i class="" aria-hidden="true"></i> Add Attendance </a></button>
                         <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="#" class="text-white" data-toggle="modal" data-target="#Bulkmodal"><i class="" aria-hidden="true"></i>  Add Bulk Attendance</a></button>
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Attendance_Report" class="text-white"><i class="" aria-hidden="true"></i> Attendance Report </a></button>
+                       <!--  <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Attendance_Report" class="text-white"><i class="" aria-hidden="true"></i> Attendance Report </a></button> -->
                     </div>
                 </div>  
                 <div class="row">
@@ -104,7 +104,7 @@
                 </div>
 
 <div id="Bulkmodal" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog">
+                                  <!--   <div class="modal-dialog">
                                         <div class="modal-content">
                                            <form method="post" action="import" enctype="multipart/form-data">
                                             <div class="modal-header">
@@ -122,7 +122,7 @@
                                                 <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
                                             </div>
                                             </form>
-                                        </div>
+                                        </div> -->
                                         <!-- /.modal-content -->
                                     </div>
                                     <!-- /.modal-dialog -->

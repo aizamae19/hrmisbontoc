@@ -17,7 +17,7 @@ class attendancesController extends Controller
     }
 
 
-    public function showWorkingHoursList($Personnel)
+    public function showWorkingHoursList($personnel)
     {
             $workingHours = Attendances::where('personnel', $personnel)->get();
             $workingHoursList = [];
@@ -81,37 +81,50 @@ class attendancesController extends Controller
                         // Process the columns as needed
 
                         $personnel = trim($columns[0]);
+
                         $csvdate = Carbon::parse(trim($columns[1]));
+                        $hourIndex = trim($columns[3]);
                         $date = $csvdate->format('Y-m-d');
+                        
                         $checkAttendance = Attendances::where('personnel', $personnel)
                                                         ->where('date',$date)
                                                         ->first();
                         if(isset($checkAttendance)){
-
-                            if (isset($checkAttendance->am_in)) {
-                                if ($csvdate->hour < 12) {
+                            switch($hourIndex){
+                                case 0://AM in 
+                                    $checkAttendance->am_in = $csvdate->format('H:i:s');
+                                    $checkAttendance->save();
+                                    break;
+                                case 4://AM out
                                     $checkAttendance->am_out = $csvdate->format('H:i:s');
                                     $checkAttendance->save();
-                                } else {
-                                   $checkAttendance->pm_in = $csvdate->format('H:i:s');
-                                   $checkAttendance->save();
-                                }
+                                    break;
+                                case 5://PM in
+                                    $checkAttendance->pm_in = $csvdate->format('H:i:s');
+                                    $checkAttendance->save();
+                                    break;
+                                case 1://PM out
+                                    $checkAttendance->pm_out = $csvdate->format('H:i:s');
+                                    $checkAttendance->save();
+                                    break;
                             }
-
-                            if ($checkAttendance->pm_in) {
-                                $checkAttendance->pm_out = $csvdate->format('H:i:s');
-                                $checkAttendance->save();
-                            }
-
                         }else{
                             $saveAttendance = new Attendances();
                             $saveAttendance->personnel = $personnel;
                             $saveAttendance->date = $date;
-                            if ($csvdate->hour < 12) {
-                                 $saveAttendance->am_in = $csvdate->format('H:i:s');
-                            } else {
-                                $saveAttendance->pm_in = $csvdate->format('H:i:s');
-                                
+                            switch($hourIndex){
+                                case 0:
+                                    $saveAttendance->am_in = $csvdate->format('H:i:s');
+                                    break;
+                                case 4:
+                                    $saveAttendance->am_out = $csvdate->format('H:i:s');
+                                    break;
+                                case 5:
+                                    $saveAttendance->pm_in = $csvdate->format('H:i:s');
+                                    break;
+                                case 1:
+                                    $saveAttendance->pm_out = $csvdate->format('H:i:s');
+                                    break;
                             }
                             $saveAttendance->save();
                         }

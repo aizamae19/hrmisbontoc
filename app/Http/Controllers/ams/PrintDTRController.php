@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Employee;
 use App\Models\Attendance;
+use App\Models\Holiday;
 use Carbon\Carbon;
 
 class PrintDTRController extends Controller
@@ -36,7 +37,7 @@ class PrintDTRController extends Controller
      
      public function printdtr(Request $request)
      {
-         $attendance = Attendance::where('personnel', $request->id)
+        $attendance = Attendance::where('personnel', $request->id)
                                 ->whereMonth('date', $request->month)
                                 ->whereYear('date', $request->year)
                                  ->get();
@@ -53,11 +54,26 @@ class PrintDTRController extends Controller
 
         $employees = Employee::where('personnel', $request->id)
                                  ->get();
+        $holiday = Holiday::whereMonth('startdate', $request->month)
+                            ->whereYear('startdate', $request->year)
+                            ->get();
+        
+        $holidayList = [];
+                                 foreach($holiday as $data){
+                                    
+                                    $holidayList[] = [
+                                        'holidayName' => $data->nameofholiday,
+                                        'startdate' => $data->startdate,
+                                        'enddate' => $data->enddate
+                                    ];
+                                 }
         // return json_encode($attendance);
          return view('ams.dtr',[
             'attendanceList'=> $attendanceList,
             'employees'=>  $employees,
-            'month' => $request->month
+            'month' => $request->month,
+            'year' => $request->year,
+            'holiday' => $holidayList
          ]);
         }
 
