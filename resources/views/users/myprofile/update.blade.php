@@ -73,7 +73,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Sex</label>
+                                        <label>Gender</label>
                                         <select name="gender" class="form-control custom-select" required>
                                             <option>Select Sex</option>
                                             <option value="Male" {{ $employee->gender === 'Male' ? 'selected' : '' }}>Male</option>

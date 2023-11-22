@@ -34,6 +34,10 @@
                                 <form class="row" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group col-md-4 m-t-20">
+                                        <label>Surname </label>
+                                        <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
                                         <label>First Name</label>
                                         <input type="text" name="firstname" class="form-control form-control-line" minlength="2" required > 
                                     </div>
@@ -42,11 +46,7 @@
                                         <input type="text" id="" name="middlename" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Last Name </label>
-                                        <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Suffix</label>
+                                        <label>Name Extension (Jr., Sr)</label>
                                         <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
@@ -86,9 +86,9 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Sex</label>
+                                        <label>Gender</label>
                                         <select name="gender" class="form-control custom-select" required>
-                                            <option>Select Sex</option>
+                                            <option>Select Gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
                                         </select>
@@ -145,6 +145,79 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>TIN Number </label>
                                         <input type="text" id="tin" name="tin" class="form-control" value="" minlength="7" > 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>UMID</label>
+                                        <input type="text" id="umid" name="umid" class="form-control" value="" minlength="7" > 
+                                    </div>
+                                    <br>
+                                    <div class="col-md-12">
+                                  <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
+                                   </div>
+                                    <br>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Surname</label>
+                                        <input type="text" name="spousesurname" class="form-control form-control-line" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Firstname</label>
+                                        <input type="text" id="" name="spousefirstname" class="form-control form-control-line" value="" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Middlename</label>
+                                      <input type="text" id="" name="spousemiddlename" class="form-control form-control-line" value=""> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Name Extension (Jr., Sr)</label>
+                                      <input type="text" id="" name="extension" class="form-control form-control-line" value=""> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Occupation</label>
+                                        <input type="text" name="occupation" id="example-email2" name="example-email" class="form-control" placeholder=""> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Employer/Business Name</label>
+                                        <input type="text" name="businessname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Business Address</label>
+                                        <input type="text" name="businessaddress" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Telephone Number</label>
+                                        <input type="text" name="telephone" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Surname</label>
+                                        <input type="text" name="fathersurname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Firstname</label>
+                                        <input type="text" name="fatherfirstname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Middlename</label>
+                                        <input type="text" name="fathermiddlename" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Name Extension (Jr., Sr.)</label>
+                                        <input type="text" name="nameextension" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Maiden Name</label>
+                                        <input type="text" name="maidenname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Surname</label>
+                                        <input type="text" name="mothersurname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Firstname</label>
+                                        <input type="text" name="motherfirstname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Middlename</label>
+                                        <input type="text" name="mothermiddlename" id="example-email2" name="example-email" class="form-control" placeholder="">
                                     </div>
                                     <br>
                                     <div class="col-md-12">

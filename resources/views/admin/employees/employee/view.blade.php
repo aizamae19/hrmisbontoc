@@ -27,6 +27,15 @@
             <div class="col-md-8">
               <div class="card mb-3">
                 <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Surname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                       {{ $employees->lastname }} 
+                    </div>
+                  </div>
+                  <hr>
                    <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Firstname</h6>
@@ -47,16 +56,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Lastname</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                       {{ $employees->lastname }} 
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Suffix</h6>
+                      <h6 class="mb-0">Name Extension (Jr., Sr.)</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{ $employees->suffix }}
@@ -133,7 +133,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Sex</h6>
+                      <h6 class="mb-0">Gender</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                      {{ $employees->gender }}
@@ -236,6 +236,24 @@
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{ $employees->tin }}
+                    </div>
+                  </div>
+                  <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">UMID</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->umid }}
+                    </div>
+                  </div>
+                  <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Spouse's Surname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->spousesurname }}
                     </div>
                   </div>
                     <hr>
