@@ -19,13 +19,14 @@ class AdminController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             
+            $employees = Employee::count();
             $permanent = Employee::where('status', 'Permanent')->count();
             $casual = Employee::where('status', 'Casual')->count();
             $joborder = Employee::where('status', 'Job Order')->count();
             $coterminous = Employee::where('status', 'Co-Terminous')->count();
             $electives = Employee::where('status', 'Elective')->count();
 
-            return view('admin.dashboard.index', compact('permanent', 'casual', 'joborder', 'coterminous' , 'electives'));
+            return view('admin.dashboard.index', compact('permanent', 'casual', 'joborder', 'coterminous' , 'electives', 'employees'));
         }
     }
 }

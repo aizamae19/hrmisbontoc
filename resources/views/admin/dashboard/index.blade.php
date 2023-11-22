@@ -20,9 +20,7 @@
         <a href="#"><div class="circle-tile-heading dark-blue"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content dark-blue">
           <div class="circle-tile-description text-faded">Employees</div>
-            @if($noemployees=App\Models\Employee::count())
-                <div class="circle-tile-number text-faded ">{{$noemployees}}</div> 
-            @endif
+                <div class="circle-tile-number text-faded ">{{$employees}}</div> 
           <a class="circle-tile-footer" href="{{ route('employee.employees')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>
       </div>
