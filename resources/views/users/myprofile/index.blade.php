@@ -8,7 +8,7 @@
       <div class="col-lg-4">
         <div class="card mb-4">
           <div class="card-body text-center">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+            <img src="{{asset('assets/images/users/userav-min.png')}}" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3">{{ $employee->firstname }} {{ $employee->middlename }} {{ $employee->lastname }} {{ $employee->suffix}}</h5>
             <div class="d-flex justify-content-center mb-2">
@@ -32,28 +32,28 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Suffix</p>
+                <p class="mb-0">Date of Birth</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->suffix }}</p>
+                <p class="text-muted mb-0">{{ $employee->dateofbirth }}</p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Address</p>
+                <p class="mb-0">Place of Birth</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->placeofbirth }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Purok/Street</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->address }}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Marital Status</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->maritalstatus }}</p>
               </div>
             </div>
           </div>
@@ -64,16 +64,42 @@
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Date of Birth</p>
+                <p class="mb-0">Barangay</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->dateofbirth }}</p>
+                <p class="text-muted mb-0">{{ $employee->barangay }}</p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Gender</p>
+                <p class="mb-0">Municipality</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->municipality }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Town/Province</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->province }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Civil Status</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->maritalstatus }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Sex</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->gender }}</p>
@@ -91,7 +117,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Contact Number</p>
+                <p class="mb-0">Mobile Number</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->contactnumber }}</p>
@@ -100,7 +126,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Person to Contact</p>
+                <p class="mb-0">Person to Contact in Case of Emergency</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->persontocontact }}</p>
@@ -109,7 +135,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Person's Contact Number</p>
+                <p class="mb-0">Contact Number of Contact Person</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->contact }}</p>
@@ -133,6 +159,51 @@
                 <p class="text-muted mb-0">{{ $employee->corporateemail }}</p>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">GSIS ID Number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->gsis }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">PAG-IBIG ID Number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->pagibig }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Philhealth Number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->philhealth }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">SSS Number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->sss }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">TIN Number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->tin }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -143,7 +214,7 @@
             <p class="mb-4" style="color: #000;"><b>Educational Background</b></p>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Course</p>
+                <p class="mb-0">College Degree</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->course }}</p>
@@ -170,7 +241,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Date of Issuance PRC ID</p>
+                <p class="mb-0">Date of Issuance-PRC ID</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->dateofissuance }}</p>
@@ -179,7 +250,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Date of Validity PRC ID</p>
+                <p class="mb-0">Date of Validity-PRC ID</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->dateofvalidity }}</p>
@@ -204,7 +275,16 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Status</p>
+                <p class="mb-0">Biometric Number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->biometric }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Employment Status</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->status }}</p>
@@ -235,6 +315,15 @@
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->dateofjoining }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Date of Leaving</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->dateofleaving }}</p>
               </div>
             </div>
             <hr>

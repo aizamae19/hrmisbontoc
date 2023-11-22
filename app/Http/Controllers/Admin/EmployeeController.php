@@ -15,6 +15,7 @@ class EmployeeController extends Controller
         return view('admin.employees.employee.index', [
             'employees'=>$employees
         ]);
+
     }  
 
     public function addemployee(request $request){
@@ -31,8 +32,12 @@ class EmployeeController extends Controller
         $employeesave->lastname = $request->lastname;
         $employeesave->suffix = $request->suffix;
         $employeesave->address = $request->address;
+        $employeesave->barangay = $request->barangay;
+        $employeesave->municipality = $request->municipality;
+        $employeesave->province = $request->province;
         $employeesave->maritalstatus = $request->maritalstatus;
         $employeesave->dateofbirth = $request->dateofbirth;
+        $employeesave->placeofbirth = $request->placeofbirth;
         $employeesave->gender = $request->gender;
         $employeesave->bloodtype = $request->bloodtype;
         $employeesave->contactnumber = $request->contactnumber;
@@ -40,12 +45,18 @@ class EmployeeController extends Controller
         $employeesave->contact = $request->contact;
         $employeesave->personalemail = $request->personalemail;
         $employeesave->corporateemail = $request->corporateemail;
+        $employeesave->gsis = $request->gsis;
+        $employeesave->pagibig = $request->pagibig;
+        $employeesave->philhealth = $request->philhealth;
+        $employeesave->sss = $request->sss;
+        $employeesave->tin = $request->tin;
         $employeesave->course = $request ->course;
         $employeesave->graduate = $request ->graduate;
         $employeesave->csc = $request ->csc;
         $employeesave->dateofissuance = $request ->dateofissuance;
         $employeesave->dateofvalidity = $request ->dateofvalidity;
         $employeesave->personnel = $request ->personnel;
+        $employeesave->biometric = $request ->biometric;
         $employeesave->status = $request ->status;
         $employeesave->department = $request ->department;
         $employeesave->position = $request ->position;
@@ -77,8 +88,12 @@ class EmployeeController extends Controller
         $Updatesave->lastname = $request->lastname;
         $Updatesave->suffix = $request->suffix;
         $Updatesave->address = $request->address;
+        $Updatesave->barangay = $request->barangay;
+        $Updatesave->municipality = $request->municipality;
+        $Updatesave->province = $request->province;
         $Updatesave->maritalstatus = $request->maritalstatus;
         $Updatesave->dateofbirth = $request->dateofbirth;
+        $Updatesave->placeofbirth = $request->placeofbirth;
         $Updatesave->gender = $request->gender;
         $Updatesave->bloodtype = $request->bloodtype;
         $Updatesave->contactnumber = $request->contactnumber;
@@ -86,12 +101,18 @@ class EmployeeController extends Controller
         $Updatesave->contact = $request->contact;
         $Updatesave->personalemail = $request->personalemail;
         $Updatesave->corporateemail = $request->corporateemail;
+        $Updatesave->gsis = $request->gsis;
+        $Updatesave->pagibig = $request->pagibig;
+        $Updatesave->philhealth = $request->philhealth;
+        $Updatesave->sss = $request->sss;
+        $Updatesave->tin = $request->tin;
         $Updatesave->course = $request ->course;
         $Updatesave->graduate = $request ->graduate;
         $Updatesave->csc = $request ->csc;
         $Updatesave->dateofissuance = $request ->dateofissuance;
         $Updatesave->dateofvalidity = $request ->dateofvalidity;
         $Updatesave->personnel = $request ->personnel;
+        $Updatesave->biometric = $request ->biometric;
         $Updatesave->status = $request ->status;
         $Updatesave->department = $request ->department;
         $Updatesave->position = $request ->position;
@@ -112,5 +133,65 @@ class EmployeeController extends Controller
         return view('admin.employees.employee.view',[
                 'employees'=>$employees
         ]);
+    }
+
+    public function permanentEmployees()
+    {
+        $permanentEmployees = $this->getpermanentEmployees();
+
+        return view('admin.employees.permanent', compact('permanentEmployees'));
+    }
+
+    private function getpermanentEmployees()
+    {
+        return Employee::where('status', 'permanent')->get();
+    }
+
+    public function casualEmployees()
+    {
+        $casualEmployees = $this->getcasualEmployees();
+
+        return view('admin.employees.casual', compact('casualEmployees'));
+    }
+
+    private function getcasualEmployees()
+    {
+        return Employee::where('status', 'casual')->get();
+    }
+
+    public function joborderEmployees()
+    {
+        $joborderEmployees = $this->getjoborderEmployees();
+
+        return view('admin.employees.joborder', compact('joborderEmployees'));
+    }
+
+    private function getjoborderEmployees()
+    {
+        return Employee::where('status', 'job order')->get();
+    }
+
+    public function coterminousEmployees()
+    {
+        $coterminousEmployees = $this->getcoterminousEmployees();
+
+        return view('admin.employees.coterminous', compact('coterminousEmployees'));
+    }
+
+    private function getcoterminousEmployees()
+    {
+        return Employee::where('status', 'co-terminous')->get();
+    }
+
+    public function electivesEmployees()
+    {
+        $electivesEmployees = $this->getelectivesEmployees();
+
+        return view('admin.employees.electives', compact('electivesEmployees'));
+    }
+
+    private function getelectivesEmployees()
+    {
+        return Employee::where('status', 'electives')->get();
     }
 }

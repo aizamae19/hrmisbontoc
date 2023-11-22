@@ -50,31 +50,47 @@
                                         <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Address</label>
-                                        <input type="text" name="address" class="form-control form-control-line" minlength="2" required > 
+                                        <label>Date Of Birth </label>
+                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Marital Status</label>
+                                        <label>Place Of Birth </label>
+                                        <input type="text" name="placeofbirth" id="dateofbirth" class="form-control" placeholder="" required> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Purok/Street</label>
+                                        <input type="text" name="address" class="form-control form-control-line" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Barangay</label>
+                                        <input type="text" name="barangay" class="form-control form-control-line" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Municipality</label>
+                                        <input type="text" name="municipality" class="form-control form-control-line" minlength="2" required > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Town/Province</label>
+                                        <input type="text" name="province" class="form-control form-control-line" minlength="2" required > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Civil Status</label>
                                         <select name="maritalstatus" value="" class="form-control custom-select" required>
-                                            <option value="">Select Marital Status</option>
+                                            <option value="">Select Civil Status</option>
+                                            <option value="Single">Single</option>
                                             <option value="Married">Married</option>
                                             <option value="Common-Law Married">Common-Law Married</option>
                                             <option value="Widowed">Widowed</option>
                                             <option value="Separated">Separated</option>
                                             <option value="Divorced">Divorced</option>
-                                            <option value="Single">Single</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Birth </label>
-                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" placeholder="" required> 
-                                    </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Gender</label>
+                                        <label>Sex</label>
                                         <select name="gender" class="form-control custom-select" required>
-                                            <option>Select Gender</option>
-                                            <option value="MALE">Male</option>
-                                            <option value="FEMALE">Female</option>
+                                            <option>Select Sex</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
@@ -91,24 +107,44 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Contact Number </label>
+                                        <label>Mobile Number </label>
                                         <input type="text" name="contactnumber" class="form-control" value="" placeholder="" minlength="11" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Person to Contact</label>
+                                    <div class="form-group col-md-6 m-t-20">
+                                        <label>Person to Contact in Case of Emergency</label>
                                         <input type="text" name="persontocontact" class="form-control" value="" placeholder="" required> 
                                     </div>
-                                    <div class="form-group col-md-3 m-t-20">
-                                        <label>Person's Contact Number</label>
+                                    <div class="form-group col-md-6 m-t-20">
+                                        <label>Contact Number of Contact Person</label>
                                         <input type="text" name="contact" class="form-control" minlength="11" value="" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Personal Email </label>
-                                        <input type="email" id="example-email2" name="personalemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" required > 
+                                        <input type="email" id="example-email2" name="personalemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Corporate Email </label>
-                                        <input type="email" id="example-email2" name="corporateemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" required > 
+                                        <input type="email" id="example-email2" name="corporateemail" class="form-control" value="" placeholder="email@gmail.com" minlength="7" > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>GSIS ID Number </label>
+                                        <input type="text" id="gsis" name="gsis" class="form-control" value=""  minlength="7" > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>PAG-IBIG ID Number </label>
+                                        <input type="text" id="pagibig" name="pagibig" class="form-control" value="" minlength="7" > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Philhealth Number </label>
+                                        <input type="text" id="philhealth" name="philhealth" class="form-control" value="" minlength="7" > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>SSS Number </label>
+                                        <input type="text" id="sss" name="sss" class="form-control" value="" minlength="7" > 
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>TIN Number </label>
+                                        <input type="text" id="tin" name="tin" class="form-control" value="" minlength="7" > 
                                     </div>
                                     <br>
                                     <div class="col-md-12">
@@ -116,24 +152,24 @@
                                    </div>
                                     <br>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Course</label>
+                                        <label>College Degree</label>
                                         <input type="text" name="course" class="form-control form-control-line" minlength="2" required > 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Graduate Studies</label>
-                                        <input type="text" id="" name="graduate" class="form-control form-control-line" value="" minlength="2" required> 
+                                        <input type="text" id="" name="graduate" class="form-control form-control-line" value="" minlength="2"> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>CSC Professional Eligibility </label>
-                                      <input type="text" id="" name="csc" class="form-control form-control-line" value="" required> 
+                                      <input type="text" id="" name="csc" class="form-control form-control-line" value=""> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Issuance PRC ID </label>
-                                        <input type="date" name="dateofissuance" id="example-email2" name="example-email" class="form-control" placeholder="" required> 
+                                        <label>Date Of Issuance-PRC ID </label>
+                                        <input type="date" name="dateofissuance" id="example-email2" name="example-email" class="form-control" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Date Of Validity PRC ID </label>
-                                        <input type="date" name="dateofvalidity" id="example-email2" name="example-email" class="form-control" placeholder="" required>
+                                        <label>Date Of Validity-PRC ID </label>
+                                        <input type="date" name="dateofvalidity" id="example-email2" name="example-email" class="form-control" placeholder="">
                                     </div>
                                  <br>
                                 <div class="col-md-12">
@@ -145,38 +181,55 @@
                                         <input type="text" id="" name="personnel" class="form-control form-control-line" value="" minlength="2" required> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
-                                        <label>Status</label>
-                                        <select name="status" class="form-control custom-select">
+                                        <label>Biometric Number</label>
+                                        <input type="text" id="" name="biometric" class="form-control form-control-line" value="" minlength="2" required>
+                                    </div>
+                                    <div class="form-group col-md-3 m-t-20">
+                                        <label>Employment Status</label>
+                                        <select name="status" class="form-control custom-select" required>
                                             <option>Select Status</option>
                                             <option value="Permanent">Permanent</option>
                                             <option value="Casual">Casual</option>
                                             <option value="Job Order">Job Order</option>
                                             <option value="Co-Terminous">Co-Terminous</option>
+                                            <option value="Elective">Elective</option>
                                         </select>
                                     </div>
                                      <div class="form-group col-md-3 m-t-20">
                                         <label>Department</label>
-                                        <select name="department" class="form-control custom-select">
+                                        <select name="department" class="form-control custom-select" required>
                                             <option>Select Department</option>
-                                            <option value="Office of the Mayor">Office of the Mayor</option>
-                                            <option value="Office of the Vice-Mayor">Office of the Vice-Mayor</option>
-                                            <option value="Office of the Sangguniang Bayan">Office of the Sangguniang Bayan</option>
-                                            <option value="Office of the Municipal Planning and Development Coordinator">Office of the Municipal Planning and Development Coordinator</option>
-                                            <option value="Office of the Municipal Budget Officer">Office of the Municipal Budget Officer</option>
-                                            <option value="Office of the Municipal Accountant">Office of the Municipal Accountant</option>
-                                            <option value="Office of the Municipal Treasurer">Office of the Municipal Treasurer</option>
-                                            <option value="Office of the Municipal Assessor">Office of the Municipal Assessor</option>
-                                             <option value="Rural Health Unit">Rural Health Unit</option>
-                                            <option value="Office of the Civil Registrar">Office of the Civil Registrar</option>
-                                            <option value="Municipal Social Welfare and Development Office">Municipal Social Welfare and Development Office</option>
                                             <option value="Municipal Agricultural Services Office">Municipal Agricultural Services Office</option>
-                                            <option value="Office of the Municipal Engineer">Office of the Municipal Engineer</option>
+                                            <option value="Municipal Social Welfare & Development Office">Municipal Social Welfare & Development Office</option>
+                                            <option value="Municipal Assessor's Office">Municipal Assessor's Office</option>
+                                            <option value="Commision on Election">Commision on Election</option>
+                                            <option value="Local Civil Registrar">Local Civil Registrar</option>
+                                            <option value="Budget Office">Budget Office</option>
+                                            <option value="BOMWASA AND BIR">BOMWASA AND BIR</option>
+                                            <option value="Accounting Office">Accounting Office</option>
+                                            <option value="PESO">PESO</option>
+                                            <option value="Municipal Treasurer's Office">Municipal Treasurer's Office</option>
+                                            <option value="Cogressman's Office">Congressman's Office</option>
                                             <option value="Human Resource Management Office">Human Resource Management Office</option>
+                                            <option value="MPDC">MPDC</option>
+                                            <option value="KALAHI">KALAHI</option>
+                                            <option value="Office of the Sangguniang Bayan">Office of the Sangguniang Bayan</option>
+                                            <option value="Office of the Vice-Mayor">Office of the Vice-Mayor</option>
+                                            <option value="Office of the Mayor">Office of the Mayor</option>
+                                            <option value="Engineering Office">Engineering Office</option>
+                                            <option value="MENRO">MENRO</option>
+                                            <option value="Tourism">Tourism</option>
+                                            <option value="Rural Health Unit">Rural Health Unit</option>
+                                            <option value="DILG">DILG</option>
+                                            <option value="MDRR">MDRR</option>
+                                            <option value="GSO">GSO</option>
+                                            <option value="DSWD">DSWD</option>
+                                            <option value="Department of Trade and Industry">Department of Trade and Industry</option>
                                         </select>
                                     </div>
                                       <div class="form-group col-md-3 m-t-20">
                                         <label>Position Title</label>
-                                        <select name="position" class="form-control custom-select">
+                                        <select name="position" class="form-control custom-select" required>
                                             <option>Select Position Title</option>
                                             <option value="Municipal Government Department Head I">Municipal Government Department Head I</option>
                                             <option value="Registration Officer II">Registration Officer II</option>
@@ -191,9 +244,6 @@
                                             <option value="Administrative Aide II">Administrative Aide II</option>
                                             <option value="Administrative Aide III">Administrative Aide III</option>
                                             <option value="Mechanic II">Mechanic II</option>
-                                            <option value=""></option>
-                                            <option value=""></option>
-                                            <option value=""></option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
@@ -202,7 +252,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Leaving </label>
-                                        <input type="date" name="dateofleaving" id="example-email2" name="example-email" class="form-control" placeholder="" required> 
+                                        <input type="date" name="dateofleaving" id="example-email2" name="example-email" class="form-control" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Date Of Mandatory Retirement</label>
@@ -210,7 +260,7 @@
                                     </div>
                                     <div class="form-group col-md-3 m-t-20">
                                         <label>Salary Grade</label>
-                                        <select name="salary" class="form-control custom-select">
+                                        <select name="salary" class="form-control custom-select" required>
                                             <option>Select Salary Grade</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -249,7 +299,7 @@
                                     </div>
                                      <div class="form-group col-md-3 m-t-20">
                                         <label>Step</label>
-                                        <select name="step" class="form-control custom-select">
+                                        <select name="step" class="form-control custom-select" required>
                                             <option>Select Step</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>

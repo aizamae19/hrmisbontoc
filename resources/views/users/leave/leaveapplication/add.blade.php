@@ -115,11 +115,6 @@
                                     <label class="control-label" id="">Inclusive Dates</label>
                                     <div class="input-group">
                                         <input type="text" class="form-control" id="inclusivedates" name="inclusivedates">
-                                    <div class="input-group-append">
-                                    <span class="input-group-text">
-                                    <i class="fa fa-calendar"></i>
-                                    </span>
-                                    </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -129,10 +124,6 @@
                                     <br>
                                     <input type="checkbox" id="requested" name="equested" value="requested">
                                     <label for="Requested">Requested</label><br>
-                                </div>
-                                 <div class="form-group">
-                                        <label>Signature of the Applicant (Kindly attach the picture of your signature.)</label>
-                                        <input type="file" name="image" class="form-control" value="image">
                                 </div>
                                 <div class="modal-footer">
                                 <input type="hidden" name="id" class="form-control" id="recipient-name1" required> 

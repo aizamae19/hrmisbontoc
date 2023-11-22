@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="GenIT Bangladesh">
     <!-- Favicon icon -->
-        <link rel="icon" type="image/ico" sizes="16x16" href="{{asset('assets/images/favicn.ico')}}">
-    <title>Human Resource</title>
+        <link rel="icon" type="image/ico" href="{{asset('assets/images/logo1.png')}}">
+    <title>Employee Information System</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- morris CSS -->
@@ -46,7 +46,7 @@
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header">
                     <a class="navbar-brand" href=""><b>
-                        <img src="{{asset('assets/images/logo.jpg')}}" alt="DRI" style="width:50px; border-radius: 100px;"/>
+                        <img src="{{asset('assets/images/logo1.png')}}" alt="DRI" style="width:50px; border-radius: 100px;"/>
                         </b>
                         <!-- Logo text --><span>
                          <img src="{{asset('assets/images/hrtag1.png')}}" alt="homepage" class="dark-logo" height="60px" width="100px" />
@@ -92,8 +92,6 @@
                                                 @endif
                                         </div>
                                     </li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="http://hrmis_bontoc.test/employee/view?I=U295MTMzMg=="><i class="ti-user"></i> My Profile</a></li>
                                                                         
                                     <li><a href="{{ route('setting.account')}}"><i class="ti-settings"></i> Account Setting</a></li>
                                     <li><a href="{{ route('signout') }}"></i> Logout</a></li>

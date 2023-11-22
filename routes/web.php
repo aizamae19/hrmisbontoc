@@ -2,7 +2,7 @@
  
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
-
+use App\Http\Controllers\EmployeeController;
  
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +47,11 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             #EMPLOYEES-EMPLOYEE
             Route::get('/admin/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');
+            Route::get('/admin/employees/permanent', [App\Http\Controllers\Admin\EmployeeController::class, 'permanentEmployees'])->name('employees.permanent');
+            Route::get('/admin/employees/casual', [App\Http\Controllers\Admin\EmployeeController::class, 'casualEmployees'])->name('employees.casual');
+            Route::get('/admin/employees/joborder', [App\Http\Controllers\Admin\EmployeeController::class, 'joborderEmployees'])->name('employees.joborder');
+            Route::get('/admin/employees/co-terminous', [App\Http\Controllers\Admin\EmployeeController::class, 'coterminousEmployees'])->name('employees.coterminous');
+            Route::get('/admin/employees/electives', [App\Http\Controllers\Admin\EmployeeController::class, 'electivesEmployees'])->name('employees.electives');
 
             //add
             Route::get('/employees/employee/add', [App\Http\Controllers\Admin\EmployeeController::class, 'addemployee'])->name('employee.add');

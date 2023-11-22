@@ -14,11 +14,6 @@
             </div>
             <div class="message"></div>
             <div class="container-fluid">
-                <div class="row m-b-10"> 
-                    <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="{{ route('employee.add') }}" class="text-white"><i class="" aria-hidden="true"></i> Add Employee</a></button>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="card card-outline-info">
@@ -40,8 +35,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        @if(isset($employees))
-                                            @foreach($employees as $employee)
+                                            @foreach ($permanentEmployees as $employee)
                                             <tr>
                                                 <td>{{$employee->personnel}}</td>
                                                 <td>{{ $employee->firstname }} {{ $employee->middlename }} {{ $employee->lastname }} {{ $employee->suffix}}</td>
@@ -54,8 +48,7 @@
                                                     <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
                                                 </td>
                                             </tr>
-                                             @endforeach
-                                        @endif   
+                                             @endforeach 
                                      </tbody>
                                     </table>
                                 </div>
