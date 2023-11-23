@@ -37,7 +37,7 @@ class PrintDTRController extends Controller
      
      public function printdtr(Request $request)
      {
-        $attendance = Attendance::where('personnel', $request->id)
+        $attendance = Attendance::where('biometric', $request->id)
                                 ->whereMonth('date', $request->month)
                                 ->whereYear('date', $request->year)
                                  ->get();
@@ -52,7 +52,7 @@ class PrintDTRController extends Controller
                                      ];
                                  }
 
-        $employees = Employee::where('personnel', $request->id)
+        $employees = Employee::where('biometric', $request->id)
                                  ->get();
         $holiday = Holiday::whereMonth('startdate', $request->month)
                             ->whereYear('startdate', $request->year)

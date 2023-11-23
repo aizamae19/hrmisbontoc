@@ -63,13 +63,13 @@
                                 <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-
+                                            <th>Biometric No.</th>
                                             <th>Employee Name</th>
                                             <th>Personnel ID</th>
-                                            <th>Personal Email </th>
+                                            <th>Department </th>
                                             <th>Contact Number </th>
-                                            <th>Position</th>
-                                            <th >Action</th>
+                                            <th>Status</th>
+                                            <th >Position</th>
 
                                         </tr>
                                     </thead>
@@ -77,15 +77,16 @@
                                         @if(isset($employees))
                                             @foreach($employees as $employee)
                                                  <tr>
+                                                    <td>{{ $employee->biometric }}</td>
                                                     <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
                                                     <td>{{ $employee->personnel }}</td>
-                                                    <td>{{ $employee->personalemail }}</td>
+                                                    <td>{{ $employee->department }}</td>
                                                     <td>{{ $employee->contactnumber }}</td>
                                                     <td>{{ $employee->status }}</td>
                                                     <td>{{ $employee->position }}</td>
 
                                                     <td class="jsgrid-align-center ">
-                                                        <button data-url="{{ url('/printdtr/').'/'.$employee->personnel }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
+                                                        <button data-url="{{ url('/printdtr/').'/'.$employee->biometric }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
                                                     </td>
                                                </tr>
                                             @endforeach
