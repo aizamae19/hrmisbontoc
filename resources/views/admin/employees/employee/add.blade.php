@@ -149,12 +149,9 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>UMID</label>
                                         <input type="text" id="umid" name="umid" class="form-control" value="" minlength="7" > 
-<<<<<<< HEAD
                                     </div><br>
-=======
                                     </div>
                                     <br>
->>>>>>> 47c300164ffa06666c183224b5497cf6c343f22b
                                     <div class="col-md-12">
                                   <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
                                    </div>
@@ -237,7 +234,6 @@
                                         <label>Mother's Middlename</label>
                                         <input type="text" name="mothermiddlename" id="example-email2" name="example-email" class="form-control" placeholder="">
                                     </div>
->>>>>>> 47c300164ffa06666c183224b5497cf6c343f22b
                                     <br>
                                     <div class="col-md-12">
                                   <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>

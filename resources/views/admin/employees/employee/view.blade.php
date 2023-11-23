@@ -257,6 +257,78 @@
                     </div>
                   </div>
                     <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Spouse's Firstname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->spousefirstname }}
+                    </div>
+                  </div>
+                    <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Spouse's Middlename</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->spousemiddlename }}
+                    </div>
+                  </div>
+                    <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Occupation</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->occupation }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Business Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->businessname }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Business Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->businessaddress }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Telephone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->telephone }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Name Extension</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->extension }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Business Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->businessname }}
+                    </div>
+                  </div>
+                    <hr>
                    <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">College Degree</h6>
