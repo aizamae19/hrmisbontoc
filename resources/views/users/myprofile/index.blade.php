@@ -204,10 +204,71 @@
                 <p class="text-muted mb-0">{{ $employee->tin }}</p>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">UMID</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->umid }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="col-lg-14">
+        <div class="card mb-6">
+          <div class="card-body">
+            <p class="mb-4" style="color: #000;"><b>Educational Background</b></p>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">College Degree</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->course }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Graduate Studies</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->graduate }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">CSC Professional Eligibility</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->csc }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Date of Issuance-PRC ID</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->dateofissuance }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Date of Validity-PRC ID</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->dateofvalidity }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
         <div class="col-lg-14">
         <div class="card mb-6">
           <div class="card-body">

@@ -36,7 +36,7 @@
                                 <form class="row" action="{{ route('employee.edit.store', $employee->id) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Last Name </label>
+                                        <label>Surname </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="lastname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->lastname}}" required> 
                                     </div>
