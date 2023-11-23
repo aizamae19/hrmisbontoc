@@ -35,6 +35,11 @@
                                 @include('layouts.partials.messages')
                                 <form class="row" action="{{ route('employee.edit.store', $employee->id) }}" method="post" enctype="multipart/form-data">
                                     @csrf
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Last Name </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="lastname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->lastname}}" required> 
+                                    </div>
                                    <div class="form-group col-md-4 m-t-20">
                                         <label>First Name</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
@@ -46,12 +51,7 @@
                                         <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->middlename}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Last Name </label>
-                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="lastname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->lastname}}" required> 
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Suffix</label>
+                                        <label>Name Extension (Jr., Sr)</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}">
                                     </div>
@@ -167,6 +167,96 @@
                                         <label>Tin Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="tin" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->tin}}">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>UMID</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="umid" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->umid}}">
+                                    </div>
+                                    <br>
+                                    <div class="col-md-12">
+                                  <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
+                                   </div>
+                                    <br>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Surname</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="spousesurname" class="form-control form-control-line" value="{{$employee->spousesurname}}" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Firstname</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" id="" name="spousefirstname" class="form-control form-control-line" value="{{$employee->spousefirstname}}" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Middlename</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                      <input type="text" id="" name="spousemiddlename" class="form-control form-control-line" value="{{$employee->spousemiddlename}}"> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Name Extension (Jr., Sr)</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                      <input type="text" id="" name="extension" class="form-control form-control-line" value="{{$employee->extension}}"> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Occupation</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="occupation" id="example-email2" name="example-email" class="form-control" value="{{$employee->occupation}}" placeholder=""> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Employer/Business Name</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="businessname" id="example-email2" name="example-email" value="{{$employee->businessname}}" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Business Address</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="businessaddress" id="example-email2" name="example-email" class="form-control" value="{{$employee->businessaddress}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Telephone Number</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="telephone" id="example-email2" name="example-email" class="form-control" value="{{$employee->telephone}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Surname</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="fathersurname" id="example-email2" name="example-email" class="form-control" value="{{$employee->fathersurname}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Firstname</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="fatherfirstname" id="example-email2" name="example-email" class="form-control" value="{{$employee->fatherfirstname}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Middlename</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="fathermiddlename" id="example-email2" name="example-email" class="form-control" value="{{$employee->fathermiddlename}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Name Extension (Jr., Sr.)</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="nameextension" id="example-email2" name="example-email" class="form-control" value="{{$employee->nameextension}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Maiden Name</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="maidenname" id="example-email2" name="example-email" class="form-control" value="{{$employee->maidenname}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Surname</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="mothersurname" id="example-email2" name="example-email" class="form-control" value="{{$employee->mothersurname}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Firstname</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="motherfirstname" id="example-email2" name="example-email" class="form-control" value="{{$employee->motherfirstname}}" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Middlename</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="mothermiddlename" id="example-email2" name="example-email" class="form-control" value="{{$employee->mothermiddlename}}" placeholder="">
                                     </div>
                                     <br>
                         <div class="col-md-12">

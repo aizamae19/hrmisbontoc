@@ -149,7 +149,12 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>UMID</label>
                                         <input type="text" id="umid" name="umid" class="form-control" value="" minlength="7" > 
+<<<<<<< HEAD
                                     </div><br>
+=======
+                                    </div>
+                                    <br>
+>>>>>>> 47c300164ffa06666c183224b5497cf6c343f22b
                                     <div class="col-md-12">
                                   <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
                                    </div>
@@ -167,6 +172,7 @@
                                       <input type="text" id="" name="spousemiddlename" class="form-control form-control-line" value=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
+<<<<<<< HEAD
                                         <label>Occupation</label>
                                         <input type="date" name="occupation" id="example-email2" name="example-email" class="form-control" placeholder=""> 
                                     </div>
@@ -179,6 +185,59 @@
                                         <input type="date" name="businessaddress" id="example-email2" name="example-email" class="form-control" placeholder="">
                                     </div>
                                  <br>
+=======
+                                        <label>Name Extension (Jr., Sr)</label>
+                                      <input type="text" id="" name="extension" class="form-control form-control-line" value=""> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Occupation</label>
+                                        <input type="text" name="occupation" id="example-email2" name="example-email" class="form-control" placeholder=""> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Employer/Business Name</label>
+                                        <input type="text" name="businessname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Business Address</label>
+                                        <input type="text" name="businessaddress" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Telephone Number</label>
+                                        <input type="text" name="telephone" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Surname</label>
+                                        <input type="text" name="fathersurname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Firstname</label>
+                                        <input type="text" name="fatherfirstname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Father's Middlename</label>
+                                        <input type="text" name="fathermiddlename" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Name Extension (Jr., Sr.)</label>
+                                        <input type="text" name="nameextension" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Maiden Name</label>
+                                        <input type="text" name="maidenname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Surname</label>
+                                        <input type="text" name="mothersurname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Firstname</label>
+                                        <input type="text" name="motherfirstname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Mother's Middlename</label>
+                                        <input type="text" name="mothermiddlename" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+>>>>>>> 47c300164ffa06666c183224b5497cf6c343f22b
                                     <br>
                                     <div class="col-md-12">
                                   <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
