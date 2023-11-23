@@ -276,12 +276,12 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Issuance-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}">
+                                        <input type="date" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Validity-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}">
+                                        <input type="date" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}">
                                     </div>
                                     <div class="form-actions col-md-12">
                                     <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>

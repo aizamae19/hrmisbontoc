@@ -238,11 +238,11 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Issuance-PRC ID </label>
-                                        <input type="text" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="date" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Validity-PRC ID </label>
-                                        <input type="text" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="date" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
                                     </div>
                                  <br>
                                 <div class="col-md-12">
@@ -322,15 +322,15 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Joining</label>
-                                        <input type="text" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="date" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Leaving </label>
-                                        <input type="text" name="dateofleaving" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="date" name="dateofleaving" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Mandatory Retirement</label>
-                                        <input type="text" name="dateofretirement" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="date" name="dateofretirement" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Salary Grade</label>

@@ -1,6 +1,9 @@
 @extends('layouts.default')
 
 @section('content')
+
+
+
          
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
@@ -51,24 +54,34 @@
                                         <option value="{{$i}}">{{ $i }}</option>
                                     @endfor
                                 </select>
-                            </div>    
+                            </div>  
                         </div>
                     </div>
                     <div class="card card-outline-info">
                         <div class="card-header">
                             <h4 class="m-b-0 text-white"><i class="fa fa-user-o" aria-hidden="true"></i> Employee List</h4>
                         </div>
+
                         <div class="card-body">
                             <div class="table-responsive ">
                                 <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
+<<<<<<< HEAD
                                             <th>Biometric No.</th>
                                             <th>Employee Name</th>
                                             <th>Personnel ID</th>
                                             <th>Department </th>
                                             <th>Contact Number </th>
                                             <th>Status</th>
+=======
+                                            
+                                            <th>Biometric No.</th>
+                                            <th>Employee Name</th>
+                                            <th>Department</th>
+                                            <th>Contact Number </th>
+                                            <th>Employee Status</th>
+>>>>>>> origin/ams
                                             <th >Position</th>
 
                                         </tr>
@@ -79,7 +92,10 @@
                                                  <tr>
                                                     <td>{{ $employee->biometric }}</td>
                                                     <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
+<<<<<<< HEAD
                                                     <td>{{ $employee->personnel }}</td>
+=======
+>>>>>>> origin/ams
                                                     <td>{{ $employee->department }}</td>
                                                     <td>{{ $employee->contactnumber }}</td>
                                                     <td>{{ $employee->status }}</td>
@@ -97,7 +113,29 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </di>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $("#employees123").DataTable({ 
+            columnDefs:[
+                { orderable: false, targets: [4] }
+            ],
+            order:[0,'asc']
+        });
+
+        $('.dataTable td, .dataTable th').addClass('py-1 px-2 align-middle');
+    });
+</script>
+
+
+
+
+
+
             <footer class="footer">   </footer>
             <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
             <script type="text/javascript">
@@ -116,6 +154,7 @@
                     };
 
                 });
+
                 // load_page();
                 // function load_page() {
                 // var now = new Date();
@@ -128,6 +167,7 @@
                 //     $('input[name="dateFrom"]').val(today);
                 //     $('input[name="dateTo"]').val(today);
                 // }
-            </script>
+        
+                </script>
 
 @endsection
