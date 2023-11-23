@@ -17,9 +17,9 @@ class attendancesController extends Controller
     }
 
 
-    public function showWorkingHoursList($personnel)
+    public function showWorkingHoursList($biometric)
     {
-            $workingHours = Attendances::where('personnel', $personnel)->get();
+            $workingHours = Attendances::where('biometric', $biometric)->get();
             $workingHoursList = [];
 
             foreach ($workingHours as $entry) {
@@ -86,7 +86,7 @@ class attendancesController extends Controller
                         $hourIndex = trim($columns[3]);
                         $date = $csvdate->format('Y-m-d');
                         
-                        $checkAttendance = Attendances::where('personnel', $personnel)
+                        $checkAttendance = Attendances::where('biometric', $biometric)
                                                         ->where('date',$date)
                                                         ->first();
                         if(isset($checkAttendance)){
@@ -110,7 +110,7 @@ class attendancesController extends Controller
                             }
                         }else{
                             $saveAttendance = new Attendances();
-                            $saveAttendance->personnel = $personnel;
+                            $saveAttendance->biometric = $biometric;
                             $saveAttendance->date = $date;
                             switch($hourIndex){
                                 case 0:

@@ -31,7 +31,7 @@
                                         <thead>
                                             <tr>
 
-                                                <th>Personnel ID</th>
+                                                <th>Biometric No.</th>
                                                <th>Date </th>
                                                 <th>Am In</th>
                                                 <th>Am Out</th>
@@ -44,7 +44,7 @@
                                            @if(isset($attendance))
                                                 @foreach($attendance as $attendancelist)
                                                     <tr>
-                                                        <td><mark>{{$attendancelist->personnel}}</mark></td>
+                                                        <td><mark>{{$attendancelist->biometric}}</mark></td>
                                                         <td>{{$attendancelist->date}}</td>
                                                         <td>{{$attendancelist->am_in}}</td>
                                                         <td>{{$attendancelist->am_out}}</td>
