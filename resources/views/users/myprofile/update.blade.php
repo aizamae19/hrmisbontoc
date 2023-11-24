@@ -258,16 +258,67 @@
                         <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
                            </div>
                                     <br>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>College Degree</label>
-                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="course" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->course}}" required>
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Graduate Studies</label>
-                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="graduate" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->graduate}}">
-                                    </div>
+                                   <br>
+
+      <div class="table-responsive custom-table-responsive">
+
+        <table class="table custom-table">
+          <thead>
+            <tr>
+              <th scope="col">Level</th>
+              <th scope="col">Name of School</th>
+              <th scope="col">Basic Education/Degree/Course</th>
+              <th scope="col">Highest Level/Units Earned</th>
+              <th scope="col">Year Graduated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>
+                Elementary
+              </td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="{{$employee->elementaryschool}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="elementarybasiceducation" id="example-email2" name="example-email" class="form-control" value="{{$employee->elementarybasiceducation}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="elemhighestlevel" id="example-email2" name="example-email" class="form-control" value="{{$employee->elemhighestlevel}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="yeargradelementary" id="example-email2" name="example-email" class="form-control" value="" placeholder="{{$employee->yeargradelementary}}"></td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>Secondary</td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="secondaryschool" id="example-email2" name="example-email" class="form-control" value="{{$employee->secondaryschool}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="secondarybasiceducation" id="example-email2" name="example-email" class="form-control" value="{{$employee->secondarybasiceducation}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="secondhighestlevel" id="example-email2" name="example-email" class="form-control" value="{{$employee->secondhighestlevel}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="yeargradsecondary" id="example-email2" name="example-email" class="form-control" value="{{$employee->yeargradsecondary}}" placeholder=""></td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>Vocational</td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="vocationalschool" id="example-email2" name="example-email" class="form-control" value="{{$employee->vocationalschool}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="vocationalbasiceducation" id="example-email2" name="example-email" class="form-control" value="{{$employee->vocationalbasiceducation}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="vocationhighestlevel" id="example-email2" name="example-email" class="form-control" value="{{$employee->vocationhighestlevel}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="yeargradvocational" id="example-email2" name="example-email" class="form-control" value="{{$employee->yeargradvocational}}" placeholder=""></td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>College</td>
+             <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="course" id="example-email2" name="example-email" class="form-control" value="{{$employee->course}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="collegebasiceducation" id="example-email2" name="example-email" class="form-control" value="{{$employee->collegebasiceducation}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="highestlevel" id="example-email2" name="example-email" class="form-control" value="{{$employee->highestlevel}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="yeargradcollege" id="example-email2" name="example-email" class="form-control" value="{{$employee->yeargradcollege}}" placeholder=""></td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+            <td>Graduate Studies</td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="graduatestudies" id="example-email2" name="example-email" class="form-control" value="{{$employee->graduatestudiesrad}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="graduatestudiesbasiceducation" id="example-email2" name="example-email" class="form-control" value="{{$employee->graduatestudiesbasiceducation}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="graduate" id="example-email2" name="example-email" class="form-control" value="{{$employee->graduate}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="yeargradstudies" id="example-email2" name="example-email" class="form-control" value="{{$employee->yeargradstudies}}" placeholder=""></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>CSC Professional Eligibility </label>
                                       <input type="hidden" name="id" value="{{$employee->id}}">

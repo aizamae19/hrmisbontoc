@@ -36,9 +36,7 @@
                                         <th>Office/Department</th>
                                         <th>Employee Name</th>
                                         <th>Date of Filing</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
+                                        <th>Status</th>                                    </tr>
                                 </thead>
                                 <tbody>
                                     @if(isset($leaveapplications))
