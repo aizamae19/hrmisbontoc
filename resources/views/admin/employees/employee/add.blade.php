@@ -257,7 +257,7 @@
               <td>
                 Elementary
               </td>
-              <td><a href="#">James Yates</a></td>
+              <td> <input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td>
                 Web Designer
                 <small class="d-block">Far far away, behind the word mountains</small>
@@ -336,15 +336,6 @@
           </tbody>
         </table>
       </div>
-      
-                         <div class="form-group col-md-4 m-t-20">
-                                        <label>College Degree</label>
-                                        <input type="text" name="course" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Graduate Studies</label>
-                                        <input type="text" name="graduate" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
-                                    </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>CSC Professional Eligibility </label>
                                         <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
