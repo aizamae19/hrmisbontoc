@@ -1,6 +1,10 @@
 @extends('layouts.default')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('table/fonts/icomoon/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('table/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('table/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('table/style.css') }}">
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
                     <h3 class="text-themecolor"><i class="fa fa-university" aria-hidden="true"></i> Employee</h3>
@@ -242,8 +246,7 @@
                   <div class="control__indicator"></div>
                 </label>
               </th>
-              
-              <th scope="col">Order</th>
+
               <th scope="col">Name</th>
               <th scope="col">Occupation</th>
               <th scope="col">Contact</th>
