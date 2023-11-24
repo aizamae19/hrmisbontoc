@@ -255,7 +255,7 @@
                 </label>
               </th>
               <td>
-                1392
+                Elementary
               </td>
               <td><a href="#">James Yates</a></td>
               <td>
@@ -274,7 +274,7 @@
                 </label>
               </th>
               
-              <td>4616</td>
+              <td>Secondary</td>
               <td><a href="#">Matthew Wasil</a></td>
               <td>
                 Graphic Designer
@@ -292,7 +292,7 @@
                 </label>
               </th>
               
-              <td>9841</td>
+              <td>Vocational</td>
               <td><a href="#">Sampson Murphy</a></td>
               <td>
                 Mobile Dev
@@ -310,7 +310,20 @@
                 </label>
               </th>
               
-              <td>9548</td>
+              <td>College</td>
+              <td><a href="#">Gaspar Semenov</a></td>
+              <td>
+                Illustrator
+                <small class="d-block">Far far away, behind the word mountains</small>
+              </td>
+              <td>+92 020 3994 929</td>
+              <td>College</td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr>
+              <th scope="row">
+
+            <td>Graduate Studies</td>
               <td><a href="#">Gaspar Semenov</a></td>
               <td>
                 Illustrator
