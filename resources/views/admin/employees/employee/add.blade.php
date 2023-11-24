@@ -240,12 +240,10 @@
           </thead>
           <tbody>
             <tr scope="row">
-              <th scope="row">
-              </th>
               <td>
                 Elementary
               </td>
-              <td> <input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><a href="#">James Yates</a></td>
               <td>
                 Web Designer
                 <small class="d-block">Far far away, behind the word mountains</small>
@@ -255,12 +253,6 @@
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
-              <th scope="row">
-                <label class="control control--checkbox">
-                  <input type="checkbox" checked="" />
-                  <div class="control__indicator"></div>
-                </label>
-              </th>
               
               <td>Secondary</td>
               <td><a href="#">Matthew Wasil</a></td>
@@ -273,12 +265,6 @@
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
-              <th scope="row">
-                <label class="control control--checkbox">
-                  <input type="checkbox"/>
-                  <div class="control__indicator"></div>
-                </label>
-              </th>
               
               <td>Vocational</td>
               <td><a href="#">Sampson Murphy</a></td>
@@ -291,12 +277,6 @@
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
-              <th scope="row">
-                <label class="control control--checkbox">
-                  <input type="checkbox"/>
-                  <div class="control__indicator"></div>
-                </label>
-              </th>
               
               <td>College</td>
               <td><a href="#">Gaspar Semenov</a></td>
@@ -308,8 +288,6 @@
               <td>College</td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
-            <tr>
-              <th scope="row">
 
             <td>Graduate Studies</td>
               <td><a href="#">Gaspar Semenov</a></td>
@@ -324,6 +302,7 @@
           </tbody>
         </table>
       </div>
+      
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>CSC Professional Eligibility </label>
                                         <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
