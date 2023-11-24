@@ -36,7 +36,7 @@
                                 <form class="row" action="{{ route('employee.edit.store', $employee->id) }}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Last Name </label>
+                                        <label>Surname </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="lastname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->lastname}}" required> 
                                     </div>
@@ -281,12 +281,12 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Issuance-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}">
+                                        <input type="date" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Validity-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}">
+                                        <input type="date" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}">
                                     </div>
                                  <br>
                                 <div class="col-md-12">
@@ -369,15 +369,15 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Joining</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofjoining}}" required>
+                                        <input type="date" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofjoining}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Leaving </label>
-                                        <input type="text" name="dateofleaving" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofleaving}}">
+                                        <input type="date" name="dateofleaving" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofleaving}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Mandatory Retirement</label>
-                                        <input type="text" name="dateofretirement" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofretirement}}" required>
+                                        <input type="date" name="dateofretirement" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofretirement}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Salary Grade</label>

@@ -257,6 +257,168 @@
                     </div>
                   </div>
                     <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Spouse's Firstname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->spousefirstname }}
+                    </div>
+                  </div>
+                    <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Spouse's Middlename</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->spousemiddlename }}
+                    </div>
+                  </div>
+                    <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Occupation</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->occupation }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Business Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->businessname }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Business Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->businessaddress }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Telephone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->telephone }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Name Extension</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->extension }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Father Surname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->fathersurname }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Father Firstname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->fatherfirstname }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Father Middlename</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->fathermiddlename }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Name Extension</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->nameextension }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Maiden Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->maidenname }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Mother Surname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->mothersurname }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Mother Firstname</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->motherfirstname }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Mother Middlename</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->mothermiddlename }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Elementary School</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->elementary }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Secondary School</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->secondaryschool }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Vocational School</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->vocationalschool }}
+                    </div>
+                  </div>
+                    <hr>
                    <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">College Degree</h6>
@@ -272,6 +434,132 @@
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{ $employees->graduate }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Secondary Basic Education</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->secondarybasiceducation }}
+                    </div>
+                  </div>
+                   <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Vocational Basic Education</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->vocationalbasiceducation }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">College Basic Education</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->collegebasiceducation}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Graduate Studies Basic Education</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->graduatestudiesbasiceducation }}
+                    </div>
+                  </div>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Highest Level</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->highestlevel}}
+                    </div>
+                  </div>
+                    <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Year Graduated in Elementary</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->yeargradelementary}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Year Graduated in Secondary</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->yeargradsecondary}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Year Graduated in Vocational</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->yeargradvocational}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Year Graduated in College</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->yeargradcollege}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Year Graduated in Graduate Studies</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->yeargradstudies}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Rating</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->rating}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date of Examination</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->dateofexamination}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Place of Examination</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->placeofexamination}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">License Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ $employees->licensenumber}}
                     </div>
                   </div>
                     <hr>
