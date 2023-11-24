@@ -239,18 +239,23 @@
             </tr>
           </thead>
           <tbody>
+<<<<<<< HEAD
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
               <td>
                 Elementary
               </td>
+=======
+            <tr scope="row">
+              <td> Elementary</td>
+>>>>>>> 9370229995fa5249c2ba7463a06a3389996fc575
               <td><input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td><input type="text" name="elementarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td><input type="text" name="elemhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td><input type="text" name="yeargradelementary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
-            <tr class="active">
+            <tr>
               <td>Secondary</td>
               <td><input type="text" name="secondaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td><input type="text" name="secondarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
