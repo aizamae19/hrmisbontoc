@@ -224,7 +224,6 @@
                         <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
                            </div>
                                     <br>
-      <div class="table-responsive custom-table-responsive">
 
         <table class="table custom-table">
           <thead>
@@ -242,26 +241,26 @@
               <td>
                 Elementary
               </td>
-              <td><input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="elementarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="elemhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="yeargradelementary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="elementaryschool" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="elementarybasiceducation" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="elemhighestlevel" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradelementary" id="example-email2" class="form-control" value="" placeholder=""></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
               <td>Secondary</td>
-              <td><input type="text" name="secondaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="secondarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="secondhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="yeargradsecondary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="secondaryschool" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="secondarybasiceducation" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="secondhighestlevel" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradsecondary" id="example-email2" class="form-control" value="" placeholder=""></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
               <td>Vocational</td>
-              <td><input type="text" name="vocationalschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="vocationalbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="vocationhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="yeargradvocational" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="vocationalschool" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="vocationalbasiceducation" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="vocationhighestlevel" id="example-email2" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradvocational" id="example-email2" class="form-control" value="" placeholder=""></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
@@ -282,7 +281,6 @@
             
           </tbody>
         </table>
-      </div>
       
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>CSC Professional Eligibility </label>

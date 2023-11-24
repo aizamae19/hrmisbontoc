@@ -67,7 +67,7 @@ class EmployeeController extends Controller
         $employeesave->mothersurname = $request->mothersurname;
         $employeesave->motherfirstname = $request->motherfirstname;
         $employeesave->mothermiddlename = $request->mothermiddlename;
-        $employeesave->elementaryschool = $request->elementrayschool;
+        $employeesave->elementaryschool = $request->elementaryschool;
         $employeesave->secondaryschool = $request->secondaryschool;
         $employeesave->secondhighestlevel = $request->secondhighestlevel;
         $employeesave->elemhighestlevel = $request->elemhighestlevel;
@@ -162,7 +162,7 @@ class EmployeeController extends Controller
         $Updatesave->mothersurname = $request->mothersurname;
         $Updatesave->motherfirstname = $request->motherfirstname;
         $Updatesave->mothermiddlename = $request->mothermiddlename;
-        $Updatesave->elementaryschool = $request->elementrayschool;
+        $Updatesave->elementaryschool = $request->elementaryschool;
         $Updatesave->secondaryschool = $request->secondaryschool;
         $Updatesave->secondhighestlevel = $request->secondhighestlevel;
         $Updatesave->elemhighestlevel = $request->elemhighestlevel;
