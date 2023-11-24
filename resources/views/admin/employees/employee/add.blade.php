@@ -239,11 +239,10 @@
                 </label>
               </th>
               
-              <th scope="col">Order</th>
-              <th scope="col">Name</th>
-              <th scope="col">Occupation</th>
-              <th scope="col">Contact</th>
-              <th scope="col">Education</th>
+              <th scope="col">Level</th>
+              <th scope="col">Name of School</th>
+              <th scope="col">Basic Educatio/Degree/Course</th>
+              <th scope="col">Highest Level/Units Earned</th>
             </tr>
           </thead>
           <tbody>
