@@ -224,11 +224,7 @@
                         <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
                            </div>
                                     <br>
-                                    <div class="content">
-    
-    <div class="container">
-      <h2 class="mb-5">Table #5</h2>
-      
+                                    <br>
 
       <div class="table-responsive custom-table-responsive">
 
@@ -327,12 +323,8 @@
           </tbody>
         </table>
       </div>
-
-
-    </div>
-
-  </div>
-                                    <div class="form-group col-md-4 m-t-20">
+      
+                         <div class="form-group col-md-4 m-t-20">
                                         <label>College Degree</label>
                                         <input type="text" name="course" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
                                     </div>
