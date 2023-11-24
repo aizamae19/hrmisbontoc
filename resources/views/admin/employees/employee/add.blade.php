@@ -242,8 +242,8 @@
               <th scope="col">Level</th>
               <th scope="col">Name of School</th>
               <th scope="col">Basic Education/Degree/Course</th>
+              <th scope="col">Highest Level/Units Earned</th> 
               <th scope="col">Year Graduated</th>
-              <th scope="col">Highest Level/Units Earned</th>
             </tr>
           </thead>
           <tbody>
