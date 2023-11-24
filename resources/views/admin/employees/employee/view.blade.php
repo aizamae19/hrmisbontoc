@@ -391,132 +391,65 @@
                         {{ $employees->mothermiddlename }}
                     </div>
                   </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Elementary School</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->elementary }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Secondary School</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->secondaryschool }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Vocational School</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->vocationalschool }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">College Degree</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->course }}
-                    </div>
-                  </div>
-                    <hr>
-                   <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Graduate Studies</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->graduate }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Secondary Basic Education</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->secondarybasiceducation }}
-                    </div>
-                  </div>
-                   <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Vocational Basic Education</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->vocationalbasiceducation }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">College Basic Education</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->collegebasiceducation}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Graduate Studies Basic Education</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->graduatestudiesbasiceducation }}
-                    </div>
-                  </div>
-                    <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Highest Level</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->highestlevel}}
-                    </div>
-                  </div>
-                    <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Year Graduated in Elementary</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->yeargradelementary}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Year Graduated in Secondary</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->yeargradsecondary}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Year Graduated in Vocational</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->yeargradvocational}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Year Graduated in College</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{ $employees->yeargradcollege}}
-                    </div>
-                  </div>
+                  <div class="table-responsive custom-table-responsive">
+
+        <table class="table custom-table">
+          <thead>
+            <tr>
+              <th scope="col">Level</th>
+              <th scope="col">Name of School</th>
+              <th scope="col">Basic Education/Degree/Course</th>
+              <th scope="col">Highest Level/Units Earned</th>
+              <th scope="col">Year Graduated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>
+                Elementary
+              </td>
+              <td>{{ $employees->elementaryschool }}</td>
+              <td>{{ $employees->elementarybasiceducation }}</td>
+              <td>{{ $employees->elemhighestlevel }}</td>
+              <td>{{ $employees->yeargradelementary }}</td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>Secondary</td>
+              <td>{{ $employees->secondaryschool }}</td>
+              <td>{{ $employees->secondarybasiceducation }}</td>
+              <td>{{ $employees->secondhighestlevel }}</td>
+              <td>{{ $employees->yeargradsecondary }}</td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>Vocational</td>
+              <td>{{ $employees->vocationalschool }}</td>
+              <td>{{ $employees->vocationalbasiceducation }}</td>
+              <td>{{ $employees->vocationhighestlevel }}</td>
+              <td>{{ $employees->yeargradvocational }}</td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>College</td>
+             <td>{{ $employees->course }}</td>
+              <td>{{ $employees->collegebasiceducation }}</td>
+              <td>{{ $employees->highestlevel }}</td>
+              <td>{{ $employees->yeargradcollege }}</td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+            <td>Graduate Studies</td>
+              <td>{{ $employees->graduatestudies }}</td>
+              <td>{{ $employees->graduatestudiesbasiceducation }}</td>
+              <td>{{ $employees->graduate }}</td>
+              <td>{{ $employees->yeargradstudies }}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">

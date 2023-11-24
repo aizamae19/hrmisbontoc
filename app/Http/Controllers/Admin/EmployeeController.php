@@ -69,6 +69,10 @@ class EmployeeController extends Controller
         $employeesave->mothermiddlename = $request->mothermiddlename;
         $employeesave->elementaryschool = $request->elementrayschool;
         $employeesave->secondaryschool = $request->secondaryschool;
+        $employeesave->secondhighestlevel = $request->secondhighestlevel;
+        $employeesave->elemhighestlevel = $request->elemhighestlevel;
+        $employeesave->elementarybasiceducation = $request->elementarybasiceducation;
+        $employeesave->vocationalhighestlevel = $request->vocationalhighestlevel;
         $employeesave->vocationalschool = $request->vocationalschool;
         $employeesave->graduatestudies = $request->graduatestudies;
         $employeesave->secondarybasiceducation = $request->secondarybasiceducation;
@@ -160,6 +164,10 @@ class EmployeeController extends Controller
         $Updatesave->mothermiddlename = $request->mothermiddlename;
         $Updatesave->elementaryschool = $request->elementrayschool;
         $Updatesave->secondaryschool = $request->secondaryschool;
+        $Updatesave->secondhighestlevel = $request->secondhighestlevel;
+        $Updatesave->elemhighestlevel = $request->elemhighestlevel;
+        $Updatesave->elementarybasiceducation = $request->elementarybasiceducation;
+        $Updatesave->vocationalhighestlevel = $request->vocationalhighestlevel;
         $Updatesave->vocationalschool = $request->vocationalschool;
         $Updatesave->graduatestudies = $request->graduatestudies;
         $Updatesave->secondarybasiceducation = $request->secondarybasiceducation;

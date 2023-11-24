@@ -25,7 +25,7 @@ class EmployeeController extends Controller
     }
 
     public function storeemployee(Request $request){ 
-        $employeesave = new Employee();
+        $employeesave =new Employee();
         $employeesave->firstname = $request->firstname;
         $employeesave->middlename = $request->middlename;
         $employeesave->lastname = $request->lastname;
@@ -51,6 +51,7 @@ class EmployeeController extends Controller
         $employeesave->tin = $request->tin;
         $employeesave->umid = $request->umid;
         $employeesave->spousesurname = $request->spousesurname;
+        $employeesave->spousefirstname = $request->spousefirstname;
         $employeesave->spousemiddlename = $request->spousemiddlename;
         $employeesave->occupation = $request->occupation;
         $employeesave->businessname = $request->businessname;
@@ -67,6 +68,10 @@ class EmployeeController extends Controller
         $employeesave->mothermiddlename = $request->mothermiddlename;
         $employeesave->elementaryschool = $request->elementrayschool;
         $employeesave->secondaryschool = $request->secondaryschool;
+        $employeesave->secondhighestlevel = $request->secondhighestlevel;
+        $employeesave->elemhighestlevel = $request->elemhighestlevel;
+        $employeesave->elementarybasiceducation = $request->elementarybasiceducation;
+        $employeesave->vocationalhighestlevel = $request->vocationalhighestlevel;
         $employeesave->vocationalschool = $request->vocationalschool;
         $employeesave->graduatestudies = $request->graduatestudies;
         $employeesave->secondarybasiceducation = $request->secondarybasiceducation;
@@ -116,10 +121,6 @@ class EmployeeController extends Controller
 
     public function updateemployee(Request $request){
         $Updatesave=Employee::where('id' ,$request->id)->first();
-        $Updatesave->firstname = $request->firstname;
-        $Updatesave->middlename = $request->middlename;
-        $Updatesave->lastname = $request->lastname;
-        $Updatesave->suffix = $request->suffix;
         $Updatesave->address = $request->address;
         $Updatesave->barangay = $request->barangay;
         $Updatesave->municipality = $request->municipality;
@@ -141,6 +142,7 @@ class EmployeeController extends Controller
         $Updatesave->tin = $request->tin;
         $Updateesave->umid = $request->umid;
         $Updatesave->spousesurname = $request->spousesurname;
+        $Updatesave->spousefirstname = $request->spousefirstname;
         $Updatesave->spousemiddlename = $request->spousemiddlename;
         $Updatesave->occupation = $request->occupation;
         $Updatesave->businessname = $request->businessname;
@@ -157,6 +159,10 @@ class EmployeeController extends Controller
         $Updatesave->mothermiddlename = $request->mothermiddlename;
         $Updatesave->elementaryschool = $request->elementrayschool;
         $Updatesave->secondaryschool = $request->secondaryschool;
+        $Updatesave->secondhighestlevel = $request->secondhighestlevel;
+        $Updatesave->elemhighestlevel = $request->elemhighestlevel;
+        $Updatesave->elementarybasiceducation = $request->elementarybasiceducation;
+        $Updatesave->vocationalhighestlevel = $request->vocationalhighestlevel;
         $Updatesave->vocationalschool = $request->vocationalschool;
         $Updatesave->graduatestudies = $request->graduatestudies;
         $Updatesave->secondarybasiceducation = $request->secondarybasiceducation;
