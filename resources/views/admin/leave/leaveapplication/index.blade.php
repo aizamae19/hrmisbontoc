@@ -38,7 +38,7 @@
                                         <th>Office/Department</th>
                                         <th>Employee Name</th>
                                         <th>Date of Filing</th>
-                                        <th>Action</th>
+                                        <!-- <th>Action</th> -->
                                         <th>Status</th>
                                     </tr>
                                 </thead>
@@ -49,9 +49,10 @@
                                         <td>{{$leaveapplications->office}}</td>
                                         <td>{{$leaveapplications->employeename}}</td>
                                         <td>{{$leaveapplications->dateoffiling}}</td>
-                                        <td class="jsgrid-align-center">
-                                            <a href="{{ url('/leaveapplication/index/edit/').'/'.$leaveapplications->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a href="{{ url('/leaveapplication/index/view/').'/'.$leaveapplications->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
+                                        <!-- <td class="jsgrid-align-center"> -->
+                                            <!-- <a href="{{ url('/leaveapplication/index/edit/').'/'.$leaveapplications->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                            <a href="{{ url('/leaveapplication/index/view/').'/'.$leaveapplications->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a> -->
+                                        <!-- </td> -->
                                             <td class="jsgrid-align-center">
                                             @if($leaveapplications->status == 'Approved')
                                                 <span class="badge badge-success">Approved</span>
@@ -60,8 +61,7 @@
                                             @else
                                             <a href="{{ url('/leaveapplication/approve/').'/'.$leaveapplications->id}}" title="Approve" class="btn btn-sm btn-success waves-effect waves-light Status" data-value="Approve" >Approve</a>       
                                             <a href="{{ url('/leaveapplication/reject/').'/'.$leaveapplications->id}}" title="Reject" class="btn btn-sm btn-danger waves-effect waves-light  Status" data-id = "4" data-value="Rejected" >Reject</a>
-                                            @endif 
-                                        </td>
+                                            @endif
                                         </td>
                                     </tr>
                                         @endforeach

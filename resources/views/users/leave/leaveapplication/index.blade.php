@@ -52,9 +52,9 @@
                                             @else($leaveapplications->status == 'Rejected')
                                                 <span class="badge badge-danger">Rejected</span>
                                             @endif</td>
-                                        <td class="jsgrid-align-center">
+                                        <!-- <td class="jsgrid-align-center">
                                             <a href="{{ url('/user/leaveapplication/index/view/').'/'.$leaveapplications->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a> 
-                                        </td>
+                                        </td> -->
                                     </tr>
                                         @endforeach
                                     @endif

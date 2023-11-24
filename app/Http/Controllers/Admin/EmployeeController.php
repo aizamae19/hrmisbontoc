@@ -52,6 +52,7 @@ class EmployeeController extends Controller
         $employeesave->tin = $request->tin;
         $employeesave->umid = $request->umid;
         $employeesave->spousesurname = $request->spousesurname;
+        $employeesave->spousefirstname = $request->spousefirstname;
         $employeesave->spousemiddlename = $request->spousemiddlename;
         $employeesave->occupation = $request->occupation;
         $employeesave->businessname = $request->businessname;
@@ -142,6 +143,7 @@ class EmployeeController extends Controller
         $Updatesave->tin = $request->tin;
         $Updateesave->umid = $request->umid;
         $Updatesave->spousesurname = $request->spousesurname;
+        $Updatesave->spousefirstname = $request->spousefirstname;
         $Updatesave->spousemiddlename = $request->spousemiddlename;
         $Updatesave->occupation = $request->occupation;
         $Updatesave->businessname = $request->businessname;

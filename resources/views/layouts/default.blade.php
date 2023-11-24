@@ -31,9 +31,16 @@
     <link href="{{asset('assets/plugins/timepicker/bootstrap-timepicker.min.css')}}" rel="stylesheet">
     
     <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
      <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
     <link href="{{asset('assets/plugins/multiselect/css/multi-select.css')}}" rel="stylesheet" type="text/css" />   
-    <link href="{{asset('assets/plugins/calendar/dist/fullcalendar.css')}}" rel="stylesheet" type="text/css" />   
+    <link href="{{asset('assets/plugins/calendar/dist/fullcalendar.css')}}" rel="stylesheet" type="text/css" />  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ asset('css/fonts/icomoon/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">

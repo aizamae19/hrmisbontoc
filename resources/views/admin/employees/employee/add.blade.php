@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="card-body">
                                 @include('layouts.partials.messages')
-                                <form class="row" action="{{ route('employee.store') }}" method="post" enctype="multipart/form-data">
+                                <form class="row" action="{{ route('employee.store') }}" method="post" id="formId" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Surname </label>
@@ -224,6 +224,114 @@
                         <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Educational Background</h3>
                            </div>
                                     <br>
+                                    <div class="content">
+    
+    <div class="container">
+      <h2 class="mb-5">Table #5</h2>
+      
+
+      <div class="table-responsive custom-table-responsive">
+
+        <table class="table custom-table">
+          <thead>
+            <tr>  
+
+              <th scope="col">
+                <label class="control control--checkbox">
+                  <input type="checkbox"  class="js-check-all"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </th>
+              
+              <th scope="col">Order</th>
+              <th scope="col">Name</th>
+              <th scope="col">Occupation</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Education</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr scope="row">
+              <th scope="row">
+                <label class="control control--checkbox">
+                  <input type="checkbox"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </th>
+              <td>
+                1392
+              </td>
+              <td><a href="#">James Yates</a></td>
+              <td>
+                Web Designer
+                <small class="d-block">Far far away, behind the word mountains</small>
+              </td>
+              <td>+63 983 0962 971</td>
+              <td>NY University</td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <th scope="row">
+                <label class="control control--checkbox">
+                  <input type="checkbox" checked="" />
+                  <div class="control__indicator"></div>
+                </label>
+              </th>
+              
+              <td>4616</td>
+              <td><a href="#">Matthew Wasil</a></td>
+              <td>
+                Graphic Designer
+                <small class="d-block">Far far away, behind the word mountains</small>
+              </td>
+              <td>+02 020 3994 929</td>
+              <td>London College</td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr>
+              <th scope="row">
+                <label class="control control--checkbox">
+                  <input type="checkbox"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </th>
+              
+              <td>9841</td>
+              <td><a href="#">Sampson Murphy</a></td>
+              <td>
+                Mobile Dev
+                <small class="d-block">Far far away, behind the word mountains</small>
+              </td>
+              <td>+01 352 1125 0192</td>
+              <td>Senior High</td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr>
+              <th scope="row">
+                <label class="control control--checkbox">
+                  <input type="checkbox"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </th>
+              
+              <td>9548</td>
+              <td><a href="#">Gaspar Semenov</a></td>
+              <td>
+                Illustrator
+                <small class="d-block">Far far away, behind the word mountains</small>
+              </td>
+              <td>+92 020 3994 929</td>
+              <td>College</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+
+  </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>College Degree</label>
                                         <input type="text" name="course" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
@@ -235,6 +343,22 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>CSC Professional Eligibility </label>
                                         <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Rating</label>
+                                        <input type="text" name="rating" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Date of Examination/Conferment </label>
+                                        <input type="text" name="dateofexamination" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Place of Examination </label>
+                                        <input type="text" name="placeofexamination" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>License Number </label>
+                                        <input type="text" name="licensenumber" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Issuance-PRC ID </label>
@@ -389,7 +513,7 @@
                                     <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
                                     <a href ="{{ route('employee.employees') }}"><button type="button"  class="btn btn-danger">Cancel</button></a>
                                     </div>
-                                </form>
+                                    </form>
                             </div>
                         </div>
                     </div>
