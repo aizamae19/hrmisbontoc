@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('employees', function (Blueprint $table) {
-            $table->string('secondhighestlevel')->nullable()->after('secondaryschool');
-            $table->string('vocationalhighestlevel')->nullable()->after('secondhighestlevel');
-            $table->string('elemhighestlevel')->nullable()->after('vocationalhighestlevel');
-            $table->string('elementarybasiceducation')->nullable()->after('elemhighestlevel');
+            $table->text('secondhighestlevel')->nullable()->after('secondaryschool');
+            $table->text('vocationalhighestlevel')->nullable()->after('secondhighestlevel');
+            $table->text('elemhighestlevel')->nullable()->after('vocationalhighestlevel');
+            $table->text('elementarybasiceducation')->nullable()->after('elemhighestlevel');
         });
     }
 
