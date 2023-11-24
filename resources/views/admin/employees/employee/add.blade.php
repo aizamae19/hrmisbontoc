@@ -227,7 +227,7 @@
                                     <div class="content">
     
     <div class="container">
-      <h2 class="mb-5">Educational Background</h2>
+      <h2 class="mb-5">Table #5</h2>
       
 
       <div class="table-responsive custom-table-responsive">
@@ -236,17 +236,18 @@
           <thead>
             <tr>  
 
-             <!--  <th scope="col">
+              <th scope="col">
                 <label class="control control--checkbox">
                   <input type="checkbox"  class="js-check-all"/>
                   <div class="control__indicator"></div>
                 </label>
-              </th> -->
+              </th>
               
-              <th scope="col">Level</th>
-              <th scope="col">Name of School</th>
-              <th scope="col">Basic Education/Degree/Course</th>
-              <th scope="col">Highest Level/Units Earned</th>
+              <th scope="col">Order</th>
+              <th scope="col">Name</th>
+              <th scope="col">Occupation</th>
+              <th scope="col">Contact</th>
+              <th scope="col">Education</th>
             </tr>
           </thead>
           <tbody>
