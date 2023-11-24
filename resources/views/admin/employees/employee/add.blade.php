@@ -230,28 +230,17 @@
 
         <table class="table custom-table">
           <thead>
-            <tr>  
-
-              <th scope="col">
-                <label class="control control--checkbox">
-                  <input type="checkbox"  class="js-check-all"/>
-                  <div class="control__indicator"></div>
-                </label>
-              </th>
+            <tr>
               
               <th scope="col">Level</th>
               <th scope="col">Name of School</th>
-              <th scope="col">Basic Educatio/Degree/Course</th>
+              <th scope="col">Basic Education/Degree/Course</th>
               <th scope="col">Highest Level/Units Earned</th>
             </tr>
           </thead>
           <tbody>
             <tr scope="row">
               <th scope="row">
-                <label class="control control--checkbox">
-                  <input type="checkbox"/>
-                  <div class="control__indicator"></div>
-                </label>
               </th>
               <td>
                 1392
