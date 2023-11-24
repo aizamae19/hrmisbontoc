@@ -239,64 +239,48 @@
             </tr>
           </thead>
           <tbody>
-            <tr scope="row">
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
               <td>
                 Elementary
               </td>
-              <td><a href="#">James Yates</a></td>
-              <td>
-                Web Designer
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+63 983 0962 971</td>
-              <td>NY University</td>
+              <td><input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="elementarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="elemhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradelementary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
-              
               <td>Secondary</td>
-              <td><a href="#">Matthew Wasil</a></td>
-              <td>
-                Graphic Designer
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+02 020 3994 929</td>
-              <td>London College</td>
+              <td><input type="text" name="secondaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="secondarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="secondhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradsecondary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
-              
               <td>Vocational</td>
-              <td><a href="#">Sampson Murphy</a></td>
-              <td>
-                Mobile Dev
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+01 352 1125 0192</td>
-              <td>Senior High</td>
+              <td><input type="text" name="vocationalschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="vocationalbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="vocationhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradvocational" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
-              
               <td>College</td>
-              <td><a href="#">Gaspar Semenov</a></td>
-              <td>
-                Illustrator
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+92 020 3994 929</td>
-              <td>College</td>
+             <td><input type="text" name="course" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="collegebasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="highestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradcollege" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
-
+            <tr>
             <td>Graduate Studies</td>
-              <td><a href="#">Gaspar Semenov</a></td>
-              <td>
-                Illustrator
-                <small class="d-block">Far far away, behind the word mountains</small>
-              </td>
-              <td>+92 020 3994 929</td>
-              <td>College</td>
+              <td><input type="text" name="graduatestudies" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="graduatestudiesbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="graduate" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradstudies" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+          </td>
             </tr>
             
           </tbody>
