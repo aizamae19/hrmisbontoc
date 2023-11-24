@@ -240,8 +240,6 @@
           </thead>
           <tbody>
             <tr scope="row">
-              <th scope="row">
-              </th>
               <td>
                 Elementary
               </td>
@@ -252,13 +250,6 @@
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
-              <th scope="row">
-                <label class="control control--checkbox">
-                  <input type="checkbox" checked="" />
-                  <div class="control__indicator"></div>
-                </label>
-              </th>
-              
               <td>Secondary</td>
               <td><input type="text" name="secondaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td><input type="text" name="secondarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
@@ -267,13 +258,6 @@
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
-              <th scope="row">
-                <label class="control control--checkbox">
-                  <input type="checkbox"/>
-                  <div class="control__indicator"></div>
-                </label>
-              </th>
-              
               <td>Vocational</td>
               <td><input type="text" name="vocationalschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td><input type="text" name="vocationalbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
@@ -282,13 +266,6 @@
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
-              <th scope="row">
-                <label class="control control--checkbox">
-                  <input type="checkbox"/>
-                  <div class="control__indicator"></div>
-                </label>
-              </th>
-              
               <td>College</td>
              <td><input type="text" name="course" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td><input type="text" name="collegebasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
@@ -297,8 +274,6 @@
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr>
-              <th scope="row">
-
             <td>Graduate Studies</td>
               <td><input type="text" name="graduatestudies" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
               <td><input type="text" name="graduatestudiesbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
