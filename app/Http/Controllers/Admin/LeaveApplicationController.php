@@ -66,7 +66,7 @@ class LeaveApplicationController extends Controller
         $Updatesave->rehabilitation = $request->rehabilitation;
         $Updatesave->specialleavebenefits = $request->specialleavebenefits;
         $Updatesave->specialemergency = $request->specialemergency;
-        $Updatesave->adoptionleave = $request->adoptionleaave;
+        $Updatesave->adoptionleave = $request->adoptionleave;
         $Updatesave->other = $request->other;
         $Updatesave->reason = $request->reason;
         $Updatesave->philippine = $request->philippine;

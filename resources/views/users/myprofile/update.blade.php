@@ -281,7 +281,7 @@
               <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="{{$employee->elementaryschool}}" placeholder=""></td>
               <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="elementarybasiceducation" id="example-email2" name="example-email" class="form-control" value="{{$employee->elementarybasiceducation}}" placeholder=""></td>
               <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="elemhighestlevel" id="example-email2" name="example-email" class="form-control" value="{{$employee->elemhighestlevel}}" placeholder=""></td>
-              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="yeargradelementary" id="example-email2" name="example-email" class="form-control" value="" placeholder="{{$employee->yeargradelementary}}"></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="yeargradelementary" id="example-email2" name="example-email" class="form-control" value="{{$employee->yeargradelementary}}"></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">

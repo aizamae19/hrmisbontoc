@@ -145,7 +145,7 @@ class EmployeeController extends Controller
         $Updatesave->philhealth = $request->philhealth;
         $Updatesave->sss = $request->sss;
         $Updatesave->tin = $request->tin;
-        $Updateesave->umid = $request->umid;
+        $Updatesave->umid = $request->umid;
         $Updatesave->spousesurname = $request->spousesurname;
         $Updatesave->spousefirstname = $request->spousefirstname;
         $Updatesave->spousemiddlename = $request->spousemiddlename;

@@ -67,21 +67,13 @@
                                 <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-<<<<<<< HEAD
-                                            <th>Biometric No.</th>
-                                            <th>Employee Name</th>
-                                            <th>Personnel ID</th>
-                                            <th>Department </th>
-                                            <th>Contact Number </th>
-                                            <th>Status</th>
-=======
                                             
                                             <th>Biometric No.</th>
                                             <th>Employee Name</th>
+                                            <th>Personnel ID</th>
                                             <th>Department</th>
                                             <th>Contact Number </th>
                                             <th>Employee Status</th>
->>>>>>> origin/ams
                                             <th >Position</th>
 
                                         </tr>
@@ -92,10 +84,7 @@
                                                  <tr>
                                                     <td>{{ $employee->biometric }}</td>
                                                     <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
-<<<<<<< HEAD
                                                     <td>{{ $employee->personnel }}</td>
-=======
->>>>>>> origin/ams
                                                     <td>{{ $employee->department }}</td>
                                                     <td>{{ $employee->contactnumber }}</td>
                                                     <td>{{ $employee->status }}</td>
