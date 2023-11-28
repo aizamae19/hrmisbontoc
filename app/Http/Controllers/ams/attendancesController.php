@@ -117,7 +117,10 @@ class attendancesController extends Controller
                                     default:
                             }
                         }else{
+<<<<<<< HEAD
 
+=======
+>>>>>>> 77b0a64fc0599fff0969b96e85eea906bea32bf1
                             if(!empty($biometric)){
                                 $saveAttendance = new Attendances();
                                 $saveAttendance->biometric = $biometric;
@@ -138,6 +141,7 @@ class attendancesController extends Controller
                                         default: 0;
                                 }
                                 
+<<<<<<< HEAD
                             $saveAttendance->save();
                             $saveAttendance = new Attendances();
                             $saveAttendance->biometric = $biometric;
@@ -155,6 +159,9 @@ class attendancesController extends Controller
                                 case 1:
                                     $saveAttendance->pm_out = $csvdate->format('H:i:s');
                                     break;
+=======
+                                $saveAttendance->save();
+>>>>>>> 77b0a64fc0599fff0969b96e85eea906bea32bf1
                             }
                         }
                     }

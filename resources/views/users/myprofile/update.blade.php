@@ -94,9 +94,12 @@
                                     </div>
 <<<<<<< HEAD
                                     <div class="form-group col-md-3 m-t-20">
+<<<<<<< HEAD
+=======
 =======
                                     <div class="form-group col-md-4 m-t-20">
 >>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
+>>>>>>> d556c6b33f4a9d112bfa217a868e5509d8c1aa87
                                         <label>Gender</label>
                                         <select name="gender" class="form-control custom-select" required>
                                             <option>Select Gender</option>

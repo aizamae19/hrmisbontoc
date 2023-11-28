@@ -2,9 +2,6 @@
 @extends('layouts.default')
 
 @section('content')
-
-
-
          
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
@@ -55,14 +52,10 @@
                                         <option value="{{$i}}">{{ $i }}</option>
                                     @endfor
                                 </select>
-<<<<<<< HEAD
                             </div>    
                             <div class="form-group col-md-3 m-t-20">
                                 
                             </div>    
-=======
-                            </div>  
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                         </div>
                     </div>
                     <div class="card card-outline-info">
@@ -114,17 +107,24 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="card-body">
                             <div class="table-responsive ">
                                 <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 77b0a64fc0599fff0969b96e85eea906bea32bf1
                                             <th>Biometric No.</th>
                                             <th>Personnel ID</th>
                                             <th>Employee Name</th>
                                             <th>Contact Number </th>
+<<<<<<< HEAD
                                             <th>Employee Status</th>
+=======
+                                            <th>Status</th>
+>>>>>>> d556c6b33f4a9d112bfa217a868e5509d8c1aa87
                                             <th>Department</th>
                                             <th >Action</th>
 
@@ -152,29 +152,7 @@
                         </div>
                     </div>
                 </div>
-            </di>
-
-
-
-
-<script>
-    $(document).ready(function() {
-        $("#employees123").DataTable({ 
-            columnDefs:[
-                { orderable: false, targets: [4] }
-            ],
-            order:[0,'asc']
-        });
-
-        $('.dataTable td, .dataTable th').addClass('py-1 px-2 align-middle');
-    });
-</script>
-
-
-
-
-
-
+            </div>
             <footer class="footer">   </footer>
             <style>
                 .custom-search{
@@ -204,14 +182,7 @@
                         newWindow.print();
                     };
                 });
-<<<<<<< HEAD
                 function printDTR(data,bio){
-=======
-
-                // load_page();
-                // function load_page() {
-                // var now = new Date();
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
 
                     var link = data.getAttribute('data-url');//get the url
                     var month = $('select[name="dtr_month"]').val();
@@ -236,7 +207,6 @@
                     }
                 });
 
-<<<<<<< HEAD
                 $('#search-department').change(function(){
                     let dpt = $('#dpt').val();
 
@@ -302,12 +272,5 @@
                     
                 }
             </script>
-=======
-                //     $('input[name="dateFrom"]').val(today);
-                //     $('input[name="dateTo"]').val(today);
-                // }
-        
-                </script>
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
 
 @endsection
