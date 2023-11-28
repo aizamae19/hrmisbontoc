@@ -35,9 +35,15 @@
                                     @csrf
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Surname </label>
+<<<<<<< HEAD
+                                        <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+=======
                                         <input type="text" name="lastname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required> 
                                     </div>
                                    <div class="form-group col-md-4 m-t-20">
+>>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                                         <label>First Name</label>
                                         <input type="text" name="firstname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
                                     </div>
@@ -47,7 +53,11 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Name Extension (Jr., Sr)</label>
+<<<<<<< HEAD
+                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
+=======
                                         <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="">
+>>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Birth </label>
@@ -150,6 +160,39 @@
                                         <label>UMID</label>
                                         <input type="text" name="umid" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
                                     </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>UMID</label>
+                                        <input type="text" id="umid" name="umid" class="form-control" value="" minlength="7" > 
+                                    </div><br>
+                                    <div class="col-md-12">
+                                  <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
+                                   </div>
+                                    <br>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Surname</label>
+                                        <input type="text" name="spousesurname" class="form-control form-control-line" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Firstname</label>
+                                        <input type="text" id="" name="spousefirstname" class="form-control form-control-line" value="" minlength="2"> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Spouse's Middlename</label>
+                                      <input type="text" id="" name="spousemiddlename" class="form-control form-control-line" value=""> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Occupation</label>
+                                        <input type="date" name="occupation" id="example-email2" name="example-email" class="form-control" placeholder=""> 
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Employer/Business Name</label>
+                                        <input type="date" name="businessname" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Business Address</label>
+                                        <input type="date" name="businessaddress" id="example-email2" name="example-email" class="form-control" placeholder="">
+                                    </div>
+                                 <br>
                                     <br>
                                     <div class="col-md-12">
                                   <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>

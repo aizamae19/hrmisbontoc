@@ -19,11 +19,11 @@ class PrintDTRController extends Controller
     public function index()
     {
         $employees = Employee::get();
-
+        
         return view('ams.printdtr',[
             'employees'=>  $employees 
         ]);
-    }
+    }  
      
      public function printdtrbackup(Request $request)
      {

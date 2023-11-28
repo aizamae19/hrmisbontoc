@@ -79,7 +79,9 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                 </div>
                                 <div class="modal-body">
-                                    <h4>Import CSV File<span><img src="http://hrsystem-ci.test\/assets/images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4>
+                                    <!-- <h4>Import CSV File<span><img src="/public/assets/images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4> -->
+                                    <h4>Import CSV File<span><img src="../images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4>
+                                    <!-- <h4>Import CSV File<span><img src="http://hrsystem-ci.test\/assets/images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4> -->
                                     <input type="file" name="datFile" id="csv_file" accept=".dat"><br><br>
                                 </div>
                                 <div class="modal-footer">

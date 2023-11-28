@@ -92,7 +92,11 @@
                                             <option value="Single" {{ $employee->maritalstatus === 'Single' ? 'selected' : '' }}>Single</option>
                                         </select>
                                     </div>
+<<<<<<< HEAD
+                                    <div class="form-group col-md-3 m-t-20">
+=======
                                     <div class="form-group col-md-4 m-t-20">
+>>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                                         <label>Gender</label>
                                         <select name="gender" class="form-control custom-select" required>
                                             <option>Select Gender</option>
