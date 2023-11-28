@@ -17,25 +17,33 @@ class attendancesController extends Controller
     }
 
 
-    public function showWorkingHoursList($personnel)
+    public function showWorkingHoursList($biometric)
     {
-            $workingHours = Attendances::where('personnel', $personnel)->get();
+            $workingHours = Attendances::where('biometric', $biometric)->get();
             $workingHoursList = [];
 
             foreach ($workingHours as $entry) {
-                $workingHours = calculateWorkingHours($entry->am_in, $entry->am_out, $entry->pm_in, $entry->pm_out);
+
+                $amIn = $entry->am_in;
+                $amOut = $entry->am_out;
+                $pmIn = $entry->pm_in;
+                $pmOut = $entry->pm_out;
+                $calc = 0;
+
+                
 
                 $workingHoursList[] = [
                     'am_in' => $entry->am_in,
                     'am_out'=> $entry->am_out, 
                     'pm_in'=> $entry->pm_in, 
                     'pm_out'=>  $entry->pm_out,
-                    'working_hours' => $workingHours,
+                    'working_hours' => $calc
                 ];
             }
 
             return view('ams.attendances', compact('workingHoursList'));
     }
+
     public function import_csv(Request $request){
         if (isset($request->datFile)) {
             $targetDir = "uploads/"; // Change this to the directory where you want to store the uploaded .dat files
@@ -80,15 +88,14 @@ class attendancesController extends Controller
                         $columns = explode($delimiter, $row);
                         // Process the columns as needed
 
-                        $personnel = trim($columns[0]);
-
+                        $biometric = trim($columns[0]);
                         $csvdate = Carbon::parse(trim($columns[1]));
                         $hourIndex = trim($columns[3]);
                         $date = $csvdate->format('Y-m-d');
-                        
-                        $checkAttendance = Attendances::where('personnel', $personnel)
+                        $checkAttendance = Attendances::where('biometric', $biometric)
                                                         ->where('date',$date)
                                                         ->first();
+
                         if(isset($checkAttendance)){
                             switch($hourIndex){
                                 case 0://AM in 
@@ -107,34 +114,39 @@ class attendancesController extends Controller
                                     $checkAttendance->pm_out = $csvdate->format('H:i:s');
                                     $checkAttendance->save();
                                     break;
+                                    default:
                             }
                         }else{
-                            $saveAttendance = new Attendances();
-                            $saveAttendance->personnel = $personnel;
-                            $saveAttendance->date = $date;
-                            switch($hourIndex){
-                                case 0:
-                                    $saveAttendance->am_in = $csvdate->format('H:i:s');
-                                    break;
-                                case 4:
-                                    $saveAttendance->am_out = $csvdate->format('H:i:s');
-                                    break;
-                                case 5:
-                                    $saveAttendance->pm_in = $csvdate->format('H:i:s');
-                                    break;
-                                case 1:
-                                    $saveAttendance->pm_out = $csvdate->format('H:i:s');
-                                    break;
+                            if(!empty($biometric)){
+                                $saveAttendance = new Attendances();
+                                $saveAttendance->biometric = $biometric;
+                                $saveAttendance->date = $date;
+                                switch($hourIndex){
+                                    case 0:
+                                        $saveAttendance->am_in = $csvdate->format('H:i:s');
+                                        break;
+                                    case 4:
+                                        $saveAttendance->am_out = $csvdate->format('H:i:s');
+                                        break;
+                                    case 5:
+                                        $saveAttendance->pm_in = $csvdate->format('H:i:s');
+                                        break;
+                                    case 1:
+                                        $saveAttendance->pm_out = $csvdate->format('H:i:s');
+                                        break;
+                                        default: 0;
+                                }
+                                
+                                $saveAttendance->save();
                             }
-                            $saveAttendance->save();
                         }
-                        // echo "Employee Id: $emp_id Date: $date <br>";
-                        // return;
                     }
                 }
-                return redirect()->back()->with('message', 'Successfully imported!!');
                 // Close the file
                 fclose($file);
+                
+                return redirect()->back()->with('message', 'Successfully imported!!');
+                
             } else {
                 echo "Error opening the file.";
             }

@@ -140,8 +140,7 @@
                             hDates[i].hDays.push(sDate);
                         }
                     }
-                    console.log(employee);
-                    console.log(stat);
+                    // console.log(employee);
                     if(employee[stat]['status'] == "Job Order" || employee[stat]['status'] == "Casual"){
                         
                         dates.textContent = '1-15';
@@ -178,6 +177,7 @@
                                     
                                     if(notFound == hCount){
                                         for(x=0; x<count; x++){
+
                                             var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
                                             var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
                                             var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
@@ -188,10 +188,30 @@
                                             pm_in = militaryTo12HrTime(pm_in);
                                             pm_out = militaryTo12HrTime(pm_out);
                                             dte = new Date(dte).getDate();
+                                            var color = "";                      
+                                            if(am_in != ""){
+                                                //if the time in is late. the color will change in to red
+                                                const am = new Date("2023-01-01 8:00 AM");
+                                                const time_in = new Date("2023-01-01 " + am_in);
+                                                
+                                                if(time_in > am){
+                                                    color = 'style="color:red;"';
+                                                }
+                                            }
+                                            var color_pm = "";
+                                            if(pm_in != ""){
+                                                //if the time in is late. the color will change in to red
+                                                const pm = new Date("2023-01-01 1:00 PM");
+                                                const time_in = new Date("2023-01-01 " + pm_in);
+                                        
+                                                if(time_in > pm){
+                                                    color_pm = 'style="color:red;"';
+                                                }
+                                            }
                                             if(i == dte){
-                                                document.write("<th>"+am_in+"</th>");
+                                                document.write("<th "+color+">"+am_in+"</th>");
                                                 document.write("<th>"+am_out+"</th>");
-                                                document.write("<th>"+pm_in+"</th>");
+                                                document.write("<th "+color_pm+">"+pm_in+"</th>");
                                                 document.write("<th>"+pm_out+"</th>");
                                                 present = true;
                                                 break;
@@ -215,10 +235,31 @@
                                     pm_in = militaryTo12HrTime(pm_in);
                                     pm_out = militaryTo12HrTime(pm_out);
                                     dte = new Date(dte).getDate();
+
+                                    var color = "";                      
+                                    if(am_in != ""){
+                                        //if the time in is late. the color will change in to red
+                                        const am = new Date("2023-01-01 8:00 AM");
+                                        const time_in = new Date("2023-01-01 " + am_in);
+                                        
+                                        if(time_in > am){
+                                            color = 'style="color:red;"';
+                                        }
+                                    }
+                                    var color_pm = "";
+                                    if(pm_in != ""){
+                                        //if the time in is late. the color will change in to red
+                                        const pm = new Date("2023-01-01 1:00 PM");
+                                        const time_in = new Date("2023-01-01 " + pm_in);
+                                
+                                        if(time_in > pm){
+                                            color_pm = 'style="color:red;"';
+                                        }
+                                    }
                                     if(i == dte){
-                                        document.write("<th>"+am_in+"</th>");
+                                        document.write("<th "+color+">"+am_in+"</th>");
                                         document.write("<th>"+am_out+"</th>");
-                                        document.write("<th>"+pm_in+"</th>");
+                                        document.write("<th "+color_pm+">"+pm_in+"</th>");
                                         document.write("<th>"+pm_out+"</th>");
                                         present = true;
                                         break;
@@ -293,10 +334,31 @@
                                             pm_in = militaryTo12HrTime(pm_in);
                                             pm_out = militaryTo12HrTime(pm_out);
                                             dte = new Date(dte).getDate();
+
+                                            var color = "";  
+                                            if(am_in != ""){
+                                                //if the time in is late. the color will change in to red
+                                                const am = new Date("2023-01-01 8:00 AM");
+                                                const time_in = new Date("2023-01-01 " + am_in);
+
+                                                if(time_in > am){
+                                                    color = 'style="color:red;"';
+                                                }
+                                            }
+                                            var color_pm = "";
+                                            if(pm_in != ""){
+                                                //if the time in is late. the color will change in to red
+                                                const pm = new Date("2023-01-01 1:00 PM");
+                                                const time_in = new Date("2023-01-01 " + pm_in);
+                                        
+                                                if(time_in > pm){
+                                                    color_pm = 'style="color:red;"';
+                                                }
+                                            }
                                             if(i == dte){
-                                                document.write("<th>"+am_in+"</th>");
+                                                document.write("<th "+color+">"+am_in+"</th>");
                                                 document.write("<th>"+am_out+"</th>");
-                                                document.write("<th>"+pm_in+"</th>");
+                                                document.write("<th "+color_pm+">"+pm_in+"</th>");
                                                 document.write("<th>"+pm_out+"</th>");
                                                 present = true;
                                                 break;
@@ -320,10 +382,30 @@
                                     pm_in = militaryTo12HrTime(pm_in);
                                     pm_out = militaryTo12HrTime(pm_out);
                                     dte = new Date(dte).getDate();
+                                    var color = ""; 
+                                    if(am_in != ""){
+                                        //if the time in is late. the color will change in to red
+                                        const am = new Date("2023-01-01 8:00 AM");
+                                        const time_in = new Date("2023-01-01 " + am_in);
+                                        
+                                        if(time_in > am){
+                                            color = 'style="color:red;"';
+                                        }
+                                    }
+                                    var color_pm = "";
+                                    if(pm_in != ""){
+                                        //if the time in is late. the color will change in to red
+                                        const pm = new Date("2023-01-01 1:00 PM");
+                                        const time_in = new Date("2023-01-01 " + pm_in);
+                                
+                                        if(time_in > pm){
+                                            color_pm = 'style="color:red;"';
+                                        }
+                                    }
                                     if(i == dte){
-                                        document.write("<th>"+am_in+"</th>");
+                                        document.write("<th "+color+">"+am_in+"</th>");
                                         document.write("<th>"+am_out+"</th>");
-                                        document.write("<th>"+pm_in+"</th>");
+                                        document.write("<th "+color_pm+">"+pm_in+"</th>");
                                         document.write("<th>"+pm_out+"</th>");
                                         present = true;
                                         break;
@@ -457,7 +539,7 @@
                 <br>
                 
             </div>
-            <table id="IDtable" border="1" style="border-collapse: collapse;" width="350" height="400" align="center">
+             <table id="IDtable" border="1" style="border-collapse: collapse;" width="480" height="400" align="center">
                 <tr>
                     <th rowspan="2">Day</th>
                     <th colspan="2">A.M.</th>
@@ -556,10 +638,30 @@
                                             pm_in = militaryTo12HrTime(pm_in);
                                             pm_out = militaryTo12HrTime(pm_out);
                                             dte = new Date(dte).getDate();
+                                            var color = "";                      
+                                            if(am_in != ""){
+                                                //if the time in is late. the color will change in to red
+                                                const am = new Date("2023-01-01 8:00 AM");
+                                                const time_in = new Date("2023-01-01 " + am_in);
+                                                
+                                                if(time_in > am){
+                                                    color = 'style="color:red;"';
+                                                }
+                                            }
+                                            var color_pm = "";
+                                            if(pm_in != ""){
+                                                //if the time in is late. the color will change in to red
+                                                const pm = new Date("2023-01-01 1:00 PM");
+                                                const time_in = new Date("2023-01-01 " + pm_in);
+                                        
+                                                if(time_in > pm){
+                                                    color_pm = 'style="color:red;"';
+                                                }
+                                            }
                                             if(i == dte){
-                                                document.write("<th>"+am_in+"</th>");
+                                                document.write("<th "+color+">"+am_in+"</th>");
                                                 document.write("<th>"+am_out+"</th>");
-                                                document.write("<th>"+pm_in+"</th>");
+                                                document.write("<th "+color_pm+">"+pm_in+"</th>");
                                                 document.write("<th>"+pm_out+"</th>");
                                                 present = true;
                                                 break;
@@ -583,10 +685,30 @@
                                     pm_in = militaryTo12HrTime(pm_in);
                                     pm_out = militaryTo12HrTime(pm_out);
                                     dte = new Date(dte).getDate();
+                                    var color = "";                      
+                                    if(am_in != ""){
+                                        //if the time in is late. the color will change in to red
+                                        const am = new Date("2023-01-01 8:00 AM");
+                                        const time_in = new Date("2023-01-01 " + am_in);
+                                        
+                                        if(time_in > am){
+                                            color = 'style="color:red;"';
+                                        }
+                                    }
+                                    var color_pm = "";
+                                    if(pm_in != ""){
+                                        //if the time in is late. the color will change in to red
+                                        const pm = new Date("2023-01-01 1:00 PM");
+                                        const time_in = new Date("2023-01-01 " + pm_in);
+                                
+                                        if(time_in > pm){
+                                            color_pm = 'style="color:red;"';
+                                        }
+                                    }
                                     if(i == dte){
-                                        document.write("<th>"+am_in+"</th>");
+                                        document.write("<th "+color+">"+am_in+"</th>");
                                         document.write("<th>"+am_out+"</th>");
-                                        document.write("<th>"+pm_in+"</th>");
+                                        document.write("<th "+color_pm+">"+pm_in+"</th>");
                                         document.write("<th>"+pm_out+"</th>");
                                         present = true;
                                         break;
@@ -650,10 +772,30 @@
                                             pm_in = militaryTo12HrTime(pm_in);
                                             pm_out = militaryTo12HrTime(pm_out);
                                             dte = new Date(dte).getDate();
+                                            var color_am = "";
+                                            if(am_in != ""){
+                                                //if the time in is late. the color will change in to red
+                                                const am = new Date("2023-01-01 8:00 AM");
+                                                const time_in = new Date("2023-01-01 " + am_in);
+                                        
+                                                if(time_in > am){
+                                                    color_am = 'style="color:red;"';
+                                                }
+                                            }
+                                            var color_pm = "";
+                                            if(pm_in != ""){
+                                                //if the time in is late. the color will change in to red
+                                                const pm = new Date("2023-01-01 1:00 PM");
+                                                const time_in = new Date("2023-01-01 " + pm_in);
+                                        
+                                                if(time_in > pm){
+                                                    color_pm = 'style="color:red;"';
+                                                }
+                                            }
                                             if(i == dte){
-                                                document.write("<th>"+am_in+"</th>");
+                                                document.write("<th "+color_am+">"+am_in+"</th>");
                                                 document.write("<th>"+am_out+"</th>");
-                                                document.write("<th>"+pm_in+"</th>");
+                                                document.write("<th "+color_pm+">"+pm_in+"</th>");
                                                 document.write("<th>"+pm_out+"</th>");
                                                 present = true;
                                                 break;
@@ -677,10 +819,30 @@
                                     pm_in = militaryTo12HrTime(pm_in);
                                     pm_out = militaryTo12HrTime(pm_out);
                                     dte = new Date(dte).getDate();
+                                    var color = "";                      
+                                    if(am_in != ""){
+                                        //if the time in is late. the color will change in to red
+                                        const am = new Date("2023-01-01 8:00 AM");
+                                        const time_in = new Date("2023-01-01 " + am_in);
+                                        
+                                        if(time_in > am){
+                                            color = 'style="color:red;"';
+                                        }
+                                    }
+                                    var color_pm = "";
+                                    if(pm_in != ""){
+                                        //if the time in is late. the color will change in to red
+                                        const pm = new Date("2023-01-01 1:00 PM");
+                                        const time_in = new Date("2023-01-01 " + pm_in);
+                                
+                                        if(time_in > pm){
+                                            color_pm = 'style="color:red;"';
+                                        }
+                                    }
                                     if(i == dte){
-                                        document.write("<th>"+am_in+"</th>");
+                                        document.write("<th "+color+">"+am_in+"</th>");
                                         document.write("<th>"+am_out+"</th>");
-                                        document.write("<th>"+pm_in+"</th>");
+                                        document.write("<th "+color_pm+">"+pm_in+"</th>");
                                         document.write("<th>"+pm_out+"</th>");
                                         present = true;
                                         break;

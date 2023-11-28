@@ -37,16 +37,19 @@ class CustomAuthController extends Controller
         ]);
     
         $credentials = $request->only('email', 'password');
+        
+
         if (Auth::attempt($credentials)) {
              $role = User_role::where('userid',Auth::user()->id)->first();
-            if ($role->roleid==1){
+
+            if ($role->roleid== ""){
                  return redirect('/admin');
             } elseif ($role->roleid==2){
                  return redirect('/user');
             
             }
         }
-   
+
         return redirect("login")->withSuccess('Login details are not valid');
     }
  
