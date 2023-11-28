@@ -112,19 +112,11 @@
                                 <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-<<<<<<< HEAD
-=======
-
->>>>>>> 77b0a64fc0599fff0969b96e85eea906bea32bf1
                                             <th>Biometric No.</th>
                                             <th>Personnel ID</th>
                                             <th>Employee Name</th>
                                             <th>Contact Number </th>
-<<<<<<< HEAD
                                             <th>Employee Status</th>
-=======
-                                            <th>Status</th>
->>>>>>> d556c6b33f4a9d112bfa217a868e5509d8c1aa87
                                             <th>Department</th>
                                             <th >Action</th>
 

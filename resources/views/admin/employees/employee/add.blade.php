@@ -37,8 +37,6 @@
                                         <label>Surname </label>
                                         <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
                                     </div>
-<<<<<<< HEAD
-=======
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>First Name</label>
                                         <input type="text" name="firstname" class="form-control form-control-line" minlength="2" required > 
@@ -49,35 +47,7 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Name Extension (Jr., Sr)</label>
-=======
-<<<<<<< HEAD
-                                        <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-=======
-                                        <input type="text" name="lastname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required> 
-                                    </div>
->>>>>>> 77b0a64fc0599fff0969b96e85eea906bea32bf1
-                                   <div class="form-group col-md-4 m-t-20">
-                                        <label>First Name</label>
-                                        <input type="text" name="firstname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Middle Name</label>
-                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="">
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Name Extension (Jr., Sr)</label>
-<<<<<<< HEAD
-                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2">
-=======
-<<<<<<< HEAD
->>>>>>> d556c6b33f4a9d112bfa217a868e5509d8c1aa87
-                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
-=======
-                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="">
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
->>>>>>> 77b0a64fc0599fff0969b96e85eea906bea32bf1
+                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2" required> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Birth </label>
@@ -178,7 +148,6 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>UMID</label>
-<<<<<<< HEAD
                                         <input type="text" id="umid" name="umid" class="form-control" value="" minlength="7" > 
                                     </div><br>
                                     <div class="col-md-12">
@@ -210,15 +179,6 @@
                                         <input type="date" name="businessaddress" id="example-email2" name="example-email" class="form-control" placeholder="">
                                     </div>
                                  <br>
-                                    <br>
-=======
-                                        <input type="text" name="umid" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>UMID</label>
-                                        <input type="text" id="umid" name="umid" class="form-control" value="" minlength="7" > 
-                                    </div><br>
->>>>>>> d556c6b33f4a9d112bfa217a868e5509d8c1aa87
                                     <div class="col-md-12">
                                   <h3 class="m-1" style="font-weight: bolder; font-size: 20px;">Family Background</h3>
                                    </div>
