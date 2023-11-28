@@ -92,10 +92,6 @@ class attendancesController extends Controller
                         $csvdate = Carbon::parse(trim($columns[1]));
                         $hourIndex = trim($columns[3]);
                         $date = $csvdate->format('Y-m-d');
-<<<<<<< HEAD
-=======
-                        
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                         $checkAttendance = Attendances::where('biometric', $biometric)
                                                         ->where('date',$date)
                                                         ->first();
@@ -121,7 +117,7 @@ class attendancesController extends Controller
                                     default:
                             }
                         }else{
-<<<<<<< HEAD
+
                             if(!empty($biometric)){
                                 $saveAttendance = new Attendances();
                                 $saveAttendance->biometric = $biometric;
@@ -142,8 +138,7 @@ class attendancesController extends Controller
                                         default: 0;
                                 }
                                 
-                                $saveAttendance->save();
-=======
+                            $saveAttendance->save();
                             $saveAttendance = new Attendances();
                             $saveAttendance->biometric = $biometric;
                             $saveAttendance->date = $date;
@@ -160,7 +155,6 @@ class attendancesController extends Controller
                                 case 1:
                                     $saveAttendance->pm_out = $csvdate->format('H:i:s');
                                     break;
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                             }
                         }
                     }
@@ -170,7 +164,7 @@ class attendancesController extends Controller
                 
                 return redirect()->back()->with('message', 'Successfully imported!!');
                 
-            } else {
+            } else{
                 echo "Error opening the file.";
             }
         } else {

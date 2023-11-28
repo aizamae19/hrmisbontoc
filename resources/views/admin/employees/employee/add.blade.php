@@ -35,15 +35,9 @@
                                     @csrf
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Surname </label>
-<<<<<<< HEAD
                                         <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
                                     </div>
-                                    <div class="form-group col-md-4 m-t-20">
-=======
-                                        <input type="text" name="lastname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required> 
-                                    </div>
                                    <div class="form-group col-md-4 m-t-20">
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                                         <label>First Name</label>
                                         <input type="text" name="firstname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
                                     </div>
@@ -53,11 +47,7 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Name Extension (Jr., Sr)</label>
-<<<<<<< HEAD
-                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
-=======
-                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="">
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
+                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Birth </label>

@@ -120,8 +120,6 @@
                                 <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
-<<<<<<< HEAD
-
                                             <th>Biometric No.</th>
                                             <th>Personnel ID</th>
                                             <th>Employee Name</th>
@@ -129,16 +127,6 @@
                                             <th>Employee Status</th>
                                             <th>Department</th>
                                             <th >Action</th>
-=======
-                                            
-                                            <th>Biometric No.</th>
-                                            <th>Employee Name</th>
-                                            <th>Personnel ID</th>
-                                            <th>Department</th>
-                                            <th>Contact Number </th>
-                                            <th>Employee Status</th>
-                                            <th >Position</th>
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
 
                                         </tr>
                                     </thead>
@@ -147,14 +135,8 @@
                                             @foreach($employees as $employee)
                                                  <tr>
                                                     <td>{{ $employee->biometric }}</td>
-<<<<<<< HEAD
                                                     <td>{{ $employee->personnel }}</td>
                                                     <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
-=======
-                                                    <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
-                                                    <td>{{ $employee->personnel }}</td>
-                                                    <td>{{ $employee->department }}</td>
->>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                                                     <td>{{ $employee->contactnumber }}</td>
                                                     <td>{{ $employee->status }}</td>
                                                     <td>{{ $employee->department }}</td>
