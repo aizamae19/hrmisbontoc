@@ -31,6 +31,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Personnel ID</th>
+                                                 <th>Biometric No.</th>
                                                 <th>Employee Name</th>
                                                 <th>Department</th>
                                                 <th>Position</th>
@@ -44,6 +45,7 @@
                                             @foreach($employees as $employee)
                                             <tr>
                                                 <td>{{$employee->personnel}}</td>
+                                                 <td>{{$employee->biometric}}</td>
                                                 <td>{{ $employee->firstname }} {{ $employee->middlename }} {{ $employee->lastname }} {{ $employee->suffix}}</td>
                                                 <td>{{$employee->department}}</td>
                                                 <td>{{$employee->position}}</td>

@@ -31,7 +31,7 @@
                                         <thead>
                                             <tr>
 
-                                                <th>Personnel ID</th>
+                                                <th>Biometric No.</th>
                                                <th>Date </th>
                                                 <th>Am In</th>
                                                 <th>Am Out</th>

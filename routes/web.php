@@ -37,7 +37,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/searchByDepartment', [App\Http\Controllers\ams\dtrSrchByDptController::class, 'searchByDepartment'])->name('searchByDpt');
             Route::get('/attendances', [App\Http\Controllers\ams\attendancesController::class, 'index'])->name('attendances');
 
-            Route::get('/attendances/{personnel}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
+            Route::get('/attendances/{biometric}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
 
             // Route::get('/attendances/{employeeId}', [App\Http\Controllers\ams\attendancesController::class, 'showWorkingHoursList'])->name('attendancesworkinghours');
 

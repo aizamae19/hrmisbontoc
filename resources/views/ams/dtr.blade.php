@@ -60,7 +60,7 @@
                 <div class="row control-input" style="align-items: center;padding-bottom: 2rem;font-weight: bolder;">
                     <label for="">DAILY TIME RECORD</label>
                 </div>
-                <div class="row control-input" style="border-bottom: 1px solid black">
+               <div class="row control-input" style="border-bottom: 1px solid black">
                     <label for="" style="font-weight: 900;">{{ $employee->firstname }} {{ strtoupper($employee->middlename[0]) }}.  {{ $employee->lastname }} </label>
                 </div>
                 <div class="row control-input">

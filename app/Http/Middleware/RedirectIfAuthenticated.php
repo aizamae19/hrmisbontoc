@@ -25,6 +25,11 @@ class RedirectIfAuthenticated
                 $role = User_role::where('userid',Auth::user()->id)->first();
                 if (Auth::user() && $role->roleid==1){
                      return redirect('/admin');
+                } elseif ($role && $role->roleid == 2) {
+                    return redirect('/user');
+                } else {
+                    // Handle cases where the role is not found or invalid
+                    return redirect('/login'); // Redirect to a default page or handle accordingly
                 }
             }
         }

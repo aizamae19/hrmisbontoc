@@ -2,6 +2,9 @@
 @extends('layouts.default')
 
 @section('content')
+
+
+
          
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
@@ -52,10 +55,14 @@
                                         <option value="{{$i}}">{{ $i }}</option>
                                     @endfor
                                 </select>
+<<<<<<< HEAD
                             </div>    
                             <div class="form-group col-md-3 m-t-20">
                                 
                             </div>    
+=======
+                            </div>  
+>>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                         </div>
                     </div>
                     <div class="card card-outline-info">
@@ -107,11 +114,13 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="card-body">
                             <div class="table-responsive ">
                                 <table id="employees123" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                     <thead>
                                         <tr>
+<<<<<<< HEAD
 
                                             <th>Biometric No.</th>
                                             <th>Personnel ID</th>
@@ -120,6 +129,16 @@
                                             <th>Employee Status</th>
                                             <th>Department</th>
                                             <th >Action</th>
+=======
+                                            
+                                            <th>Biometric No.</th>
+                                            <th>Employee Name</th>
+                                            <th>Personnel ID</th>
+                                            <th>Department</th>
+                                            <th>Contact Number </th>
+                                            <th>Employee Status</th>
+                                            <th >Position</th>
+>>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
 
                                         </tr>
                                     </thead>
@@ -128,8 +147,14 @@
                                             @foreach($employees as $employee)
                                                  <tr>
                                                     <td>{{ $employee->biometric }}</td>
+<<<<<<< HEAD
                                                     <td>{{ $employee->personnel }}</td>
                                                     <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
+=======
+                                                    <td>{{ $employee->lastname }}, {{ $employee->firstname }} {{ $employee->middlename }}</td>
+                                                    <td>{{ $employee->personnel }}</td>
+                                                    <td>{{ $employee->department }}</td>
+>>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
                                                     <td>{{ $employee->contactnumber }}</td>
                                                     <td>{{ $employee->status }}</td>
                                                     <td>{{ $employee->department }}</td>
@@ -145,7 +170,29 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </di>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $("#employees123").DataTable({ 
+            columnDefs:[
+                { orderable: false, targets: [4] }
+            ],
+            order:[0,'asc']
+        });
+
+        $('.dataTable td, .dataTable th').addClass('py-1 px-2 align-middle');
+    });
+</script>
+
+
+
+
+
+
             <footer class="footer">   </footer>
             <style>
                 .custom-search{
@@ -175,7 +222,14 @@
                         newWindow.print();
                     };
                 });
+<<<<<<< HEAD
                 function printDTR(data,bio){
+=======
+
+                // load_page();
+                // function load_page() {
+                // var now = new Date();
+>>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
 
                     var link = data.getAttribute('data-url');//get the url
                     var month = $('select[name="dtr_month"]').val();
@@ -200,6 +254,7 @@
                     }
                 });
 
+<<<<<<< HEAD
                 $('#search-department').change(function(){
                     let dpt = $('#dpt').val();
 
@@ -265,5 +320,12 @@
                     
                 }
             </script>
+=======
+                //     $('input[name="dateFrom"]').val(today);
+                //     $('input[name="dateTo"]').val(today);
+                // }
+        
+                </script>
+>>>>>>> 4158688252c0646f5abe324c0fa45057f253acdd
 
 @endsection
