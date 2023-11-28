@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->integer('biometric')->unique();
             $table->date('date');
-            $table->time('am_in');
-            $table->time('am_out');
-            $table->time('pm_in');
-            $table->time('pm_out');
+            $table->time('am_in')->nullable();
+            $table->time('am_out')->nullable();
+            $table->time('pm_in')->nullable();
+            $table->time('pm_out')->nullable();
+            $table->integer('working_hours')->nullable();
             $table->timestamps();
         });
     }
