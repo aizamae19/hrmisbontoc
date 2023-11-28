@@ -117,7 +117,11 @@
                                             <th>Personnel ID</th>
                                             <th>Employee Name</th>
                                             <th>Contact Number </th>
+<<<<<<< HEAD
                                             <th>Employee Status</th>
+=======
+                                            <th>Status</th>
+>>>>>>> d556c6b33f4a9d112bfa217a868e5509d8c1aa87
                                             <th>Department</th>
                                             <th >Action</th>
 

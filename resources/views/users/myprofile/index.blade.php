@@ -204,31 +204,201 @@
                 <p class="text-muted mb-0">{{ $employee->tin }}</p>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">UMID</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->umid }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-        <div class="col-lg-14">
+    <div class="col-lg-14">
         <div class="card mb-6">
           <div class="card-body">
-            <p class="mb-4" style="color: #000;"><b>Educational Background</b></p>
+            <p class="mb-4" style="color: #000;"><b>Family Background</b></p>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">College Degree</p>
+                <p class="mb-0">Spouse's Surname</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->course }}</p>
+                <p class="text-muted mb-0">{{ $employee->spousesurname }}</p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Graduate Studies</p>
+                <p class="mb-0">Spouse's Firstname</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->graduate }}</p>
+                <p class="text-muted mb-0">{{ $employee->spousefirstname }}</p>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Spouse's Middlename</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->spousemiddlename }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Name Extension (Jr., Sr.)</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->extension }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Occupation</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->occupation }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Employer/Business Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->businessname }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Business Address</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->businessaddress }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Telephone Number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->telephone }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Father's Surname</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->fathersurname }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Father's Firstname</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->fatherfirstname }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Father's Middlename</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->fathermiddlename }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Name Extension (Jr., Sr.)</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->occupation }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-lg-14">
+        <div class="card mb-6">
+          <div class="card-body">
+            <p class="mb-4" style="color: #000;"><b>Educational Background</b></p>
+            <br>
+            <br>
+      <div class="table-responsive custom-table-responsive">
+
+        <table class="table custom-table">
+          <thead>
+            <tr>
+              <th scope="col">Level</th>
+              <th scope="col">Name of School</th>
+              <th scope="col">Basic Education/Degree/Course</th>
+              <th scope="col">Highest Level/Units Earned</th>
+              <th scope="col">Year Graduated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>
+                Elementary
+              </td>
+              <td><input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="elementarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="elemhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradelementary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>Secondary</td>
+              <td><input type="text" name="secondaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="secondarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="secondhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradsecondary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>Vocational</td>
+              <td><input type="text" name="vocationalschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="vocationalbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="vocationhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradvocational" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+              <td>College</td>
+             <td><input type="text" name="course" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="collegebasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="highestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradcollege" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+            </tr>
+            <tr class="spacer"><td colspan="100"></td></tr>
+            <tr class="active">
+            <td>Graduate Studies</td>
+              <td><input type="text" name="graduatestudies" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="graduatestudiesbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="graduate" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td><input type="text" name="yeargradstudies" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+
+
             <hr>
             <div class="row">
               <div class="col-sm-3">
