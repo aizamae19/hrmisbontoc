@@ -145,7 +145,7 @@
                         
                         dates.textContent = '1-15';
                         for(i=1; i<=15; i++){
-                            document.write("<tr>");
+                            document.write("<tr>"); 
                             document.write("<th>"+i+"</th>");
                             var present = false;
                             var isHoliday = false;

@@ -60,44 +60,7 @@
                                         <a href="{{route('leave.holiday')}}"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></a>
                                         <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
-                                    </form>
-<<<<<<< HEAD
-
-                                    <div class="row">
-                    <div class="col-12">
-                        <div class="card card-outline-info">
-                            <div class="card-header">
-                                <h4 class="m-b-0 text-white"> Holidays List  </h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive ">
-                                    <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Start Date </th>
-                                                <th>End Date </th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @if(isset($holidays))
-                                                @foreach($holidays as $holiday)
-                                            <tr>
-                                                <td>{{$holiday->nameofholiday}}</td>
-                                                <td>{{$holiday->startdate}}</td>
-                                                <td>{{$holiday->enddate}}</td>
-                                            </tr>
-                                            @endforeach
-                                        @endif
-                                    </tbody>
-                                </div>
-                            </div>
-                        </div>
-                <script>
-
-                
-                </script>                        
+                                    </form>                  
 <script type="text/javascript">
                                         $(document).ready(function () {
                                             $(".holiday").click(function (e) {
@@ -124,28 +87,5 @@
                                             });
                                         });
 </script>
-<script type="text/javascript">
-                                        $(document).ready(function () {
-                                            $(".holidelet").click(function (e) {
-                                                e.preventDefault(e);
-                                                // Get the record's ID via attribute  
-                                                var iid = $(this).attr('data-id');
-                                                $.ajax({
-                                                    url: 'HOLIvalueDelet?id=' + iid,
-                                                    method: 'GET',
-                                                    data: 'data',
-                                                }).done(function (response) {
-                                                    console.log(response);
-                                                    $(".message").fadeIn('fast').delay(3000).fadeOut('fast').html(response);
-                                                    window.setTimeout(function(){location.reload()},2000)
-                                                    // Populate the form fields with the data returned from server
-                                                });
-                                            });
-                                        });
-</script>                              
-            </div>
-=======
-        </div>
->>>>>>> 30378690d917322e2f287d1ddeb83114ab61ad4d
 
 @endsection

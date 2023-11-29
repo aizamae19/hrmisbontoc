@@ -121,6 +121,10 @@ class EmployeeController extends Controller
 
     public function updateemployee(Request $request){
         $Updatesave=Employee::where('id' ,$request->id)->first();
+        $Updatesave->firstname = $request->firstname;
+        $Updatesave->middlename = $request->middlename;
+        $Updatesave->lastname = $request->lastname;
+        $Updatesave->suffix = $request->suffix;
         $Updatesave->address = $request->address;
         $Updatesave->barangay = $request->barangay;
         $Updatesave->municipality = $request->municipality;

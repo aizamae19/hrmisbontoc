@@ -63,7 +63,7 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Place Of Birth </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="placeofbirth" id="dateofbirth" class="form-control" value="{{$employee->placeofbirth}}" placeholder="" required> 
+                                        <input type="text" name="placeofbirth" id="dateofbirth" class="form-control" value="{{$employee->placeofbirth}}" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Purok/Street</label>
@@ -314,7 +314,7 @@
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
             <td>Graduate Studies</td>
-              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="graduatestudies" id="example-email2" name="example-email" class="form-control" value="{{$employee->graduatestudiesrad}}" placeholder=""></td>
+              <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="graduatestudies" id="example-email2" name="example-email" class="form-control" value="{{$employee->graduatestudies}}" placeholder=""></td>
               <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="graduatestudiesbasiceducation" id="example-email2" name="example-email" class="form-control" value="{{$employee->graduatestudiesbasiceducation}}" placeholder=""></td>
               <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="graduate" id="example-email2" name="example-email" class="form-control" value="{{$employee->graduate}}" placeholder=""></td>
               <td><input type="hidden" name="id" value="{{$employee->id}}"><input type="text" name="yeargradstudies" id="example-email2" name="example-email" class="form-control" value="{{$employee->yeargradstudies}}" placeholder=""></td>
@@ -327,6 +327,26 @@
                                         <label>CSC Professional Eligibility </label>
                                       <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->csc}}">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Rating</label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="rating" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->rating}}">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Date of Examination/Conferment </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="dateofexamination" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofexamination}}">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Place of Examination </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="placeofexamination" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->placeofexamination}}">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>License Number </label>
+                                        <input type="hidden" name="id" value="{{$employee->id}}">
+                                        <input type="text" name="licensenumber" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->licensenumber}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Issuance-PRC ID </label>

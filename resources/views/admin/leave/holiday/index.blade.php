@@ -84,6 +84,31 @@
                                         <h4 class="modal-title" id="exampleModalLabel1">Holidays</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     </div>
+                                    <form method="post" action="{{route('holiday.store')}}" id="holidayform" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="modal-body">
+                                        
+                                            <div class="form-group">
+                                                <label class="control-label">Name of Holiday</label>
+                                                <input type="text" name="nameofholiday" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Start Date</label>
+                                                <input type="text" name="startdate" class="form-control mydatetimepickerFull" id="recipient-name1"  value="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">End Date</label>
+                                                <input type="text" name="enddate" class="form-control mydatetimepickerFull" id="recipient-name1" value="">
+                                            </div>                                      
+                                        
+                                        </div>
+                                    <div class="modal-footer">
+                                    <input type="hidden" name="id" value="" class="form-control" id="recipient-name1">                                   
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>  

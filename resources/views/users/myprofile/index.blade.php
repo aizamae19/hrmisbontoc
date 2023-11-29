@@ -356,42 +356,42 @@
               <td>
                 Elementary
               </td>
-              <td><input type="text" name="elementaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="elementarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="elemhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="yeargradelementary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td>{{ $employee->elementaryschool }}</td>
+              <td>{{ $employee->elementarybasiceducation }}</td>
+              <td>{{ $employee->elemhighestlevel }}</td>
+              <td>{{ $employee->yeargradelementary }}</td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
               <td>Secondary</td>
-              <td><input type="text" name="secondaryschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="secondarybasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="secondhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="yeargradsecondary" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td>{{ $employee->secondaryschool }}</td>
+              <td>{{ $employee->secondarybasiceducation }}</td>
+              <td>{{ $employee->secondhighestlevel }}</td>
+              <td>{{ $employee->yeargradsecondary }}</td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
               <td>Vocational</td>
-              <td><input type="text" name="vocationalschool" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="vocationalbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="vocationhighestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="yeargradvocational" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td>{{ $employee->vocationalschool }}</td>
+              <td>{{ $employee->vocationalbasiceducation }}</td>
+              <td>{{ $employee->vocationhighestlevel }}</td>
+              <td>{{ $employee->yeargradvocational }}</td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
               <td>College</td>
-             <td><input type="text" name="course" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="collegebasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="highestlevel" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="yeargradcollege" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+             <td>{{ $employee->course }}</td>
+              <td>{{ $employee->collegebasiceducation }}</td>
+              <td>{{ $employee->highestlevel }}</td>
+              <td>{{ $employee->yeargradcollege }}</td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             <tr class="active">
             <td>Graduate Studies</td>
-              <td><input type="text" name="graduatestudies" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="graduatestudiesbasiceducation" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="graduate" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
-              <td><input type="text" name="yeargradstudies" id="example-email2" name="example-email" class="form-control" value="" placeholder=""></td>
+              <td>{{ $employee->graduatestudies }}</td>
+              <td>{{ $employee->graduatestudiesbasiceducation }}</td>
+              <td>{{ $employee->graduate }}</td>
+              <td>{{ $employee->yeargradstudies }}</td>
             </tr>
             
           </tbody>
@@ -408,6 +408,42 @@
                 <p class="text-muted mb-0">{{ $employee->csc }}</p>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Rating</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->rating }}</p>
+              </div>
+            </div>
+            <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date of Examination</h6>
+                    </div>
+                    <div class="col-sm-9 text-black">
+                        {{ $employee->dateofexamination }}
+                    </div>
+                  </div>
+                  <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Place of Examination</h6>
+                    </div>
+                    <div class="col-sm-9 text-black">
+                        {{ $employee->placeofexamination }}
+                    </div>
+                  </div>
+                  <hr>
+                   <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">License Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-black">
+                        {{ $employee->licensenumber }}
+                    </div>
+                  </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
@@ -502,7 +538,7 @@
                 <p class="mb-0">Date of Mandatory Retirement</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->dateofleaving }}</p>
+                <p class="text-muted mb-0">{{ $employee->dateofretirement }}</p>
               </div>
             </div>
             <hr>
