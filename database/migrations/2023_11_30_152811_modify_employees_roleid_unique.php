@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('user_roles', function (Blueprint $table) {
-        $table->dropUnique('userroles_roleid_unique');
-        $table->dropUnique('userroles_role_name_unique');  
+        $table->dropUnique('user_roles_roleid_unique');
+        $table->dropUnique('user_roles_role_name_unique');  
     });
     }
 
