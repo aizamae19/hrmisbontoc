@@ -174,57 +174,70 @@
                                     }else{
                                         notFound++;
                                     }
-                                    
                                     if(notFound == hCount){
-                                        for(x=0; x<count; x++){
+                                            console.log(count);
+                                            if(count != 0){
+                                                for(x=0; x<count; x++){
 
-                                            var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
-                                            var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
-                                            var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
-                                            var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
-                                            var dte = attendances[x]['date'];
-                                            am_in = militaryTo12HrTime(am_in);
-                                            am_out = militaryTo12HrTime(am_out);
-                                            pm_in = militaryTo12HrTime(pm_in);
-                                            pm_out = militaryTo12HrTime(pm_out);
-                                            dte = new Date(dte).getDate();
-                                            var color = "";                      
-                                            if(am_in != ""){
-                                                //if the time in is late. the color will change in to red
-                                                const am = new Date("2023-01-01 8:00 AM");
-                                                const time_in = new Date("2023-01-01 " + am_in);
+                                                var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
+                                                var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
+                                                var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
+                                                var pm_out = attendances[x]['pm_out'] === null? "" : attendances[x]['pm_out'];
+                                                var dte = attendances[x]['date'];
                                                 
-                                                if(time_in > am){
-                                                    color = 'style="color:red;"';
+                                                am_in = militaryTo12HrTime(am_in);
+                                                am_out = militaryTo12HrTime(am_out);
+                                                pm_in = militaryTo12HrTime(pm_in);
+                                                pm_out = militaryTo12HrTime(pm_out);
+                                                dte = new Date(dte).getDate();
+                                                var color = "";                      
+                                                if(am_in != ""){
+                                                    //if the time in is late. the color will change in to red
+                                                    const am = new Date("2023-01-01 8:00 AM");
+                                                    const time_in = new Date("2023-01-01 " + am_in);
+                                                    
+                                                    if(time_in > am){
+                                                        color = 'style="color:red;"';
+                                                    }
                                                 }
-                                            }
-                                            var color_pm = "";
-                                            if(pm_in != ""){
-                                                //if the time in is late. the color will change in to red
-                                                const pm = new Date("2023-01-01 1:00 PM");
-                                                const time_in = new Date("2023-01-01 " + pm_in);
-                                        
-                                                if(time_in > pm){
-                                                    color_pm = 'style="color:red;"';
+                                                var color_pm = "";
+                                                if(pm_in != ""){
+                                                    //if the time in is late. the color will change in to red
+                                                    const pm = new Date("2023-01-01 1:00 PM");
+                                                    const time_in = new Date("2023-01-01 " + pm_in);
+                                            
+                                                    if(time_in > pm){
+                                                        color_pm = 'style="color:red;"';
+                                                    }
                                                 }
-                                            }
-                                            if(i == dte){
-                                                document.write("<th "+color+">"+am_in+"</th>");
-                                                document.write("<th>"+am_out+"</th>");
-                                                document.write("<th "+color_pm+">"+pm_in+"</th>");
-                                                document.write("<th>"+pm_out+"</th>");
-                                                present = true;
-                                                break;
-                                            }else{
-                                                isHoliday = false;
+                                                if(i == dte){
+                                                    document.write("<th "+color+">"+am_in+"</th>");
+                                                    document.write("<th>"+am_out+"</th>");
+                                                    document.write("<th "+color_pm+">"+pm_in+"</th>");
+                                                    document.write("<th>"+pm_out+"</th>");
+                                                    present = true;
+                                                    break;
+                                                }else{
+                                                    isHoliday = false;
+                                                }
+
                                             }
 
-                                        }
+                                        }else{
+                                            document.write("<th></th>");
+                                            document.write("<th></th>");
+                                            document.write("<th></th>");
+                                            document.write("<th></th>");
+                                        }       
+
+                                        
                                         
                                     }
                                 }
                             }else{
+
                                 for(x=0; x<count; x++){
+
                                     var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
                                     var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
                                     var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
@@ -235,6 +248,7 @@
                                     pm_in = militaryTo12HrTime(pm_in);
                                     pm_out = militaryTo12HrTime(pm_out);
                                     dte = new Date(dte).getDate();
+                                    console.log(dte);
 
                                     var color = "";                      
                                     if(am_in != ""){
@@ -290,6 +304,7 @@
                             document.write("<tr>");
                         }     
                     }else{
+
                         dates.textContent = '1-31';
                         for(i=1; i<=31; i++){
                             document.write("<tr>");
@@ -323,7 +338,10 @@
                                     }
                                     
                                     if(notFound == hCount){
-                                        for(x=0; x<count; x++){
+                                        console.log('gdsss');
+                                        if(count != 0)
+                                        {
+                                            for(x=0; x<count; x++){
                                             var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
                                             var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
                                             var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
@@ -362,11 +380,18 @@
                                                 document.write("<th>"+pm_out+"</th>");
                                                 present = true;
                                                 break;
-                                            }else{
-                                                isHoliday = false;
-                                            }
+                                                }else{
+                                                    isHoliday = false;
+                                                }
 
+                                            }
+                                        }else{
+                                            document.write("<th></th>");    
+                                            document.write("<th></th>");
+                                            document.write("<th></th>");
+                                            document.write("<th></th>");
                                         }
+                                        
                                         
                                     }
                                 }
@@ -625,9 +650,10 @@
                                     }else{
                                         notFound++;
                                     }
-                                    
                                     if(notFound == hCount){
-                                        for(x=0; x<count; x++){
+
+                                        if(count != 0){
+                                            for(x=0; x<count; x++){
                                             var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
                                             var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
                                             var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
@@ -671,8 +697,16 @@
 
                                         }
                                         
+                                    }else{
+                                        document.write("<th></th>");
+                                        document.write("<th></th>");
+                                        document.write("<th></th>");
+                                        document.write("<th></th>");
                                     }
                                 }
+                                    
+                                }
+                                        
                             }else{
                                 for(x=0; x<count; x++){
                                     var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
@@ -761,7 +795,9 @@
                                     }
                                     
                                     if(notFound == hCount){
-                                        for(x=0; x<count; x++){
+                                        console.log('qqq');
+                                        if(count != 0){
+                                            for(x=0; x<count; x++){
                                             var am_in = attendances[x]['am_in'] === null? "" : attendances[x]['am_in'];
                                             var am_out = attendances[x]['am_out'] === null? "" : attendances[x]['am_out'];
                                             var pm_in = attendances[x]['pm_in'] === null? "" : attendances[x]['pm_in'];
@@ -804,6 +840,13 @@
                                             }
 
                                         }
+                                        }else{
+                                            document.write("<th></th>");
+                                            document.write("<th></th>");
+                                            document.write("<th></th>");
+                                            document.write("<th></th>");
+                                        }
+                                        
                                         
                                     }
                                 }
