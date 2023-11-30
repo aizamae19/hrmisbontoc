@@ -35,19 +35,19 @@
                                     @csrf
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Surname </label>
-                                        <input type="text" id="" name="lastname" class="form-control form-control-line" value="" minlength="2" required> 
+                                        <input type="text" id="" name="lastname" class="form-control form-control-line" value="" required> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>First Name</label>
-                                        <input type="text" name="firstname" class="form-control form-control-line" minlength="2" required > 
+                                        <input type="text" name="firstname" class="form-control form-control-line"  required > 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Middle Name</label>
-                                        <input type="text" id="" name="middlename" class="form-control form-control-line" value="" minlength="2"> 
+                                        <input type="text" id="" name="middlename" class="form-control form-control-line" value=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Name Extension (Jr., Sr)</label>
-                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value="" minlength="2"> 
+                                        <input type="text" id="" name="suffix" class="form-control form-control-line" value=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Birth </label>
@@ -59,19 +59,19 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Purok/Street</label>
-                                        <input type="text" name="address" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="text" name="address" class="form-control" id="recipient-name1" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Barangay</label>
-                                        <input type="text" name="barangay" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="text" name="barangay" class="form-control" id="recipient-name1" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Municipality</label>
-                                        <input type="text" name="municipality" class="form-control form-control-line" value="" minlength="2" required > 
+                                        <input type="text" name="municipality" class="form-control form-control-line" value="" required > 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Town/Province</label>
-                                        <input type="text" name="province" class="form-control form-control-line" value="" minlength="2" required > 
+                                        <input type="text" name="province" class="form-control form-control-line" value="" required > 
                                     </div>
                                      <div class="form-group col-md-4 m-t-20">
                                         <label for="maritalstatus">Civil Status</label>
@@ -108,7 +108,7 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Mobile Number </label>
-                                        <input type="text" name="contactnumber" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="text" name="contactnumber" class="form-control" id="recipient-name1" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Person to Contact in Case of Emergency</label>
@@ -116,39 +116,39 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Contact Number of Contact Person</label>
-                                        <input type="text" name="contact" class="form-control" minlength="11" value="" placeholder="" required> 
+                                        <input type="text" name="contact" class="form-control" value="" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Personal Email </label>
-                                        <input type="text" name="personalemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="text" name="personalemail" class="form-control" id="recipient-name1" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Corporate Email </label>
-                                        <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="corporateemail" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>GSIS ID Number </label>
-                                        <input type="text" name="gsis" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="gsis" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>PAG-IBIG ID Number </label>
-                                        <input type="text" name="pagibig" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="pagibig" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Philhealth Number </label>
-                                        <input type="text" name="philhealth" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="philhealth" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>SSS Number </label>
-                                        <input type="text" name="sss" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="sss" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Tin Number </label>
-                                        <input type="text" name="tin" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="tin" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>UMID</label>
-                                        <input type="text" id="umid" name="umid" class="form-control" value="" minlength="7" > 
+                                        <input type="text" id="umid" name="umid" class="form-control" value=""> 
                                     </div><br>
                                     <br>
                                     <div class="col-md-12">
@@ -157,11 +157,11 @@
                                     <br>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Spouse's Surname</label>
-                                        <input type="text" name="spousesurname" class="form-control form-control-line" value="" minlength="2"> 
+                                        <input type="text" name="spousesurname" class="form-control form-control-line" value=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Spouse's Firstname</label>
-                                        <input type="text" id="" name="spousefirstname" class="form-control form-control-line" value="" minlength="2"> 
+                                        <input type="text" id="" name="spousefirstname" class="form-control form-control-line" value=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Spouse's Middlename</label>
@@ -286,31 +286,31 @@
       
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>CSC Professional Eligibility </label>
-                                        <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="csc" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Rating</label>
-                                        <input type="text" name="rating" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="rating" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date of Examination/Conferment </label>
-                                        <input type="text" name="dateofexamination" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="dateofexamination" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Place of Examination </label>
-                                        <input type="text" name="placeofexamination" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="placeofexamination" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>License Number </label>
-                                        <input type="text" name="licensenumber" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="text" name="licensenumber" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Issuance-PRC ID </label>
-                                        <input type="date" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="date" name="dateofissuance" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Validity-PRC ID </label>
-                                        <input type="date" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="date" name="dateofvalidity" class="form-control" id="recipient-name1" value="">
                                     </div>
                                  <br>
                                 <div class="col-md-12">
@@ -319,11 +319,11 @@
                                 <br>
                                      <div class="form-group col-md-4 m-t-20">
                                         <label>Personnel ID</label>
-                                        <input type="text" name="personnel" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="text" name="personnel" class="form-control" id="recipient-name1" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Biometric Number</label>
-                                        <input type="text" name="biometric" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="text" name="biometric" class="form-control" id="recipient-name1" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Employment Status</label>
@@ -390,15 +390,15 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Joining</label>
-                                        <input type="date" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="date" name="dateofjoining" class="form-control" id="recipient-name1" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Leaving </label>
-                                        <input type="date" name="dateofleaving" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="">
+                                        <input type="date" name="dateofleaving" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Mandatory Retirement</label>
-                                        <input type="date" name="dateofretirement" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
+                                        <input type="date" name="dateofretirement" class="form-control" id="recipient-name1" value="" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Salary Grade</label>

@@ -38,22 +38,22 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Surname </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="lastname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->lastname}}" required> 
+                                        <input type="text" name="lastname" class="form-control" id="recipient-name1" value="{{$employee->lastname}}" required> 
                                     </div>
                                    <div class="form-group col-md-4 m-t-20">
                                         <label>First Name</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="firstname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->firstname}}" required>
+                                        <input type="text" name="firstname" class="form-control" id="recipient-name1" value="{{$employee->firstname}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Middle Name</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->middlename}}">
+                                        <input type="text" name="middlename" class="form-control" id="recipient-name1" value="{{$employee->middlename}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Name Extension (Jr., Sr)</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" minlength="0" maxlength="25" value="{{$employee->suffix}}">
+                                        <input type="text" name="suffix" class="form-control" id="recipient-name1" value="{{$employee->suffix}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Birth </label>
@@ -68,22 +68,22 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Purok/Street</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="address" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->address}}" required>
+                                        <input type="text" name="address" class="form-control" id="recipient-name1" value="{{$employee->address}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Barangay</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="barangay" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->barangay}}" required>
+                                        <input type="text" name="barangay" class="form-control" id="recipient-name1" value="{{$employee->barangay}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Municipality</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="municipality" class="form-control form-control-line" value="{{$employee->municipality}}" minlength="2" required > 
+                                        <input type="text" name="municipality" class="form-control form-control-line" value="{{$employee->municipality}}" required > 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Town/Province</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="province" class="form-control form-control-line" value="{{$employee->province}}" minlength="2" required > 
+                                        <input type="text" name="province" class="form-control form-control-line" value="{{$employee->province}}" required > 
                                     </div>
                                      <div class="form-group col-md-4 m-t-20">
                                         <label for="maritalstatus">Civil Status</label>
@@ -121,7 +121,7 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Mobile Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="contactnumber" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->contactnumber}}" required>
+                                        <input type="text" name="contactnumber" class="form-control" id="recipient-name1" value="{{$employee->contactnumber}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Person to Contact in Case of Emergency</label>
@@ -131,47 +131,47 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Contact Number of Contact Person</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="contact" class="form-control" minlength="11" value="{{$employee->contact}}" placeholder="" required> 
+                                        <input type="text" name="contact" class="form-control" value="{{$employee->contact}}" placeholder="" required> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Personal Email </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="personalemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->personalemail}}" required>
+                                        <input type="text" name="personalemail" class="form-control" id="recipient-name1" value="{{$employee->personalemail}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Corporate Email </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="corporateemail" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->corporateemail}}">
+                                        <input type="text" name="corporateemail" class="form-control" id="recipient-name1" value="{{$employee->corporateemail}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>GSIS ID Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="gsis" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->gsis}}">
+                                        <input type="text" name="gsis" class="form-control" id="recipient-name1" value="{{$employee->gsis}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>PAG-IBIG ID Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="pagibig" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->pagibig}}">
+                                        <input type="text" name="pagibig" class="form-control" id="recipient-name1" value="{{$employee->pagibig}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Philhealth Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="philhealth" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->philhealth}}">
+                                        <input type="text" name="philhealth" class="form-control" id="recipient-name1" value="{{$employee->philhealth}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>SSS Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="sss" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->sss}}">
+                                        <input type="text" name="sss" class="form-control" id="recipient-name1" value="{{$employee->sss}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Tin Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="tin" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->tin}}">
+                                        <input type="text" name="tin" class="form-control" id="recipient-name1" value="{{$employee->tin}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>UMID</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="umid" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->umid}}">
+                                        <input type="text" name="umid" class="form-control" id="recipient-name1" value="{{$employee->umid}}">
                                     </div>
                                     <br>
                                     <div class="col-md-12">
@@ -326,37 +326,37 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>CSC Professional Eligibility </label>
                                       <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="csc" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->csc}}">
+                                        <input type="text" name="csc" class="form-control" id="recipient-name1" value="{{$employee->csc}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Rating</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="rating" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->rating}}">
+                                        <input type="text" name="rating" class="form-control" id="recipient-name1" value="{{$employee->rating}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date of Examination/Conferment </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="dateofexamination" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofexamination}}">
+                                        <input type="text" name="dateofexamination" class="form-control" id="recipient-name1" value="{{$employee->dateofexamination}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Place of Examination </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="placeofexamination" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->placeofexamination}}">
+                                        <input type="text" name="placeofexamination" class="form-control" id="recipient-name1" value="{{$employee->placeofexamination}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>License Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="licensenumber" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->licensenumber}}">
+                                        <input type="text" name="licensenumber" class="form-control" id="recipient-name1" value="{{$employee->licensenumber}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Issuance-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="date" name="dateofissuance" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofissuance}}">
+                                        <input type="date" name="dateofissuance" class="form-control" id="recipient-name1" value="{{$employee->dateofissuance}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Validity-PRC ID </label>
                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="date" name="dateofvalidity" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofvalidity}}">
+                                        <input type="date" name="dateofvalidity" class="form-control" id="recipient-name1" value="{{$employee->dateofvalidity}}">
                                     </div>
                                  <br>
                                 <div class="col-md-12">
@@ -366,12 +366,12 @@
                                      <div class="form-group col-md-4 m-t-20">
                                         <label>Personnel ID</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="personnel" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->personnel}}" required>
+                                        <input type="text" name="personnel" class="form-control" id="recipient-name1" value="{{$employee->personnel}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Biometric Number</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="biometric" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->biometric}}" required>
+                                        <input type="text" name="biometric" class="form-control" id="recipient-name1" value="{{$employee->biometric}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Employment Status</label>
@@ -439,15 +439,15 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Joining</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="date" name="dateofjoining" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofjoining}}" required>
+                                        <input type="date" name="dateofjoining" class="form-control" id="recipient-name1" value="{{$employee->dateofjoining}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Leaving </label>
-                                        <input type="date" name="dateofleaving" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofleaving}}">
+                                        <input type="date" name="dateofleaving" class="form-control" id="recipient-name1" value="{{$employee->dateofleaving}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Mandatory Retirement</label>
-                                        <input type="date" name="dateofretirement" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="{{$employee->dateofretirement}}" required>
+                                        <input type="date" name="dateofretirement" class="form-control" id="recipient-name1" value="{{$employee->dateofretirement}}" required>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Salary Grade</label>
