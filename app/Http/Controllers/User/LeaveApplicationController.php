@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Leaveapplication;
 
-class LeaveapplicationController extends Controller
+class LeaveApplicationController extends Controller
 {
        public function index()
     {
