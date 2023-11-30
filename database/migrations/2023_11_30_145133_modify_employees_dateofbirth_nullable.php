@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('user_roles', function (Blueprint $table) {
-        $table->dropUnique('user_roles_roleid_unique'); 
-        $table->integer('roleid')->unique()->change();
-        $table->dropUnique('user_roles_role_name_unique'); 
-        $table->string('role_name')->unique()->change();  
-    });
+        Schema::table('employees', function (Blueprint $table) {
+            $table->string('dateofbirth')->nullable()->change();
+            $table->string('contactnumber')->nullable()->change();
+            $table->string('persontocontact')->nullable()->change();
+            $table->string('contact')->nullable()->change();
+        });
     }
 
     /**
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-
+        //
     }
 };
