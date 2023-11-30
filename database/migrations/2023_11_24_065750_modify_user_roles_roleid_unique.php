@@ -24,11 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('user_roles', function (Blueprint $table) {
-        $table->dropUnique('user_roles_roleid_unique');
-        $table->string('roleid')->unique(false)->change();
-        $table->dropUnique('user_roles_role_name_unique');
-        $table->string('role_name')->unique(false)->change();
-    });
+        
     }
 };
