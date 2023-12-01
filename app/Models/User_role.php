@@ -10,6 +10,11 @@ class User_role extends Model
     protected $fillable = [
         'userid',
         'roleid',
+        'role_name',
+    ];
+
+    protected $attributes = [
         'role_name' => 'user',
     ];
+
 }

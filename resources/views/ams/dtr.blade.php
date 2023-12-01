@@ -140,7 +140,27 @@
                             hDates[i].hDays.push(sDate);
                         }
                     }
-                    // console.log(employee);
+                    let month = @json($month);
+                    let year = @json($year);
+                    // Get the first and last day of the month
+                    var firstDay = new Date(year, month - 1, 1);
+                    var lastDay = new Date(year, month, 0);
+
+                    // Initialize an array to store Saturdays and Sundays
+                    var weekends = [];
+                    var dayName = '';
+                    var dat = '';
+                    
+                    // Iterate through the days of the month
+                    for (var day = firstDay; day <= lastDay; day.setDate(day.getDate() + 1)) {
+                        // Check if the current day is a Saturday or Sunday
+                        if (day.getDay() === 0 || day.getDay() === 6) {
+                            dayName = day.toLocaleDateString('en-US', { weekday: 'long' });
+                            dat = new Date(day).getDate();
+                            weekends.push({d:dayName,dte:dat}); // Store the date
+                        }
+                    }
+                    console.log(weekends);
                     if(employee[stat]['status'] == "Job Order" || employee[stat]['status'] == "Casual"){
                         
                         dates.textContent = '1-15';
@@ -283,10 +303,23 @@
                             
                             if(!isHoliday && !present){
                                 // absent or saturday & sunday
-                                document.write("<th></th>");
-                                document.write("<th></th>");
-                                document.write("<th></th>");
-                                document.write("<th></th>");
+                                var isWeekends = false;
+                                for(var d = 0;d < weekends.length; d++){
+                                    if(i == weekends[d]['dte']){
+                                        document.write('<th colspan="2">'+weekends[d]['d']+'</th>');
+                                        document.write("<th></th>");
+                                        document.write("<th></th>");
+                                        isWeekends = true;
+                                        break;
+                                    }
+                                    
+                                }
+                                if(!isWeekends){
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                }
                             }
                             document.write("<th></th>");
                             document.write("<th></th>");
@@ -440,10 +473,23 @@
                            
                             if(!isHoliday && !present){
                                 // absent or saturday & sunday
-                                document.write("<th></th>");
-                                document.write("<th></th>");
-                                document.write("<th></th>");
-                                document.write("<th></th>");
+                                var isWeekends = false;
+                                for(var d = 0;d < weekends.length; d++){
+                                    if(i == weekends[d]['dte']){
+                                        document.write('<th colspan="2">'+weekends[d]['d']+'</th>');
+                                        document.write("<th></th>");
+                                        document.write("<th></th>");
+                                        isWeekends = true;
+                                        break;
+                                    }
+                                    
+                                }
+                                if(!isWeekends){
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                }
                             }
                             document.write("<th></th>");
                             document.write("<th></th>");
@@ -752,10 +798,23 @@
                             
                             if(!isHoliday && !present){
                                 // absent or saturday & sunday
-                                document.write("<th></th>");
-                                document.write("<th></th>");
-                                document.write("<th></th>");
-                                document.write("<th></th>");
+                                var isWeekends = false;
+                                for(var d = 0;d < weekends.length; d++){
+                                    if(i == weekends[d]['dte']){
+                                        document.write('<th colspan="2">'+weekends[d]['d']+'</th>');
+                                        document.write("<th></th>");
+                                        document.write("<th></th>");
+                                        isWeekends = true;
+                                        break;
+                                    }
+                                    
+                                }
+                                if(!isWeekends){
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                }
                             }
                             document.write("<th></th>");
                             document.write("<th></th>");
@@ -895,10 +954,23 @@
                            
                             if(!isHoliday && !present){
                                 // absent or saturday & sunday
-                                document.write("<th></th>");
-                                document.write("<th></th>");
-                                document.write("<th></th>");
-                                document.write("<th></th>");
+                                var isWeekends = false;
+                                for(var d = 0;d < weekends.length; d++){
+                                    if(i == weekends[d]['dte']){
+                                        document.write('<th colspan="2">'+weekends[d]['d']+'</th>');
+                                        document.write("<th></th>");
+                                        document.write("<th></th>");
+                                        isWeekends = true;
+                                        break;
+                                    }
+                                    
+                                }
+                                if(!isWeekends){
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                    document.write("<th></th>");
+                                }
                             }
                             document.write("<th></th>");
                             document.write("<th></th>");

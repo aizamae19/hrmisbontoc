@@ -220,7 +220,7 @@
   
     $(".select2").select2();
     </script>
-   <!-  <script src="http://hrsystem-ci.test\/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script> -->
+   <!--  <script src="http://hrsystem-ci.test\/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script> -->
 
  -->
 

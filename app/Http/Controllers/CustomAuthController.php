@@ -32,25 +32,26 @@ class CustomAuthController extends Controller
     public function customLogin(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'email' => 'required|email',
             'password' => 'required',
         ]);
-    
+
         $credentials = $request->only('email', 'password');
-        
 
         if (Auth::attempt($credentials)) {
-             $role = User_role::where('userid',Auth::user()->id)->first();
+            $user = Auth::user();
 
-            if ($role->roleid== ""){
-                 return redirect('/admin');
-            } elseif ($role->roleid==2){
-                 return redirect('/user');
-            
+            $role = User_role::where('userid', $user->id)->first();
+
+            if ($role) {
+                if ($role->roleid == 1) {
+                    return redirect('/admin');
+                } elseif ($role->roleid == 2) {
+                    return redirect('/user');
+                }
             }
         }
-
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect("login")->with('error', 'Invalid credentials');
     }
  
  
@@ -68,7 +69,7 @@ class CustomAuthController extends Controller
         'username' => 'required',
         'email' => 'required|email|unique:users',
         'password' => 'required|min:6',
-        'user' => 'required'
+        'user' => 'required',
     ]);
 
     $data = $request->all();
@@ -77,7 +78,8 @@ class CustomAuthController extends Controller
 
     User_role::create([
         'userid' => $user->id,
-        'roleid' => $roleId
+        'roleid' => $roleId,
+        'role_name' => 'user',
     ]);
 
     return redirect("login")->withSuccess('You have signed-in');
@@ -90,7 +92,7 @@ public function create(array $data)
         'email' => $data['email'],
         'username' => $data['username'],
         'password' => Hash::make($data['password']),
-        'user' => $data['user']
+        'user' => $data['user'],
     ]);
 }    
      
