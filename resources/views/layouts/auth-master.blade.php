@@ -11,9 +11,10 @@
     <meta name="keywords" content="Colorlib Templates">
 
 
-    <title>Register</title>
+    <title>Register User</title>
 
     <!-- Icons font CSS-->
+    <link rel="icon" type="image/png" href="../assets/images/logo1.png"/>
     <link href="registration/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="registration/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->

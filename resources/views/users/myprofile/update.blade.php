@@ -53,7 +53,7 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Birth </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" value="{{$employee->dateofbirth}}" placeholder="" required> 
+                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" value="{{$employee->dateofbirth}}" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Place Of Birth </label>
@@ -116,17 +116,17 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Mobile Number </label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="contactnumber" class="form-control" id="recipient-name1" value="{{$employee->contactnumber}}" required>
+                                        <input type="text" name="contactnumber" class="form-control" id="recipient-name1" value="{{$employee->contactnumber}}">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Person to Contact in Case of Emergency</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="persontocontact" class="form-control" value="{{$employee->persontocontact}}" placeholder="" required> 
+                                        <input type="text" name="persontocontact" class="form-control" value="{{$employee->persontocontact}}" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Contact Number of Contact Person</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="contact" class="form-control" value="{{$employee->contact}}" placeholder="" required> 
+                                        <input type="text" name="contact" class="form-control" value="{{$employee->contact}}" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Personal Email </label>

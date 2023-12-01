@@ -21,7 +21,10 @@
                         
                         
                         <div class="wrap-input100 validate-input" data-validate="Password is required">
-                            <input class="input100" type="password" name="password">
+                            <span class="toggle-password" onclick="togglePasswordVisibility()" style="position: absolute; right: 8px; top: 67%; transform: translateY(-50%);">
+                                    <i class="fa fa-fw fa-eye field-icon" id="toggleIcon"></i>
+                            </span>
+                            <input class="input100" type="password" name="password" id="password-field">
                             <span class="focus-input100"></span>
                             <span class="label-input100">Password</span>
                         </div>
@@ -71,6 +74,21 @@
     <script src="vendor/countdowntime/countdowntime.js"></script>
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        function togglePasswordVisibility() {
+    const passwordField = document.getElementById('password-field');
+    const toggleIcon = document.getElementById('toggleIcon');
 
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleIcon.classList.remove('fa-eye');
+        toggleIcon.classList.add('fa-eye-slash');
+    } else {
+        passwordField.type = "password";
+        toggleIcon.classList.remove('fa-eye-slash');
+        toggleIcon.classList.add('fa-eye');
+    }
+}
+    </script>
 @endsection
     

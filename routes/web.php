@@ -17,11 +17,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         });
         Route::group(['middleware' => ['guest']], function() {
             Route::get('/login', [CustomAuthController::class, 'index'])->name('login');
-            Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
-
-
-            Route::get('/register', [CustomAuthController::class, 'register'])->name('register');
-            Route::post('/register', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+            Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');  
 
         });
         Route::group(['middleware' => ['auth']], function() {
@@ -45,6 +41,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
             Route::post('/attendances/import/csv', [App\Http\Controllers\ams\attendancesController::class, 'import_csv'])->name('importcsv');
 
+            #ADD USER
+            Route::get('/register', [CustomAuthController::class, 'register'])->name('register');
+            Route::post('/register', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 
             #EMPLOYEES-EMPLOYEE
             Route::get('/admin/employees/employee', [App\Http\Controllers\Admin\EmployeeController::class, 'employeeemployees'])->name('employee.employees');

@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Birth </label>
-                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" value="" placeholder="" required> 
+                                        <input type="date" name="dateofbirth" id="dateofbirth" class="form-control" value="" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Place Of Birth </label>
@@ -108,15 +108,15 @@
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Mobile Number </label>
-                                        <input type="text" name="contactnumber" class="form-control" id="recipient-name1" value="" required>
+                                        <input type="text" name="contactnumber" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Person to Contact in Case of Emergency</label>
-                                        <input type="text" name="persontocontact" class="form-control" value="" placeholder="" required> 
+                                        <input type="text" name="persontocontact" class="form-control" value="" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Contact Number of Contact Person</label>
-                                        <input type="text" name="contact" class="form-control" value="" placeholder="" required> 
+                                        <input type="text" name="contact" class="form-control" value="" placeholder=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Personal Email </label>

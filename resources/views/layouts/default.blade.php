@@ -157,7 +157,7 @@
                         </li>
                         
                         <li> <a href="{{ route('notice') }}" ><i class="mdi mdi-clipboard"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
-                        <li> <a href="" ><i class="mdi mdi-account"></i><span class="hide-menu">Add User <span class="hide-menu"></a></li>
+                        <li> <a href="{{ route('register') }}" ><i class="mdi mdi-account"></i><span class="hide-menu">Add User <span class="hide-menu"></a></li>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
