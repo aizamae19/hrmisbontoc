@@ -61,31 +61,38 @@ class CustomAuthController extends Controller
     }
        
  
-    public function customRegistration(Request $request) 
-    {  
-        $request->validate([
-            'name' => 'required',
-            'username' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-        ]);
-            
-        $data = $request->all();
-        $check = $this->create($data);
-          
-        return redirect("login")->withSuccess('You have signed-in');
-    }
- 
- 
-    public function create(array $data)
-    {
-      return User::create([
+    public function customRegistration(Request $request)
+{
+    $request->validate([
+        'name' => 'required',
+        'username' => 'required',
+        'email' => 'required|email|unique:users',
+        'password' => 'required|min:6',
+        'user' => 'required'
+    ]);
+
+    $data = $request->all();
+    $user = $this->create($data);
+    $roleId = $data['user'] == 'user' ? 2 : 1;
+
+    User_role::create([
+        'userid' => $user->id,
+        'roleid' => $roleId
+    ]);
+
+    return redirect("login")->withSuccess('You have signed-in');
+}
+
+public function create(array $data)
+{
+    return User::create([
         'name' => $data['name'],
         'email' => $data['email'],
-        'username' =>$data['username'],
-        'password' => Hash::make($data['password'])
-      ]);
-    }    
+        'username' => $data['username'],
+        'password' => Hash::make($data['password']),
+        'user' => $data['user']
+    ]);
+}    
      
  
     public function signOut() {
