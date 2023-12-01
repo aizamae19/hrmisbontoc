@@ -23,7 +23,6 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 .row-space {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;

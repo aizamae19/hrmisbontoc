@@ -40,6 +40,17 @@
                             </div>
                         </div>
                         </div>
+                        <div class="row row-space">
+                        <div class="col-10">
+                            <div class="input-group">
+                                <label class="label">Add Category</label>
+                                <select name="user" class="user-select" style="padding: 10px 215px; border: 1px solid #ccc; border-radius: 4px;">
+                                <option style="font-style: italic; color: #999;">Select Category</option>
+                                <option value="user" style="font-size: 15px;">User</option>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
                         <div class="p-t-15">
                             <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
                         </div>
