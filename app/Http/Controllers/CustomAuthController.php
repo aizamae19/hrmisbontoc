@@ -1,34 +1,37 @@
 <?php
- 
+
 namespace App\Http\Controllers;
- 
+
+use App\Http\Controllers\Controller; // Add this import
 use Illuminate\Http\Request;
-use Hash;
-use Session;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use App\Models\User;
 use App\Models\User_role;
 
 class CustomAuthController extends Controller
 {
- 
+    public function redirectTo()
+    {
+        $role = User_role::where('userid', Auth::user()->id)->first();
 
-    public function redirectTo(){
-         $role = User_role::where('userid',Auth::user()->id)->first();
-         dd($role);
-        if ($role->roleid==1){
-             return '/admin';
-        }  elseif ($role->roleid==2){
-             return '/user';
+        if ($role) {
+            if ($role->roleid == 1) {
+                return '/admin';
+            } elseif ($role->roleid == 2) {
+                return '/user';
+            }
         }
+
+        return '/login'; // Handle if role is not found
     }
 
     public function index()
     {
         return view('auth.login');
-    }  
-       
- 
+    }
+
     public function customLogin(Request $request)
     {
         $request->validate([
@@ -51,56 +54,54 @@ class CustomAuthController extends Controller
                 }
             }
         }
-        return redirect("login")->with('error', 'Invalid credentials');
+
+        return redirect("/login")->with('error', 'Invalid credentials');
     }
- 
- 
- 
+
     public function register()
     {
         return view('auth.register');
     }
-       
- 
+
     public function customRegistration(Request $request)
-{
-    $request->validate([
-        'name' => 'required',
-        'username' => 'required',
-        'email' => 'required|email|unique:users',
-        'password' => 'required|min:6',
-        'user' => 'required',
-    ]);
+    {
+        $request->validate([
+            'name' => 'required',
+            'username' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+            'type' => 'required|in:user,admin',
+        ]);
 
-    $data = $request->all();
-    $user = $this->create($data);
-    $roleId = $data['user'] == 'user' ? 2 : 1;
+        $data = $request->all();
+        $user = $this->create($data);
+        $roleId = $data['type'] == 'user' ? 2 : 1; 
 
-    User_role::create([
-        'userid' => $user->id,
-        'roleid' => $roleId,
-        'role_name' => 'user',
-    ]);
+        User_role::create([
+            'userid' => $user->id,
+            'roleid' => $roleId,
+            'role_name' => $data['type'],
+        ]);
 
-    return redirect("login")->withSuccess('You have signed-in');
-}
+        return redirect("/login")->with('success', 'You have signed in');
+    }
 
-public function create(array $data)
-{
-    return User::create([
-        'name' => $data['name'],
-        'email' => $data['email'],
-        'username' => $data['username'],
-        'password' => Hash::make($data['password']),
-        'user' => $data['user'],
-    ]);
-}    
-     
- 
-    public function signOut() {
+    public function create(array $data)
+    {
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'username' => $data['username'],
+            'password' => Hash::make($data['password']),
+            'type' => $data['type'],
+        ]);
+    }
+
+    public function signOut()
+    {
         Session::flush();
         Auth::logout();
-   
-        return Redirect('login');
+
+        return redirect('/login');
     }
 }

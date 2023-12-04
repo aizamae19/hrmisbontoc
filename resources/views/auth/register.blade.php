@@ -19,7 +19,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="text" name="email">
+                                    <input class="input--style-4" type="text" name="email"placeholder = "example@gmail.com">
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                                           style="position: absolute; right: 8px; top: 70%; transform: translateY(-50%);">
                                         <i class="fa fa-fw fa-eye field-icon" id="toggleIcon"></i>
                                     </span>
-                                    <input class="input--style-4" type="password" name="password" id="password-field">
+                                    <input class="input--style-4" type="password" name="password" id="password-field" >
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Select Category</label>
-                                    <select name="user" class="user-select" class="user-select" style="padding: 10px 245px; border: 1px solid #ccc; border-radius: 4px;">
+                                    <select name="type" class="user-select" class="user-select" style="padding: 10px 245px; border: 1px solid #ccc; border-radius: 4px;">
                                 <option style="font-style: italic; color: #999;">
                                         <option value="user">User</option>
                                         <option value="admin">Admin</option>

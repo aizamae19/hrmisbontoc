@@ -35,7 +35,7 @@
                                                 <th>Employee Name</th>
                                                 <th>Department</th>
                                                 <th>Position</th>
-                                                <th>Status</th>
+                                                <th>Employment Status</th>
                                                 <th>Date of Joining</th>
                                                 <th>Action</th>
                                             </tr>
