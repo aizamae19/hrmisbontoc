@@ -22,9 +22,9 @@ return new class extends Migration
             $table->date('dateofbirth');
             $table->string('gender');
             $table->string('bloodtype')->nullable();
-            $table->string('contactnumber')->unique();
-            $table->string('persontocontact')->unique();
-            $table->string('personalemail')->unique();
+            $table->string('contactnumber');
+            $table->string('persontocontact');
+            $table->string('personalemail');
             $table->string('corporateemail');
             $table->timestamps();
         });

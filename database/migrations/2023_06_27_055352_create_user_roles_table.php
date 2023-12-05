@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('user_roles', function (Blueprint $table) {
             $table->id()->autoincrement();
             $table->integer('userid');
-            $table->integer('roleid')->unique();
-            $table->string('role_name')->unique();
+            $table->integer('roleid');
+            $table->string('role_name');
             $table->timestamps();
         });
     }
