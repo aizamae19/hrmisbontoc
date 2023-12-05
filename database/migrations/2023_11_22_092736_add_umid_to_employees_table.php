@@ -12,26 +12,26 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('employees', function (Blueprint $table) {
-            $table->string('umid')->nullable()->after('tin');
-            $table->string('spousesurname')->after('umid');
-            $table->string('spousefirstname')->after('spousesurname');
-            $table->string('spousemiddlename')->nullable()->after('spousefirstname');
-            $table->string('occupation')->after('spousemiddlename');
+            $table->text('umid')->nullable()->after('tin');
+            $table->text('spousesurname')->after('umid');
+            $table->text('spousefirstname')->after('spousesurname');
+            $table->text('spousemiddlename')->nullable()->after('spousefirstname');
+            $table->text('occupation')->after('spousemiddlename');
             $table->string('businessname')->nullable()->after('occupation');
             $table->string('businessaddress')->nullable()->after('businessname');
             $table->string('telephone')->nullable()->after('businessaddress');
-            $table->string('extension')->nullable()->after('telephone');
-            $table->string('fathersurname')->after('extension');
-            $table->string('fatherfirstname')->after('fathersurname');
-            $table->string('fathermiddlename')->nullable()->after('fatherfirstname');
+            $table->text('extension')->nullable()->after('telephone');
+            $table->text('fathersurname')->after('extension');
+            $table->text('fatherfirstname')->after('fathersurname');
+            $table->text('fathermiddlename')->nullable()->after('fatherfirstname');
             $table->string('nameextension')->nullable()->after('fathermiddlename');
-            $table->string('maidenname')->after('nameextension');
+            $table->text('maidenname')->after('nameextension');
             $table->string('mothersurname')->after('maidenname');
             $table->string('motherfirstname')->after('mothersurname');
-            $table->string('mothermiddlename')->nullable()->after('motherfirstname');
+            $table->text('mothermiddlename')->nullable()->after('motherfirstname');
             $table->string('elementaryschool')->after('mothermiddlename');
             $table->string('secondaryschool')->after('elementaryschool');
-            $table->string('vocationalschool')->nullable()->after('secondaryschool');
+            $table->text('vocationalschool')->nullable()->after('secondaryschool');
             $table->string('graduatestudies')->nullable()->after('vocationalschool');
             $table->string('secondarybasiceducation')->nullable()->after('graduatestudies');
             $table->string('vocationalbasiceducation')->nullable()->after('secondarybasiceducation');
