@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 use App\Models\User_role;
+use App\Models\User;
 
 class RedirectIfAuthenticated
 {
@@ -23,13 +24,12 @@ class RedirectIfAuthenticated
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
                 $role = User_role::where('userid',Auth::user()->id)->first();
-                if (Auth::user() && $role->roleid==1){
-                     return redirect('/admin');
-                } elseif ($role && $role->roleid == 2) {
-                    return redirect('/user');
-                } else {
-                    // Handle cases where the role is not found or invalid
-                    return redirect('/login'); // Redirect to a default page or handle accordingly
+                if(isset($role)){
+                    if(Auth::user() && $role->roleid==1){
+                         return redirect('/admin');
+                    }elseif (Auth::user() && $role->roleid == 2) {
+                        return redirect('/user');
+                    }
                 }
             }
         }

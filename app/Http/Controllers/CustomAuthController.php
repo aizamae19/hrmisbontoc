@@ -14,15 +14,13 @@ class CustomAuthController extends Controller
 {
     public function redirectTo()
     {
-        $role = User_role::where('userid', Auth::user()->id)->first();
-
-        if ($role) {
+        $role = User_role::where('userid', Auth::user()->type)->first();
+        dd($role);
             if ($role->roleid == 1) {
                 return '/admin';
             } elseif ($role->roleid == 2) {
                 return '/user';
             }
-        }
 
         return '/login'; // Handle if role is not found
     }
@@ -42,17 +40,12 @@ class CustomAuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            $user = Auth::user();
-
-            $role = User_role::where('userid', $user->id)->first();
-
-            if ($role) {
-                if ($role->roleid == 1) {
+            $role = User_role::where('userid', Auth::user()->type)->first();
+                if (Auth::user() && $role->roleid == 1) {
                     return redirect('/admin');
-                } elseif ($role->roleid == 2) {
-                    return redirect('/user');
+                }elseif (Auth::user() && $role->roleid == 2) {
+                    return redirect()->intended('/user');
                 }
-            }
         }
 
         return redirect("/login")->with('error', 'Invalid credentials');
@@ -70,17 +63,16 @@ class CustomAuthController extends Controller
             'username' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
-            'type' => 'required|in:user,admin',
+            'type' => 'required'
         ]);
-
+        $data['password'] = Hash::make($request->password);
         $data = $request->all();
         $user = $this->create($data);
-        $roleId = $data['type'] == 'user' ? 2 : 1; 
 
         User_role::create([
-            'userid' => $user->id,
-            'roleid' => $roleId,
-            'role_name' => $data['type'],
+            'userid' => $user->type,
+            'roleid' => $request->type,
+            'role_name' =>$user->name,
         ]);
 
         return redirect("/login")->with('success', 'You have signed in');
@@ -93,7 +85,7 @@ class CustomAuthController extends Controller
             'email' => $data['email'],
             'username' => $data['username'],
             'password' => Hash::make($data['password']),
-            'type' => $data['type'],
+            'type' => $data['type']
         ]);
     }
 

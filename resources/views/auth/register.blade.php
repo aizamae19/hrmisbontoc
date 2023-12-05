@@ -45,10 +45,10 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Select Category</label>
-                                    <select name="type" class="user-select" class="user-select" style="padding: 10px 245px; border: 1px solid #ccc; border-radius: 4px;">
-                                <option style="font-style: italic; color: #999;">
-                                        <option value="user">User</option>
-                                        <option value="admin">Admin</option>
+                                    <select name="type" class="input--style-4" class="user-select" style="padding: 10px 240px; border: 1px solid #ccc; border-radius: 4px;">
+                                        <option style="font-style: italic; color: #999;">
+                                        <option value="2">User</option>
+                                        <option value="1">Admin</option>
                                     </select>
                                 </div>
                             </div>
