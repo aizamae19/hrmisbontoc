@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('employees', function (Blueprint $table) {
-            $table->string('certification')->after('dateofvalidity');
+            $table->string('certification')->nullable()->after('dateofvalidity');
         });
     }
 

@@ -487,7 +487,7 @@
                         {{ $employees->certification }}
                     </div>
                   </div>
-                </div>
+                  <hr>
                     <br>
                   <div>
                     <h3>Work Background</h3>
@@ -582,7 +582,6 @@
                     <div class="col-sm-9 text-black">
                         {{ $employees->step }}
                     </div>
-                  </div>
                     </div>
                 </div>
               </div>
