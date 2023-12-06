@@ -35,7 +35,7 @@
                 <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Surname</h6>
+                      <h6 class="mb-0">Last Name</h6>
                     </div>
                     <div class="col-sm-9 text-black">
                        {{ $employees->lastname }} 
@@ -238,7 +238,7 @@
                   <hr>
                    <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">TIN Number</h6>
+                      <h6 class="mb-0">TIN</h6>
                     </div>
                     <div class="col-sm-9 text-black">
                         {{ $employees->tin }}
@@ -262,7 +262,7 @@
                   <hr>
                    <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Spouse's Surname</h6>
+                      <h6 class="mb-0">Spouse's Lastname</h6>
                     </div>
                     <div class="col-sm-9 text-black">
                         {{ $employees->spousesurname }}
@@ -334,37 +334,10 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Father Surname</h6>
+                      <h6 class="mb-0">Father's Name</h6>
                     </div>
                     <div class="col-sm-9 text-black">
                         {{ $employees->fathersurname }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Father Firstname</h6>
-                    </div>
-                    <div class="col-sm-9 text-black">
-                        {{ $employees->fatherfirstname }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Father Middlename</h6>
-                    </div>
-                    <div class="col-sm-9 text-black">
-                        {{ $employees->fathermiddlename }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Name Extension</h6>
-                    </div>
-                    <div class="col-sm-9 text-black">
-                        {{ $employees->nameextension }}
                     </div>
                   </div>
                   <hr>
@@ -374,33 +347,6 @@
                     </div>
                     <div class="col-sm-9 text-black">
                         {{ $employees->maidenname }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Mother Surname</h6>
-                    </div>
-                    <div class="col-sm-9 text-black">
-                        {{ $employees->mothersurname }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Mother Firstname</h6>
-                    </div>
-                    <div class="col-sm-9 text-black">
-                        {{ $employees->motherfirstname }}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Mother Middlename</h6>
-                    </div>
-                    <div class="col-sm-9 text-black">
-                        {{ $employees->mothermiddlename }}
                     </div>
                   </div>
                   <hr>
@@ -508,7 +454,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">License Number</h6>
+                      <h6 class="mb-0">PRC - License Number</h6>
                     </div>
                     <div class="col-sm-9 text-black">
                         {{ $employees->licensenumber}}
@@ -533,6 +479,15 @@
                     </div>
                   </div>
                     <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Additional Certification (if any)</h6>
+                    </div>
+                    <div class="col-sm-9 text-black">
+                        {{ $employees->certification }}
+                    </div>
+                  </div>
+                </div>
                     <br>
                   <div>
                     <h3>Work Background</h3>

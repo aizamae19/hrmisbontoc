@@ -60,13 +60,8 @@ class EmployeeController extends Controller
         $employeesave->telephone = $request->telephone;
         $employeesave->extension = $request->extension;
         $employeesave->fathersurname = $request->fathersurname;
-        $employeesave->fatherfirstname = $request->fatherfirstname;
-        $employeesave->fathermiddlename = $request->fathermiddlename;
-        $employeesave->nameextension = $request->nameextension;
         $employeesave->maidenname = $request->maidenname;
         $employeesave->mothersurname = $request->mothersurname;
-        $employeesave->motherfirstname = $request->motherfirstname;
-        $employeesave->mothermiddlename = $request->mothermiddlename;
         $employeesave->elementaryschool = $request->elementaryschool;
         $employeesave->secondaryschool = $request->secondaryschool;
         $employeesave->secondhighestlevel = $request->secondhighestlevel;
@@ -94,6 +89,7 @@ class EmployeeController extends Controller
         $employeesave->csc = $request ->csc;
         $employeesave->dateofissuance = $request ->dateofissuance;
         $employeesave->dateofvalidity = $request ->dateofvalidity;
+        $employeesave->certification = $request ->certification;
         $employeesave->personnel = $request ->personnel;
         $employeesave->biometric = $request ->biometric;
         $employeesave->status = $request ->status;
@@ -155,13 +151,8 @@ class EmployeeController extends Controller
         $Updatesave->telephone = $request->telephone;
         $Updatesave->extension = $request->extension;
         $Updatesave->fathersurname = $request->fathersurname;
-        $Updatesave->fatherfirstname = $request->fatherfirstname;
-        $Updatesave->fathermiddlename = $request->fathermiddlename;
-        $Updatesave->nameextension = $request->nameextension;
         $Updatesave->maidenname = $request->maidenname;
         $Updatesave->mothersurname = $request->mothersurname;
-        $Updatesave->motherfirstname = $request->motherfirstname;
-        $Updatesave->mothermiddlename = $request->mothermiddlename;
         $Updatesave->elementaryschool = $request->elementaryschool;
         $Updatesave->secondaryschool = $request->secondaryschool;
         $Updatesave->secondhighestlevel = $request->secondhighestlevel;
@@ -189,6 +180,7 @@ class EmployeeController extends Controller
         $Updatesave->csc = $request ->csc;
         $Updatesave->dateofissuance = $request ->dateofissuance;
         $Updatesave->dateofvalidity = $request ->dateofvalidity;
+        $Updatesave->certification = $request ->certification;
         $Updatesave->personnel = $request ->personnel;
         $Updatesave->biometric = $request ->biometric;
         $Updatesave->status = $request ->status;

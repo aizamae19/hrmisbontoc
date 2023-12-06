@@ -134,7 +134,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/user/notice', [App\Http\Controllers\User\NoticeController::class, 'index'])->name('usernotice');
             
              #LEAVE-HOLIDAY
-            Route::get('/user/leave/holiday', [App\Http\Controllers\User\HolidayController::class, 'holidayleave'])->name('userleave.holiday');
+            Route::get('/user/holiday', [App\Http\Controllers\User\HolidayController::class, 'holidayleave'])->name('userleave.holiday');
 
             #LEAVE-EARNED LEAVE
              Route::get('/user/leave/earnedleave', [App\Http\Controllers\User\EarnedLeaveController::class, 'earnedleaveleave'])->name('userleave.earnedleave');

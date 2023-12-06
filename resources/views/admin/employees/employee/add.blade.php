@@ -34,7 +34,7 @@
                                 <form class="row" action="{{ route('employee.store') }}" method="post" id="formId" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Surname </label>
+                                        <label>Last Name </label>
                                         <input type="text" id="" name="lastname" class="form-control form-control-line" value="" required> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
@@ -94,9 +94,9 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Blood Group</label>
+                                        <label>Blood Type</label>
                                         <select name="bloodtype" class="form-control custom-select">
-                                            <option>Select Blood Group</option>
+                                            <option>Select Blood Type</option>
                                             <option value="O+">O+</option>
                                             <option value="O-">O-</option>
                                             <option value="A+">A+</option>
@@ -143,7 +143,7 @@
                                         <input type="text" name="sss" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Tin Number </label>
+                                        <label>TIN </label>
                                         <input type="text" name="tin" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
@@ -156,7 +156,7 @@
                                    </div>
                                     <br>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Spouse's Surname</label>
+                                        <label>Spouse's Lastname</label>
                                         <input type="text" name="spousesurname" class="form-control form-control-line" value=""> 
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
@@ -188,36 +188,16 @@
                                         <input type="text" name="telephone" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Father's Surname</label>
+                                        <label>Father's Name</label>
                                         <input type="text" name="fathersurname" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Father's Firstname</label>
-                                        <input type="text" name="fatherfirstname" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Father's Middlename</label>
-                                        <input type="text" name="fathermiddlename" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Name Extension (Jr., Sr.)</label>
-                                        <input type="text" name="nameextension" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Mother's Maiden Name</label>
                                         <input type="text" name="maidenname" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Mother's Surname</label>
+                                        <label>Mother's Name</label>
                                         <input type="text" name="mothersurname" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Mother's Firstname</label>
-                                        <input type="text" name="motherfirstname" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
-                                        <label>Mother's Middlename</label>
-                                        <input type="text" name="mothermiddlename" id="example-email2" name="example-email" class="form-control" value="" placeholder="">
                                     </div>
                                     <br>
                         <div class="col-md-12">
@@ -301,7 +281,7 @@
                                         <input type="text" name="placeofexamination" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>License Number </label>
+                                        <label>PRC - License Number </label>
                                         <input type="text" name="licensenumber" class="form-control" id="recipient-name1" value="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
@@ -311,6 +291,10 @@
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Date Of Validity-PRC ID </label>
                                         <input type="date" name="dateofvalidity" class="form-control" id="recipient-name1" value="">
+                                    </div>
+                                    <div class="form-group col-md-4 m-t-20">
+                                        <label>Additional Certification (if any)</label>
+                                        <input type="certification" name="certification" class="form-control" id="recipient-name1" value="">
                                     </div>
                                  <br>
                                 <div class="col-md-12">
