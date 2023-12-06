@@ -5,7 +5,7 @@
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Registration Form</h2>
+                    <h2 class="title">Add User</h2>
                     <form method="POST" action="{{ route('register.custom') }}">
                         @csrf
                         @include('layouts.partials.messages')
