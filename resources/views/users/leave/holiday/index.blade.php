@@ -49,8 +49,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Start Date </th>
-                                                <th>End Date </th>
+                                                <th>Date </th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -59,7 +58,6 @@
                                             <tr>
                                                 <td>{{$holiday->nameofholiday}}</td>
                                                 <td>{{$holiday->startdate}}</td>
-                                                <td>{{$holiday->enddate}}</td>
                                                 </td>
                                                 @endforeach
                                             @endif

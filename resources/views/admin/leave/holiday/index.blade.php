@@ -54,8 +54,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Name of Holiday</th>
-                                                <th>Start Date </th>
-                                                <th>End Date </th>
+                                                <th>Date </th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -65,7 +64,6 @@
                                             <tr>
                                                 <td>{{$holiday->nameofholiday}}</td>
                                                 <td>{{$holiday->startdate}}</td>
-                                                <td>{{$holiday->enddate}}</td>
                                                 <td class="jsgrid-align-center ">
                                                     <a href="{{ url('/holiday/index/edit/').'/'.$holiday->id}}" title="Edit"  class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="1"><i class="fa fa-pencil-square-o"></i></a>
                                                     <a onclick="confirm('Are you sure, you want to delete this?')" href="{{ url('/holiday/index/delete').'/'.$holiday->id}}" title="Delete"  class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="1"><i class="fa fa-trash-o"></i></a>
@@ -93,13 +91,9 @@
                                                 <input type="text" name="nameofholiday" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label">Start Date</label>
+                                                <label class="control-label">Date</label>
                                                 <input type="text" name="startdate" class="form-control mydatetimepickerFull" id="recipient-name1"  value="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label">End Date</label>
-                                                <input type="text" name="enddate" class="form-control mydatetimepickerFull" id="recipient-name1" value="">
-                                            </div>                                      
+                                            </div>                                   
                                         
                                         </div>
                                     <div class="modal-footer">
