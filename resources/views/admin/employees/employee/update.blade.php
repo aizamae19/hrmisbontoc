@@ -224,11 +224,6 @@
                                         <input type="text" name="fathersurname" id="example-email2" name="example-email" class="form-control" value="{{$employee->fathersurname}}" placeholder="">
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
-                                        <label>Mother's Maiden Name</label>
-                                        <input type="hidden" name="id" value="{{$employee->id}}">
-                                        <input type="text" name="maidenname" id="example-email2" name="example-email" class="form-control" value="{{$employee->maidenname}}" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-4 m-t-20">
                                         <label>Mother's Name</label>
                                         <input type="hidden" name="id" value="{{$employee->id}}">
                                         <input type="text" name="mothersurname" id="example-email2" name="example-email" class="form-control" value="{{$employee->mothersurname}}" placeholder="">

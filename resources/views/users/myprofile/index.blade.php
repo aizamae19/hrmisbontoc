@@ -11,9 +11,6 @@
             <img src="{{asset('assets/images/users/userav-min.png')}}" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
             <h5 class="my-3">{{ $employee->firstname }} {{ $employee->middlename }} {{ $employee->lastname }} {{ $employee->suffix}}</h5>
-            <div class="d-flex justify-content-center mb-2">
-              <a href="{{ url('/user/myprofile/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-            </div>
           </div>
         </div>
       </div>
@@ -296,7 +293,7 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Father's Surname</p>
+                <p class="mb-0">Father's Name</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->fathersurname }}</p>
@@ -305,28 +302,10 @@
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Father's Firstname</p>
+                <p class="mb-0">Mother's Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->fatherfirstname }}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Father's Middlename</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->fathermiddlename }}</p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Name Extension (Jr., Sr.)</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">{{ $employee->occupation }}</p>
+                <p class="text-muted mb-0">{{ $employee->mothersurname }}</p>
               </div>
             </div>
           </div>
@@ -421,7 +400,7 @@
             <hr>
                    <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Date of Examination</h6>
+                      <p class="mb-0">Date of Examination</p>
                     </div>
                     <div class="col-sm-9 text-black">
                         {{ $employee->dateofexamination }}
@@ -430,7 +409,7 @@
                   <hr>
                    <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Place of Examination</h6>
+                      <p class="mb-0">Place of Examination</p>
                     </div>
                     <div class="col-sm-9 text-black">
                         {{ $employee->placeofexamination }}
@@ -439,7 +418,7 @@
                   <hr>
                    <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">License Number</h6>
+                      <p class="mb-0">License Number</p>
                     </div>
                     <div class="col-sm-9 text-black">
                         {{ $employee->licensenumber }}
@@ -461,6 +440,15 @@
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0">{{ $employee->dateofvalidity }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Additional Certification (if any)</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ $employee->certification }}</p>
               </div>
             </div>
           </div>
