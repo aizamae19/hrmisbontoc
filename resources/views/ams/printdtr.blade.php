@@ -33,29 +33,13 @@
                             </div> -->
 
                             <div class="form-group col-md-3 m-t-20">
-                                <label>Select Month</label>
-                                <input type="text" value="{{ $d = date('m')}}" hidden>    
-                                <select name="dtr_month" value="" class="form-control custom-select" required>
-                                    <option value="{{$d}}">{{ date('F') }}</option>
-                                    @for($i=1; $i<=12; $i++)
-                                        @if($d != $i){
-                                            <option value="{{$i}}">{{ date('F', strtotime("2023-$i-01")) }}</option>
-                                        }
-                                        @endif
-                                    @endfor
-                                </select>
+                                <label>Start Date</label>
+                                <input type="date" class="form-control" id="datestarted">
                             </div>    
                             <div class="form-group col-md-3 m-t-20">
-                                <label>Select Year</label>
-                                <select name="dtr_year" value="" class="form-control custom-select" required>
-                                    @for($i=date('Y'); $i>2019; $i--)
-                                        <option value="{{$i}}">{{ $i }}</option>
-                                    @endfor
-                                </select>
-                            </div>    
-                            <div class="form-group col-md-3 m-t-20">
-                                
-                            </div>    
+                                <label>End Date</label>
+                                <input type="date" class="form-control" id="dateend">
+                            </div>
                         </div>
                     </div>
                     <div class="card card-outline-info">
@@ -133,7 +117,7 @@
                                                     <td>{{ $employee->status }}</td>
                                                     <td>{{ $employee->department }}</td>
                                                     <td class="jsgrid-align-center ">
-                                                        <button data-url="{{ url('/printdtr/').'/'.$employee->biometric }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
+                                                        <button data-url="{{ url('/printdtralt/').'/'.$employee->biometric }}" title="print" class="btn btn-sm btn-primary waves-effect waves-light printdtr"><i class="fa fa-print"></i> </button>
                                                     </td>
                                                </tr>
                                             @endforeach
@@ -162,12 +146,19 @@
             </style>
             <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
             <script type="text/javascript">
+                $(document).ready(function() {
+                  var currentDate = new Date().toISOString().split('T')[0]; // Get current date in "YYYY-MM-DD" format
+                  $('#datestarted').val(currentDate); // Set the value of the input field to the current date
+                  $('#dateend').val(currentDate); // Set the value of the input field to the current date
+                });
+
+
                 var employees = @json($employees);
                 $('.printdtr').on('click', function(e){
                     var link = $(this).attr('data-url');
-                    var month = $('select[name="dtr_month"]').val();
-                    var year = $('select[name="dtr_year"]').val();
-                    url = link+'/'+month+'/'+year;
+                    var datestarted = $('#datestarted').val();
+                    var dateend = $('#dateend').val();
+                    url = link+'/'+datestarted+'/'+dateend;
                     console.log(url);
                     var newWindow = window.open(url, '_blank');
                     newWindow.onload = function() {

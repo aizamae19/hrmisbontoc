@@ -10,7 +10,7 @@
                 <div class="row m-b-10"> 
                     <div class="col-12" style="margin-top: 10px; margin-bottom: 10px;   width: 3000px;">
                        <!--  <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a href="http://hrsystem-ci.test\/attendance/Save_Attendance" class="text-white"><i class="" aria-hidden="true"></i> Add Attendance </a></button> -->
-                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="#" class="text-white" data-toggle="modal" data-target="#Bulkmodal"><i class="" aria-hidden="true" style=" "></i>  IMPORT CSV FILE </a></button>
+                        <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="#" class="text-white" data-toggle="modal" data-target="#Bulkmodal"><i class="" aria-hidden="true" style=" "></i>  IMPORT .DAT FILE </a></button>
                         
                         <!--  <input id="attendance" style="margin-left:80%; " type="text" placeholder="search" > -->
 
@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <!-- <h4>Import CSV File<span><img src="/public/assets/images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4> -->
-                                    <h4>Import CSV File<span><img src="../images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4>
+                                    <h2>Import .DAT File </h2> <h4><p style="color:red">(Upload only .DAT file)</p></h4>
                                     <!-- <h4>Import CSV File<span><img src="http://hrsystem-ci.test\/assets/images/finger.jpg" height="100px" width="100px" margin-left="5px"></span>Upload only CSV file</h4> -->
                                     <input type="file" name="datFile" id="csv_file" accept=".dat"><br><br>
                                 </div>

@@ -37,12 +37,39 @@ class PrintDTRController extends Controller
      
      public function printdtr(Request $request)
      {
-        $attendance = Attendance::where('biometric', $request->id)
-                                ->whereMonth('date', $request->month)
-                                ->whereYear('date', $request->year)
-                                 ->get();
+        // $attendance = Attendance::where('biometric', $request->id)
+        //                         ->whereMonth('date', $request->month)
+        //                         ->whereYear('date', $request->year)
+        //                          ->get();
+
+        $attendances = Attendance::where('biometric', $request->id)
+                                 ->whereBetween('date', [$request->startDate, $request->endDate])
+                                 ->get();  
+                                 
+                                 
+                                 $date1 = Carbon::parse($request->startDate);
+                                 $date2 = Carbon::parse($request->endDate);
+                                 
+                                 // Get the month, day, and year
+                                //  $month = $date1->format('m');
+                                //  $day = $date1->format('d');
+                                //  $year = $date1->format('Y');
+
+                                //  $date1 = new DateTime($request->startDate);
+                                //  $date2 = new DateTime($request->endDate);
+                                 
+                                 // Get the month and year
+                                 $month = $date1->format('m');
+                                 $year = $date1->format('Y');
+                                 $startDay = $date1->format('d');
+
+                                 $endDay = $date2->format('d');
+
+
+
+
         $attendanceList = [];
-                                 foreach ($attendance as $entry) {
+                                 foreach ($attendances as $entry) {
                                      $attendanceList[] = [
                                          'date' => $entry->date,
                                          'am_in' => $entry->am_in,
@@ -54,8 +81,9 @@ class PrintDTRController extends Controller
 
         $employees = Employee::where('biometric', $request->id)
                                  ->get();
-        $holiday = Holiday::whereMonth('startdate', $request->month)
-                            ->whereYear('startdate', $request->year)
+        $holiday = Holiday::where('startdate', $request->startDate)
+                            ->where('enddate', $request->endDate)
+                            // ->whereYear('startdate', $request->year)
                             ->get();
         
         $holidayList = [];
@@ -71,10 +99,43 @@ class PrintDTRController extends Controller
          return view('ams.dtr',[
             'attendanceList'=> $attendanceList,
             'employees'=>  $employees,
-            'month' => $request->month,
-            'year' => $request->year,
+            'startDate' => $request->startDate,
+            'endDate' => $request->endDate,
+            'month' => $month,
+            'year' => $year,
+            'startDay' => $startDay,
+            'endDay' => $endDay,
             'holiday' => $holidayList
          ]);
+        }
+        public function printdtr_alt(Request $request)
+        {
+            $startDate = Carbon::parse($request->startdate);
+            $endDate = Carbon::parse($request->enddate);
+
+            $firstDayOfMonth = $startDate->firstOfMonth();
+            $lastDayOfMonth = $endDate->lastOfMonth();
+
+            
+
+            
+            $daysList = [];
+            for ($date = $firstDayOfMonth; $date->lte($lastDayOfMonth); $date->addDay()) {
+                $daysList[] = $date->format('d-m-Y');
+            }
+
+            $employee = Employee::where('biometric', $request->id)
+                                 ->first();
+
+            return view('ams.dtr_alt',[
+                'daysList'=> $daysList,
+                'employee'=>  $employee,
+                'startDate' => Carbon::parse($request->startdate),
+                'endDate' => Carbon::parse($request->enddate),
+                'month' => Carbon::parse($request->startdate)->format('F'),
+                'year' => $startDate->format('Y'),
+                'emp_num'=>$request->id
+            ]);
         }
 
 
