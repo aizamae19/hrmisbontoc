@@ -46,7 +46,7 @@
                     <label for="" style="font-style: italic;">Civil Service Form No. 48</label>
                 </div>
                 <div style="position: absolute;margin-top: 2rem;margin-left: 1rem;">
-                    <img class="" style="width: 6rem;" alt="" src="{{asset('assets/images/logo1.png')}}" />
+                    <img class="" style="width: 6rem;" alt="" src="{{ assets('assets/images/logo.jpg')}}" />
                 </div>
                 <div class="row control-input" style="align-items: center;padding-bottom: .5rem;">
                     <label for="">Republic of the Philippines</label>
