@@ -48,12 +48,7 @@
                                                 <label class="control-label">Start Date</label>
                                                 <input type="hidden" name="id" value="{{$holiday->id}}">
                                                 <input type="text" name="startdate" class="form-control mydatetimepickerFull" id="recipient-name1"  value="{{$holiday->startdate}}">
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="control-label">End Date</label>
-                                                <input type="hidden" name="id" value="{{$holiday->id}}">
-                                                <input type="text" name="enddate" class="form-control mydatetimepickerFull" id="recipient-name1" value="{{$holiday->enddate}}">
-                                            </div>                                      
+                                            </div>                                   
                                         
                                         </div>
                                     <div class="modal-footer">                                   
