@@ -20,8 +20,6 @@ class HolidayController extends Controller
         $holidaysave =new Holiday();
         $holidaysave->nameofholiday = $request->nameofholiday;
         $holidaysave->startdate = $request->startdate;
-        $holidaysave->enddate = $request->enddate;
-
         if($holidaysave->save()) {
             return redirect()->back();
         }
@@ -41,7 +39,6 @@ class HolidayController extends Controller
         $Updatesave=Holiday::where('id' ,$request->id)->first();
         $Updatesave-> nameofholiday =$request->nameofholiday;
         $Updatesave-> startdate =$request->startdate;
-        $Updatesave-> enddate =$request->enddate;
 
         if($Updatesave->update()) {
             return redirect()->back()->withErrors('Updated!');
@@ -52,8 +49,6 @@ class HolidayController extends Controller
         $Deletesave=Holiday::where('id' ,$request->id)->first();
         $Deletesave-> nameofholiday =$request->nameofholiday;
         $Deletesave-> startdate =$request->startdate;
-        $Deletesave-> enddate =$request->enddate;
-
         if($Deletesave->delete()) {
             return redirect()->back()->withErrors('Deleted!');
         }
