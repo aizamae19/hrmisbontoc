@@ -205,6 +205,14 @@ class EmployeeController extends Controller
         ]);
     }
 
+    public function pds(Request $request){
+        $employees=Employee::where('id',$request->id)->first();
+
+        return view('admin.employees.employee.pds',[
+                'employees'=>$employees
+        ]);
+    }
+
     public function permanentEmployees()
     {
         $permanentEmployees = $this->getpermanentEmployees();

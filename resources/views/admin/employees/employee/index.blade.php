@@ -52,8 +52,9 @@
                                                 <td>{{$employee->status}}</td>
                                                 <td>{{$employee->dateofjoining}}</td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="{{ url('/employee/index/view/').'/'.$employee->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-eye"></i></a>
-                                                    <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="{{ url('/employee/index/view/').'/'.$employee->id}}" title="View" class="btn btn-sm btn-primary waves-effect waves-light" style="background-color: green;"><i class="fa fa-eye"></i></a>
+                                                    <a href="{{ url('/employee/index/edit/').'/'.$employee->id}}" title="Edit" class="btn btn-sm btn-red waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="{{ url('/employee/index/pds/').'/'.$employee->id}}" title="Print" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-print" aria-hidden="true"></i></a>
                                                 </td>
                                             </tr>
                                              @endforeach

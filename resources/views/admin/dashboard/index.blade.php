@@ -78,7 +78,7 @@
       <div class="circle-tile ">
         <a href="#"><div class="circle-tile-heading purple "><i class="fa fa-users fa-fw fa-3x"></i></div></a>
         <div class="circle-tile-content purple">
-          <div class="circle-tile-description text-faded"> Co-Terminous </div>
+          <div class="circle-tile-description text-faded"> Co-Terminus </div>
           <div class="circle-tile-number text-faded ">{{ $coterminous }}</div>
           <a class="circle-tile-footer" href="{{ route('employees.coterminous')}}">View Details <i class="fa fa-chevron-circle-right"></i></a>
         </div>

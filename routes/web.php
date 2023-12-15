@@ -67,9 +67,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
             Route::get('/employee/index/view/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.view');
             Route::post('/employee/index/view', [App\Http\Controllers\Admin\EmployeeController::class, 'viewemployee'])->name('employee.edit.view');
 
-            //Delete
-            Route::get('/employee/index/delete/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'deleteemployee'])->name('employee.delete');
-            Route::post('/employee/index/delete', [App\Http\Controllers\Admin\EmployeeController::class, 'deleteemployee'])->name('employee.delete');
+            //PDS
+            Route::get('/employee/index/pds/{id}', [App\Http\Controllers\Admin\EmployeeController::class, 'pds'])->name('pds');
+            Route::post('/employee/index/pds', [App\Http\Controllers\Admin\EmployeeController::class, 'pds'])->name('pds');
 
             #LEAVE-HOLIDAY
            Route::get('/leave/holiday', [App\Http\Controllers\Admin\HolidayController::class, 'holidayleave'])->name('leave.holiday');
