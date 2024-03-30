@@ -77,20 +77,19 @@
                                         <label for="maritalstatus">Civil Status</label>
                                         <select name="maritalstatus" class="form-control custom-select" required>
                                             <option value="">Select Civil Status</option>
-                                            <option value="Married">Married</option>
-                                            <option value="Common-Law Married">Common-Law Married</option>
-                                            <option value="Widowed">Widowed</option>
-                                            <option value="Separated">Separated</option>
-                                            <option value="Divorced">Divorced</option>
-                                            <option value="Single">Single</option>
+                                            <option value="MARRIED">MARRIED</option>
+                                            <option value="WIDOWED ">WIDOWED</option>
+                                            <option value="SEPARATED">SEPARATED</option>
+                                            <option value="DIVORCED">DIVORCED</option>
+                                            <option value="SINGLE">SINGLE</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Gender</label>
                                         <select name="gender" class="form-control custom-select" required>
                                             <option>Select Gender</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
+                                            <option value="MALE">MALE</option>
+                                            <option value="FEMALE">FEMALE</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
@@ -309,11 +308,11 @@
                                         <label>Employment Status</label>
                                         <select name="status" class="form-control custom-select" required>
                                             <option>Select Status</option>
-                                            <option value="Permanent">Permanent</option>
-                                            <option value="Casual">Casual</option>
-                                            <option value="Job Order">Job Order</option>
-                                            <option value="Co-Terminous">Co-Terminous</option>
-                                            <option value="Elective">Elective</option>
+                                            <option value="PERMANENT">PERMANENT</option>
+                                            <option value="CASUAL">CASUAL</option>
+                                            <option value="JOB ORDER">JOB ORDER</option>
+                                            <option value="CO-TERMINOUS">CO-TERMINOUS</option>
+                                            <option value="ELECTIVE">ELECTIVE</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">

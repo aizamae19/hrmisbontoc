@@ -89,20 +89,19 @@
                                         <label for="maritalstatus">Civil Status</label>
                                         <select name="maritalstatus" class="form-control custom-select" required>
                                             <option value="">Select Civil Status</option>
-                                            <option value="Married" {{ $employee->maritalstatus === 'Married' ? 'selected' : '' }}>Married</option>
-                                            <option value="Common-Law Married" {{ $employee->maritalstatus === 'Common-Law Married' ? 'selected' : '' }}>Common-Law Married</option>
-                                            <option value="Widowed" {{ $employee->maritalstatus === 'Widowed' ? 'selected' : '' }}>Widowed</option>
-                                            <option value="Separated" {{ $employee->maritalstatus === 'Separated' ? 'selected' : '' }}>Separated</option>
-                                            <option value="Divorced" {{ $employee->maritalstatus === 'Divorced' ? 'selected' : '' }}>Divorced</option>
-                                            <option value="Single" {{ $employee->maritalstatus === 'Single' ? 'selected' : '' }}>Single</option>
+                                            <option value="MARRIED" {{ $employee->maritalstatus === 'MARRIED' ? 'selected' : '' }}>MARRIED</option>
+                                            <option value="WIDOWED" {{ $employee->maritalstatus === 'WIDOWED' ? 'selected' : '' }}>WIDOWED</option>
+                                            <option value="SEPARATED" {{ $employee->maritalstatus === 'SEPARATED' ? 'selected' : '' }}>SEPARATED</option>
+                                            <option value="DIVORCED" {{ $employee->maritalstatus === 'DIVORCED' ? 'selected' : '' }}>DIVORCED</option>
+                                            <option value="SINGLE" {{ $employee->maritalstatus === 'SINGLE' ? 'selected' : '' }}>SINGLE</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
                                         <label>Gender</label>
                                         <select name="gender" class="form-control custom-select" required>
                                             <option>Select Gender</option>
-                                            <option value="Male" {{ $employee->gender === 'Male' ? 'selected' : '' }}>Male</option>
-                                            <option value="Female" {{ $employee->gender === 'Female' ? 'selected' : '' }}>Female</option>
+                                            <option value="MALE" {{ $employee->gender === 'MALE' ? 'selected' : '' }}>MALE</option>
+                                            <option value="FEMALE" {{ $employee->gender === 'FEMALE' ? 'selected' : '' }}>FEMALE</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">
@@ -351,11 +350,11 @@
                                         <label>Employment Status</label>
                                         <select name="status" class="form-control custom-select" required>
                                             <option>Select Status</option>
-                                            <option value="Permanent" {{ $employee->status === 'Permanent' ? 'selected' : '' }}>Permanent</option>
-                                            <option value="Casual" {{ $employee->status === 'Casual' ? 'selected' : '' }}>Casual</option>
-                                            <option value="Job Order" {{ $employee->status === 'Job Order' ? 'selected' : '' }}>Job Order</option>
-                                            <option value="Co-Terminous" {{ $employee->status === 'Co-Terminous' ? 'selected' : '' }}>Co-Terminous</option>
-                                            <option value="Elective" {{ $employee->status === 'Elective' ? 'selected' : '' }}>Elective</option>
+                                            <option value="PERMANENT" {{ $employee->status === 'PERMANENT' ? 'selected' : '' }}>PERMANENT</option>
+                                            <option value="CASUAL" {{ $employee->status === 'CASUAL' ? 'selected' : '' }}>CASUAL</option>
+                                            <option value="JOB ORDER" {{ $employee->status === 'JOB ORDER' ? 'selected' : '' }}>JOB ORDER</option>
+                                            <option value="CO-TERMINOUS" {{ $employee->status === 'CO-TERMINOUS' ? 'selected' : '' }}>CO-TERMINOUS</option>
+                                            <option value="ELECTIVE" {{ $employee->status === 'ELECTIVE' ? 'selected' : '' }}>ELECTIVE</option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4 m-t-20">

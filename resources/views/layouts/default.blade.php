@@ -37,6 +37,7 @@
     <link href="{{asset('assets/plugins/calendar/dist/fullcalendar.css')}}" rel="stylesheet" type="text/css" />  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
@@ -177,8 +178,6 @@
     <script src="{{asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js')}}"></script>
     <!--Custom JavaScript -->
     <script src="{{asset('assets/js/custom.min.js')}}"></script>
-
-    <!-- ============================================================== -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <!-- ============================================================== -->
     <!--sparkline JavaScript -->
@@ -249,7 +248,7 @@
         });
         $(function () {
             $('.mydatetimepickerFull').datepicker({
-            format: "yyyy-mm-dd"   
+            format: "MM-DD-YYYY"   
             });
         });
     </script>      
