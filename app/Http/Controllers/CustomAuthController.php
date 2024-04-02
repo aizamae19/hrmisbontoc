@@ -53,7 +53,7 @@ class CustomAuthController extends Controller
 
     public function register()
     {
-        return view('auth.register');
+        return view('admin.users.index');
     }
 
     public function customRegistration(Request $request)

@@ -242,7 +242,7 @@
         });
         $(function () {
             $('.mydatetimepickerFull').datepicker({
-            format: "yyyy-mm-dd"   
+            format: "mm-dd-yyyy"   
             });
         });
     </script>      
